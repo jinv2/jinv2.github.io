@@ -1,4 +1,4 @@
----
+layout: single
 layout: default # 使用主题的默认页面布局
 title: 关于天算AI
 permalink: /about/ # 设置页面的固定链接为 /about/
