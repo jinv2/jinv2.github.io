@@ -1,0 +1,12 @@
+# main navigation links
+main:
+  - title: "首页"
+    url: /tsai/ # 注意这里是 /tsai/
+  - title: "博客"
+    url: /tsai/blog/ # 注意这里是 /tsai/blog/
+  - title: "关于"
+    url: /tsai/about/ # 注意这里是 /tsai/about/
+  - title: "按标签"
+    url: /tsai/tags/ # 注意这里是 /tsai/tags/
+  - title: "按分类"
+    url: /tsai/categories/ # 注意这里是 /tsai/categories/
