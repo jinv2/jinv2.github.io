@@ -1,0 +1,22 @@
+---
+---
+@import "{{ site.theme }}"; // 这行会导入 Cayman 主题的原始样式
+/* Navigation Styles */
+.main-nav {
+  text-align: center; /* 居中导航链接 */
+  background-color: #f2f2f2; /* 浅灰色背景 */
+  padding: 10px 0; /* 上下留白 */
+  border-bottom: 1px solid #ddd; /* 底部加条线 */
+  margin-bottom: 20px; /* 和下方内容留点距离 */
+}
+
+.main-nav a {
+  margin: 0 15px; /* 链接之间留点空隙 */
+  color: #333; /* 链接文字颜色 */
+  text-decoration: none; /* 去掉下划线 */
+  font-weight: bold; /* 文字加粗 */
+}
+
+.main-nav a:hover {
+  color: #007bff; /* 鼠标悬停时变色 */
+}
