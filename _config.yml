@@ -1,4 +1,4 @@
-remote_theme: mmistakes/minimal-mistakes@4.24.0 
+theme: jekyll-theme-cayman
 # -- Site Settings ----------
 # 这些是 Minimal Mistakes 会用到的核心设置
 locale: "zh-CN" # 可选：尝试使用中文界面，如果主题支持的话。默认为 "en-US"
