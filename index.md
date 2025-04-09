@@ -1,3 +1,4 @@
+layout: home
 # 天算AI
 
 AI科技博主 | AI科技研发 | 科技前沿最新AI资讯影视化报道
