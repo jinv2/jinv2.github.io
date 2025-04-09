@@ -1,14 +1,22 @@
 ---
-layout: default  # 使用主题的默认布局
+layout: default # 或者尝试 layout: home，取决于主题
 ---
 
-# 欢迎来到我的 AI 探索者博客
+(这里是您从 README 粘贴过来的内容，像 # 天算AI ...)
+# 天算AI
 
-这里记录了我在人工智能，特别是大型语言模型领域的学习、研究和思考。
+AI科技博主 | AI科技研发 | 科技前沿最新AI资讯影视化报道
 
-## 近期文章
-{% for post in site.posts limit:5 %}
-  * [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%Y-%m-%d" }}
-{% endfor %}
+---
 
-[查看所有文章](/archive.html) <!-- 您可以稍后创建一个文章存档页 -->
+## 天算AI数字资产：
+
+*   5万字原创诗文
+*   7千分钟原创交响乐
+*   9千部原创AI短视频
+*   16项原创AI科技产品
+*   7个天算AI语言大模型
+
+---
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SLv6RcKpPWM?si=m8IxR8b4vTZKTXEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+天算AI（Natural Algorithm）
