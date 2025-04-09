@@ -30,3 +30,4 @@ AI科技博主 | AI科技研发 | 科技前沿最新AI资讯影视化报道
 {% if site.posts.size > 5 %}
   <p><a href="#">查看所有文章</a> <!-- 这里将来可以链接到专门的博客页面 --> </p>
 {% endif %}
+<p><a href="{{ '/blog/' | relative_url }}">查看所有文章</a></p>
