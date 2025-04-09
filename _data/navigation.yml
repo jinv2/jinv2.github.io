@@ -1,12 +1,1 @@
-# main navigation
-main:
-  - title: "首页"
-    url: /
-  - title: "博客"
-    url: /blog/
-  - title: "关于"
-    url: /about/
-  - title: "按标签" # 添加标签页链接
-    url: /tags/
-  - title: "按分类" # 添加分类页链接
-    url: /categories/
+
