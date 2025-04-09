@@ -1,0 +1,50 @@
+# Static CMS 配置 for jinvbar/tsai GitHub Pages site with Cayman theme
+
+backend:
+  name: github # 使用 GitHub 作为后端
+  repo: jinvbar/tsai # 您的仓库路径
+  branch: main # 您网站内容所在的分支 (检查是否是 main 或 master)
+  base_url: https://jinvbar.github.io # 您的网站 URL (用于 OAuth 回调，稍后可能需要 Netlify Identity)
+  auth_endpoint: /api/auth # 用于 Git Gateway 认证
+
+media_folder: "assets/images" # 图片上传后存放的目录 (相对于仓库根目录)
+public_folder: "/tsai/assets/images" # 图片在网站上的访问路径 (注意前面的 /tsai)
+
+# 用于启用 Netlify Identity (Git Gateway 需要)
+publish_mode: editorial_workflow # 可选：启用草稿/审核流程
+
+collections: # 定义您可以管理的内容类型
+  - name: "posts" # 内容集合的名称 (可以随便起，内部使用)
+    label: "博客文章" # 在 CMS 界面上显示的标签
+    folder: "_posts" # 内容文件存放的目录
+    create: true # 允许在 CMS 中创建新文章
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # 新文章的文件名格式
+    fields: # 定义文章包含的字段及其编辑器
+      - { label: "Layout", name: "layout", widget: "hidden", default: "default" } # 布局字段，通常隐藏设为默认值
+      - { label: "标题", name: "title", widget: "string" } # 标题字段，文本输入
+      - { label: "发布日期", name: "date", widget: "datetime" } # 日期字段，日期时间选择器
+      - { label: "分类", name: "categories", widget: "string", required: false } # 分类字段，简单文本输入 (可以输入多个，用空格隔开)
+      - { label: "标签", name: "tags", widget: "list", required: false } # 标签字段，列表输入 (可以添加多个标签)
+      - { label: "正文", name: "body", widget: "markdown" } # 正文字段，Markdown 编辑器 (有预览和工具栏)
+      - { label: "特色图片", name: "image", widget: "image", required: false } # 可选：为文章添加特色图片字段
+
+  - name: "pages" # 另一个内容集合：管理页面 (比如 About, Contact)
+    label: "页面管理"
+    files: # 直接编辑指定的文件
+      - label: "关于页面"
+        name: "about"
+        file: "about.md" # 编辑 about.md 文件
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
+          - { label: "标题", name: "title", widget: "hidden", default: "关于" } # 标题通常固定
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/"} # 固定链接
+          - { label: "正文", name: "body", widget: "markdown" }
+      - label: "联系页面"
+        name: "contact"
+        file: "contact.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
+          - { label: "标题", name: "title", widget: "hidden", default: "联系我们" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/contact/"}
+          - { label: "正文", name: "body", widget: "markdown" }
+      # 您可以添加对 index.md 的编辑，但首页通常布局复杂，不建议直接用 Markdown 编辑器
