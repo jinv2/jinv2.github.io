@@ -7,7 +7,7 @@ tags: [欢迎, Jekyll, GitHub Pages] # 使用列表格式
 author_profile: true # 确保显示作者信息
 ---
 
-# 欢迎来到天算AI博客！ (这里是您的正文开始)
+# 欢迎来到天算AI博客！
 
 大家好！欢迎来到 **天算AI** 的官方博客。
 
