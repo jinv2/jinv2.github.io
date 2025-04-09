@@ -1,6 +1,4 @@
 ---
-layout: default # 或者尝试 layout: home，取决于主题
----
 
 (这里是您从 README 粘贴过来的内容，像 # 天算AI ...)
 # 天算AI
