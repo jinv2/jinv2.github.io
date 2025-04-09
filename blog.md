@@ -1,4 +1,4 @@
----
+layout: archive
 layout: default # 使用主题的默认页面布局
 title: 博客文章
 permalink: /blog/ # 设置页面的固定链接为 /blog/
