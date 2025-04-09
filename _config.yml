@@ -1,3 +1,4 @@
-theme: jekyll-theme-cayman
+remote_theme: mmistakes/minimal-mistakes@4.24.0 # @后面是版本号，建议指定
+# theme: jekyll-theme-cayman # 原来的这行要注释掉或删除
 title: AI 探索与实践
 description: Jinvbar 的个人博客，专注于大模型和 AI 技术
