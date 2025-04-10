@@ -5,57 +5,60 @@
 
 /* --- 自定义样式开始 --- */
 
+/* -- Google Fonts (在 default.html 中引入) -- */
+$font-family-serif: 'Lora', Georgia, 'Times New Roman', Times, serif; // 标题字体
+$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // 正文字体
+
 /* 整体页面背景和文字颜色 */
 body {
-  background-color: #f0f2f5; /* 非常浅的灰色背景 */
+  background-color: #f0f2f5;
   color: #333;
+  font-family: $font-family-sans-serif; /* 默认使用 Lato */
+  line-height: 1.6; /* 增加行高提高可读性 */
 }
 
-/* 头部区域样式 - 应用背景图和蒙版 */
+/* --- Header Styles --- */
 .page-header {
   position: relative;
-  /* 背景图 + 半透明黑色蒙版 + 后备颜色 */
-  /* 使用 ddd.jpg 作为 Header 背景 */
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-              url('{{ "/assets/images/ddd.jpg" | relative_url }}') no-repeat center center; /* <--- Header 图片 */
+              url('{{ "/assets/images/ddd.jpg" | relative_url }}') no-repeat center center;
   background-size: cover;
-  background-color: #1a237e; /* 后备颜色 */
+  background-color: #1a237e;
   color: #ffffff;
-  padding-left: 220px; /* 保持之前的 LOGO 布局 (基于 scale(2.67)) */
+  padding-left: 220px;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   padding-right: 1rem;
-  min-height: 200px; /* 保持高度 */
-  border-bottom: 3px solid rgba(0, 150, 136, 0.6); /* 可选边框 */
+  min-height: 200px;
+  border-bottom: 3px solid rgba(0, 150, 136, 0.6);
 }
 
-/* LOGO 图片样式 (保持不变, 使用 TSLOGO.png 或 天算LOGO3.png，根据 default.html) */
 .header-logo {
   position: absolute;
   top: 18px;
   left: 18px;
   width: 75px;
   height: auto;
-  transform: scale(2.67); /* 保持上次的缩放比例 */
+  transform: scale(2.67);
   transform-origin: top left;
   z-index: 10;
 }
 
-/* 标题样式 (保持白色) */
-.project-name {
+.project-name { /* Header 中的标题 */
+  font-family: $font-family-serif; /* 使用 Lora */
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-size: 1.9em;
-  font-weight: bold;
+  font-size: 2em; /* 稍微调整字号 */
+  font-weight: 700; /* 使用 Lora 的粗体 */
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* 导航按钮样式 (保持浅色) */
 .page-header nav {
   margin-top: 15px;
 }
 .page-header nav .btn {
+  font-family: $font-family-sans-serif; /* 按钮使用 Lato */
   border: 1px solid rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(0, 0, 0, 0.2);
@@ -67,7 +70,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* 页面主要内容区域样式 */
+/* --- Main Content Styles --- */
 .main-content {
   max-width: 960px;
   margin: 2rem auto;
@@ -77,29 +80,61 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* 页脚区域样式 - 应用背景图和蒙版 */
+/* 内容区的标题使用 Lora */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+  font-family: $font-family-serif;
+  font-weight: 700; /* 标题用粗体 */
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  color: #2a2e36; /* 标题用深一点的颜色 */
+}
+
+/* 内容区的段落和其他文字使用 Lato (已在 body 中设置) */
+.main-content p,
+.main-content li,
+.main-content dt,
+.main-content dd {
+  margin-bottom: 1em;
+}
+
+/* 链接颜色调整 */
+a {
+ color: #00796b; /* 一个青色，来自之前 Header 边框 */
+ text-decoration: none;
+ transition: color 0.2s ease;
+}
+a:hover {
+ color: #004d40; /* 悬停时加深 */
+ text-decoration: underline;
+}
+
+/* --- Footer Styles --- */
 .site-footer {
   margin-top: 3rem;
   padding: 2rem 1rem;
   color: rgba(255, 255, 255, 0.7);
-  /* 背景图 + 半透明黑色蒙版 + 后备颜色 */
-  /* 使用 jjj.jpg 作为 Footer 背景 */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-              url('{{ "/assets/images/jjj.jpg" | relative_url }}') no-repeat center center; /* <--- Footer 图片 */
+              url('{{ "/assets/images/jjj.jpg" | relative_url }}') no-repeat center center;
   background-size: cover;
-  background-color: #1a1d24; /* 后备颜色 */
+  background-color: #1a1d24;
   text-align: center;
+  font-family: $font-family-sans-serif; /* 页脚使用 Lato */
 }
 
 .site-footer a {
   color: rgba(255, 255, 255, 0.9);
 }
 .site-footer a:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 
-
-/* 响应式设计 (保持不变) */
+/* --- Responsive Styles --- */
 @media screen and (max-width: 768px) {
   .page-header {
     padding-left: 100px;
@@ -111,15 +146,15 @@ body {
 
   .header-logo {
     width: 50px;
-    transform: scale(1.67); /* 对应的小屏幕缩放 */
+    transform: scale(1.67);
     top: 12px;
     left: 12px;
   }
 
   .project-name {
-    font-size: 1.5em;
+    font-size: 1.6em; /* 调整小屏幕字号 */
     text-align: center;
-    margin-left: -85px; /* 对应的小屏幕负 margin */
+    margin-left: -85px;
   }
    .page-header nav {
      text-align: center;
