@@ -1,74 +1,32 @@
-theme: jekyll-theme-cayman
-# -- Site Settings ----------
-# 这些是 Minimal Mistakes 会用到的核心设置
-locale: "zh-CN" # 可选：尝试使用中文界面，如果主题支持的话。默认为 "en-US"
-title: "天算AI" # 您的网站标题
-description: "天算AI - AI科技博主 | AI科技研发 | 最新AI资讯影视化报道" # 您的网站描述
-url: "https://jinvbar.github.io" # 您的网站根 URL，不要加 /tsai
-baseurl: "/tsai" # 您的仓库名称，前面必须加斜杠 /
-repository: "jinvbar/tsai" # GitHub 仓库路径 (user/repo)
+# -- Site Settings -----------------------------------------------------------
+title: "天算AI" # 网站标题 (Cayman 会用)
+description: "天算AI - AI科技博主 | AI科技研发 | 最新AI资讯影视化报道" # 网站描述 (Cayman 会用)
+url: "https://jinvbar.github.io" # 网站的根 URL
+baseurl: "/tsai" # 仓库名称
+repository: "jinvbar/tsai" # GitHub 仓库路径 (布局文件可能会用到)
 
-# -- Author Settings --------
-# Minimal Mistakes 经常用到作者信息
-author:
-  name: "Jinvbar" # 您的名字或昵称
-  avatar: "/assets/images/your-avatar.png" # 可选：您的头像图片路径 (需要您上传头像到这个路径)
-  bio: "专注于大模型和 AI 技术" # 可选：您的简介
-  location: "未知星球" # 可选：您的位置
-  email: "ssk937520@gmail.com" # 您的邮箱
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github" # Font Awesome 图标
-      url: "https://github.com/jinvbar"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/@jinvjinvbar"
-    # 您可以添加更多社交链接
+# -- Theme Settings ----------------------------------------------------------
+theme: jekyll-theme-cayman # <--- 明确使用 Cayman 主题
 
-# -- Build Settings ---------
-# 这些通常是 Jekyll 的标准设置，MM 可能依赖
+# -- Build Settings ----------------------------------------------------------
 markdown: kramdown
 highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n" # 文章摘要分隔符
-incremental: false
 
-# -- Pagination Settings ----
-# 用于博客页面分页
-paginate: 5 # 每页显示文章数
-paginate_path: "/blog/page:num/" # 分页路径
-
-# -- Plugins (GitHub Pages 支持的) ----
-# 这些插件通常是 GitHub Pages 默认启用或推荐的
+# -- Plugins (只保留最基础、GitHub Pages 默认支持的) --------------------
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  # - jekyll-include-cache # 这个推荐，但不确定GitHub Pages免费版是否完全支持
+  - jekyll-sitemap # 生成 sitemap.xml (推荐保留)
+  - jekyll-feed   # 生成 Atom feed (推荐保留)
+# - jekyll-seo-tag # Cayman 主题通常自己处理 SEO，可以先不用
+# - jekyll-paginate # Cayman 主题默认分页支持不好，移除
+# - jekyll-gist
+# - jekyll-include-cache # Cayman 不需要
 
-# -- Minimal Mistakes 默认值（您可以覆盖） --
-# 更多配置请参考 MM 文档: https://mmistakes.github.io/minimal-mistakes/docs/configuration/
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single # 文章默认使用 single 布局
-      author_profile: true # 显示作者侧边栏
-      read_time: true # 显示阅读时间
-      comments: false # 评论功能默认关闭 (需要额外配置)
-      share: true # 显示分享按钮
-      related: true # 显示相关文章
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single # 普通页面也用 single 布局
-      author_profile: true
-
-# --- 保持您原有的 title 和 description (如果上面的 site settings 里没包含的话) ---
-# title: 天算AI  (上面已经有了)
-# description: Jinvbar 的个人博客... (上面已经有了)
+# --- Exclude from processing (可选，保持默认通常即可) -------------------
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
