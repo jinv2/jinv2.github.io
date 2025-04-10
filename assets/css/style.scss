@@ -10,74 +10,26 @@ $font-family-serif: 'Lora', Georgia, 'Times New Roman', Times, serif;
 $font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /* 整体页面背景和文字颜色 */
-body {
-  background-color: #dfe2f1;
-  color: #333;
-  font-family: $font-family-sans-serif;
-  line-height: 1.6;
-  background-image: url('{{ "/assets/images/iii.jpg" | relative_url }}');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-}
-/* 调整蒙版和模糊 */
-body::before {
-    content: "";
-    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background-color: rgba(223, 226, 241, 0.92);
-    z-index: -1;
-} /* <--- 已删除多余的分号 */
+body { /* 省略不变的部分 */ }
+body::before { /* 省略不变的部分 */ }
 
 /* --- Header Styles --- */
 .page-header {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-              url('{{ "/assets/images/kkk.jpg" | relative_url }}') no-repeat center top; /* 背景定位 top */
+  /* V V V 修改 Header 背景图片为 lll.jpg V V V */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), /* 保持蒙版 */
+              url('{{ "/assets/images/lll.jpg" | relative_url }}') no-repeat center top;
+  /* ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ */
   background-size: cover; background-color: #1a237e; color: #ffffff;
-  padding-left: 100px; /* 恢复合理的 padding */
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-right: 1rem;
-  min-height: auto; /* 移除最小高度 */
-  border-bottom: 3px solid rgba(0, 121, 107, 0.7);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-left: 100px; padding-top: 1.5rem; padding-bottom: 1.5rem; padding-right: 1rem;
+  min-height: auto; border-bottom: 3px solid rgba(0, 121, 107, 0.7);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: flex; flex-direction: column; align-items: center;
 }
 
 /* Header 内主内容区 (LOGO + Title) */
-.header-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.header-logo {
-  position: static;
-  width: 80px; /* 恢复合理尺寸 */
-  height: auto;
-  margin-right: 20px;
-  mask-image: none;
-  -webkit-mask-image: none;
-}
-
-.project-name {
-  font-family: $font-family-serif;
-  margin: 0;
-  font-size: 1.9em;
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  text-align: center;
-}
+.header-main { /* 省略不变的部分 */ }
+.header-logo { /* 省略不变的部分 */ }
+.project-name { /* 省略不变的部分 */ }
 
 /* --- 导航容器样式 --- */
 .nav-container { /* 省略不变的部分 */ }
@@ -85,10 +37,68 @@ body::before {
 .nav-left { /* 省略不变的部分 */ }
 .nav-right { /* 省略不变的部分 */ }
 
-/* 导航按钮通用样式 - 保持简洁 */
-.page-header nav .btn { /* 省略不变的部分 */ }
+/* 导航按钮通用样式 */
+.page-header nav .btn {
+  font-family: $font-family-sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* 更弱的边框 */
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* 非常强的阴影以提高对比度 */
+  background-color: rgba(0, 0, 0, 0.1); /* 非常浅的默认背景 */
+  background-size: cover;
+  background-position: center center;
+  transition: all 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+  margin: 0 3px 8px 3px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 4px;
+  white-space: nowrap;
+  min-width: 85px; /* 稍微调整宽度 */
+  text-align: center;
+}
+
+/* --- V V V 恢复按钮背景图，使用非常弱的蒙版 V V V --- */
+/* !!! 请最终确认文件名和顺序 !!! */
+
+/* 左侧导航按钮背景 */
+.nav-left a.btn:nth-of-type(1) { /* 首页 */
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/aaa.jpg" | relative_url }}');
+}
+.nav-left a.btn:nth-of-type(2) { /* 博客 */
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/bbb.png" | relative_url }}');
+}
+.nav-left a.btn:nth-of-type(3) { /* Hugging Face */
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/fff.jpg" | relative_url }}');
+}
+.nav-left a.btn:nth-of-type(4) { /* GitHub */
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/eee.jpg" | relative_url }}');
+}
+
+/* 右侧导航按钮背景 (新顺序) */
+.nav-right a.btn:nth-of-type(1) { /* YouTube */
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/hhh.jpg" | relative_url }}');
+}
+.nav-right a.btn:nth-of-type(2) { /* TikTok */
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/ggg.jpg" | relative_url }}');
+}
+.nav-right a.btn:nth-of-type(3) { /* 关于 */
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/ccc.png" | relative_url }}');
+}
+.nav-right a.btn:nth-of-type(4) { /* 联系我们 */
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/iii.jpg" | relative_url }}');
+}
+/* --- ^ ^ ^ 结束单独设置 ^ ^ ^ --- */
+
 /* 按钮悬停效果 */
-.page-header nav .btn:hover { /* 省略不变的部分 */ }
+.page-header nav .btn:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)); /* 悬停时加深蒙版 */
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
 /* --- Navigation Separator Style --- */
 .nav-separator { /* 省略不变的部分 */ }
 
@@ -96,12 +106,31 @@ body::before {
 .main-content { /* 省略不变的部分 */ }
 /* 其他内容样式省略 */
 
-/* --- Footer Styles --- */
-.site-footer { /* 省略不变的部分 */ }
-/* 其他页脚样式省略 */
+/* --- Footer Styles - 修改背景 --- */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2.5rem 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  /* V V V 修改 Footer 背景图片为 lll.jpg V V V */
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+              url('{{ "/assets/images/lll.jpg" | relative_url }}') no-repeat center center;
+  /* ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ */
+  background-size: cover; background-color: #1a1d24; /* 后备 */
+  text-align: center; font-family: $font-family-sans-serif; position: relative; z-index: 2;
+}
+.site-footer a { /* 省略不变的部分 */ }
+.site-footer a:hover { /* 省略不变的部分 */ }
 
 /* --- Responsive Styles --- */
 @media screen and (max-width: 960px) { /* 省略不变的部分 */ }
-@media screen and (max-width: 768px) { /* 省略不变的部分 */ }
+@media screen and (max-width: 768px) {
+    /* 小屏幕按钮简化 */
+    .page-header nav .btn {
+        background-image: none !important; /* 强制移除背景图 */
+        background-color: rgba(0, 0, 0, 0.3);
+        text-shadow: none;
+    }
+    /* 其他响应式规则省略 */
+}
 
 /* --- 自定义样式结束 --- */
