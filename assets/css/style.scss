@@ -10,28 +10,7 @@ $font-family-serif: 'Lora', Georgia, 'Times New Roman', Times, serif;
 $font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /* 整体页面背景和文字颜色 */
-body {
-  background-color: #dfe2f1; /* 更深的蓝灰色后备色 */
-  color: #333;
-  font-family: $font-family-sans-serif;
-  line-height: 1.6;
-  background-image: url('{{ "/assets/images/iii.jpg" | relative_url }}'); /* 确认使用 iii.jpg */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-}
-/* 调整蒙版和模糊 */
-body::before {
-    content: "";
-    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    backdrop-filter: blur(12px); /* 调整模糊度 */
-    -webkit-backdrop-filter: blur(12px);
-    background-color: rgba(223, 226, 241, 0.92); /* 匹配 body 后备色，调整透明度 */
-    z-index: -1;
-}
+body { /* ... */ } body::before { /* ... */ }
 
 /* --- Header Styles --- */
 .page-header {
@@ -39,60 +18,55 @@ body::before {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
               url('{{ "/assets/images/ddd.jpg" | relative_url }}') no-repeat center center;
   background-size: cover; background-color: #1a237e; color: #ffffff;
-  /* V V V 修正 padding-left 以适应修正后的 LOGO 宽度 V V V */
-  padding-left: 110px; /* 基于 80px LOGO 宽度 + 30px 间距 */
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-right: 1rem;
-  min-height: 90px; /* 大幅减小高度 */
+  /* 移除固定左 padding，让 flexbox 控制居中 */
+  padding: 1.8rem 1rem; /* 调整垂直和左右 padding */
+  min-height: auto; /* 移除最小高度，由内容决定 */
   border-bottom: 3px solid rgba(0, 121, 107, 0.7);
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  display: flex; /* 使用 Flexbox 控制内部元素对齐 */
-  flex-direction: column; /* 垂直排列 header-main 和 nav-container */
-  align-items: flex-start; /* 内容靠左对齐（相对于 padding-left） */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* V V V 让所有子元素（包括标题和导航容器）水平居中 V V V */
 }
 
 /* Header 内主内容区 (LOGO + Title) */
 .header-main {
     display: flex;
-    align-items: center; /* 垂直居中 */
-    width: 100%; /* 占满可用宽度 */
+    align-items: center;
+    justify-content: center; /* 让 LOGO 和标题整体居中 */
+    width: 100%; /* 占满宽度 */
+    margin-bottom: 15px; /* 与下方导航的间距 */
 }
 
 .header-logo {
-  position: absolute; /* 保持绝对定位 */
-  top: 15px;
-  left: 15px;
-  width: 80px; /* <--- 直接设置合理的宽度 */
+  /* 取消绝对定位，让它参与 Flex 布局 */
+  position: static;
+  width: 80px; /* 保持合理的 LOGO 宽度 */
   height: auto;
-  /* 移除 transform: scale() */
-  transform-origin: top left;
-  z-index: 10;
-  /* 移除 mask 或减弱 */
+  /* 移除 transform */
+  margin-right: 20px; /* LOGO 和标题的间距 */
+  /* 移除 mask */
   mask-image: none;
   -webkit-mask-image: none;
 }
 
 .project-name {
   font-family: $font-family-serif;
-  margin-top: 0;
-  margin-bottom: 0; /* 移除下边距，让导航更靠近 */
-  font-size: 1.8em; /* 调整字号 */
+  margin: 0; /* 移除所有边距 */
+  font-size: 2em; /* 调整字号 */
   font-weight: 700;
   color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  margin-left: 10px; /* 确保标题和 logo padding 区域有距离 */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  text-align: center; /* 确保标题文本居中（在 flex item 内部）*/
 }
 
 /* --- 导航容器样式 --- */
 .nav-container {
   display: flex;
-  justify-content: space-between; /* 左右分离 */
+  justify-content: center; /* <--- 让左右导航组靠近中间 */
   align-items: center;
-  margin-top: 15px; /* 与上方内容的间距 */
-  width: calc(100% - 110px + 15px); /* 宽度=总宽度-左padding+右logo一点边距 */
-  margin-left: -15px; /* 补偿一点左边距 */
-  padding-right: 15px; /* 右侧加点内边距 */
+  flex-wrap: wrap; /* 允许换行 */
+  width: 95%; /* 限制最大宽度 */
+  max-width: 1100px; /* 设置一个最大宽度 */
 }
 
 /* 左侧和右侧导航通用样式 */
@@ -100,82 +74,124 @@ body::before {
   display: flex;
   align-items: center;
 }
-.nav-left { justify-content: flex-start; }
-.nav-right { justify-content: flex-end; }
+.nav-left { justify-content: center; margin-right: 10px; } /* 组内居中，添加右边距 */
+.nav-right { justify-content: center; margin-left: 10px; } /* 组内居中，添加左边距 */
 
-/* 导航按钮通用样式 - 移除背景图，恢复简洁 */
+/* 导航按钮通用样式 - 再次尝试恢复背景 */
 .page-header nav .btn {
   font-family: $font-family-sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.5); /* 调整边框 */
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: none; /* 移除阴影 */
-  background-color: rgba(0, 0, 0, 0.25); /* 统一背景 */
-  background-image: none !important; /* 强制移除背景图 */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* 边框更柔和 */
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 加强阴影 */
+  background-color: rgba(0, 0, 0, 0.4); /* 默认深色背景 */
+  background-size: cover;
+  background-position: center center;
   transition: all 0.2s ease-in-out;
-  padding: 0.5rem 0.9rem; /* 调整按钮大小 */
-  margin: 0 3px; /* 按钮间距 */
+  padding: 0.5rem 1rem; /* 调整按钮大小 */
+  margin: 0 4px 8px 4px; /* 调整按钮间距 */
   display: inline-block;
   position: relative;
   z-index: 1;
   overflow: hidden;
   border-radius: 4px;
   white-space: nowrap;
+  min-width: 80px; /* 给按钮一个最小宽度 */
+  text-align: center; /* 文字居中 */
 }
-/* 移除单独背景图规则 */
+
+/* --- V V V 恢复为每个按钮单独设置背景图片 (非常弱的蒙版) V V V --- */
+/* !!! 请根据按钮新顺序和图片文件名修改 !!! */
+
+/* 左侧导航按钮背景 */
+.nav-left a.btn:nth-of-type(1) { /* 首页 */
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/aaa.jpg" | relative_url }}');
+}
+.nav-left a.btn:nth-of-type(2) { /* 博客 */
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/bbb.png" | relative_url }}');
+}
+/* 第三个是分隔符 span */
+.nav-left a.btn:nth-of-type(3) { /* Hugging Face */
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/fff.jpg" | relative_url }}');
+}
+.nav-left a.btn:nth-of-type(4) { /* GitHub */
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/eee.jpg" | relative_url }}');
+}
+
+/* 右侧导航按钮背景 (新顺序) */
+.nav-right a.btn:nth-of-type(1) { /* YouTube */
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/hhh.jpg" | relative_url }}');
+}
+.nav-right a.btn:nth-of-type(2) { /* TikTok */
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/ggg.jpg" | relative_url }}');
+}
+/* 第三个是分隔符 span */
+.nav-right a.btn:nth-of-type(3) { /* 关于 */
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/ccc.png" | relative_url }}');
+}
+.nav-right a.btn:nth-of-type(4) { /* 联系我们 */
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/iii.jpg" | relative_url }}');
+}
+/* --- ^ ^ ^ 结束单独设置 ^ ^ ^ --- */
 
 /* 按钮悬停效果 */
 .page-header nav .btn:hover {
   border-color: #ffffff;
   color: #ffffff;
-  background-color: rgba(0, 121, 107, 0.5);
-  box-shadow: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* 悬停时加深蒙版 */
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
 }
 
 /* --- Navigation Separator Style --- */
 .nav-separator {
   display: inline-block;
-  color: rgba(255, 255, 255, 0.5); /* 调暗分隔符 */
-  margin: 0 8px; /* 调整间距 */
-  font-size: 1em; /* 调整大小 */
-  vertical-align: baseline; /* 基线对齐 */
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 8px;
+  font-size: 1em;
+  vertical-align: middle; /* 调整对齐 */
 }
 
 /* --- Main Content Styles --- */
-.main-content {
-  max-width: 960px;
-  margin: 2.5rem auto;
-  padding: 2.5rem;
-  /* 恢复纯白背景以保证最佳可读性 */
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+.main-content { /* 省略不变的部分 */ }
+/* 其他内容样式省略 */
+
+/* --- Footer Styles - 恢复背景 --- */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2.5rem 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  /* V V V 恢复 Footer 背景图和蒙版 V V V */
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+              url('{{ "/assets/images/jjj.jpg" | relative_url }}') no-repeat center center;
+  background-size: cover;
+  background-color: #1a1d24;
+  /* ^ ^ ^ 结束恢复 ^ ^ ^ */
+  text-align: center;
+  font-family: $font-family-sans-serif;
   position: relative;
   z-index: 2;
 }
-/* 其他内容样式省略 */
-
-/* --- Footer Styles --- */
-.site-footer { /* 省略不变的部分 */ }
-/* 其他页脚样式省略 */
+.site-footer a { /* 省略不变的部分 */ }
+.site-footer a:hover { /* 省略不变的部分 */ }
 
 /* --- Responsive Styles --- */
 @media screen and (max-width: 960px) {
-   /* 调整中等屏幕布局 */
-  .page-header { padding-left: 95px; min-height: 80px; padding-top: 1.2rem; padding-bottom: 1.2rem; align-items: center;} /* Header 内部元素居中 */
-  .header-main { justify-content: center; width: auto; } /* LOGO+Title 居中 */
-  .header-logo { width: 65px; top: 12px; left: 15px; } /* 中屏幕 LOGO */
-  .project-name { font-size: 1.7em; margin-left: 0; } /* 标题居中 */
-  .nav-container { flex-direction: column; width: 100%; margin-left: 0; padding-right: 0; } /* 导航垂直排列 */
-  .nav-left, .nav-right { justify-content: center; margin-bottom: 8px; flex-wrap: wrap; }
+    /* 中等屏幕调整 */
+    .page-header { padding-left: 1rem; padding-right: 1rem; align-items: center; } /* 移除左 padding，整体居中 */
+    .header-main { justify-content: center; } /* LOGO+Title 居中 */
+    .header-logo { position: static; width: 70px; margin: 0 15px 0 0; } /* LOGO 参与流式布局 */
+    .project-name { font-size: 1.8em; margin-left: 0; }
+    .nav-container { justify-content: center; } /* 导航组居中 */
 }
 @media screen and (max-width: 768px) {
-    /* 小屏幕进一步调整 */
-    .page-header { padding-left: 1rem; padding-right: 1rem; } /* 移除固定左 padding */
-    .header-main { flex-direction: column; /* LOGO 和标题垂直 */ }
-    .header-logo { position: static; /* 取消绝对定位 */ width: 70px; margin: 0 auto 10px auto; mask-image: none; -webkit-mask-image: none; } /* LOGO 居中 */
-    .project-name { font-size: 1.6em; text-align: center; } /* 标题居中 */
-    .page-header nav .btn { padding: 0.4rem 0.8rem; }
-    body::before { background-color: rgba(223, 226, 241, 0.98); } /* 蒙版更不透明 */
+    /* 小屏幕调整 */
+    .header-main { flex-direction: column; margin-bottom: 10px;} /* LOGO 和标题垂直 */
+    .header-logo { margin: 0 auto 8px auto; } /* LOGO 居中 */
+    .project-name { font-size: 1.6em; }
+    .nav-container { flex-direction: column; }
+    .nav-left, .nav-right { margin: 0 0 8px 0; } /* 移除左右边距，增加下边距 */
+    .nav-separator { margin: 0 5px; }
+    /* 小屏幕按钮简化 */
+    .page-header nav .btn { background-image: none !important; background-color: rgba(0,0,0,0.3); }
 }
 
 /* --- 自定义样式结束 --- */
