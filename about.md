@@ -1,21 +1,45 @@
-layout: single
-layout: default # 使用主题的默认页面布局
-title: 关于天算AI
-permalink: /about/ # 设置页面的固定链接为 /about/
 ---
+layout: default # <--- 确保使用 default 布局
+title: 关于天算AI # <--- 页面的标题
+permalink: /about/ # <--- 页面的固定链接 (确保斜杠)
+---
+
+<!-- V V V 以下是之前确认的关于页面内容 V V V -->
 
 # 关于天算AI
 
-这里是关于天算AI的详细介绍。我们专注于... (请在这里写上您的详细介绍)
+AI科技博主 
+AI科技研发
+科技前沿最新AI资讯影视化报道 
 
-## 我们的使命
+---
 
-(介绍您的目标和愿景)
+## 天算AI数字资产：
 
-## 联系我们
+*   5万字原创诗文
+*   7千分钟原创交响乐
+*   9千部原创AI短视频
+*   16项原创AI科技产品
+*   7个天算AI大语言模型
 
-如果您有任何问题或合作意向，可以通过以下方式联系我们：
+---
 
-*   **邮箱:** ssk937520@gmail.com
+天算AI（Natural Algorithm）
 
-(您也可以添加其他联系方式，比如社交媒体链接等)
+---
+
+## 更多信息
+
+*   **天算AI主页：** <a href="https://jinvbar.github.io/tsai/" target="_blank">https://jinvbar.github.io/tsai/</a>
+*   **联系方式 (邮箱)：** ssk937520@gmail.com
+
+<!-- 页面底部的导航链接 (布局文件会自动添加页脚，这里的不一定需要，但保留也无妨) -->
+<!-- 
+<hr>
+<p>
+  <a href="{{ '/' | relative_url }}">首页</a> |
+  <a href="{{ '/blog/' | relative_url }}">博客</a> |
+  <a href="{{ '/about/' | relative_url }}">关于</a> |
+  <a href="{{ '/contact/' | relative_url }}">联系我们</a>
+</p> 
+-->
