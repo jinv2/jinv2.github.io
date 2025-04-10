@@ -8,67 +8,68 @@
 /* 头部区域样式 */
 .page-header {
   position: relative; /* Needed for absolute positioning of logo */
-  /* Calculate padding-left based on 4x scaled logo size + gap */
-  /* Base width 75px * scale 4 = 300px. Add 20px gap = 320px */
-  padding-left: 320px;
-  padding-top: 2rem; /* Increase vertical padding for larger logo */
-  padding-bottom: 2rem;
-  padding-right: 1rem; /* Keep some right padding */
-  min-height: 180px; /* Increase min-height to fit 4x scaled logo */
+  /* Calculate padding-left based on 2/3 scaled logo size + gap */
+  /* Base width 75px * scale 0.67 ≈ 50px. Add 20px gap = 70px */
+  padding-left: 70px;
+  padding-top: 1rem; /* Reduce vertical padding */
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  min-height: 60px; /* Significantly reduce min-height */
 }
 
 /* LOGO 图片样式 */
 .header-logo {
   position: absolute;
-  top: 20px;  /* Adjust distance from top slightly */
-  left: 20px; /* Adjust distance from left slightly */
+  top: 10px;  /* Adjust positioning for smaller logo */
+  left: 15px;
   width: 75px; /* Keep the BASE width */
   height: auto; /* Maintain aspect ratio */
-  transform: scale(4); /* <--- 修改这里！放大四倍 */
+  transform: scale(0.67); /* <--- 修改这里！缩小到三分之二 */
   transform-origin: top left; /* Scale from top-left corner */
-  z-index: 10; /* Optional: ensure logo is on top */
+  z-index: 10;
 }
 
 /* 标题样式 */
 .project-name {
-  margin-top: 0; /* Remove default top margin */
-  margin-bottom: 0.5rem; /* Add some space below title */
-  font-size: 2em; /* Maybe increase title size slightly again */
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.6em; /* Maybe slightly smaller title to match logo */
   font-weight: bold;
 }
 
 /* 导航按钮区域 */
 .page-header nav {
-  margin-top: 15px; /* Adjust space above nav */
+  margin-top: 10px;
 }
 
 /* 响应式设计：针对小屏幕 */
 @media screen and (max-width: 768px) {
   .page-header {
     /* Adjust left padding for small screens */
-    /* Base width 50px * scale 2.5 = 125px. Add 15px gap = 140px */
-    padding-left: 140px;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    min-height: 120px; /* Adjust min-height */
-    text-align: center; /* Center title and nav */
+    /* Base width 50px * scale 0.67 ≈ 34px. Add 15px gap = 49px -> use 50px */
+    padding-left: 50px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    min-height: 50px; /* Adjust min-height */
+    text-align: center;
   }
 
   .header-logo {
     width: 50px; /* Smaller base width */
-    transform: scale(2.5); /* Increase scaling for small screens too */
-    top: 15px;
-    left: 15px;
+    transform: scale(0.67); /* Keep same scale for small screens */
+    top: 8px;
+    left: 10px;
   }
 
   .project-name {
-    font-size: 1.6em; /* Adjust title size */
-    text-align: center; /* Center title */
-    margin-left: -125px; /* Adjust negative margin based on new padding */
+    font-size: 1.3em; /* Adjust title size */
+    text-align: center;
+    /* Adjust negative margin based on new padding */
+    margin-left: -35px; /* approx -50px + 15px gap */
   }
    .page-header nav {
-     text-align: center; /* Center nav buttons */
-     margin-top: 10px;
+     text-align: center;
+     margin-top: 8px;
    }
    .page-header nav .btn {
        margin-bottom: 5px;
