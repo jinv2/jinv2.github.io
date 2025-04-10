@@ -14,127 +14,113 @@ body { /* 省略不变的部分 */ }
 body::before { /* 省略不变的部分 */ }
 
 /* --- Header Styles --- */
-.page-header { /* 省略不变的部分 */
+.page-header {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
               url('{{ "/assets/images/ddd.jpg" | relative_url }}') no-repeat center center;
   background-size: cover; background-color: #1a237e; color: #ffffff;
-  padding-left: 110px; padding-top: 1.5rem; padding-bottom: 1.5rem; padding-right: 1rem;
-  min-height: 100px; border-bottom: 3px solid rgba(0, 121, 107, 0.7); box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  /* 调整 padding-left 以适应放大 3 倍的 LOGO */
+  /* Base width 75px * scale 3 = 225px. Add 20px gap = 245px */
+  padding-left: 245px;
+  padding-top: 2rem; /* 调整垂直 padding */
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+  min-height: 160px; /* 调整最小高度 */
+  border-bottom: 3px solid rgba(0, 121, 107, 0.7);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-.header-logo { /* 省略不变的部分 */
-  position: absolute; top: 15px; left: 15px; width: 90px; height: auto;
-  transform-origin: top left; z-index: 10;
-  mask-image: radial-gradient(ellipse at center, black 70%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 70%, transparent 100%);
+
+.header-logo {
+  position: absolute;
+  top: 20px; /* 调整位置 */
+  left: 20px;
+  width: 75px; /* 保持 BASE 宽度 */
+  height: auto;
+  transform: scale(3); /* <--- 修改这里！放大三倍 */
+  transform-origin: top left;
+  z-index: 10;
+  mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
 }
-.project-name { /* 省略不变的部分 */
+
+.project-name {
   font-family: $font-family-serif; margin-top: 0; margin-bottom: 0.6rem;
-  font-size: 1.9em; font-weight: 700; color: #ffffff;
+  font-size: 2em; /* 调整字号 */
+  font-weight: 700; color: #ffffff;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* 导航按钮区域 */
-.page-header nav {
-  margin-top: 10px;
-  text-align: center;
-}
+.page-header nav { /* 省略不变的部分 */ }
 
-/* 导航按钮通用样式 - 准备接收背景图 */
-.page-header nav .btn {
-  font-family: $font-family-sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: #ffffff; /* 强制白色文字 */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 加强阴影 */
-  background-color: rgba(0, 0, 0, 0.5); /* 更深的默认背景 */
-  background-size: cover;
-  background-position: center center;
-  transition: all 0.2s ease-in-out;
-  padding: 0.6rem 1.1rem; /* 稍微调整 padding */
-  margin: 0 3px 8px 3px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  border-radius: 4px;
-}
+/* 导航按钮通用样式 */
+.page-header nav .btn { /* 省略不变的部分 */ }
 
-/* --- V V V 为每个按钮单独设置背景图片 V V V --- */
-/* !!! 请根据您的按钮顺序和图片文件名修改下面的 url() !!! */
-
-/* 核心页面组 */
-.page-header nav a.btn:nth-of-type(1) { /* 首页 */
-  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/aaa.jpg" | relative_url }}');
-}
-.page-header nav a.btn:nth-of-type(2) { /* 博客 */
-  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/bbb.png" | relative_url }}'); /* 假设是 png */
-}
-.page-header nav a.btn:nth-of-type(3) { /* 关于 */
-  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/ccc.png" | relative_url }}'); /* 假设是 png */
-}
-.page-header nav a.btn:nth-of-type(4) { /* 联系我们 */
-  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/ddd.jpg" | relative_url }}'); /* 注意：ddd.jpg 已用于 Header，建议换一个 */
-}
-
-/* 平台组 1 (跳过分隔符，从第 5 个 a 标签开始) */
-.page-header nav a.btn:nth-of-type(5) { /* GitHub */
-  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/eee.jpg" | relative_url }}');
-}
-.page-header nav a.btn:nth-of-type(6) { /* Hugging Face */
-  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/fff.jpg" | relative_url }}');
-}
-
-/* 平台组 2 (跳过第二个分隔符，从第 7 个 a 标签开始) */
-.page-header nav a.btn:nth-of-type(7) { /* TikTok */
-  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/ggg.jpg" | relative_url }}');
-}
-.page-header nav a.btn:nth-of-type(8) { /* YouTube */
-  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/hhh.jpg" | relative_url }}');
-}
-/* --- ^ ^ ^ 结束单独设置 ^ ^ ^ --- */
-
+/* --- 为每个按钮单独设置背景图片 --- */
+/* !!! 再次确认文件名和顺序 !!! */
+.page-header nav a.btn:nth-of-type(1) { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/aaa.jpg" | relative_url }}'); }
+.page-header nav a.btn:nth-of-type(2) { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/bbb.png" | relative_url }}'); }
+.page-header nav a.btn:nth-of-type(3) { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/ccc.png" | relative_url }}'); }
+.page-header nav a.btn:nth-of-type(4) { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/eee.jpg" | relative_url }}'); } /* 使用 eee 替代 ddd */
+.page-header nav a.btn:nth-of-type(5) { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/fff.jpg" | relative_url }}'); }
+.page-header nav a.btn:nth-of-type(6) { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/ggg.jpg" | relative_url }}'); }
+.page-header nav a.btn:nth-of-type(7) { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/hhh.jpg" | relative_url }}'); }
+.page-header nav a.btn:nth-of-type(8) { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('{{ "/assets/images/iii.jpg" | relative_url }}'); } /* 使用 iii */
 
 /* 按钮悬停效果 */
-.page-header nav .btn:hover {
-  border-color: #ffffff;
-  color: #ffffff;
-  /* 悬停时可以加深蒙版，让背景图更暗 */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75));
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
-}
+.page-header nav .btn:hover { /* 省略不变的部分 */ }
 
 /* --- Navigation Separator Style --- */
-.nav-separator {
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0 8px;
-  font-size: 1.2em;
-  vertical-align: middle;
-}
+.nav-separator { /* 省略不变的部分 */ }
 
 /* --- Main Content Styles --- */
 .main-content { /* 省略不变的部分 */ }
-/* 其他样式 (标题, 链接, 图片, 列表, 分隔线, 引用块) 省略不变的部分... */
+/* 其他内容样式省略 */
 
-/* --- Footer Styles --- */
-.site-footer { /* 省略不变的部分 */ }
-/* 其他页脚样式省略 */
+/* --- Footer Styles - 恢复背景 --- */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2.5rem 1rem; /* 调整 padding */
+  color: rgba(255, 255, 255, 0.75);
+  /* V V V 恢复 Footer 背景图和蒙版 V V V */
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+              url('{{ "/assets/images/jjj.jpg" | relative_url }}') no-repeat center center; /* 使用 jjj.jpg */
+  background-size: cover;
+  background-color: #1a1d24; /* 后备颜色 */
+  /* ^ ^ ^ 结束恢复 ^ ^ ^ */
+  text-align: center;
+  font-family: $font-family-sans-serif;
+  position: relative;
+  z-index: 2;
+}
+.site-footer a { color: rgba(255, 255, 255, 0.95); }
+.site-footer a:hover { color: #ffffff; text-decoration: underline; }
 
 /* --- Responsive Styles --- */
 @media screen and (max-width: 768px) {
-  .page-header { /* 省略不变的部分 */ }
-  .header-logo { /* 省略不变的部分 */ }
-  .project-name { /* 省略不变的部分 */ }
-   .page-header nav { /* 省略不变的部分 */ }
-   .page-header nav .btn { /* 省略不变的部分 */ }
-   /* 小屏幕下可以考虑移除按钮背景图以简化 */
-   /*
-   .page-header nav a.btn { background-image: none !important; }
-   */
-   .nav-separator { /* 省略不变的部分 */ }
-   .main-content { /* 省略不变的部分 */ }
-   .site-footer { /* 省略不变的部分 */ }
-   /* 其他响应式规则省略 */
+  .page-header {
+    /* 调整小屏幕 padding-left */
+    /* Base width 50px * scale 2 = 100px. Add 15px gap = 115px */
+    padding-left: 115px;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    min-height: 100px; /* 调整高度 */
+    text-align: center;
+  }
+  .header-logo {
+    width: 50px; /* 小屏幕基础宽度 */
+    transform: scale(2); /* 小屏幕放大两倍 */
+    top: 12px;
+    left: 12px;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .project-name {
+    font-size: 1.6em;
+    text-align: center;
+    margin-left: -100px; /* 调整负边距 */
+  }
+  /* 其他响应式规则省略 */
 }
 
 /* --- 自定义样式结束 --- */
