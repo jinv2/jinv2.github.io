@@ -15,26 +15,19 @@ body {
   color: #333;
   font-family: $font-family-sans-serif;
   line-height: 1.6;
-  /* 使用 hhh.jpg 作为新的平铺背景 */
-  /* !!! 请确认 hhh.jpg 是您想用的 body 背景图文件名 !!! */
-  background-image: url('{{ "/assets/images/hhh.jpg" | relative_url }}');
+  background-image: url('{{ "/assets/images/hhh.jpg" | relative_url }}'); /* 使用 hhh.jpg 作为微妙背景 */
   background-repeat: repeat;
   background-attachment: fixed;
   position: relative;
   z-index: 1;
 }
-/* 调整伪元素蒙版的透明度，让背景更隐约可见一点 */
 body::before {
     content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(240, 242, 245, 0.9); /* <--- 透明度从 0.85 改为 0.9 (更透明一点点) */
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(240, 242, 245, 0.9); /* 90% 不透明蒙版 */
     z-index: -1;
 }
-
 
 /* --- Header Styles --- */
 .page-header {
@@ -51,44 +44,27 @@ body::before {
   min-height: 200px;
   border-bottom: 3px solid rgba(0, 150, 136, 0.6);
 }
-
-.header-logo {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  width: 75px;
-  height: auto;
-  transform: scale(2.67);
-  transform-origin: top left;
-  z-index: 10;
+.header-logo { /* 省略不变的部分 */
+  position: absolute; top: 18px; left: 18px; width: 75px; height: auto;
+  transform: scale(2.67); transform-origin: top left; z-index: 10;
   mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
 }
-
-.project-name {
-  font-family: $font-family-serif;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 2em;
-  font-weight: 700;
-  color: #ffffff;
+.project-name { /* 省略不变的部分 */
+  font-family: $font-family-serif; margin-top: 0; margin-bottom: 0.5rem;
+  font-size: 2em; font-weight: 700; color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-
-.page-header nav {
+.page-header nav { /* 省略不变的部分 */
   margin-top: 15px;
 }
-.page-header nav .btn {
-  font-family: $font-family-sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  color: rgba(255, 255, 255, 0.85);
-  background-color: rgba(0, 0, 0, 0.2);
+.page-header nav .btn { /* 省略不变的部分 */
+  font-family: $font-family-sans-serif; border: 1px solid rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85); background-color: rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 }
-.page-header nav .btn:hover {
-  border-color: #ffffff;
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
+.page-header nav .btn:hover { /* 省略不变的部分 */
+  border-color: #ffffff; color: #ffffff; background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* --- Main Content Styles --- */
@@ -96,128 +72,105 @@ body::before {
   max-width: 960px;
   margin: 2rem auto;
   padding: 2rem;
-  /* 内容区域背景保持不透明或接近不透明，保证阅读性 */
   background-color: #ffffff;
-  /* background-color: rgba(255, 255, 255, 0.98); */ /* 如果想非常轻微透视 */
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;
 }
 
-/* 其他样式 (标题, 链接, 分隔线, 引用块) 保持不变... */
+/* 内容区的标题 */
 .main-content h1, .main-content h2, .main-content h3,
 .main-content h4, .main-content h5, .main-content h6 {
-  font-family: $font-family-serif;
-  font-weight: 700;
-  margin-top: 1.5em;
-  margin-bottom: 0.8em;
-  color: #2a2e36;
+  font-family: $font-family-serif; font-weight: 700;
+  margin-top: 1.5em; margin-bottom: 0.8em; color: #2a2e36;
 }
+/* 内容区的段落等 */
 .main-content p, .main-content li, .main-content dt, .main-content dd {
   margin-bottom: 1em;
 }
-a {
- color: #00796b;
- text-decoration: none;
- transition: color 0.2s ease;
+/* 链接颜色 */
+a { color: #00796b; text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: #004d40; text-decoration: underline; }
+
+/* --- 内容中图片的样式 --- */
+.main-content img {
+  max-width: 100%; /* 确保图片不超过容器宽度 */
+  height: auto; /* 保持宽高比 */
+  display: block; /* 让 margin:auto 生效以居中 */
+  margin: 2em auto; /* 上下留白，左右居中 */
+  border-radius: 8px; /* 轻微圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 柔和阴影 */
 }
-a:hover {
- color: #004d40;
- text-decoration: underline;
+
+/* --- 无序列表样式 --- */
+.main-content ul {
+  list-style: none; /* 移除默认的黑点 */
+  padding-left: 0; /* 移除默认的左内边距 */
 }
-hr {
-  border: 0;
-  height: 2px;
+.main-content ul li {
+  padding-left: 1.5em; /* 为自定义符号留出空间 */
+  position: relative; /* 作为伪元素定位的相对基准 */
+  margin-bottom: 0.5em; /* 列表项之间的间距 */
+}
+.main-content ul li::before {
+  content: '•'; /* 使用实心圆点作为内容 */
+  position: absolute;
+  left: 0;
+  top: 0.05em; /* 微调垂直位置，使其与文字对齐 */
+  color: #00796b; /* 使用主题青色 */
+  font-weight: bold; /* 加粗符号 */
+  font-size: 1.2em; /* 稍微放大符号 */
+}
+
+/* --- 有序列表样式 (保持默认或稍作调整) --- */
+.main-content ol {
+    padding-left: 1.8em; /* 保留默认数字的空间 */
+    margin-bottom: 1em;
+}
+.main-content ol li {
+    margin-bottom: 0.5em;
+}
+
+/* --- 分隔线样式 --- */
+hr { /* 省略不变的部分 */
+  border: 0; height: 2px;
   background-image: linear-gradient(to right, rgba(0, 121, 107, 0), rgba(0, 121, 107, 0.75), rgba(0, 121, 107, 0));
-  margin: 3em auto;
-  width: 80%;
+  margin: 3em auto; width: 80%;
 }
-blockquote {
-  margin: 1.5em 0;
-  padding: 1em 1.5em;
-  border-left: 5px solid #00796b;
-  background-color: #e8f5e9;
-  color: #333;
-  font-style: italic;
-  border-radius: 4px;
+
+/* --- 引用块样式 --- */
+blockquote { /* 省略不变的部分 */
+  margin: 1.5em 0; padding: 1em 1.5em; border-left: 5px solid #00796b;
+  background-color: #e8f5e9; color: #333; font-style: italic; border-radius: 4px;
 }
-blockquote p:last-child {
-  margin-bottom: 0;
-}
+blockquote p:last-child { margin-bottom: 0; }
 
 /* --- Footer Styles --- */
-.site-footer {
-  margin-top: 3rem;
-  padding: 2rem 1rem;
-  color: rgba(255, 255, 255, 0.7);
+.site-footer { /* 省略不变的部分 */
+  margin-top: 3rem; padding: 2rem 1rem; color: rgba(255, 255, 255, 0.7);
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
               url('{{ "/assets/images/jjj.jpg" | relative_url }}') no-repeat center center;
-  background-size: cover;
-  background-color: #1a1d24;
-  text-align: center;
-  font-family: $font-family-sans-serif;
-  position: relative;
-  z-index: 2;
+  background-size: cover; background-color: #1a1d24; text-align: center;
+  font-family: $font-family-sans-serif; position: relative; z-index: 2;
 }
-.site-footer a {
-  color: rgba(255, 255, 255, 0.9);
-}
-.site-footer a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
+.site-footer a { color: rgba(255, 255, 255, 0.9); }
+.site-footer a:hover { color: #ffffff; text-decoration: underline; }
 
 /* --- Responsive Styles --- */
-@media screen and (max-width: 768px) {
-  .page-header {
-    padding-left: 100px;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    min-height: 120px;
-    text-align: center;
-  }
-
-  .header-logo {
-    width: 50px;
-    transform: scale(1.67);
-    top: 12px;
-    left: 12px;
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
-
-  .project-name {
-    font-size: 1.6em;
-    text-align: center;
-    margin-left: -85px;
-  }
-   .page-header nav {
-     text-align: center;
-     margin-top: 10px;
-   }
-   .page-header nav .btn {
-       display: inline-block;
-       margin-bottom: 5px;
-   }
-   .main-content {
-       padding: 1.5rem;
-       margin: 1.5rem auto;
-       background-color: #ffffff; /* 小屏幕内容背景不透明 */
-   }
-   .site-footer {
-       padding: 1.5rem 1rem;
-   }
-   hr {
-       width: 90%;
-       margin: 2em auto;
-   }
-   blockquote {
-       padding: 0.8em 1em;
-   }
-   body::before {
-       background-color: rgba(240, 242, 245, 0.95); /* 小屏幕上让背景更不明显 */
-   }
+@media screen and (max-width: 768px) { /* 省略不变的部分 */
+  .page-header { padding-left: 100px; padding-top: 1.5rem; padding-bottom: 1.5rem; min-height: 120px; text-align: center; }
+  .header-logo { width: 50px; transform: scale(1.67); top: 12px; left: 12px; mask-image: none; -webkit-mask-image: none; }
+  .project-name { font-size: 1.6em; text-align: center; margin-left: -85px; }
+  .page-header nav { text-align: center; margin-top: 10px; }
+  .page-header nav .btn { display: inline-block; margin-bottom: 5px; }
+  .main-content { padding: 1.5rem; margin: 1.5rem auto; background-color: #ffffff; }
+  .site-footer { padding: 1.5rem 1rem; }
+  hr { width: 90%; margin: 2em auto; }
+  blockquote { padding: 0.8em 1em; }
+  body::before { background-color: rgba(240, 242, 245, 0.95); }
+  /* 小屏幕下图片样式调整 */
+  .main-content img { margin: 1.5em auto; }
 }
 
 /* --- 自定义样式结束 --- */
