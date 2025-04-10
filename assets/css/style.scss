@@ -5,9 +5,9 @@
 
 /* --- 自定义样式开始 --- */
 
-/* -- Google Fonts (在 default.html 中引入) -- */
-$font-family-serif: 'Lora', Georgia, 'Times New Roman', Times, serif; // 标题字体
-$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // 正文字体
+/* -- Google Fonts -- */
+$font-family-serif: 'Lora', Georgia, 'Times New Roman', Times, serif;
+$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /* 整体页面背景和文字颜色 */
 body {
@@ -15,32 +15,31 @@ body {
   color: #333;
   font-family: $font-family-sans-serif;
   line-height: 1.6;
-  /* 添加微妙的平铺背景图 */
-  /* !!! 请确认 ggg.jpg 是您想用的 body 背景图文件名 !!! */
-  background-image: url('{{ "/assets/images/ggg.jpg" | relative_url }}');
-  background-repeat: repeat; /* 平铺 */
-  background-attachment: fixed; /* 背景固定，内容滚动 */
-  /* 通过伪元素叠加透明度，避免影响子元素 */
+  /* 使用 hhh.jpg 作为新的平铺背景 */
+  /* !!! 请确认 hhh.jpg 是您想用的 body 背景图文件名 !!! */
+  background-image: url('{{ "/assets/images/hhh.jpg" | relative_url }}');
+  background-repeat: repeat;
+  background-attachment: fixed;
   position: relative;
   z-index: 1;
 }
-/* 添加一个伪元素来控制 body 背景透明度 */
+/* 调整伪元素蒙版的透明度，让背景更隐约可见一点 */
 body::before {
     content: "";
-    position: fixed; /* 或者 absolute，根据需要 */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(240, 242, 245, 0.85); /* 浅灰色背景，85% 不透明度，遮盖下方图片 */
-    z-index: -1; /* 放在 body 内容之后，背景图之前 */
+    background-color: rgba(240, 242, 245, 0.9); /* <--- 透明度从 0.85 改为 0.9 (更透明一点点) */
+    z-index: -1;
 }
 
 
 /* --- Header Styles --- */
 .page-header {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), /* 稍微调整蒙版透明度 */
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
               url('{{ "/assets/images/ddd.jpg" | relative_url }}') no-repeat center center;
   background-size: cover;
   background-color: #1a237e;
@@ -62,9 +61,8 @@ body::before {
   transform: scale(2.67);
   transform-origin: top left;
   z-index: 10;
-  /* 添加边缘虚化效果 */
   mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%); /* 兼容 Webkit */
+  -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
 }
 
 .project-name {
@@ -98,13 +96,16 @@ body::before {
   max-width: 960px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.95); /* 让白色背景稍微透明，隐约透出 body 背景 */
+  /* 内容区域背景保持不透明或接近不透明，保证阅读性 */
+  background-color: #ffffff;
+  /* background-color: rgba(255, 255, 255, 0.98); */ /* 如果想非常轻微透视 */
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  position: relative; /* 确保 z-index 生效 */
-  z-index: 2; /* 确保内容区域在 body 背景之上 */
+  position: relative;
+  z-index: 2;
 }
 
+/* 其他样式 (标题, 链接, 分隔线, 引用块) 保持不变... */
 .main-content h1, .main-content h2, .main-content h3,
 .main-content h4, .main-content h5, .main-content h6 {
   font-family: $font-family-serif;
@@ -113,12 +114,9 @@ body::before {
   margin-bottom: 0.8em;
   color: #2a2e36;
 }
-
 .main-content p, .main-content li, .main-content dt, .main-content dd {
   margin-bottom: 1em;
 }
-
-/* 链接颜色调整 */
 a {
  color: #00796b;
  text-decoration: none;
@@ -128,30 +126,25 @@ a:hover {
  color: #004d40;
  text-decoration: underline;
 }
-
-/* --- 分隔线样式 --- */
 hr {
   border: 0;
-  height: 2px; /* 线条高度 */
-  background-image: linear-gradient(to right, rgba(0, 121, 107, 0), rgba(0, 121, 107, 0.75), rgba(0, 121, 107, 0)); /* 青色渐变 */
-  margin: 3em auto; /* 上下边距，左右居中 */
-  width: 80%; /* 分隔线宽度 */
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 121, 107, 0), rgba(0, 121, 107, 0.75), rgba(0, 121, 107, 0));
+  margin: 3em auto;
+  width: 80%;
 }
-
-/* --- 引用块样式 --- */
 blockquote {
   margin: 1.5em 0;
   padding: 1em 1.5em;
-  border-left: 5px solid #00796b; /* 左侧加青色边框 */
-  background-color: #e8f5e9; /* 非常浅的绿色背景 */
+  border-left: 5px solid #00796b;
+  background-color: #e8f5e9;
   color: #333;
-  font-style: italic; /* 斜体 */
+  font-style: italic;
   border-radius: 4px;
 }
 blockquote p:last-child {
-  margin-bottom: 0; /* 移除引用块内最后一个段落的下边距 */
+  margin-bottom: 0;
 }
-
 
 /* --- Footer Styles --- */
 .site-footer {
@@ -164,10 +157,9 @@ blockquote p:last-child {
   background-color: #1a1d24;
   text-align: center;
   font-family: $font-family-sans-serif;
-  position: relative; /* 确保 z-index 生效 */
-  z-index: 2; /* 确保页脚在 body 背景之上 */
+  position: relative;
+  z-index: 2;
 }
-
 .site-footer a {
   color: rgba(255, 255, 255, 0.9);
 }
@@ -191,7 +183,6 @@ blockquote p:last-child {
     transform: scale(1.67);
     top: 12px;
     left: 12px;
-    /* 小屏幕下可以禁用或减弱 mask */
     mask-image: none;
     -webkit-mask-image: none;
   }
@@ -212,22 +203,21 @@ blockquote p:last-child {
    .main-content {
        padding: 1.5rem;
        margin: 1.5rem auto;
-       background-color: rgba(255, 255, 255, 1); /* 小屏幕内容背景不透明 */
+       background-color: #ffffff; /* 小屏幕内容背景不透明 */
    }
    .site-footer {
        padding: 1.5rem 1rem;
    }
    hr {
-       width: 90%; /* 小屏幕分隔线更宽 */
+       width: 90%;
        margin: 2em auto;
    }
    blockquote {
        padding: 0.8em 1em;
    }
-   /* 小屏幕下 body 背景效果可能不佳，可以考虑禁用 */
-    body::before {
-        /* background-color: rgba(240, 242, 245, 1); */ /* 完全不透明 */
-    }
+   body::before {
+       background-color: rgba(240, 242, 245, 0.95); /* 小屏幕上让背景更不明显 */
+   }
 }
 
 /* --- 自定义样式结束 --- */
