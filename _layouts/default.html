@@ -15,6 +15,11 @@
   <body>
     <div class="wrapper">
       <header class="page-header" role="banner">
+
+        <!-- V V V V V 在 Header 内添加 LOGO V V V V V -->
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="天算AI Logo" class="header-logo">
+        <!-- ^ ^ ^ ^ ^ Header 内 LOGO 结束 ^ ^ ^ ^ ^ -->
+
         <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
         <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
         
@@ -35,11 +40,7 @@
       </header>
 
       <main id="content" class="main-content" role="main">
-
-        <!-- V V V V V 在这里添加全局 LOGO V V V V V -->
-        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="天算AI Logo" style="float: left; margin-right: 15px; margin-bottom: 10px; width: 200px; height: auto;">
-        <!-- ^ ^ ^ ^ ^ 全局 LOGO 结束 ^ ^ ^ ^ ^ -->
-
+        <!-- 确保这里没有旧的 LOGO 代码 -->
         {{ content }} 
 
         <footer class="site-footer">
