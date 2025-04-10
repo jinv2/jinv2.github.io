@@ -14,16 +14,20 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- 使用 header 标签 -->
       <header class="page-header" role="banner">
 
-        <!-- V V V V V 使用正确的文件名 TSLOGO.png V V V V V -->
-        <img src="{{ '/assets/images/TSLOGO.png' | relative_url }}" alt="天算AI Logo" class="header-logo"> 
-        <!-- ^ ^ ^ ^ ^ 确保文件名和大小写完全匹配！ ^ ^ ^ ^ ^ -->
+        <!-- 添加一个容器包裹 LOGO 和标题 -->
+        <div class="header-main">
+          <img src="{{ '/assets/images/TSLOGO.png' | relative_url }}" alt="天算AI Logo" class="header-logo">
+          <!-- 直接写入标题，并使用 project-name 类方便样式控制 -->
+          <h1 class="project-name">天算AI (Natural Algorithm)</h1>
+        </div>
 
-        <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-        
-        <nav style="margin-top: 15px;">
+        <!-- 移除 Tagline h2 标签 -->
+
+        <!-- 保留导航按钮 -->
+        <nav style="margin-top: 20px;"> <!-- 稍微增加导航和上方内容的间距 -->
           <a href="{{ '/' | relative_url }}" class="btn">首页</a>
           <a href="{{ '/blog/' | relative_url }}" class="btn">博客</a>
           <a href="{{ '/about/' | relative_url }}" class="btn">关于</a>
@@ -39,9 +43,9 @@
 
       </header>
 
+      <!-- 使用 main 标签 -->
       <main id="content" class="main-content" role="main">
-        <!-- 确保这里没有旧的 LOGO 代码 -->
-        {{ content }} 
+        {{ content }}
 
         <footer class="site-footer">
           {% if site.github.is_project_page %}
