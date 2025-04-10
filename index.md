@@ -1,50 +1,49 @@
 ---
-layout: default # 确保主页使用我们统一的 default 布局
-title: "天算AI - 首页" # 为主页定义一个标题 (显示在浏览器标签栏等地方)
-# date, categories, tags 这些通常不用于主页，可以省略
+layout: default # 使用 Cayman 主题的默认布局
+title: 关于天算AI
+permalink: /about/
 ---
 
-<!-- V V V V V V V V V V V V V V V V V V V V V V V -->
-<!--  以下内容直接来自您提供的 welcome-to-my-blog.md  -->
-<!-- V V V V V V V V V V V V V V V V V V V V V V V -->
+# 关于天算AI
 
-<!-- 头部 LOGO 和文字 -->
-<div style="text-align: center; margin-bottom: 20px;"> 
-  <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="天算AI Logo" style="width: 100px; height: auto; vertical-align: middle; margin-right: 10px;"> 
-  <span style="font-size: 2em; font-weight: bold; vertical-align: middle;">天算AI</span>
-</div>
-<hr> 
-<!-- LOGO 和文字结束 -->
+<!-- V V V 添加的介绍性文字 V V V -->
+AI科技博主 
+AI科技研发
+科技前沿最新AI资讯影视化报道 
+<!-- ^ ^ ^ 介绍性文字结束 ^ ^ ^ -->
 
-<!-- 这里不需要再显示文章标题 # {{ page.title }} 了 -->
+---
 
-大家好！欢迎来到 **天算AI** 的官方博客。
+<!-- V V V 添加的数字资产列表 V V V -->
+## 天算AI数字资产：
 
-在这里，我将分享关于人工智能 (AI) 科技的研发进展、前沿资讯的影视化解读，以及个人的学习和思考。
+*   5万字原创诗文
+*   7千分钟原创交响乐
+*   9千部原创AI短视频
+*   16项原创AI科技产品
+*   7个天算AI大语言模型
+<!-- ^ ^ ^ 数字资产列表结束 ^ ^ ^ -->
 
-**我的目标是：**
+---
 
-*   探索 AI 的无限可能
-*   分享最新的科技动态
-*   记录原创内容的创作历程
+<!-- V V V 添加的标识文字 V V V -->
+天算AI（Natural Algorithm）
+<!-- ^ ^ ^ 标识文字结束 ^ ^ ^ -->
 
-## 关注我的 YouTube 频道
+---
 
-除了文字内容，我也会在 YouTube 上发布相关的视频内容，包括 AI 资讯的影视化报道、原创音乐和短视频等。
+<!-- V V V 添加的主页链接和联系方式 V V V -->
+## 更多信息
 
-欢迎订阅我的频道：[天算AI YouTube 频道](https://www.youtube.com/@jinvjinvbar)
+*   **天算AI主页：** <a href="https://jinvbar.github.io/tsai/" target="_blank">https://jinvbar.github.io/tsai/</a>
+*   **联系方式 (邮箱)：** ssk937520@gmail.com
+<!-- ^ ^ ^ 主页链接和联系方式结束 ^ ^ ^ -->
 
-**(如果您想嵌入某个具体的 YouTube 视频，可以这样做：)**
-<!-- 
-1. 打开那个 YouTube 视频页面。
-2. 点击 "分享" (Share) -> "嵌入" (Embed)。
-3. 复制提供的 `<iframe ...></iframe>` 代码。
-4. 将代码粘贴到这里。
-例如:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/替换成视频ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
--->
-
-期待与大家一同在 AI 的世界里探索和成长！
-
-<!-- 主页通常不需要文章末尾的“最新文章”和“返回主页”链接 -->
-<!-- 如果您提供的原始文件末尾有这些内容，它们在这里已经被省略 -->
+<!-- 页面底部的导航链接 (保持不变) -->
+<hr>
+<p>
+  <a href="{{ '/' | relative_url }}">首页</a> |
+  <a href="{{ '/blog/' | relative_url }}">博客</a> |
+  <a href="{{ '/about/' | relative_url }}">关于</a> |
+  <a href="{{ '/contact/' | relative_url }}">联系我们</a>
+</p>
