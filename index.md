@@ -1,6 +1,6 @@
 ---
-layout: page # 改回使用 page 布局，希望能获得合适的头部样式
-title: 天算AI (Natural Algorithm) # 这个标题可能会显示在页面头部
+layout: page # 继续使用 page 布局
+title: 天算AI (Natural Algorithm) # 页面主标题，由布局显示
 ---
 
 <!-- Logo 使用绝对定位放在左上角 -->
@@ -10,29 +10,48 @@ title: 天算AI (Natural Algorithm) # 这个标题可能会显示在页面头部
 <!-- 用一个 div 包裹主要内容，并添加上内边距 (padding-top) 为 Logo 留出空间 -->
 <div style="padding-top: 80px;"> <!-- 如果 Logo 下方的空白太多或太少，请调整这里的 80px -->
 
-    <!-- ↓↓↓ 欢迎信息作为主要内容 ↓↓↓ -->
+    <!-- ↓↓↓ 经过样式化的欢迎内容 ↓↓↓ -->
 
-    大家好！欢迎来到 天算AI 的官方博客。
+    <!-- 第一个段落块：浅灰色背景 -->
+    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+        <p style="color: #343a40; margin-bottom: 10px;">大家好！欢迎来到 天算AI 的官方博客。</p>
+        <p style="color: #495057;">在这里，我将分享关于人工智能 (AI) 科技的研发进展、前沿资讯的影视化解读，以及个人的学习和思考。</p>
+    </div>
 
-    在这里，我将分享关于人工智能 (AI) 科技的研发进展、前沿资讯的影视化解读，以及个人的学习和思考。
+    <!-- 目标列表块：略微不同的样式，例如加个边框 -->
+    <div style="border: 1px solid #dee2e6; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+        <h3 style="color: #0056b3; margin-top: 0;">我的目标是：</h3>
+        <ul style="color: #495057; padding-left: 20px;">
+            <li>探索 AI 的无限可能</li>
+            <li>分享最新的科技动态</li>
+            <li>记录原创内容的创作历程</li>
+        </ul>
+    </div>
 
-    我的目标是：
+    <!-- YouTube 频道块：可以用不同的背景或文字颜色强调 -->
+    <div style="background-color: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+        <h2 style="color: #007bff; margin-top: 0;">关注我的 YouTube 频道</h2>
+        <p style="color: #495057;">除了文字内容，我也会在 YouTube 上发布相关的视频内容，包括 AI 资讯的影视化报道、原创音乐和短视频等。</p>
+        <p style="margin-top: 15px;">
+            欢迎订阅我的频道：<a href="https://www.youtube.com/@jinvjinvbar" target="_blank" style="color: #0056b3; font-weight: bold;">天算AI YouTube 频道</a> <!-- 已更新为新链接 -->
+        </p>
 
-    *   探索 AI 的无限可能
-    *   分享最新的科技动态
-    *   记录原创内容的创作历程
+        <!-- ↓↓↓ 新添加的 YouTube 视频嵌入 ↓↓↓ -->
+        <div style="text-align: center; margin: 25px 0 15px 0;"> <!-- 居中并添加上下边距 -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dF-a3G49w60?si=VZELf8RTM9nVDlkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <!-- ↑↑↑ 新添加的 YouTube 视频嵌入 ↑↑↑ -->
 
-    ## 关注我的 YouTube 频道
+    </div>
 
-    除了文字内容，我也会在 YouTube 上发布相关的视频内容，包括 AI 资讯的影视化报道、原创音乐和短视频等。
-
-    欢迎订阅我的频道：[天算AI YouTube 频道](https://www.youtube.com/@tiansuanai) <!-- 请确认这里的链接是正确的 -->
-
-    期待与大家一同在 AI 的世界里探索和成长！
+    <!-- 结束语块：简单样式 -->
+    <div style="padding: 10px 0;">
+      <p style="color: #6c757d; text-align: center;">期待与大家一同在 AI 的世界里探索和成长！</p>
+    </div>
 
     ---
 
-    <!-- ↓↓↓ 重新添加最新博客文章列表 ↓↓↓ -->
+    <!-- ↓↓↓ 最新博客文章列表 ↓↓↓ -->
 
     ## 最新博客文章
 
