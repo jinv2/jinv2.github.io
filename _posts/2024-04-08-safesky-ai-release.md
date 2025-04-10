@@ -2,21 +2,15 @@
 layout: default # 使用 Cayman 主题的默认布局
 title: "步步惊心，智绘安全！天算AI第七弹，重磅来袭！（在线测试）" # 文章标题
 date: 2024-04-08 10:00:00 +0800 # 文章日期，与文件名一致
-categories: [AI安全, 模型发布] # 文章分类 (用列表格式更标准)
+categories: [AI安全, 模型发布] # 文章分类
 tags: [SafeSky AI, Gemma, AI安全, 开源, 知识图谱] # 文章标签
 ---
 
-<!-- 头部 LOGO 和文字 -->
-<div style="text-align: center; margin-bottom: 20px;">
-  <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="天算AI Logo" style="width: 100px; height: auto; vertical-align: middle; margin-right: 10px;">
-  <span style="font-size: 2em; font-weight: bold; vertical-align: middle;">天算AI</span>
-</div>
-<hr>
-<!-- LOGO 和文字结束 -->
+<!-- V V V V V 确保这里没有了内嵌的 LOGO 和 天算AI 文字代码块 V V V V V -->
 
-<!-- V V V V V 在这里添加文章标题 V V V V V -->
-# {{ page.title }}
-<!-- ^ ^ ^ ^ ^ 文章标题结束 ^ ^ ^ ^ ^ -->
+# {{ page.title }} <!-- 文章标题保留在这里 -->
+
+<!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ -->
 
 人工智能，重塑世界的力量！自动驾驶、科研突破… 但“幻觉”、逻辑断裂、偏见固化，这些AI的阴影，正考验着智能社会的信任与安全！
 
