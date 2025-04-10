@@ -25,28 +25,33 @@
           <img src="{{ '/assets/images/TSLOGO.png' | relative_url }}" alt="天算AI Logo" class="header-logo">
           <h1 class="project-name">天算AI (Natural Algorithm)</h1>
         </div>
-        <!-- V V V V V 添加分隔符 V V V V V -->
-        <nav style="margin-top: 20px;">
-          <!-- 核心页面 -->
+        <!-- V V V V V 调整导航按钮顺序和分隔符 V V V V V -->
+        <nav style="margin-top: 10px;"> <!-- 调整了 margin-top -->
+          <!-- 第一组：核心页面 -->
           <a href="{{ '/' | relative_url }}" class="btn">首页</a>
           <a href="{{ '/blog/' | relative_url }}" class="btn">博客</a>
           <a href="{{ '/about/' | relative_url }}" class="btn">关于</a>
           <a href="{{ '/contact/' | relative_url }}" class="btn">联系我们</a>
 
-          <!-- 添加分隔符 -->
+          <!-- 第一个分隔符 -->
           <span class="nav-separator">|</span>
 
-          <!-- 外部平台 -->
-          <a href="https://huggingface.co/jinv2" class="btn" target="_blank" rel="noopener noreferrer">Hugging Face</a>
-          <a href="https://www.tiktok.com/@jinvjinvbar" class="btn" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.youtube.com/@jinvjinvbar" class="btn" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <!-- 第二组：代码与模型平台 -->
           {% if site.github.is_project_page %}
             <a href="{{ site.github.repository_url }}" class="btn">GitHub</a>
           {% endif %}
+          <a href="https://huggingface.co/jinv2" class="btn" target="_blank" rel="noopener noreferrer">Hugging Face</a>
+
+          <!-- 第二个分隔符 -->
+          <span class="nav-separator">|</span>
+
+          <!-- 第三组：社交媒体 -->
+          <a href="https://www.tiktok.com/@jinvjinvbar" class="btn" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.youtube.com/@jinvjinvbar" class="btn" target="_blank" rel="noopener noreferrer">YouTube</a>
 
           <!-- 下载按钮（如果存在） -->
           {% if site.show_downloads %}
-            <span class="nav-separator">|</span> <!-- 可选：也加个分隔符 -->
+            <span class="nav-separator">|</span>
             <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
             <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
           {% endif %}
