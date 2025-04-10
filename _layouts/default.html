@@ -15,25 +15,25 @@
   <body>
     <div class="wrapper">
       <header class="page-header" role="banner">
-        <!-- V V V V V 修改下面这行 V V V V V -->
         <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-        <!-- ^ ^ ^ ^ ^ 修改上面这行 ^ ^ ^ ^ ^ -->
         <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-        {% if site.github.is_project_page %}
-          <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-        {% endif %}
-        {% if site.show_downloads %}
-          <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-          <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-        {% endif %}
-
-        <!-- 添加简单的页面导航 -->
+        
+        <!-- V V V V V 修改后的导航部分 V V V V V -->
+        <!-- 所有按钮都放在 nav 标签内 -->
         <nav style="margin-top: 15px;">
           <a href="{{ '/' | relative_url }}" class="btn">首页</a>
           <a href="{{ '/blog/' | relative_url }}" class="btn">博客</a>
           <a href="{{ '/about/' | relative_url }}" class="btn">关于</a>
           <a href="{{ '/contact/' | relative_url }}" class="btn">联系我们</a>
+          {% if site.github.is_project_page %}
+            <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+          {% endif %}
+          {% if site.show_downloads %}
+            <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+            <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+          {% endif %}
         </nav>
+        <!-- ^ ^ ^ ^ ^ 修改后的导航部分 ^ ^ ^ ^ ^ -->
 
       </header>
 
