@@ -10,76 +10,100 @@ $font-family-serif: 'Lora', Georgia, 'Times New Roman', Times, serif;
 $font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /* 整体页面背景和文字颜色 */
-body { /* 省略不变的部分 */ }
-body::before { /* 省略不变的部分 */ }
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  font-family: $font-family-sans-serif;
+  line-height: 1.6;
+  background-image: url('{{ "/assets/images/iii.jpg" | relative_url }}'); /* 使用 iii.jpg 作为微妙背景 */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+body::before {
+    content: "";
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(232, 234, 246, 0.95); /* 95% 不透明蒙版 */
+    z-index: -1;
+}
 
 /* --- Header Styles --- */
-.page-header { /* 省略不变的部分 */ }
-.header-logo { /* 省略不变的部分 */ }
-.project-name { /* 省略不变的部分 */ }
+.page-header {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+              url('{{ "/assets/images/ddd.jpg" | relative_url }}') no-repeat center center;
+  background-size: cover;
+  background-color: #1a237e;
+  color: #ffffff;
+  /* 调整 padding-left 以适应新的 LOGO 宽度 (90px) + 间距 (20px) */
+  padding-left: 110px;
+  padding-top: 1.5rem; /* 减少垂直 padding */
+  padding-bottom: 1.5rem;
+  padding-right: 1rem;
+  min-height: 100px; /* 大幅减少最小高度 */
+  border-bottom: 3px solid rgba(0, 121, 107, 0.7); /* 调整边框 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-logo {
+  position: absolute;
+  top: 15px; /* 调整位置 */
+  left: 15px;
+  width: 90px; /* <--- 直接设置合适的宽度 */
+  height: auto;
+  /* 移除 transform: scale() */
+  transform-origin: top left; /* 保留以防万一，但 scale 已移除 */
+  z-index: 10;
+  /* 调整 mask 效果或暂时移除 */
+  mask-image: radial-gradient(ellipse at center, black 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 70%, transparent 100%);
+}
+
+.project-name {
+  font-family: $font-family-serif;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.9em; /* 可以根据新的 LOGO 大小调整 */
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
 
 /* 导航按钮区域 */
 .page-header nav {
-  margin-top: 15px;
-  text-align: center; /* 确保按钮容器居中 */
+  margin-top: 10px; /* 减小与标题的间距 */
 }
 
-/* 导航按钮通用样式 */
+/* 导航按钮通用样式 - 移除独立背景图，恢复简洁样式 */
 .page-header nav .btn {
   font-family: $font-family-sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.5); /* 边框更柔和 */
-  color: #ffffff; /* 文字强制白色 */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 加强文字阴影以提高可读性 */
-  background-color: rgba(0, 0, 0, 0.4); /* 默认深色半透明背景 */
-  background-size: cover; /* 背景图覆盖按钮 */
-  background-position: center center; /* 背景图居中 */
+  border: 1px solid rgba(255, 255, 255, 0.6); /* 边框稍柔和 */
+  color: rgba(255, 255, 255, 0.9); /* 文字清晰 */
+  text-shadow: none; /* 移除文字阴影，因为背景变简单了 */
+  background-color: rgba(0, 0, 0, 0.2); /* 统一的半透明深色背景 */
+  background-image: none !important; /* 强制移除背景图 */
   transition: all 0.2s ease-in-out;
-  padding: 0.6rem 1.2rem;
-  margin: 0 3px 8px 3px; /* 按钮间加一点水平和底部间距，以防换行 */
-  display: inline-block; /* 确保按钮正确排列 */
-  position: relative; /* 用于可能的伪元素叠加 */
-  z-index: 1; /* 确保按钮在背景之上 */
-  overflow: hidden; /* 防止背景图溢出 */
+  padding: 0.5rem 1rem; /* 调整按钮大小 */
+  margin: 0 3px 8px 3px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 4px; /* 加回一点圆角 */
 }
 
-/* 为每个按钮单独设置背景图片 */
-/* !!! 请确保文件名和顺序是您想要的 !!! */
-.page-header nav .btn:nth-child(1) { /* 首页 */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ "/assets/images/aaa.jpg" | relative_url }}');
-}
-.page-header nav .btn:nth-child(2) { /* 博客 */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ "/assets/images/bbb.png" | relative_url }}'); /* 注意可能是 png */
-}
-.page-header nav .btn:nth-child(3) { /* 关于 */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ "/assets/images/ccc.png" | relative_url }}'); /* 注意可能是 png */
-}
-.page-header nav .btn:nth-child(4) { /* 联系我们 */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ "/assets/images/eee.jpg" | relative_url }}');
-}
-.page-header nav .btn:nth-child(5) { /* Hugging Face */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ "/assets/images/fff.jpg" | relative_url }}');
-}
-.page-header nav .btn:nth-child(6) { /* TikTok */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ "/assets/images/ggg.jpg" | relative_url }}');
-}
-.page-header nav .btn:nth-child(7) { /* YouTube */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ "/assets/images/hhh.jpg" | relative_url }}');
-}
-/* 注意：GitHub 按钮是第 8 个，前提是 if 条件满足 */
-.page-header nav .btn:nth-child(8) { /* GitHub */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('{{ "/assets/images/iii.jpg" | relative_url }}'); /* 使用 iii.jpg */
-}
-/* 如果还有下载按钮 (第 9, 10 个)，它们也会继承通用样式，但没有单独背景图 */
+/* 移除 :nth-child 的背景图规则 */
 
-
-/* 按钮悬停效果 */
+/* 按钮悬停效果 - 统一 */
 .page-header nav .btn:hover {
   border-color: #ffffff;
   color: #ffffff;
-  background-color: rgba(0, 121, 107, 0.6); /* 悬停时用主题色半透明覆盖 */
-  /* 可以选择在悬停时不显示背景图，或让背景图变暗 */
-  // background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)); /* 悬停时加深蒙版 */
-  box-shadow: 0 0 10px rgba(255,255,255,0.3); /* 加一点辉光 */
+  background-color: rgba(0, 121, 107, 0.5); /* 悬停变主题色 */
+  box-shadow: none; /* 移除之前的辉光 */
 }
 
 /* --- Main Content Styles --- */
@@ -88,10 +112,37 @@ body::before { /* 省略不变的部分 */ }
 
 /* --- Footer Styles --- */
 .site-footer { /* 省略不变的部分 */ }
-.site-footer a { /* 省略不变的部分 */ }
-.site-footer a:hover { /* 省略不变的部分 */ }
+/* 其他页脚样式省略 */
 
 /* --- Responsive Styles --- */
-@media screen and (max-width: 768px) { /* 省略不变的部分 */ }
+@media screen and (max-width: 768px) {
+  .page-header {
+    padding-left: 80px; /* 根据小屏幕 LOGO 宽度 (60px) + 间距 (20px) 调整 */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    min-height: 80px; /* 调整高度 */
+    text-align: center;
+  }
+
+  .header-logo {
+    width: 60px; /* 小屏幕 LOGO 宽度 */
+    top: 10px; /* 调整位置 */
+    left: 10px;
+    mask-image: none; /* 小屏幕不虚化 */
+    -webkit-mask-image: none;
+  }
+
+  .project-name {
+    font-size: 1.6em;
+    text-align: center;
+    margin-left: 0; /* 移除负边距，因为 header 已居中 */
+    margin-top: 0.5rem; /* 可能需要一点上边距 */
+  }
+   .page-header nav { text-align: center; margin-top: 8px; }
+   .page-header nav .btn { padding: 0.4rem 0.8rem; } /* 按钮缩小 */
+   /* 其他响应式规则省略 */
+   .main-content { background-color: #ffffff;} /* 小屏幕背景不透明 */
+   body::before { background-color: rgba(232, 234, 246, 0.98); } /* 小屏幕蒙版更不透明 */
+}
 
 /* --- 自定义样式结束 --- */
