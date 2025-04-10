@@ -1,68 +1,50 @@
 ---
-layout: page # 确保使用我们修改过的 page 布局
-title: 天算AI # 供浏览器标签等使用，头部固定显示“天算AI”
+layout: default # 确保主页使用我们统一的 default 布局
+title: "天算AI - 首页" # 为主页定义一个标题 (显示在浏览器标签栏等地方)
+# date, categories, tags 这些通常不用于主页，可以省略
 ---
 
-<!-- Logo 和 大标题 "天算AI" 现在由 _layouts/page.html 处理，这里不再需要 -->
+<!-- V V V V V V V V V V V V V V V V V V V V V V V -->
+<!--  以下内容直接来自您提供的 welcome-to-my-blog.md  -->
+<!-- V V V V V V V V V V V V V V V V V V V V V V V -->
 
-<!-- 主要内容区域 -->
-<div> <!-- 不再需要很大的 padding-top，因为 header 提供了空间 -->
-
-    <!-- ↓↓↓ 恢复原来的样式化欢迎内容 ↓↓↓ -->
-
-    <!-- 第一个段落块：浅灰色背景 -->
-    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-        <p style="color: #343a40; margin-bottom: 10px;">大家好！欢迎来到 天算AI 的官方博客。</p>
-        <p style="color: #495057;">在这里，我将分享关于人工智能 (AI) 科技的研发进展、前沿资讯的影视化解读，以及个人的学习和思考。</p>
-    </div>
-
-    <!-- 目标列表块：略微不同的样式，例如加个边框 -->
-    <div style="border: 1px solid #dee2e6; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-        <h3 style="color: #0056b3; margin-top: 0;">我的目标是：</h3>
-        <ul style="color: #495057; padding-left: 20px;">
-            <li>探索 AI 的无限可能</li>
-            <li>分享最新的科技动态</li>
-            <li>记录原创内容的创作历程</li>
-        </ul>
-    </div>
-
-    <!-- YouTube 频道块：可以用不同的背景或文字颜色强调 -->
-    <div style="background-color: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-        <h2 style="color: #007bff; margin-top: 0;">关注我的 YouTube 频道</h2>
-        <p style="color: #495057;">除了文字内容，我也会在 YouTube 上发布相关的视频内容，包括 AI 资讯的影视化报道、原创音乐和短视频等。</p>
-        <p style="margin-top: 15px;">
-            欢迎订阅我的频道：<a href="https://www.youtube.com/@jinvjinvbar" target="_blank" style="color: #0056b3; font-weight: bold;">天算AI YouTube 频道</a> <!-- 确认链接正确 -->
-        </p>
-
-        <!-- YouTube 视频嵌入 -->
-        <div style="text-align: center; margin: 25px 0 15px 0;"> <!-- 居中并添加上下边距 -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/KtcN0AdthQY?si=li5KLtUoEl220yfZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-    </div>
-
-    <!-- 结束语块：简单样式 -->
-    <div style="padding: 10px 0;">
-      <p style="color: #6c757d; text-align: center;">期待与大家一同在 AI 的世界里探索和成长！</p>
-    </div>
-
-    ---
-
-    <!-- ↓↓↓ 最新博客文章列表 ↓↓↓ -->
-
-    ## 最新博客文章
-
-    <ul>
-      {% for post in site.posts limit:5 %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
-        </li>
-      {% endfor %}
-    </ul>
-
-    {% if site.posts.size > 0 %} <!-- 检查是否有文章 -->
-      <p><a href="{{ '/blog/' | relative_url }}">查看所有文章</a></p> <!-- 请确认 /blog/ 是你文章列表页的正确路径 -->
-    {% endif %}
-
-<!-- 主要内容 div 在这里结束 -->
+<!-- 头部 LOGO 和文字 -->
+<div style="text-align: center; margin-bottom: 20px;"> 
+  <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="天算AI Logo" style="width: 100px; height: auto; vertical-align: middle; margin-right: 10px;"> 
+  <span style="font-size: 2em; font-weight: bold; vertical-align: middle;">天算AI</span>
 </div>
+<hr> 
+<!-- LOGO 和文字结束 -->
+
+<!-- 这里不需要再显示文章标题 # {{ page.title }} 了 -->
+
+大家好！欢迎来到 **天算AI** 的官方博客。
+
+在这里，我将分享关于人工智能 (AI) 科技的研发进展、前沿资讯的影视化解读，以及个人的学习和思考。
+
+**我的目标是：**
+
+*   探索 AI 的无限可能
+*   分享最新的科技动态
+*   记录原创内容的创作历程
+
+## 关注我的 YouTube 频道
+
+除了文字内容，我也会在 YouTube 上发布相关的视频内容，包括 AI 资讯的影视化报道、原创音乐和短视频等。
+
+欢迎订阅我的频道：[天算AI YouTube 频道](https://www.youtube.com/@jinvjinvbar)
+
+**(如果您想嵌入某个具体的 YouTube 视频，可以这样做：)**
+<!-- 
+1. 打开那个 YouTube 视频页面。
+2. 点击 "分享" (Share) -> "嵌入" (Embed)。
+3. 复制提供的 `<iframe ...></iframe>` 代码。
+4. 将代码粘贴到这里。
+例如:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/替换成视频ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+-->
+
+期待与大家一同在 AI 的世界里探索和成长！
+
+<!-- 主页通常不需要文章末尾的“最新文章”和“返回主页”链接 -->
+<!-- 如果您提供的原始文件末尾有这些内容，它们在这里已经被省略 -->
