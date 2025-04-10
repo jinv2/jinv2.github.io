@@ -1,22 +1,43 @@
 ---
 ---
-@import "{{ site.theme }}"; // 这行会导入 Cayman 主题的原始样式
-/* Navigation Styles */
-.main-nav {
-  text-align: center; /* 居中导航链接 */
-  background-color: #f2f2f2; /* 浅灰色背景 */
-  padding: 10px 0; /* 上下留白 */
-  border-bottom: 1px solid #ddd; /* 底部加条线 */
-  margin-bottom: 20px; /* 和下方内容留点距离 */
+@import "{{ site.theme }}"; // 导入 Cayman 主题的原始样式
+
+/* Custom Header Logo Styles */
+.page-header {
+  position: relative; /* 使绝对定位的子元素相对于此 header 定位 */
+  /* 恢复默认或较小的内边距，因为 logo 变小了 */
+   padding-top: 1rem; /* 尝试恢复默认或稍大一点 */
+   padding-left: 1rem; /* 尝试恢复默认或稍大一点 */
+   padding-right: 1rem; /* 确保右边也有边距 */
 }
 
-.main-nav a {
-  margin: 0 15px; /* 链接之间留点空隙 */
-  color: #333; /* 链接文字颜色 */
-  text-decoration: none; /* 去掉下划线 */
-  font-weight: bold; /* 文字加粗 */
+.header-logo {
+  position: absolute; /* 绝对定位，脱离文档流 */
+  top: 15px;          /* 距离 header 顶部稍微减小一点 */
+  left: 15px;         /* 距离 header 左侧稍微减小一点 */
+  width: 40px;        /* <--- 设置 logo 宽度为 40px */
+  height: auto;       /* 保持宽高比 */
+  z-index: 10;        /* 确保 logo 在其他内容之上 (可选) */
 }
 
-.main-nav a:hover {
-  color: #007bff; /* 鼠标悬停时变色 */
+/* (可选) 移除或减小标题、标语、导航的左边距调整 */
+.page-header .project-name {
+   margin-top: 0; /* 尝试恢复默认 */
+   margin-left: 0; /* 移除左边距调整 */
 }
+.page-header .project-tagline {
+   margin-left: 0; /* 移除左边距调整 */
+}
+ .page-header nav {
+   margin-top: 15px; /* 保持或调整 */
+   margin-left: 0; /* 移除左边距调整 */
+ }
+ 
+/* 清除浮动 (如果布局文件里没有 float:left 的 logo 了，这个可能不再需要) */
+/* 
+.main-content::before {
+    content: "";
+    display: table;
+    clear: both;
+} 
+*/
