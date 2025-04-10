@@ -17,84 +17,36 @@ body::before { /* 省略不变的部分 */ }
 .page-header { /* 省略不变的部分 */ }
 .header-logo { /* 省略不变的部分 */ }
 .project-name { /* 省略不变的部分 */ }
-
-/* --- 导航容器样式 --- */
-.nav-container { /* 省略不变的部分 */ }
-.nav-left, .nav-right { /* 省略不变的部分 */ }
-.nav-left { /* 省略不变的部分 */ }
-.nav-right { /* 省略不变的部分 */ }
-
-/* 导航按钮通用样式 */
-.page-header nav .btn {
-  font-family: $font-family-sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: #ffffff;
-  /* 调整文字阴影 */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* 阴影稍柔和 */
-  background-color: rgba(0, 0, 0, 0.3); /* 默认背景色也浅一点 */
-  background-size: cover;
-  background-position: center center;
-  transition: all 0.2s ease-in-out;
-  padding: 0.6rem 1.1rem;
-  margin: 0 3px 8px 3px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-
-/* --- V V V 为每个按钮单独设置背景图片 (减弱蒙版) V V V --- */
-/* !!! 请根据您的按钮顺序和图片文件名修改下面的 url() !!! */
-
-/* 左侧导航按钮背景 */
-.nav-left a.btn:nth-of-type(1) { /* 首页 */
-  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.3)), url('{{ "/assets/images/aaa.jpg" | relative_url }}');
-}
-.nav-left a.btn:nth-of-type(2) { /* 博客 */
-  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.3)), url('{{ "/assets/images/bbb.png" | relative_url }}');
-}
-/* 第三个是分隔符 span */
-.nav-left a.btn:nth-of-type(3) { /* Hugging Face */
-  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.3)), url('{{ "/assets/images/fff.jpg" | relative_url }}');
-}
-.nav-left a.btn:nth-of-type(4) { /* GitHub */
-  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.3)), url('{{ "/assets/images/eee.jpg" | relative_url }}');
-}
-
-/* 右侧导航按钮背景 */
-.nav-right a.btn:nth-of-type(1) { /* TikTok */
-  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.3)), url('{{ "/assets/images/ggg.jpg" | relative_url }}');
-}
-.nav-right a.btn:nth-of-type(2) { /* YouTube */
-  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.3)), url('{{ "/assets/images/hhh.jpg" | relative_url }}');
-}
-/* 第三个是分隔符 span */
-.nav-right a.btn:nth-of-type(3) { /* 关于 */
-  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.3)), url('{{ "/assets/images/ccc.png" | relative_url }}');
-}
-.nav-right a.btn:nth-of-type(4) { /* 联系我们 */
-  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.3)), url('{{ "/assets/images/iii.jpg" | relative_url }}');
-}
-/* --- ^ ^ ^ 结束单独设置 ^ ^ ^ --- */
-
-
-/* 按钮悬停效果 */
-.page-header nav .btn:hover {
-  border-color: #ffffff;
-  color: #ffffff;
-  /* 悬停时加深蒙版 */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.65));
-  box-shadow: 0 0 8px rgba(255,255,255,0.2); /* 调整辉光 */
-}
-
-/* --- Navigation Separator Style --- */
+.page-header nav { /* 省略不变的部分 */ }
+.page-header nav .btn { /* 省略不变的部分 */ }
+/* 按钮背景图规则省略不变的部分... */
+.page-header nav .btn:hover { /* 省略不变的部分 */ }
 .nav-separator { /* 省略不变的部分 */ }
 
 /* --- Main Content Styles --- */
-.main-content { /* 省略不变的部分 */ }
-/* 其他内容样式省略 */
+.main-content {
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 2.5rem;
+  /* V V V 修改背景色为半透明白色 V V V */
+  background-color: rgba(255, 255, 255, 0.92); /* 92% 不透明度的白色 */
+  /* ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ */
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 2;
+}
+
+/* 内容区的标题等 (保持不变) */
+.main-content h1, .main-content h2, .main-content h3,
+.main-content h4, .main-content h5, .main-content h6 { /* ... */ }
+.main-content p, .main-content li, .main-content dt, .main-content dd { /* ... */ }
+a { /* ... */ } a:hover { /* ... */ }
+.main-content img { /* ... */ }
+.main-content ul { /* ... */ } .main-content ul li { /* ... */ } .main-content ul li::before { /* ... */ }
+.main-content ol { /* ... */ } .main-content ol li { /* ... */ }
+hr { /* ... */ }
+blockquote { /* ... */ }
 
 /* --- Footer Styles --- */
 .site-footer { /* 省略不变的部分 */ }
@@ -103,11 +55,11 @@ body::before { /* 省略不变的部分 */ }
 /* --- Responsive Styles --- */
 @media screen and (max-width: 960px) { /* 省略不变的部分 */ }
 @media screen and (max-width: 768px) {
-    /* 小屏幕下按钮样式简化 */
-    .page-header nav .btn {
-        background-image: none !important; /* 强制移除背景图 */
-        background-color: rgba(0, 0, 0, 0.3); /* 统一深色背景 */
-        text-shadow: none; /* 移除阴影 */
+    /* 小屏幕下内容背景恢复不透明，保证阅读 */
+    .main-content {
+        padding: 1.5rem;
+        margin: 2rem auto;
+        background-color: #ffffff; /* <--- 恢复为纯白 */
     }
     /* 其他响应式规则省略 */
 }
