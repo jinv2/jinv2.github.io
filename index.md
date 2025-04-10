@@ -4,7 +4,8 @@ title: 天算AI 主页
 ---
 
 <div style="text-align: center; margin-bottom: 15px;"> <!-- Logo 居中显示 -->
-  <img src="/assets/images/天算LOGO3.png" alt="天算AI Logo" width="100">
+  <img src="{{ '/assets/images/天算LOGO3.png' | relative_url }}" alt="天算AI Logo" width="100">
+  <!-- 使用 relative_url 过滤器确保路径正确 -->
   <!-- 您可以修改 width="100" 来调整 Logo 大小 -->
 </div>
 
