@@ -14,123 +14,99 @@ body { /* 省略不变的部分 */ }
 body::before { /* 省略不变的部分 */ }
 
 /* --- Header Styles --- */
-.page-header {
-  position: relative;
-  /* V V V 修改 Header 背景图片为 lll.jpg V V V */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), /* 保持蒙版 */
-              url('{{ "/assets/images/lll.jpg" | relative_url }}') no-repeat center top;
-  /* ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ */
-  background-size: cover; background-color: #1a237e; color: #ffffff;
-  padding-left: 100px; padding-top: 1.5rem; padding-bottom: 1.5rem; padding-right: 1rem;
-  min-height: auto; border-bottom: 3px solid rgba(0, 121, 107, 0.7);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: flex; flex-direction: column; align-items: center;
-}
-
-/* Header 内主内容区 (LOGO + Title) */
+.page-header { /* 省略不变的部分 */ }
 .header-main { /* 省略不变的部分 */ }
 .header-logo { /* 省略不变的部分 */ }
 .project-name { /* 省略不变的部分 */ }
 
 /* --- 导航容器样式 --- */
-.nav-container { /* 省略不变的部分 */ }
-.nav-left, .nav-right { /* 省略不变的部分 */ }
-.nav-left { /* 省略不变的部分 */ }
-.nav-right { /* 省略不变的部分 */ }
+.nav-container {
+  display: flex;
+  justify-content: center; /* 居中对齐导航组 */
+  align-items: center;
+  flex-wrap: nowrap; /* <--- 修改这里！强制不换行 */
+  margin-top: 15px;
+  width: 95%;
+  max-width: 1100px;
+  overflow-x: auto; /* 如果内容实在超出，允许水平滚动 (可选) */
+  -webkit-overflow-scrolling: touch; /* 移动端平滑滚动 (可选) */
+}
+
+/* 左侧和右侧导航通用样式 */
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* 确保组内也不换行 */
+}
+.nav-left { justify-content: center; margin-right: 8px; /* 调整组间距 */ }
+.nav-right { justify-content: center; margin-left: 8px; /* 调整组间距 */ }
 
 /* 导航按钮通用样式 */
 .page-header nav .btn {
   font-family: $font-family-sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.4); /* 更弱的边框 */
-  color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* 非常强的阴影以提高对比度 */
-  background-color: rgba(0, 0, 0, 0.1); /* 非常浅的默认背景 */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 加强阴影以便看清 */
+  background-color: rgba(0, 0, 0, 0.4);
   background-size: cover;
   background-position: center center;
   transition: all 0.2s ease-in-out;
-  padding: 0.5rem 1rem;
-  margin: 0 3px 8px 3px;
+  padding: 0.5rem 0.9rem; /* 微调 padding */
+  margin: 0 2px; /* <--- 修改这里！减小按钮左右间距 */
   display: inline-block;
   position: relative;
   z-index: 1;
   overflow: hidden;
   border-radius: 4px;
   white-space: nowrap;
-  min-width: 85px; /* 稍微调整宽度 */
+  min-width: auto; /* 移除最小宽度，让按钮更紧凑 */
   text-align: center;
 }
 
-/* --- V V V 恢复按钮背景图，使用非常弱的蒙版 V V V --- */
-/* !!! 请最终确认文件名和顺序 !!! */
-
-/* 左侧导航按钮背景 */
-.nav-left a.btn:nth-of-type(1) { /* 首页 */
-  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/aaa.jpg" | relative_url }}');
-}
-.nav-left a.btn:nth-of-type(2) { /* 博客 */
-  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/bbb.png" | relative_url }}');
-}
-.nav-left a.btn:nth-of-type(3) { /* Hugging Face */
-  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/fff.jpg" | relative_url }}');
-}
-.nav-left a.btn:nth-of-type(4) { /* GitHub */
-  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/eee.jpg" | relative_url }}');
-}
-
-/* 右侧导航按钮背景 (新顺序) */
-.nav-right a.btn:nth-of-type(1) { /* YouTube */
-  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/hhh.jpg" | relative_url }}');
-}
-.nav-right a.btn:nth-of-type(2) { /* TikTok */
-  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/ggg.jpg" | relative_url }}');
-}
-.nav-right a.btn:nth-of-type(3) { /* 关于 */
-  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/ccc.png" | relative_url }}');
-}
-.nav-right a.btn:nth-of-type(4) { /* 联系我们 */
-  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.15)), url('{{ "/assets/images/iii.jpg" | relative_url }}');
-}
-/* --- ^ ^ ^ 结束单独设置 ^ ^ ^ --- */
+/* --- 按钮背景图规则 (保持不变) --- */
+/* !!! 再次确认文件名和顺序 !!! */
+.nav-left a.btn:nth-of-type(1) { /* ... */ }
+.nav-left a.btn:nth-of-type(2) { /* ... */ }
+.nav-left a.btn:nth-of-type(3) { /* ... */ }
+.nav-left a.btn:nth-of-type(4) { /* ... */ }
+.nav-right a.btn:nth-of-type(1) { /* ... */ }
+.nav-right a.btn:nth-of-type(2) { /* ... */ }
+.nav-right a.btn:nth-of-type(3) { /* ... */ }
+.nav-right a.btn:nth-of-type(4) { /* ... */ }
 
 /* 按钮悬停效果 */
-.page-header nav .btn:hover {
-  border-color: #ffffff;
-  color: #ffffff;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)); /* 悬停时加深蒙版 */
-  box-shadow: 0 0 8px rgba(255,255,255,0.2);
-}
+.page-header nav .btn:hover { /* 省略不变的部分 */ }
 
 /* --- Navigation Separator Style --- */
-.nav-separator { /* 省略不变的部分 */ }
+.nav-separator {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 6px; /* <--- 修改这里！减小分隔符左右间距 */
+  font-size: 1em;
+  vertical-align: baseline;
+}
 
 /* --- Main Content Styles --- */
 .main-content { /* 省略不变的部分 */ }
 /* 其他内容样式省略 */
 
-/* --- Footer Styles - 修改背景 --- */
-.site-footer {
-  margin-top: 4rem;
-  padding: 2.5rem 1rem;
-  color: rgba(255, 255, 255, 0.75);
-  /* V V V 修改 Footer 背景图片为 lll.jpg V V V */
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
-              url('{{ "/assets/images/lll.jpg" | relative_url }}') no-repeat center center;
-  /* ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ */
-  background-size: cover; background-color: #1a1d24; /* 后备 */
-  text-align: center; font-family: $font-family-sans-serif; position: relative; z-index: 2;
-}
-.site-footer a { /* 省略不变的部分 */ }
-.site-footer a:hover { /* 省略不变的部分 */ }
+/* --- Footer Styles --- */
+.site-footer { /* 省略不变的部分 */ }
+/* 其他页脚样式省略 */
 
 /* --- Responsive Styles --- */
-@media screen and (max-width: 960px) { /* 省略不变的部分 */ }
+@media screen and (max-width: 960px) {
+    /* 中等屏幕下恢复允许换行，并居中 */
+    .nav-container { flex-wrap: wrap; justify-content: center; }
+    .nav-left { margin-right: 0; margin-bottom: 8px; } /* 移除右边距，增加下边距 */
+    .nav-right { margin-left: 0; } /* 移除左边距 */
+    /* 其他中等屏幕调整省略 */
+}
 @media screen and (max-width: 768px) {
-    /* 小屏幕按钮简化 */
-    .page-header nav .btn {
-        background-image: none !important; /* 强制移除背景图 */
-        background-color: rgba(0, 0, 0, 0.3);
-        text-shadow: none;
-    }
-    /* 其他响应式规则省略 */
+    /* 小屏幕下强制垂直排列 */
+    .nav-container { flex-direction: column; }
+    .nav-left, .nav-right { margin-bottom: 10px; }
+    /* 其他小屏幕调整省略 */
 }
 
 /* --- 自定义样式结束 --- */
