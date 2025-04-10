@@ -1,41 +1,43 @@
 ---
-layout: post # 继续使用 post 布局
-title: "天算AI 简介与数字资产" # 可以把标题改成更符合内容的，比如这个
-date: 2024-04-07 00:00:00 +0800 # 保留原始发布日期
-# categories: [介绍] # 可以根据新内容调整分类
-# tags: [简介, 资产] # 可以根据新内容调整标签
+layout: default # 使用 Cayman 主题的默认布局
+title: "欢迎来到天算AI博客！" # 文章标题
+date: 2024-04-06 15:00:00 +0800 # 文章日期 (请确保与文件名日期匹配或为您想要的日期)
+categories: 介绍 欢迎 # 可选分类
+tags: [欢迎, Jekyll, GitHub Pages] # 可选标签
 ---
 
-<!-- ↓↓↓ 这里是新的博客文章内容（原来主页的内容）↓↓↓ -->
-
-## 天算AI数字资产：
-
-*   5万字原创诗文
-*   7千分钟原创交响乐
-*   9千部原创AI短视频
-*   16项原创AI科技产品
-*   7个天算AI大语言模型
-
----
-
-<div style="text-align: center; margin: 20px 0;"> <!-- YouTube 视频居中显示 -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SLv6RcKpPWM?si=m8IxR8b4vTZKTXEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- 在这里添加 LOGO 和文字 -->
+<div style="text-align: center; margin-bottom: 20px;"> 
+  <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="天算AI Logo" style="width: 100px; height: auto; vertical-align: middle; margin-right: 10px;"> 
+  <span style="font-size: 2em; font-weight: bold; vertical-align: middle;">天算AI</span>
 </div>
+<hr> 
+<!-- LOGO 和文字结束 -->
 
-天算AI (Natural Algorithm)
+大家好！欢迎来到 **天算AI** 的官方博客。
 
----
+在这里，我将分享关于人工智能 (AI) 科技的研发进展、前沿资讯的影视化解读，以及个人的学习和思考。
 
-## 最新博客文章（从此页面查看）
+**我的目标是：**
 
-<ul>
-  {% for post in site.posts limit:5 %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
-    </li>
-  {% endfor %}
-</ul>
+*   探索 AI 的无限可能
+*   分享最新的科技动态
+*   记录原创内容的创作历程
 
-{% if site.posts.size > 0 %} <!-- 检查是否有文章 -->
-  <p><a href="{{ '/blog/' | relative_url }}">查看所有文章</a></p> <!-- 确认 /blog/ 是你文章列表页的正确路径 -->
-{% endif %}
+## 关注我的 YouTube 频道
+
+除了文字内容，我也会在 YouTube 上发布相关的视频内容，包括 AI 资讯的影视化报道、原创音乐和短视频等。
+
+欢迎订阅我的频道：[天算AI YouTube 频道](https://www.youtube.com/@jinvjinvbar)
+
+**(如果您想嵌入某个具体的 YouTube 视频，可以这样做：)**
+<!-- 
+1. 打开那个 YouTube 视频页面。
+2. 点击 "分享" (Share) -> "嵌入" (Embed)。
+3. 复制提供的 `<iframe ...></iframe>` 代码。
+4. 将代码粘贴到这里。
+例如:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/替换成视频ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+-->
+
+期待与大家一同在 AI 的世界里探索和成长！
