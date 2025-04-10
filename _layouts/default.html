@@ -26,7 +26,6 @@
           <h1 class="project-name">天算AI (Natural Algorithm)</h1>
         </div>
 
-        <!-- V V V V V 新的导航容器和分组 V V V V V -->
         <div class="nav-container">
           <!-- 左侧导航 -->
           <nav class="nav-left">
@@ -39,14 +38,15 @@
             {% endif %}
           </nav>
 
-          <!-- 右侧导航 -->
+          <!-- 右侧导航 - 调整顺序 -->
           <nav class="nav-right">
-            <a href="https://www.tiktok.com/@jinvjinvbar" class="btn" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <!-- V V V 调换 YouTube 和 TikTok 位置 V V V -->
             <a href="https://www.youtube.com/@jinvjinvbar" class="btn" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.tiktok.com/@jinvjinvbar" class="btn" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ -->
             <span class="nav-separator">|</span>
             <a href="{{ '/about/' | relative_url }}" class="btn">关于</a>
             <a href="{{ '/contact/' | relative_url }}" class="btn">联系我们</a>
-            <!-- 下载按钮通常也放右侧或单独一行 -->
             {% if site.show_downloads %}
                <span class="nav-separator">|</span>
                <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -54,7 +54,6 @@
             {% endif %}
           </nav>
         </div>
-        <!-- ^ ^ ^ ^ ^ 结束调整 ^ ^ ^ ^ ^ -->
       </header>
 
       <!-- main 内容 -->
