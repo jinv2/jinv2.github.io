@@ -77,13 +77,3 @@
 ## 📄 许可证 (License)
 
 本仓库的代码和内容遵循 **MIT License**。请查看仓库根目录下的 `LICENSE` 文件获取详细信息。
-*(如果你还没有 LICENSE 文件，建议添加一个。)*
-
----
-
-## 📫 联系我 (Contact)
-
-*   **博客主页:** [https://jinvbar.github.io/tsai/](https://jinvbar.github.io/tsai/)
-*   **邮箱 (Email):** ssk937520@gmail.com
-
-感谢你的访问和关注！
