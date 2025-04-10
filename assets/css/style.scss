@@ -10,62 +10,45 @@ $font-family-serif: 'Lora', Georgia, 'Times New Roman', Times, serif;
 $font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /* 整体页面背景和文字颜色 */
-body { /* 省略不变的部分 */ }
-body::before { /* 省略不变的部分 */ }
+body {
+  background-color: #dfe2f1;
+  color: #333;
+  font-family: $font-family-sans-serif;
+  line-height: 1.6;
+  background-image: url('{{ "/assets/images/iii.jpg" | relative_url }}');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+/* 调整蒙版和模糊 */
+body::before {
+    content: "";
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(223, 226, 241, 0.92);
+    z-index: -1;
+} /* <--- 已删除多余的分号 */
 
 /* --- Header Styles --- */
 .page-header {
   position: relative;
-  /* V V V 修改 Header 背景图片定位为 center top V V V */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-              url('{{ "/assets/images/kkk.jpg" | relative_url }}') no-repeat center top; /* 改为 center top */
-  /* ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ */
-  background-size: cover; /* 保持覆盖 */
-  background-color: #1a237e; /* 后备色 */ color: #ffffff;
-  /* V V V 调整 padding-left 以适应修正后的 LOGO 宽度 (80px) V V V */
-  padding-left: 110px; /* 80px logo + 30px gap */
-  padding-top: 1.5rem;
-2.  **Header 背景图定位:** 让 `kkk.jpg` 只显示其上半部分。
-
-**请修改 CSS 文件 (`assets/css/style.scss`)**
-
-将您仓库中 `assets/css/style.scss` 文件的内容**完全替换**为以下代码。这个版本修正了 LOGO 大小，并调整了 Header 背景图的位置：
-
-```scss
----
-# Import theme styles
----
-@import "{{ site.theme }}";
-
-/* --- 自定义样式开始 --- */
-
-/* -- Google Fonts -- */
-$font-family-serif: 'Lora', Georgia, 'Times New Roman', Times, serif;
-$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
-/* 整体页面背景和文字颜色 */
-body { /* 省略不变的部分 */ }
-body::before { /* 省略不变的部分 */ }
-
-/* --- Header Styles --- */
-.page-header {
-  position: relative;
-  /* V V V 修改 Header 背景图定位为 center top V V V */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-              url('{{ "/assets/images/kkk.jpg" | relative_url }}') no-repeat center top; /* 改为 center top */
-  /* ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ */
+              url('{{ "/assets/images/kkk.jpg" | relative_url }}') no-repeat center top; /* 背景定位 top */
   background-size: cover; background-color: #1a237e; color: #ffffff;
-  /* V V V 恢复合理的 padding-left V V V */
-  padding-left: 100px; /* 基于 80px LOGO + 20px 间距 */
+  padding-left: 100px; /* 恢复合理的 padding */
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-right: 1rem;
-  min-height: auto; /* 移除最小高度，让内容自然撑开 */
+  min-height: auto; /* 移除最小高度 */
   border-bottom: 3px solid rgba(0, 121, 107, 0.7);
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  align-items: center; /* 保持子元素居中 */
+  align-items: center;
 }
 
 /* Header 内主内容区 (LOGO + Title) */
@@ -78,22 +61,18 @@ body::before { /* 省略不变的部分 */ }
 }
 
 .header-logo {
-  /* V V V 恢复 LOGO 合理尺寸 V V V */
-  position: static; /* 保持流式布局 */
-  width: 80px; /* 设置合适的宽度 */
+  position: static;
+  width: 80px; /* 恢复合理尺寸 */
   height: auto;
-  margin-right: 20px; /* LOGO 和标题间距 */
-  /* 移除 transform */
-  /* 移除 mask */
+  margin-right: 20px;
   mask-image: none;
   -webkit-mask-image: none;
-  /* ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ */
 }
 
 .project-name {
   font-family: $font-family-serif;
   margin: 0;
-  font-size: 1.9em; /* 调整字号 */
+  font-size: 1.9em;
   font-weight: 700;
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
@@ -107,30 +86,9 @@ body::before { /* 省略不变的部分 */ }
 .nav-right { /* 省略不变的部分 */ }
 
 /* 导航按钮通用样式 - 保持简洁 */
-.page-header nav .btn {
-  font-family: $font-family-sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: none;
-  background-color: rgba(0, 0, 0, 0.25);
-  background-image: none !important; /* 确保无背景图 */
-  transition: all 0.2s ease-in-out;
-  padding: 0.5rem 1rem;
-  margin: 0 3px 8px 3px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  border-radius: 4px;
-  white-space: nowrap;
-  min-width: 80px;
-  text-align: center;
-}
-/* 移除单独按钮背景图规则 */
-
+.page-header nav .btn { /* 省略不变的部分 */ }
 /* 按钮悬停效果 */
 .page-header nav .btn:hover { /* 省略不变的部分 */ }
-
 /* --- Navigation Separator Style --- */
 .nav-separator { /* 省略不变的部分 */ }
 
@@ -139,26 +97,11 @@ body::before { /* 省略不变的部分 */ }
 /* 其他内容样式省略 */
 
 /* --- Footer Styles --- */
-.site-footer {
-  /* V V V 确认 Footer 背景图定位为 center center V V V */
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
-              url('{{ "/assets/images/kkk.jpg" | relative_url }}') no-repeat center center; /* 保持 center center */
-  background-size: cover;
-  /* 其他 Footer 样式省略不变的部分 */
-}
+.site-footer { /* 省略不变的部分 */ }
 /* 其他页脚样式省略 */
 
 /* --- Responsive Styles --- */
-@media screen and (max-width: 960px) {
-    .page-header { padding-left: 1rem; padding-right: 1rem; } /* 移除固定左 padding */
-    .header-logo { width: 70px; margin: 0 15px 0 0; } /* 中屏幕 LOGO */
-    .project-name { font-size: 1.8em; }
-}
-@media screen and (max-width: 768px) {
-    .header-main { flex-direction: column; margin-bottom: 10px;}
-    .header-logo { width: 65px; margin: 0 auto 8px auto; } /* 小屏幕 LOGO */
-    .project-name { font-size: 1.6em; }
-    /* 其他响应式规则省略 */
-}
+@media screen and (max-width: 960px) { /* 省略不变的部分 */ }
+@media screen and (max-width: 768px) { /* 省略不变的部分 */ }
 
 /* --- 自定义样式结束 --- */
