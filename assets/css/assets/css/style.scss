@@ -1,0 +1,44 @@
+---
+---
+@import "{{ site.theme }}"; // 导入 Cayman 主题的原始样式
+
+/* Custom Header Logo Styles */
+.page-header {
+  position: relative; /* 使绝对定位的子元素相对于此 header 定位 */
+  padding-top: 20px; /* 稍微增加顶部内边距，给 logo 留空间 */
+  padding-left: 20px; /* 稍微增加左侧内边距 */
+  /* 如果标题文字与 logo 重叠，可能需要更大的 padding-left */
+  /* padding-left: 180px; */ 
+}
+
+.header-logo {
+  position: absolute; /* 绝对定位，脱离文档流 */
+  top: 20px;          /* 距离 header 顶部 20px (可调整) */
+  left: 20px;         /* 距离 header 左侧 20px (可调整) */
+  width: 150px;       /* 设置 logo 宽度 (您可以调整, 比原来100px大一半) */
+  height: auto;       /* 保持宽高比 */
+  z-index: 10;        /* 确保 logo 在其他内容之上 (可选) */
+}
+
+/* (可选) 调整标题和标语的上边距，避免离 logo 太近 */
+.page-header .project-name {
+   margin-top: 10px; /* 根据需要调整 */
+   /* 可能也需要增加左边距，如果 logo 很大 */
+   /* margin-left: 180px; */ 
+}
+.page-header .project-tagline {
+   /* 可以根据需要添加调整 */
+   /* margin-left: 180px; */
+}
+/* (可选) 调整导航按钮的上边距 */
+ .page-header nav {
+   margin-top: 25px; /* 稍微增大与上方内容的距离 */
+   /* margin-left: 180px; */
+ }
+ 
+/* (可选) 确保内容区的浮动被清除，如果之前有 float:left 的 logo */
+.main-content::before {
+    content: "";
+    display: table;
+    clear: both;
+}
