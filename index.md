@@ -1,4 +1,13 @@
+---
 layout: home
+title: 天算AI 主页
+---
+
+<div style="text-align: center; margin-bottom: 15px;"> <!-- Logo 居中显示 -->
+  <img src="/assets/images/天算LOGO3.png" alt="天算AI Logo" width="100">
+  <!-- 您可以修改 width="100" 来调整 Logo 大小 -->
+</div>
+
 # 天算AI
 
 AI科技博主 | AI科技研发 | 科技前沿最新AI资讯影视化报道
@@ -14,8 +23,13 @@ AI科技博主 | AI科技研发 | 科技前沿最新AI资讯影视化报道
 *   7个天算AI大语言模型
 
 ---
+
+<div style="text-align: center; margin: 20px 0;"> <!-- YouTube 视频居中显示 -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SLv6RcKpPWM?si=m8IxR8b4vTZKTXEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-天算AI（Natural Algorithm）
+</div>
+
+天算AI (Natural Algorithm)
+
 ---
 
 ## 最新博客文章
@@ -28,7 +42,6 @@ AI科技博主 | AI科技研发 | 科技前沿最新AI资讯影视化报道
   {% endfor %}
 </ul>
 
-{% if site.posts.size > 5 %}
-  <p><a href="#">查看所有文章</a> <!-- 这里将来可以链接到专门的博客页面 --> </p>
+{% if site.posts.size > 0 %} <!-- 检查是否有文章 -->
+  <p><a href="{{ '/blog/' | relative_url }}">查看所有文章</a></p> <!-- 确认 /blog/ 是你文章列表页的正确路径 -->
 {% endif %}
-<p><a href="{{ '/blog/' | relative_url }}">查看所有文章</a></p>
