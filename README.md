@@ -1,4 +1,4 @@
-# 天算AI (TNatural Algorithm)
+# 天算AI (Natural Algorithm)
 
 ✨ AI科技博主 | AI科技研发 | 前沿资讯影视化报道 ✨
 
