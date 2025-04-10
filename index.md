@@ -1,6 +1,6 @@
 ---
-layout: post # 继续使用 post 布局以获取背景和头部样式
-title: 天算AI (Natural Algorithm) # 主页标题，可能会显示在头部
+layout: page # 改回使用 page 布局，希望能获得合适的头部样式
+title: 天算AI (Natural Algorithm) # 这个标题可能会显示在页面头部
 ---
 
 <!-- Logo 使用绝对定位放在左上角 -->
@@ -10,7 +10,7 @@ title: 天算AI (Natural Algorithm) # 主页标题，可能会显示在头部
 <!-- 用一个 div 包裹主要内容，并添加上内边距 (padding-top) 为 Logo 留出空间 -->
 <div style="padding-top: 80px;"> <!-- 如果 Logo 下方的空白太多或太少，请调整这里的 80px -->
 
-    <!-- ↓↓↓ 这里是新的主页内容（原来博客文章的内容）↓↓↓ -->
+    <!-- ↓↓↓ 欢迎信息作为主要内容 ↓↓↓ -->
 
     大家好！欢迎来到 天算AI 的官方博客。
 
@@ -29,6 +29,24 @@ title: 天算AI (Natural Algorithm) # 主页标题，可能会显示在头部
     欢迎订阅我的频道：[天算AI YouTube 频道](https://www.youtube.com/@tiansuanai) <!-- 请确认这里的链接是正确的 -->
 
     期待与大家一同在 AI 的世界里探索和成长！
+
+    ---
+
+    <!-- ↓↓↓ 重新添加最新博客文章列表 ↓↓↓ -->
+
+    ## 最新博客文章
+
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if site.posts.size > 0 %} <!-- 检查是否有文章 -->
+      <p><a href="{{ '/blog/' | relative_url }}">查看所有文章</a></p> <!-- 请确认 /blog/ 是你文章列表页的正确路径 -->
+    {% endif %}
 
 <!-- 包裹内容的 div 在这里结束 -->
 </div>
