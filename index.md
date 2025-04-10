@@ -1,14 +1,14 @@
 ---
-layout: page # 确保使用 page 布局
-title: 天算AI # 这个 title 可能不再直接显示在头部，但对浏览器标签等仍有用
+layout: page # 确保使用我们修改过的 page 布局
+title: 天算AI # 供浏览器标签等使用，头部固定显示“天算AI”
 ---
 
-<!-- Logo 和 大标题 "天算AI" 由 _layouts/page.html 文件提供，这里不需要再写 -->
+<!-- Logo 和 大标题 "天算AI" 现在由 _layouts/page.html 处理，这里不再需要 -->
 
 <!-- 主要内容区域 -->
-<div> <!-- 不再需要很大的 padding-top -->
+<div> <!-- 不再需要很大的 padding-top，因为 header 提供了空间 -->
 
-    <!-- ↓↓↓ 经过样式化的欢迎内容 ↓↓↓ -->
+    <!-- ↓↓↓ 恢复原来的样式化欢迎内容 ↓↓↓ -->
 
     <!-- 第一个段落块：浅灰色背景 -->
     <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
