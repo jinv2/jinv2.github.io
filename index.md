@@ -33,14 +33,14 @@ title: 天算AI (Natural Algorithm) # 页面主标题，由布局显示
         <h2 style="color: #007bff; margin-top: 0;">关注我的 YouTube 频道</h2>
         <p style="color: #495057;">除了文字内容，我也会在 YouTube 上发布相关的视频内容，包括 AI 资讯的影视化报道、原创音乐和短视频等。</p>
         <p style="margin-top: 15px;">
-            欢迎订阅我的频道：<a href="https://www.youtube.com/@jinvjinvbar" target="_blank" style="color: #0056b3; font-weight: bold;">天算AI YouTube 频道</a> <!-- 已更新为新链接 -->
+            欢迎订阅我的频道：<a href="https://www.youtube.com/@jinvjinvbar" target="_blank" style="color: #0056b3; font-weight: bold;">天算AI YouTube 频道</a> <!-- 确认链接正确 -->
         </p>
 
-        <!-- ↓↓↓ 新添加的 YouTube 视频嵌入 ↓↓↓ -->
+        <!-- ↓↓↓ YouTube 视频嵌入 - 已替换为新视频 ↓↓↓ -->
         <div style="text-align: center; margin: 25px 0 15px 0;"> <!-- 居中并添加上下边距 -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/dF-a3G49w60?si=VZELf8RTM9nVDlkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/KtcN0AdthQY?si=li5KLtUoEl220yfZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <!-- ↑↑↑ 新添加的 YouTube 视频嵌入 ↑↑↑ -->
+        <!-- ↑↑↑ YouTube 视频嵌入 - 已替换为新视频 ↑↑↑ -->
 
     </div>
 
