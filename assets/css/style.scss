@@ -1,42 +1,86 @@
 ---
+# Import theme styles
 ---
-@import "{{ site.theme }}"; // 导入 Cayman 主题的原始样式
+@import "{{ site.theme }}";
 
-/* Custom Header Logo Styles */
+/* --- 自定义样式开始 --- */
+
+/* 头部区域样式 */
 .page-header {
-  position: relative; /* 使绝对定位的子元素相对于此 header 定位 */
-  /* 调整左内边距以适应 150px 的 logo */
-  padding-left: 170px; /* (logo 宽度 150px + 20px 间距) */
-  padding-top: 1rem;  /* 保持或根据需要调整顶部内边距 */
-  padding-right: 1rem; /* 保持右侧内边距 */
-  padding-bottom: 1rem; /* 确保底部也有足够边距 */
+  position: relative; /* Needed for absolute positioning of logo */
+  /* Calculate padding-left based on scaled logo size + gap */
+  /* Base width 75px * scale 2 = 150px. Add 20px gap = 170px */
+  padding-left: 170px;
+  padding-top: 1.5rem; /* Adjust vertical padding as needed */
+  padding-bottom: 1.5rem;
+  padding-right: 1rem; /* Keep some right padding */
+  min-height: 120px; /* Ensure header has enough height for scaled logo */
 }
 
+/* LOGO 图片样式 */
 .header-logo {
-  position: absolute; /* 绝对定位，脱离文档流 */
-  top: 15px;          /* 距离 header 顶部 (可调整) */
-  left: 15px;         /* 距离 header 左侧 (可调整) */
-  width: 150px;       /* <--- 修改这里！设置为 150px */
-  height: auto;       /* 保持宽高比 */
-  z-index: 10;        /* 确保 logo 在其他内容之上 (可选) */
+  position: absolute;
+  top: 15px;  /* Distance from top */
+  left: 15px; /* Distance from left */
+  width: 75px; /* Set a BASE width */
+  height: auto; /* Maintain aspect ratio */
+  transform: scale(2); /* Double the size */
+  transform-origin: top left; /* Scale from top-left corner */
+  z-index: 10; /* Optional: ensure logo is on top */
 }
 
-/* (可选) 确保标题/标语/导航不会与 logo 重叠 */
-.page-header .project-name {
-   margin-top: 0; 
+/* 标题样式 */
+.project-name {
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 0.5rem; /* Add some space below title */
+  font-size: 1.8em; /* Adjust font size */
+  font-weight: bold;
 }
-.page-header .project-tagline {
 
+/* 导航按钮区域 */
+.page-header nav {
+  margin-top: 10px; /* Adjust space above nav */
 }
- .page-header nav {
-   margin-top: 15px; 
- }
- 
-/* 清除浮动 */
-/* 
-.main-content::before {
-    content: "";
-    display: table;
-    clear: both;
-} 
-*/
+
+/* 响应式设计：针对小屏幕 */
+@media screen and (max-width: 768px) {
+  .page-header {
+    /* Reduce left padding */
+    /* Base width 50px * scale 1.5 = 75px. Add 15px gap = 90px */
+    padding-left: 90px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    min-height: 80px; /* Reduce min-height */
+    text-align: center; /* Center title and nav on small screens */
+  }
+
+  .header-logo {
+    width: 50px; /* Smaller base width */
+    transform: scale(1.5); /* Slightly less scaling */
+    top: 10px;
+    left: 10px;
+  }
+
+  .project-name {
+    font-size: 1.4em; /* Smaller title */
+    text-align: center; /* Ensure title is centered if header is */
+    margin-left: -75px; /* Adjust left margin to help centering relative to reduced padding */
+  }
+   .page-header nav {
+     text-align: center; /* Center nav buttons */
+     margin-top: 10px;
+   }
+   .page-header nav .btn {
+       margin-bottom: 5px; /* Add space between buttons if they wrap */
+   }
+}
+
+/* 确保页面主要内容区域居中 */
+.main-content {
+  max-width: 960px; /* Limit content width */
+  margin: 2rem auto; /* Add top/bottom margin and center horizontally */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* --- 自定义样式结束 --- */
