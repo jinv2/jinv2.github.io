@@ -5,37 +5,69 @@
 /* Custom Header Logo Styles */
 .page-header {
   position: relative; /* 使绝对定位的子元素相对于此 header 定位 */
-  /* 增加左内边距，为放大的 logo 腾出空间 */
-  padding-left: 140px; /* (大约 logo 宽度 120px + 20px 间距) */
+  /* 需要非常大的左内边距来容纳 360px 的 logo */
+  padding-left: 380px; /* (logo 宽度 360px + 20px 间距) - 这非常大! */
+  padding-top: 1rem;  /* 保持或根据需要增加顶部内边距 */
+  padding-right: 1rem; /* 保持右侧内边距 */
+  padding-bottom: 1rem; /* 确保底部也有足够边距 */
+  minpx * 3 = 360px` 宽。
+
+**警告：** 360px 宽度对于一个 Header LOGO 来说**非常大**，它很可能会占据 Header 区域相当大的空间，甚至可能在较窄的屏幕上造成布局问题。但我们先按您的要求来修改。
+
+**我们需要再次修改 CSS 文件 (`assets/css/style.scss`)。**
+
+**请按照以下步骤操作：**
+
+1.  **编辑 CSS 文件：**
+    *   进入 `assets/css/` 目录。
+    *   找到并点击 `style.scss` 文件。
+    *   点击**铅笔图标**编辑。
+
+2.  **替换 CSS 内容：**
+    *   **删除** 编辑框里所有的现有内容（除了 `@import` 行，但最好整体替换）。
+    *   将以下**完整的、调整了 LOGO 尺寸和布局的代码**复制并粘贴到编辑框中：
+
+```scss
+---
+---
+@import "{{ site.theme }}"; // 导入 Cayman 主题的原始样式
+
+/* Custom Header Logo Styles */
+.page-header {
+  position: relative; /* 使绝对定位的子元素相对于此 header 定位 */
+  /* !! 大幅增加左内边距，为 360px 的 logo 腾出巨大空间 !! */
+  padding-left: 380px; /* (大约 logo 宽度 360px + 20px 间距) */
   padding-top: 1rem;  /* 保持或根据需要调整顶部内边距 */
   padding-right: 1rem; /* 保持右侧内边距 */
   padding-bottom: 1rem; /* 确保底部也有足够边距 */
+  /* 可能需要设置最小高度，防止 header 被 logo 撑开太多 */
+  min-height: 100px; /* 根据 logo 实际高度调整 */
 }
 
 .header-logo {
   position: absolute; /* 绝对定位，脱离文档流 */
   top: 15px;          /* 距离 header 顶部 (可调整) */
   left: 15px;         /* 距离 header 左侧 (可调整) */
-  width: 120px;       /* <--- 修改这里！设置为 120px (40px * 3) */
+  width: 360px;       /* <--- 修改这里！设置为 360px (120px * 3) */
   height: auto;       /* 保持宽高比 */
   z-index: 10;        /* 确保 logo 在其他内容之上 (可选) */
 }
 
 /* (可选) 确保标题/标语/导航不会与 logo 重叠 */
-/* 因为我们增加了 header 的 padding-left, 下面的 margin-left 可能不再需要 */
+/* 由于 header 的 padding-left 已大幅增加，下面的 margin-left 可能不需要 */
 .page-header .project-name {
    margin-top: 0; 
-   /* margin-left: 0; */ /* 可能不再需要 */
+   /* margin-left: 0; */ 
 }
 .page-header .project-tagline {
-   /* margin-left: 0; */ /* 可能不再需要 */
+   /* margin-left: 0; */
 }
  .page-header nav {
    margin-top: 15px; 
-   /* margin-left: 0; */ /* 可能不再需要 */
+   /* margin-left: 0; */
  }
  
-/* 清除浮动 (如果布局文件里没有 float:left 的 logo 了，这个可能不再需要) */
+/* 清除浮动 */
 /* 
 .main-content::before {
     content: "";
