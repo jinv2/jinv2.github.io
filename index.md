@@ -3,14 +3,15 @@ layout: default # 确保主页使用我们统一的 default 布局
 title: "天算AI - 首页" # 主页标题 (显示在浏览器标签栏)
 ---
 
-<!-- V V V 融合后的完整内容 V V V -->
+<!-- V V V 融合后的完整内容 (居中标题, 移除下方重复标识) V V V -->
+
+<!-- 将原来的 # 天算AI... 改为居中的 H2 -->
+<h2 style="text-align: center;">天算AI (Natural Algorithm)</h2> 
 
 <!-- 欢迎/介绍文字 -->
-# 天算AI (Natural Algorithm)
-
 ✨ AI科技博主 | AI科技研发 | 前沿资讯影视化报道 ✨
 
-欢迎来到 **天算AI (Natural Algorithm)** 博客！
+欢迎来到 **天算AI (Tiansuan AI)** 博客！
 
 我是天算AI，一名专注于人工智能领域的科技博主。本博客致力于分享 AI 科技研发的探索、实践与思考。我相信技术与艺术的结合能带来更深刻的理解和启发，探索“自然算法 (Natural Algorithm)”的奥秘。
 
@@ -27,11 +28,10 @@ title: "天算AI - 首页" # 主页标题 (显示在浏览器标签栏)
 
 ---
 
-<!-- V V V V V 这里是替换后的新视频 V V V V V -->
+<!-- 嵌入的视频 -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iNLfbru91AA?si=BbGajTUjoRnRrFz9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<!-- ^ ^ ^ ^ ^ 新视频结束 ^ ^ ^ ^ ^ -->
 
-天算AI (Natural Algorithm)
+<!-- 天算AI (Natural Algorithm) <--- 确保视频下方的这行已被删除 -->
 
 ---
 
