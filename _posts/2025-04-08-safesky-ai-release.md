@@ -51,10 +51,10 @@ tags: [SafeSky AI, Gemma, AI安全, 开源, 知识图谱] # 文章标签
 **模型在线测试地址：**
 
 *   第一个：SafeSky AI Gemma 2B
-    *   [在线测试地址](https://huggingface.co/spaces/jinv2/test-safesky-gemma)
+    *   [在线测试地址点我](https://huggingface.co/spaces/jinv2/test-safesky-gemma)
     *   ![SafeSky AI 图片 1]({{ '/assets/images/8a82f25ad68304233e2090d3593091b5.jpg' | relative_url }})
 *   第二个：safesky-ai-gemma-2b-sft
-    *   [在线测试地址](https://huggingface.co/jinv2/safesky-ai-gemma-2b-sft)
+    *   [在线测试地址我](https://huggingface.co/jinv2/safesky-ai-gemma-2b-sft)
 ![SafeSky AI 图片 2]({{ '/assets/images/b9e4821c3add7198ab456eb48ce0cef2.jpg' | relative_url }})
 ---
 
