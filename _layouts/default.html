@@ -18,8 +18,6 @@
         <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
         <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
         
-        <!-- V V V V V 修改后的导航部分 V V V V V -->
-        <!-- 所有按钮都放在 nav 标签内 -->
         <nav style="margin-top: 15px;">
           <a href="{{ '/' | relative_url }}" class="btn">首页</a>
           <a href="{{ '/blog/' | relative_url }}" class="btn">博客</a>
@@ -33,12 +31,16 @@
             <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
           {% endif %}
         </nav>
-        <!-- ^ ^ ^ ^ ^ 修改后的导航部分 ^ ^ ^ ^ ^ -->
 
       </header>
 
       <main id="content" class="main-content" role="main">
-        {{ content }}
+
+        <!-- V V V V V 在这里添加全局 LOGO V V V V V -->
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="天算AI Logo" style="float: left; margin-right: 15px; margin-bottom: 10px; width: 200px; height: auto;">
+        <!-- ^ ^ ^ ^ ^ 全局 LOGO 结束 ^ ^ ^ ^ ^ -->
+
+        {{ content }} 
 
         <footer class="site-footer">
           {% if site.github.is_project_page %}
