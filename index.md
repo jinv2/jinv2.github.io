@@ -6,11 +6,11 @@ title: "天算AI - 首页" # 主页标题 (显示在浏览器标签栏)
 <!-- V V V 融合后的完整内容 V V V -->
 
 <!-- 欢迎/介绍文字 -->
-# 天算AI (Tiansuan AI)
+# 天算AI (Natural Algorithm)
 
 ✨ AI科技博主 | AI科技研发 | 前沿资讯影视化报道 ✨
 
-欢迎来到 **天算AI (Tiansuan AI)** 博客！
+欢迎来到 **天算AI (Natural Algorithm)** 博客！
 
 我是天算AI，一名专注于人工智能领域的科技博主。本博客致力于分享 AI 科技研发的探索、实践与思考。我相信技术与艺术的结合能带来更深刻的理解和启发，探索“自然算法 (Natural Algorithm)”的奥秘。
 
