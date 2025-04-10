@@ -1,20 +1,15 @@
 ---
-layout: default # 使用 Cayman 主题的默认布局
-title: 关于天算AI
-permalink: /about/
+layout: default # 确保主页使用我们统一的 default 布局
+title: "天算AI - 首页" # 主页标题 (显示在浏览器标签栏)
 ---
 
-# 关于天算AI
+# 天算AI 
+<!-- (这个内容区的标题可以保留或删除) -->
 
-<!-- V V V 添加的介绍性文字 V V V -->
-AI科技博主 
-AI科技研发
-科技前沿最新AI资讯影视化报道 
-<!-- ^ ^ ^ 介绍性文字结束 ^ ^ ^ -->
+AI科技博主 | AI科技研发 | 科技前沿最新AI资讯影视化报道
 
 ---
 
-<!-- V V V 添加的数字资产列表 V V V -->
 ## 天算AI数字资产：
 
 *   5万字原创诗文
@@ -22,24 +17,30 @@ AI科技研发
 *   9千部原创AI短视频
 *   16项原创AI科技产品
 *   7个天算AI大语言模型
-<!-- ^ ^ ^ 数字资产列表结束 ^ ^ ^ -->
 
 ---
 
-<!-- V V V 添加的标识文字 V V V -->
-天算AI（Natural Algorithm）
-<!-- ^ ^ ^ 标识文字结束 ^ ^ ^ -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SLv6RckpPWM?si=m8lxR8b4VTZKTXEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+天算AI (Natural Algorithm)
 
 ---
 
-<!-- V V V 添加的主页链接和联系方式 V V V -->
-## 更多信息
+## 最新博客文章
 
-*   **天算AI主页：** <a href="https://jinvbar.github.io/tsai/" target="_blank">https://jinvbar.github.io/tsai/</a>
-*   **联系方式 (邮箱)：** ssk937520@gmail.com
-<!-- ^ ^ ^ 主页链接和联系方式结束 ^ ^ ^ -->
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
+    </li>
+  {% endfor %}
+</ul>
 
-<!-- 页面底部的导航链接 (保持不变) -->
+{% if site.posts.size > 0 %}
+  <p><a href="{{ '/blog/' | relative_url }}">查看所有文章</a></p>
+{% endif %}
+
+<!-- 页面底部的导航链接 -->
 <hr>
 <p>
   <a href="{{ '/' | relative_url }}">首页</a> |
