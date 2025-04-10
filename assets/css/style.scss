@@ -5,8 +5,8 @@
 /* Custom Header Logo Styles */
 .page-header {
   position: relative; /* 使绝对定位的子元素相对于此 header 定位 */
-  /* 调整左内边距以适应 100px 的 logo */
-  padding-left: 120px; /* (logo 宽度 100px + 20px 间距) */
+  /* 调整左内边距以适应 150px 的 logo */
+  padding-left: 170px; /* (logo 宽度 150px + 20px 间距) */
   padding-top: 1rem;  /* 保持或根据需要调整顶部内边距 */
   padding-right: 1rem; /* 保持右侧内边距 */
   padding-bottom: 1rem; /* 确保底部也有足够边距 */
@@ -16,23 +16,20 @@
   position: absolute; /* 绝对定位，脱离文档流 */
   top: 15px;          /* 距离 header 顶部 (可调整) */
   left: 15px;         /* 距离 header 左侧 (可调整) */
-  width: 100px;       /* <--- 修改这里！恢复到 100px */
+  width: 150px;       /* <--- 修改这里！设置为 150px */
   height: auto;       /* 保持宽高比 */
   z-index: 10;        /* 确保 logo 在其他内容之上 (可选) */
 }
 
 /* (可选) 确保标题/标语/导航不会与 logo 重叠 */
-/* 因为 header 的 padding-left 调整了，下面的 margin-left 可能不需要 */
 .page-header .project-name {
    margin-top: 0; 
-   /* margin-left: 0; */ 
 }
 .page-header .project-tagline {
-   /* margin-left: 0; */
+
 }
  .page-header nav {
    margin-top: 15px; 
-   /* margin-left: 0; */
  }
  
 /* 清除浮动 */
