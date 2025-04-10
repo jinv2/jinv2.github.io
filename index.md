@@ -27,10 +27,9 @@ title: "天算AI - 首页" # 主页标题 (显示在浏览器标签栏)
 
 ---
 
-<!-- 嵌入的视频 -->
-<!-- V V V V V 请仔细检查下面这行 iframe 代码是否完整且正确 V V V V V -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SLv6RckpPWM?si=m8lxR8b4VTZKTXEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<!-- ^ ^ ^ ^ ^ 检查 iframe 代码结束 ^ ^ ^ ^ ^ -->
+<!-- V V V V V 这里是替换后的新视频 V V V V V -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iNLfbru91AA?si=BbGajTUjoRnRrFz9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- ^ ^ ^ ^ ^ 新视频结束 ^ ^ ^ ^ ^ -->
 
 天算AI (Natural Algorithm)
 
