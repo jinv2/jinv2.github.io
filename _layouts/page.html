@@ -1,13 +1,30 @@
-<!-- 居中的 Logo 和 大号网站标题 -->
-<div style="text-align: center; padding-top: 40px; padding-bottom: 30px;">
-    <!-- Logo -->
-    <img src="{{ '/assets/images/天算LOGO3.png' | relative_url }}" alt="天算AI Logo" style="width: 80px; margin-bottom: 10px; display: inline-block; vertical-align: middle;">
-    <!-- ↑↑↑ 调整 width 控制 Logo 大小，margin-bottom 控制与下方文字间距 ↑↑↑ -->
+<!-- 全局头部：Logo居左，大标题居中 -->
+<header class="site-header" role="banner" style="background: linear-gradient(to right, #2a5276, #2f896a); padding: 20px 15px; border-bottom: 1px solid #e8e8e8;">
+    <!-- ↑↑↑ 使用了一个示例蓝绿渐变背景，你可以替换成你主题原来的背景样式代码 ↑↑↑ -->
+    <!-- ↑↑↑ padding 是头部上下左右的留白，border-bottom 是底部分隔线 ↑↑↑ -->
+    <div style="display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto;">
+        <!-- ↑↑↑ 使用 Flexbox 布局。max-width 限制内容宽度，margin: 0 auto 使其居中 ↑↑↑ -->
 
-    <!-- 大号文字标题 -->
-    <h1 style="font-size: 4.5em; font-weight: bold; color: #FFFFFF; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); margin: 0; display: inline-block; vertical-align: middle; margin-left: 15px;">
-    <!-- ↑↑↑ 调整 font-size 控制文字大小，color 控制颜色，margin-left 控制与 Logo 间距 ↑↑↑ -->
-        天算AI
-    </h1>
-</div>
-<!-- 原来的 {{ page.title }} 很可能需要被这个 div 替换掉 -->
+        <!-- Logo 在左侧 -->
+        <div style="flex: 0 0 auto;"> <!-- 固定部分，不缩放 -->
+             <a href="{{ '/' | relative_url }}" style="display: block;"> <!-- 让 Logo 变成返回主页的链接 -->
+                <img src="{{ '/assets/images/天算LOGO3.png' | relative_url }}" alt="天算AI Logo" style="width: 60px; height: auto; display: block;">
+                <!-- ↑↑↑ 调整 width 控制 Logo 大小 ↑↑↑ -->
+             </a>
+        </div>
+
+        <!-- 居中的大号文字标题 -->
+        <div style="flex-grow: 1; text-align: center;"> <!-- 占据剩余空间并居中文本 -->
+            <h1 style="font-size: 3.5em; font-weight: bold; color: #FFFFFF; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); margin: 0;">
+                天算AI
+            </h1>
+             <!-- ↑↑↑ 调整 font-size, color, text-shadow 等样式 ↑↑↑ -->
+        </div>
+
+         <!-- 右侧占位符，保持与 Logo 宽度一致以完美居中标题 -->
+         <div style="flex: 0 0 auto; width: 60px;"> <!-- 宽度应等于 Logo 的宽度 -->
+             <!-- 这里可以留空，或放其他元素 -->
+         </div>
+    </div>
+</header>
+<!-- ↓↓↓ 原来的布局文件中，包裹页面主要内容（通常是 {{ content }}）的部分应该在这个 header 之后 ↓↓↓ -->
