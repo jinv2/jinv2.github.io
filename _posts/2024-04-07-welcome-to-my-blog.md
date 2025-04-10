@@ -1,28 +1,41 @@
 ---
-layout: single # 使用 Minimal Mistakes 的文章布局
-title: "欢迎来到天算AI博客！" # 使用标准引号
-date: 2024-04-07 10:00:00 +0800 # 使用过去的日期
-categories: [介绍, 博客] # 使用列表格式
-tags: [欢迎, Jekyll, GitHub Pages] # 使用列表格式
-author_profile: true # 确保显示作者信息
+layout: post # 继续使用 post 布局
+title: "天算AI 简介与数字资产" # 可以把标题改成更符合内容的，比如这个
+date: 2024-04-07 00:00:00 +0800 # 保留原始发布日期
+# categories: [介绍] # 可以根据新内容调整分类
+# tags: [简介, 资产] # 可以根据新内容调整标签
 ---
 
-# 欢迎来到天算AI博客！
+<!-- ↓↓↓ 这里是新的博客文章内容（原来主页的内容）↓↓↓ -->
 
-大家好！欢迎来到 **天算AI** 的官方博客。
+## 天算AI数字资产：
 
-在这里，我将分享关于人工智能 (AI) 科技的研发进展、前沿资讯的影视化解读，以及个人的学习和思考。
+*   5万字原创诗文
+*   7千分钟原创交响乐
+*   9千部原创AI短视频
+*   16项原创AI科技产品
+*   7个天算AI大语言模型
 
-**我的目标是：**
+---
 
-*   探索 AI 的无限可能
-*   分享最新的科技动态
-*   记录原创内容的创作历程
+<div style="text-align: center; margin: 20px 0;"> <!-- YouTube 视频居中显示 -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SLv6RcKpPWM?si=m8IxR8b4vTZKTXEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-## 关注我的 YouTube 频道
+天算AI (Natural Algorithm)
 
-除了文字内容，我也会在 YouTube 上发布相关的视频内容，包括 AI 资讯的影视化报道、原创音乐和短视频等。
+---
 
-欢迎订阅我的频道：[天算AI YouTube 频道](https://www.youtube.com/@jinvjinvbar)
+## 最新博客文章（从此页面查看）
 
-期待与大家一同在 AI 的世界里探索和成长！
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
+    </li>
+  {% endfor %}
+</ul>
+
+{% if site.posts.size > 0 %} <!-- 检查是否有文章 -->
+  <p><a href="{{ '/blog/' | relative_url }}">查看所有文章</a></p> <!-- 确认 /blog/ 是你文章列表页的正确路径 -->
+{% endif %}
