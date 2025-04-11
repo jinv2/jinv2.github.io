@@ -34,28 +34,3 @@ title: "天算AI - 首页" # 主页标题 (显示在浏览器标签栏)
 <!-- 天算AI (Natural Algorithm) <--- 确保视频下方的这行已被删除 -->
 
 ---
-
-<!-- 最新博客文章列表 -->
-## 最新博客文章
-
-<ul>
-  {% for post in site.posts limit:5 %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
-    </li>
-  {% endfor %}
-</ul>
-
-{% if site.posts.size > 0 %}
-  <p><a href="{{ '/blog/' | relative_url }}">查看所有文章</a></p>
-{% endif %}
-
-<!-- 页面底部的导航链接 -->
-<hr>
-<p>
-  <a href="{{ '/' | relative_url }}">首页</a> |
-  <a href="{{ '/blog/' | relative_url }}">博客</a> |
-  <a href="{{ '/about/' | relative_url }}">关于</a> |
-  <a href="{{ '/contact/' | relative_url }}">联系我们</a>
-</p>
-<!-- ^ ^ ^ 融合内容结束 ^ ^ ^ -->
