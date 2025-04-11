@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "zh-CN" }}"> <!-- 建议将默认语言改为中文 "zh-CN" -->
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,22 +17,19 @@
     <![endif]-->
     {% include head-custom.html %}
 
-    <!-- V V V V V 添加 Google Analytics 代码 V V V V V -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDMTY87FV1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-VDMTY87FV1');
     </script>
-    <!-- ^ ^ ^ ^ ^ 结束 Google Analytics 代码 ^ ^ ^ ^ ^ -->
 
-  </head> <!-- head 标签结束 -->
+  </head>
   <body>
     <div class="wrapper">
-      <!-- header 内容 -->
+      <!-- 页眉 (header) 内容 -->
       <header class="page-header" role="banner">
         <div class="header-main">
           <img src="{{ '/assets/images/TSLOGO.png' | relative_url }}" alt="天算AI Logo" class="header-logo">
@@ -66,49 +63,50 @@
         </nav>
       </header>
 
-      <!-- main 内容 -->
+      <!-- 主要内容区域 (main) -->
       <main id="content" class="main-content" role="main">
 
         {{ content }}  <!-- 主要页面/文章内容会显示在这里 -->
 
-        <!-- =============================================== -->
-        <!-- ===== V V V  最新文章 & 返回主页 开始 V V V ===== -->
-        <!-- =============================================== -->
+        <!-- ======================================================= -->
+        <!-- ===== V V V  最新博客文章 & 底部导航 开始 V V V ===== -->
+        <!-- ======================================================= -->
 
-        <hr style="margin-top: 2.5rem; margin-bottom: 1.5rem;"> {# 添加顶部分隔线和一些间距 #}
+        <hr style="margin-top: 2.5rem; margin-bottom: 1.5rem;"> <!-- 顶部 分隔线 -->
 
-        <section class="recent-posts" style="margin-bottom: 1.5rem;"> {# 最新文章区域，底部加间距 #}
-          <h2 style="margin-bottom: 1rem; font-size: 1.5em;">最新文章</h2> {# 标题样式调整得更醒目些 #}
-          <ul style="list-style: none; padding-left: 0;"> {# 移除默认列表样式 #}
-            {% assign post_limit = 5 %} {# 设置显示最近文章的数量 #}
+        <section class="recent-blog-posts" style="margin-bottom: 1rem;"> <!-- 最新博客文章区域 -->
+          <h2 style="margin-bottom: 1rem; font-size: 1.5em; text-align: center;">最新博客文章</h2> <!-- 居中标题 -->
+          <ul style="list-style: none; padding-left: 0; text-align: center;"> <!-- 居中列表项 -->
+            {% assign post_limit = 5 %} <!-- 设置显示最近文章的数量 -->
             {% assign displayed_posts = 0 %}
-            {% for post in site.posts %}
-              {% if post.url != page.url and displayed_posts < post_limit %} {# 不显示当前页 #}
-                <li style="margin-bottom: 0.5rem;"> {# 列表项之间加点间距 #}
+            {% for post in site.posts limit:post_limit %} <!-- 直接限制循环次数为 post_limit -->
+                <li style="margin-bottom: 0.5rem;">
                   <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
                 </li>
-                {% assign displayed_posts = displayed_posts | plus: 1 %}
-              {% endif %}
-              {% if displayed_posts >= post_limit %}
-                {% break %} {# 达到数量限制后停止 #}
-              {% endif %}
             {% endfor %}
           </ul>
         </section>
 
-        <hr style="margin-bottom: 1.5rem;"> {# 中间分隔线 #}
-
-        <p style="text-align: center; margin-bottom: 2rem;"> {# 返回主页链接，居中并增加底部间距 #}
-          <a href="{{ '/' | relative_url }}">返回主页</a>
+        <p style="text-align: center; margin-bottom: 1.5rem;"> <!-- 查看所有文章链接 -->
+          <a href="{{ '/blog/' | relative_url }}">查看所有文章</a>
         </p>
 
-        <!-- =============================================== -->
-        <!-- ===== ^ ^ ^  最新文章 & 返回主页 结束 ^ ^ ^ ===== -->
-        <!-- =============================================== -->
+        <hr style="margin-bottom: 1.5rem;"> <!-- 中间分隔线 -->
 
-      </main> <!-- main 内容结束 -->
+        <nav class="footer-nav" style="text-align: center; margin-bottom: 2rem;"> <!-- 底部文本导航 -->
+           <a href="{{ '/' | relative_url }}">首页</a> |
+           <a href="{{ '/blog/' | relative_url }}">博客</a> |
+           <a href="{{ '/about/' | relative_url }}">关于</a> |
+           <a href="{{ '/contact/' | relative_url }}">联系我们</a>
+        </nav>
 
-      <!-- footer 内容 -->
+        <!-- ======================================================= -->
+        <!-- ===== ^ ^ ^  最新博客文章 & 底部导航 结束 ^ ^ ^ ===== -->
+        <!-- ======================================================= -->
+
+      </main> <!-- 主要内容区域结束 -->
+
+      <!-- 页脚 (footer) 内容 -->
       <footer class="site-footer">
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
