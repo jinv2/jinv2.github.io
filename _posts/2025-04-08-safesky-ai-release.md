@@ -64,15 +64,3 @@ tags: [SafeSky AI, Gemma, AI安全, 开源, 知识图谱] # 文章标签
 
 
 ---
-
-## 最新文章
-
-<ul>
-  {% for post in site.posts limit:5 %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
-    </li>
-  {% endfor %}
-</ul>
-
-<p style="margin-top: 20px;"><a href="{{ '/' | relative_url }}">返回主页</a></p>
