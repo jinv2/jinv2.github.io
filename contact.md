@@ -14,8 +14,9 @@ permalink: /contact/
 
 <div style="text-align: center; margin: 30px 0;">
   <h2 style="margin-bottom: 20px;">天算AI名片预览</h2>
+  <!-- 使用原始代码中指定的预览图片路径 -->
   <img
-    src="/tsai/assets/images/tian_suan_logo.jpg"
+    src="/tsai/assets/images/天算AI 名片圆角xxxxxxxxxxxxx.png"  <!-- 使用你原来的这个图片路径 -->
     alt="天算AI 名片预览"
     style="max-width: 320px; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
   >
@@ -23,8 +24,9 @@ permalink: /contact/
 </div>
 
 <p style="text-align: center; margin-top: 15px; margin-bottom: 30px;">
+  <!-- 下载链接保持指向 ZIP 文件 -->
   <a
-    href="/tsai/contact/天算AI数字名片.zip"  
+    href="/tsai/contact/天算AI数字名片.zip"
     download="天算AI数字名片.zip"
     style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;"
   >
