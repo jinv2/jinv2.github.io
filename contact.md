@@ -10,6 +10,10 @@ permalink: /contact/
 
 **电子邮箱:** ssk937520@gmail.com
 
+**天算AI博客:** <a href="https://jinvbar.github.io/tsai/" target="_blank" rel="noopener noreferrer">https://jinvbar.github.io/tsai/</a>  <!-- 使用<a>标签确保链接可点击 -->
+
+**联系方式:** 手机/微信: 15632151615
+
 ---
 
 <div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
@@ -25,10 +29,13 @@ permalink: /contact/
   </a>
 </div>
 
-<!-- 确保以下内容（如果有的话）与上面的 HTML 块之间有空行 -->
-
----
-
-### 最新博客文章
-
-<!-- 这里可以放你的博客列表或其他内容 -->
+<!-- Optional Footer Navigation -->
+<!--
+<hr>
+<p>
+  <a href="{{ '/' | relative_url }}">首页</a> |
+  <a href="{{ '/blog/' | relative_url }}">博客</a> |
+  <a href="{{ '/about/' | relative_url }}">关于</a> |
+  <a href="{{ '/contact/' | relative_url }}">联系我们</a>
+</p>
+-->
