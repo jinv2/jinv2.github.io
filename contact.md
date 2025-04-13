@@ -10,20 +10,19 @@ permalink: /contact/
 
 **电子邮箱:** ssk937520@gmail.com
 
-**天算AI博客:** https://jinvbar.github.io/tsai/
+**天算AI博客:** [https://jinvbar.github.io/tsai/](https://jinvbar.github.io/tsai/)
 
 **联系方式:** 手机/微信: 15632151615
 
 ---
 
-<!-- === 天算AI名片预览区域 === -->
 <div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
   <h2 style="margin-bottom: 20px;">天算AI名片预览</h2>
-  <!-- 确保图片路径 /tsai/assets/images/tian_suan_logo.jpg 是有效的 -->
-  <img src="/tsai/assets/images/tian_suan_logo.jpg" alt="天算AI 名片预览" style="max-width: 320px; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <!-- 重要：请确保 '/tsai/assets/images/天算AI 名片圆角xxxxxxxxxxxxx.png' 这个文件确实存在于你的仓库中 -->
+  <img src="/tsai/assets/images/天算AI 名片圆角xxxxxxxxxxxxx.png" alt="天算AI 名片预览" style="max-width: 320px; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
 </div>
-<!-- === 预览区域结束 === -->
 
+<!-- 按钮区域 -->
 <div style="text-align: center; margin-top: 20px; margin-bottom: 30px;">
   <!-- 下载 ZIP 包的按钮 -->
   <a
@@ -35,10 +34,10 @@ permalink: /contact/
   </a>
   <!-- RSS 订阅按钮 -->
   <a
-    href="/tsai/feed.xml"
+    href="/tsai/feed.xml"  <!-- 确认 RSS Feed 路径 -->
     target="_blank"
     rel="noopener noreferrer"
-    style="display: inline-block; padding: 12px 20px; background-color: #ff9800; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px;"
+    style="display: inline-block; padding: 12px 20px; background-color: #ff9800; /* 橙色 */ color: white; text-decoration: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px;"
   >
     订阅 RSS Feed
   </a>
@@ -51,6 +50,7 @@ permalink: /contact/
   <img src="/tsai/assets/images/tsai_qrcode.png" alt="天算AI网站二维码" style="width: 150px; height: 150px; border: 1px solid #ccc; display: block; margin: 0 auto 10px;">
   <p style="font-size: 0.9em; color: #555; margin: 0;">手机扫描二维码访问或收藏网站</p>
 </div>
+
 
 <!-- Optional Footer Navigation -->
 <!--
