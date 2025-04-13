@@ -1,228 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>天算AI - 数字名片</title>
-  <style>
-    /* --- CSS 样式 --- */
-    body {
-      background-color: #e0e0e0; /* 页面背景色，方便查看卡片 */
-      display: flex;
-      justify-content: center; /* 水平居中 */
-      align-items: center;     /* 垂直居中 */
-      min-height: 100vh;      /* 确保视口高度 */
-      margin: 0;
-      padding: 20px; /* 卡片四周的边距 */
-      box-sizing: border-box;
-      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; /* 使用通用字体 */
-      -webkit-font-smoothing: antialiased; /* 字体平滑处理 */
-      -moz-osx-font-smoothing: grayscale;
-    }
+---
+layout: default
+title: 联系我们
+permalink: /contact/
+---
 
-    .card-wrapper {
-      width: 320px;
-      border-radius: 15px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      background-color: #000; /* 图片加载失败时的后备背景 */
-    }
+# 联系我们
 
-    .vertical-card {
-      width: 100%;
-      height: 100%; /* 让高度自适应内容 */
-      position: relative;
-      /* 使用相对路径引用背景图片 */
-      background-image: url('assets/images/circuit_background.jpg');
-      background-size: cover;
-      background-position: center;
-    }
+如果您有任何问题、建议或合作意向，欢迎通过以下方式与我们联系：
 
-    .content-overlay {
-      /* 不再需要绝对定位，因为它是 .vertical-card 的内容流部分 */
-      background-color: rgba(0, 5, 15, 0.7); /* 半透明黑色遮罩 */
-      color: #fff;
-      padding: 40px 25px 30px 25px; /* 调整内边距 */
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      min-height: 600px; /* 保持一定的最小高度 */
-    }
+**电子邮箱:** ssk937520@gmail.com
 
-    .logo-area {
-      margin-bottom: 25px;
-    }
+**天算AI博客:** [https://jinvbar.github.io/tsai/](https://jinvbar.github.io/tsai/)
 
-    .logo-area img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 3px solid rgba(255, 255, 255, 0.8);
-      background-color: rgba(255, 255, 255, 0.1);
-      margin: 0 auto;
-      object-fit: cover;
-      display: block;
-      /* === 使用相对路径引用 Logo 图片 === */
-      /* src 属性在下面的 HTML 中设置 */
-    }
+**联系方式:** 手机/微信: 15632151615
 
-    .header-info h1 {
-      font-size: 1.6em;
-      margin: 0 0 5px;
-      font-weight: 600;
-    }
+---
 
-    .header-info .english-name {
-      font-size: 0.9em;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 15px;
-    }
+<div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
+  <h2 style="margin-bottom: 20px;">天算AI名片预览</h2>
+  <!-- 再次确认这个图片路径是否正确 -->
+  <img src="/tsai/assets/images/天算AI 名片圆角xxxxxxxxxxxxx.png" alt="天算AI 名片预览" style="max-width: 320px; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <!--  "(名片预览图)" 这行文字已删除 -->
+</div>
 
-    .roles span {
-      display: inline-block;
-      background-color: rgba(76, 175, 80, 0.7);
-      color: #fff;
-      padding: 6px 12px;
-      font-size: 0.8em;
-      margin: 5px 3px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 4px;
-    }
+<div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
+  <a href="/tsai/contact/天算AI数字名片.zip" download="天算AI数字名片.zip" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+    下载交互式名片 (ZIP 压缩包)
+  </a>
+</div>
 
-    .roles span:last-child {
-      background-color: rgba(63, 81, 181, 0.7);
-    }
-
-    .service-desc {
-      font-size: 0.9em;
-      color: rgba(255, 255, 255, 0.9);
-      margin-top: 15px;
-      margin-bottom: 25px;
-      line-height: 1.4;
-    }
-
-    .assets-section {
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 15px;
-      text-align: left;
-      margin-bottom: 25px;
-      border-radius: 8px;
-    }
-
-    .assets-section h2 {
-      font-size: 1.1em;
-      margin: 0 0 12px;
-      display: flex;
-      align-items: center;
-      color: #81d4fa;
-    }
-
-    .vertical-bar {
-      display: inline-block;
-      width: 4px;
-      height: 1.1em;
-      background-color: #29b6f6;
-      margin-right: 10px;
-      border-radius: 2px;
-    }
-
-    .assets-section ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    .assets-section li {
-      font-size: 0.85em;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 6px;
-      display: flex;
-      align-items: flex-start;
-    }
-
-    .assets-section li::before {
-      content: '•';
-      color: #4fc3f7;
-      font-size: 1.2em;
-      margin-right: 8px;
-      line-height: 1;
-    }
-
-    .contact-info {
-      margin-top: auto; /* 把联系信息推到底部 */
-      text-align: center;
-      font-size: 0.9em;
-      padding-top: 15px; /* 和上方内容间距 */
-      border-top: 1px solid rgba(255, 255, 255, 0.2); /* 分隔线 */
-    }
-
-    .contact-info p {
-      margin: 8px 0;
-      color: rgba(255, 255, 255, 0.85);
-    }
-
-    .contact-info .label {
-      font-weight: bold;
-      color: #fff;
-      margin-right: 5px;
-    }
-
-    .contact-info a {
-      color: #81d4fa; /* 链接颜色 */
-      text-decoration: none;
-      word-break: break-all; /* 长链接自动换行 */
-      cursor: pointer; /* 明确指定鼠标指针为手形 */
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-info a[href^="tel:"] { /* 保持电话号码不断行 */
-      white-space: nowrap;
-    }
-
-  </style>
-</head>
-<body>
-
-  <div class="card-wrapper">
-    <div class="vertical-card">
-      <div class="content-overlay">
-        <div class="logo-area">
-          <!-- === 使用相对路径引用 Logo 图片 === -->
-          <!-- 确认为 JPG 格式 -->
-          <img src="assets/images/tian_suan_logo.jpg" alt="天算AI Logo" class="logo"/>
-        </div>
-        <div class="header-info">
-          <h1>天算AI科技研发实验室</h1>
-          <p class="english-name">(Natural Algorithm AI R&D Lab)</p>
-          <div class="roles">
-            <span>AI科技博主</span>
-            <span>AI科技研发</span>
-          </div>
-          <p class="service-desc">科技前沿最新AI资讯影视化报道</p>
-        </div>
-        <div class="assets-section">
-          <h2><span class="vertical-bar"></span>天算AI数字资产</h2>
-          <ul>
-            <li>5万字原创诗文</li>
-            <li>7千分钟原创交响乐</li>
-            <li>9千部原创AI短视频</li>
-            <li>16项原创AI科技产品</li>
-            <li>7个天算AI大语言模型</li>
-          </ul>
-        </div>
-        <!-- === 交互式联系信息 === -->
-        <div class="contact-info">
-          <p><span class="label">天算AI博客:</span> <a href="https://jinvbar.github.io/tsai/" target="_blank" rel="noopener noreferrer">https://jinvbar.github.io/tsai/</a></p>
-          <p><span class="label">联系方式:</span> 手机/微信: <a href="tel:15632151615">15632151615</a></p> <!-- 添加了 tel: 链接 -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-</body>
-</html>
+<!-- Optional Footer Navigation -->
+<!--
+<hr>
+<p>
+  <a href="{{ '/' | relative_url }}">首页</a> |
+  <a href="{{ '/blog/' | relative_url }}">博客</a> |
+  <a href="{{ '/about/' | relative_url }}">关于</a> |
+  <a href="{{ '/contact/' | relative_url }}">联系我们</a>
+</p>
+-->
