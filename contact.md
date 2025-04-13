@@ -8,19 +8,19 @@ permalink: /contact/
 
 如果您有任何问题、建议或合作意向，欢迎通过以下方式与我们联系：
 
-**电子邮箱:** ssk937520@gmail.com
+<p><strong>电子邮箱:</strong> ssk937520@gmail.com</p>
 
-**天算AI博客:** [https://jinvbar.github.io/tsai/](https://jinvbar.github.io/tsai/)
+<p><strong>天算AI博客:</strong> <a href="https://jinvbar.github.io/tsai/" target="_blank" rel="noopener noreferrer">https://jinvbar.github.io/tsai/</a></p>
 
-**联系方式:** 手机/微信: 15632151615
+<p><strong>联系方式:</strong> 手机/微信: 15632151615</p>
 
 ---
 
 <div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
   <h2 style="margin-bottom: 20px;">天算AI名片预览</h2>
-  <!-- 再次确认这个图片路径是否正确 -->
-  <img src="/tsai/assets/images/天算AI 名片圆角xxxxxxxxxxxxx.png" alt="天算AI 名片预览" style="max-width: 320px; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-  <!--  "(名片预览图)" 这行文字已删除 -->
+  <!-- 确保图片路径正确 -->
+  <img src="/tsai/assets/images/tian_suan_logo.jpg" alt="天算AI 名片预览" style="max-width: 320px; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <!-- (名片预览图) 文字已移除 -->
 </div>
 
 <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
