@@ -10,7 +10,7 @@ permalink: /contact/
 
 **电子邮箱:** ssk937520@gmail.com
 
-**天算AI博客:** <a href="https://jinvbar.github.io/tsai/" target="_blank" rel="noopener noreferrer">https://jinvbar.github.io/tsai/</a>  <!-- 使用<a>标签确保链接可点击 -->
+**天算AI博客:** [https://jinvbar.github.io/tsai/](https://jinvbar.github.io/tsai/)
 
 **联系方式:** 手机/微信: 15632151615
 
@@ -18,9 +18,9 @@ permalink: /contact/
 
 <div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
   <h2 style="margin-bottom: 20px;">天算AI名片预览</h2>
-  <!-- 检查这个图片路径是否在你的 GitHub 仓库中真实存在 -->
+  <!-- 再次确认这个图片路径是否正确 -->
   <img src="/tsai/assets/images/天算AI 名片圆角xxxxxxxxxxxxx.png" alt="天算AI 名片预览" style="max-width: 320px; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-  <p style="font-size: 0.9em; color: #555; margin-top: 10px;">(名片预览图)</p>
+  <!--  "(名片预览图)" 这行文字已删除 -->
 </div>
 
 <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
