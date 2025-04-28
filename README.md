@@ -8,7 +8,7 @@
 
 我是天算AI，一名专注于人工智能领域的科技博主。本博客致力于分享 AI 科技研发的探索、实践与思考，并以独特的影视化视角解读和报道科技前沿的最新AI资讯。我相信技术与艺术的结合能带来更深刻的理解和启发，探索“自然算法 (Natural Algorithm)”的奥秘。
 
-➡️ **访问我的博客主页:** [https://jinvbar.github.io/tsai/](https://jinv2.github.io/)
+➡️ **访问我的博客主页:** [https://jinv2.github.io/](https://jinv2.github.io/)
 
 ---
 
