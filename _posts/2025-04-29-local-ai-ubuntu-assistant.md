@@ -13,6 +13,11 @@ AI 的便捷性令人向往，但随之而来的往往是 API 调用的成本、
 
 答案是肯定的！今天，我们非常激动地向大家介绍一个由 **天算AI (Natural Algorithm)** 出品的开源项目——**local-ai-ubuntu**。这是一个专为 Ubuntu 用户设计的本地 AI 命令助手，让你在享受自然语言操控电脑的便捷同时，彻底告别 API 成本和大型模型的负担！
 
+**看看它的实际效果：**
+
+![本地AI命令助手演示](assets/images/local-ai-ubuntu-demo.png)
+*图：输入中文指令，自动执行相应操作*
+
 **👉 项目地址：[https://github.com/jinv2/local-ai-ubuntu](https://github.com/jinv2/local-ai-ubuntu)**
 
 ---
@@ -70,6 +75,9 @@ AI 的便捷性令人向往，但随之而来的往往是 API 调用的成本、
     git clone https://github.com/jinv2/local-ai-ubuntu.git
     cd local-ai-ubuntu
     ```
+    克隆下来的项目文件结构如下，包含了所有配置和安装脚本：
+    ![项目文件结构](assets/images/project-structure.png)
+    *图：local-ai-ubuntu 项目结构*
 
 3.  **运行一键安装脚本:**
     ```bash
