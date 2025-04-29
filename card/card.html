@@ -221,7 +221,8 @@
           </ul>
         </div>
         <div class="contact-info">
-          <p><span class="label">天算AI博客:</span> <a href="https://jinv2.github.io/tsai/" target="_blank">https://jinv2.github.io/tsai/</a></p>
+          <!-- 这里是修改过的地方 -->
+          <p><span class="label">天算AI博客:</span> <a href="https://jinv2.github.io/" target="_blank">https://jinv2.github.io/</a></p>
           <p><span class="label">联系方式:</span> 手机/微信: 15632151615</p>
         </div>
       </div>
@@ -239,14 +240,14 @@
       saveButton.disabled = true;
 
       html2canvas(captureArea, {
-        scale: 2,
-        backgroundColor: null,
-        useCORS: true
+        scale: 2, // 提高分辨率
+        backgroundColor: null, // 保持透明背景（如果需要）
+        useCORS: true // 如果图片跨域需要
       }).then(canvas => {
         const link = document.createElement('a');
-        link.download = 'tian-suan-ai-card.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
+        link.download = 'tian-suan-ai-card.png'; // 下载的文件名
+        link.href = canvas.toDataURL('image/png'); // 将canvas转为PNG格式的DataURL
+        link.click(); // 模拟点击下载
         saveButton.textContent = '生成并下载图片 (PNG)';
         saveButton.disabled = false;
       }).catch(error => {
