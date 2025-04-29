@@ -10,7 +10,7 @@ permalink: /contact/
 
 **电子邮箱:** ssk937520@gmail.com
 
-**天算AI博客:** https://jinvbar.github.io/tsai/
+**天算AI博客:** https://jinv2.github.io/tsai/
 
 **联系方式:** 手机/微信: 15632151615
 
