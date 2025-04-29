@@ -3,51 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>天算AI 名片生成器</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <title>天算AI - 数字名片</title>
   <style>
+    /* --- CSS 样式 --- */
     body {
-      background-color: #e0e0e0;
+      /* 页面背景色，方便在浏览器中预览卡片 */
+      background-color: #f0f0f0;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      justify-content: center; /* 水平居中 */
+      align-items: center;     /* 垂直居中 */
+      min-height: 100vh;      /* 确保视口高度 */
       margin: 0;
+      padding: 20px;          /* 卡片外边距 */
+      box-sizing: border-box;
       font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
     }
 
     .card-wrapper {
       width: 320px;
-      height: 660px;
       border-radius: 15px;
       overflow: hidden;
       position: relative;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px;
-      background-color: #000;
+      background-color: #000; /* 图片加载失败时的后备背景 */
     }
 
     .vertical-card {
       width: 100%;
-      height: 100%;
+      height: 100%; /* 让高度自适应内容 */
       position: relative;
-      background-image: url('./circuit_background.jpg');
+      /* 使用相对路径引用背景图片 */
+      background-image: url('assets/images/circuit_background.jpg');
       background-size: cover;
       background-position: center;
     }
 
     .content-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 5, 15, 0.7);
+      /* 不再需要绝对定位，因为它是 .vertical-card 的直接子元素 */
+      background-color: rgba(0, 5, 15, 0.7); /* 半透明黑色遮罩 */
       color: #fff;
-      padding: 40px 25px 50px 25px;
+      padding: 40px 25px 30px 25px; /* 调整内边距 */
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       text-align: center;
+      min-height: 600px; /* 保持一定的最小高度，防止内容太少时卡片过小 */
     }
 
     .logo-area {
@@ -57,14 +57,15 @@
     }
 
     .logo-area img {
-      width: 40px;
-      height: 40px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       border: 3px solid rgba(255, 255, 255, 0.8);
       background-color: rgba(255, 255, 255, 0.1);
       margin: 0 auto;
-      transform: scale(2.0);
       object-fit: cover;
+      display: block;
+      /* src 属性在下面的 HTML 中设置 */
     }
 
     .header-info h1 {
@@ -87,6 +88,7 @@
       font-size: 0.8em;
       margin: 5px 3px;
       border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
     }
 
     .roles span:last-child {
@@ -98,6 +100,7 @@
       color: rgba(255, 255, 255, 0.9);
       margin-top: 15px;
       margin-bottom: 25px;
+      line-height: 1.4;
     }
 
     .assets-section {
@@ -105,6 +108,7 @@
       padding: 15px;
       text-align: left;
       margin-bottom: 25px;
+      border-radius: 8px;
     }
 
     .assets-section h2 {
@@ -135,7 +139,7 @@
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 6px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .assets-section li::before {
@@ -143,16 +147,19 @@
       color: #4fc3f7;
       font-size: 1.2em;
       margin-right: 8px;
+      line-height: 1;
     }
 
     .contact-info {
-      margin-top: auto;
+      margin-top: auto; /* 把联系信息推到底部 */
       text-align: center;
       font-size: 0.9em;
+      padding-top: 15px; /* 和上方内容间距 */
+      border-top: 1px solid rgba(255, 255, 255, 0.2); /* 分隔线 */
     }
 
     .contact-info p {
-      margin: 5px 0;
+      margin: 8px 0;
       color: rgba(255, 255, 255, 0.85);
     }
 
@@ -163,43 +170,28 @@
     }
 
     .contact-info a {
-      color: #81d4fa;
+      color: #81d4fa; /* 链接颜色 */
       text-decoration: none;
-      word-break: break-word;
+      word-break: break-all; /* 长链接自动换行 */
     }
 
     .contact-info a:hover {
       text-decoration: underline;
     }
 
-    #saveButton {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-
-    #saveButton:hover {
-      background-color: #45a049;
-    }
-
-    #saveButton:disabled {
-      background-color: #ccc;
-      cursor: not-allowed;
+    .contact-info a[href^="tel:"] { /* 保持电话号码不断行 */
+      white-space: nowrap;
     }
   </style>
 </head>
 <body>
 
-  <div class="card-wrapper" id="captureArea">
+  <div class="card-wrapper" id="captureArea"> <!-- ID 保留，虽然此版本不用它来截图 -->
     <div class="vertical-card">
       <div class="content-overlay">
         <div class="logo-area">
-          <img src="./tian_suan_logo.jpg" alt="天算AI Logo" />
+          <!-- === 修改：使用相对路径引用 Logo 图片 === -->
+          <img src="assets/images/tian_suan_logo.jpg" alt="天算AI Logo" class="logo"/>
         </div>
         <div class="header-info">
           <h1>天算AI科技研发实验室</h1>
@@ -221,43 +213,14 @@
           </ul>
         </div>
         <div class="contact-info">
-          <!-- 这里是修改过的地方 -->
-          <p><span class="label">天算AI博客:</span> <a href="https://jinv2.github.io/" target="_blank">https://jinv2.github.io/</a></p>
-          <p><span class="label">联系方式:</span> 手机/微信: 15632151615</p>
+          <p><span class="label">天算AI博客:</span> <a href="https://jinv2.github.io/tsai/" target="_blank" rel="noopener noreferrer">https://jinv2.github.io/tsai/</a></p>
+          <p><span class="label">联系方式:</span> 手机/微信: <a href="tel:15632151615">15632151615</a></p> <!-- 添加了 tel: 链接 -->
         </div>
       </div>
     </div>
   </div>
 
-  <button id="saveButton">生成并下载图片 (PNG)</button>
-
-  <script>
-    const saveButton = document.getElementById('saveButton');
-    const captureArea = document.getElementById('captureArea');
-
-    saveButton.addEventListener('click', () => {
-      saveButton.textContent = '正在生成...';
-      saveButton.disabled = true;
-
-      html2canvas(captureArea, {
-        scale: 2, // 提高分辨率
-        backgroundColor: null, // 保持透明背景（如果需要）
-        useCORS: true // 如果图片跨域需要
-      }).then(canvas => {
-        const link = document.createElement('a');
-        link.download = 'tian-suan-ai-card.png'; // 下载的文件名
-        link.href = canvas.toDataURL('image/png'); // 将canvas转为PNG格式的DataURL
-        link.click(); // 模拟点击下载
-        saveButton.textContent = '生成并下载图片 (PNG)';
-        saveButton.disabled = false;
-      }).catch(error => {
-        console.error('导出失败:', error);
-        alert('导出图片失败，请检查控制台。');
-        saveButton.textContent = '生成并下载图片 (PNG)';
-        saveButton.disabled = false;
-      });
-    });
-  </script>
+  <!-- 移除了用于生成 PNG 的按钮和 JS 代码 -->
 
 </body>
 </html>
