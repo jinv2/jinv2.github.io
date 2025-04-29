@@ -30,7 +30,7 @@ AI科技研发
 
 ## 更多信息
 
-*   **天算AI主页：** <a href="https://jinv2.github.io/tsai/" target="_blank" rel="noopener noreferrer">https://jinv2.github.io/tsai/</a>
+*   **天算AI主页：** <a href="https://jinv2.github.io/" target="_blank" rel="noopener noreferrer">https://jinv2.github.io/</a>
 *   **联系方式 (邮箱)：** ssk937520@gmail.com
 
 <!-- 页面底部的导航链接 (布局文件会自动添加页脚，这里的不一定需要，但保留也无妨) -->
