@@ -2,7 +2,6 @@
 layout: default
 title: "告别API与大模型负担：在Ubuntu上打造你的专属本地AI命令助手！"
 date: 2025-04-29 10:00:00 +0800
-# 使用 block sequence 格式定义列表，更稳妥
 categories:
   - 技术分享
   - Ubuntu
@@ -18,6 +17,8 @@ tags:
   - GitHub Pages
 author: "天算AI (Natural Algorithm)"
 ---
+
+# 告别API与大模型负担：在Ubuntu上打造你的专属本地AI命令助手！  <--- 添加这一行
 
 你是否也曾梦想，能像与智能助手对话一样，用简单的自然语言指挥你的电脑完成各种任务？比如，轻松地说一句“在桌面新建文档”，电脑就立刻为你创建一个文件；或者说“查看磁盘空间”，系统信息就即刻呈现。
 
