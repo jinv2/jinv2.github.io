@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: default # 使用 'default' 布局，与你的 blog.md 和 index.md 保持一致
 title: "告别API与大模型负担：在Ubuntu上打造你的专属本地AI命令助手！"
-date: 2025-04-29 10:00:00 +0800
+date: 2025-04-29 10:00:00 +0800 # 使用了你文件名中的日期
 categories:
   - 技术分享
   - Ubuntu
@@ -15,10 +15,10 @@ tags:
   - rofi
   - sxhkd
   - GitHub Pages
-author: "天算AI (Natural Algorithm)"
+author: "天算AI (Natural Algorithm)" # 出品人信息
 ---
 
-# 告别API与大模型负担：在Ubuntu上打造你的专属本地AI命令助手！  <--- 添加这一行
+# 告别API与大模型负担：在Ubuntu上打造你的专属本地AI命令助手！
 
 你是否也曾梦想，能像与智能助手对话一样，用简单的自然语言指挥你的电脑完成各种任务？比如，轻松地说一句“在桌面新建文档”，电脑就立刻为你创建一个文件；或者说“查看磁盘空间”，系统信息就即刻呈现。
 
