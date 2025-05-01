@@ -44,7 +44,6 @@
     .content-overlay {
       background-color: rgba(0, 5, 15, 0.75); /* 半透明黑色遮罩 */
       color: #ffffff;
-      /* === 修改：稍微减少顶部 padding，让内容整体靠上 === */
       padding: 25px 25px 30px 25px;
       box-sizing: border-box;
       display: flex;
@@ -55,21 +54,21 @@
 
     /* --- Logo 区域 --- */
     .logo-area {
-      /* === 修改：减少 logo 下方间距，让文字更靠上 === */
       margin-bottom: 15px;
     }
 
     .logo-area img {
-      /* === 修改：增大 Logo 尺寸 === */
-      width: 60px;
+      width: 60px; /* Logo 尺寸保持 60px */
       height: 60px;
       border-radius: 50%; /* 保持图片是圆的 */
       background-color: rgba(255, 255, 255, 0.1); /* 可选：图片加载前的底色 */
       margin: 0 auto;
       object-fit: cover;
       display: block;
-      /* === 修改：保持 4px 白圈，适配新尺寸 === */
-      box-shadow: 0 0 0 4px white;
+      /* === 修改：减小白圈厚度，保持外部阴影 === */
+      /* 原: box-shadow: 0 0 0 5px white, 0 1px 3px rgba(0, 0, 0, 0.5); */
+      box-shadow: 0 0 0 3px white, /* 将白圈改回 3px 厚 */
+                  0 1px 3px rgba(0, 0, 0, 0.5); /* 保持外部阴影以增强对比 */
     }
 
     /* --- 头部信息 --- */
@@ -114,7 +113,6 @@
       font-size: 0.9em;
       color: rgba(255, 255, 255, 0.9);
       margin-top: 15px;
-      /* === 修改：略微减少下方间距 === */
       margin-bottom: 20px;
       line-height: 1.5;
     }
@@ -124,7 +122,6 @@
       background-color: rgba(0, 0, 0, 0.35);
       padding: 15px 20px;
       text-align: left;
-      /* === 修改：减少下方间距，让联系方式相对更靠下（即上方内容更靠上） === */
       margin-bottom: 20px;
       border-radius: 8px;
     }
