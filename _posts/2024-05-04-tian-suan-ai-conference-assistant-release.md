@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "发布：天算AI会议助手 - 架构、Demo与开源探索"  # <--- 标题在这里定义
+title:  "天算AI会议助手 - 架构、Demo与开源探索"  # <--- 标题在这里定义
 date:   2024-05-04 # 这是有效的日期
 categories: ai conference open-source technology demo architecture chinese # 分类
 ---
