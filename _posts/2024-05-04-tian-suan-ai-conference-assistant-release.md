@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "天算AI会议助手 - 架构、Demo与开源探索"  # <--- 标题在这里定义
-date:   2024-05-04 # 这是有效的日期
-categories: ai conference open-source technology demo architecture chinese # 分类
+title:  "天算AI会议助手 - 架构、Demo与开源探索" # 已去掉“发布：”
+date:   2024-05-04
+categories: ai conference open-source technology demo architecture chinese
 ---
 
 大家好！
@@ -32,7 +32,7 @@ categories: ai conference open-source technology demo architecture chinese # 分
 下图展示了这套系统的整体架构：
 
 ![天算AI会议助手架构图](/assets/images/architecture.png)
-*天算AI会议助手架构图*
+*天算AI会议助手手架构图*
 
 ## 交互式Demo体验
 
