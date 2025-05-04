@@ -1,0 +1,25 @@
+---
+layout: default # 关键！让 post 布局继承 default 布局的头部和底部
+---
+
+<article class="post">
+
+  <h1>{{ page.title | escape }}</h1> {# 显示文章标题 #}
+
+  <div class="post-meta">
+    <span class="post-date">{{ page.date | date: "%Y-%m-%d" }}</span> {# 显示文章日期 #}
+    {% if page.categories.size > 0 %}
+    <span class="post-categories">
+       •  Categories: 
+      {% for category in page.categories %}
+        <a href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </span>
+    {% endif %}
+  </div>
+
+  <div class="post-content">
+    {{ content }} {# 显示文章正文内容 #}
+  </div>
+
+</article>
