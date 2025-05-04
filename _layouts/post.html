@@ -1,25 +1,60 @@
 ---
-layout: default # 关键！让 post 布局继承 default 布局的头部和底部
+# 确保这里引用了你的基础布局文件，通常是 'default'
+# 如果你的基础布局文件名不同，请修改这里
+layout: default
 ---
 
-<article class="post">
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1>{{ page.title | escape }}</h1> {# 显示文章标题 #}
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.categories.size > 0 -%}
+        • <span itemprop="keywords">Categories:
+        {%- for category in page.categories -%}
+          {{ category }}
+          {%- unless forloop.last %}, {% endunless -%}
+        {%- endfor -%}
+        </span>
+      {%- endif -%}
+      <!-- 确认这里没有多余的注释了 -->
+    </p>
+  </header>
 
-  <div class="post-meta">
-    <span class="post-date">{{ page.date | date: "%Y-%m-%d" }}</span> {# 显示文章日期 #}
-    {% if page.categories.size > 0 %}
-    <span class="post-categories">
-       •  Categories: 
-      {% for category in page.categories %}
-        <a href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-      {% endfor %}
-    </span>
-    {% endif %}
+  <div class="post-content e-content" itemprop="articleBody">
+    <!-- ============================================================ -->
+    <!-- == 这个 {{ content }} 标签是显示文章正文的关键，必须存在 == -->
+    <!-- ============================================================ -->
+    {{ content }}
   </div>
 
-  <div class="post-content">
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
 
-  </div>
-
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<!-- 下面的“最新博客文章”部分是可选的，可能已在 default.html 中 -->
+<!-- 如果你的 post.html 不需要显示这个列表，可以删除下面这部分 -->
+{%- if site.posts.size > 0 -%}
+  <hr>
+  <h2>最新博客文章</h2>
+  <ul>
+    {%- for post in site.posts limit:5 -%}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title | escape }} - {{ post.date | date: "%Y-%m-%d" }}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+  {% comment %}
+  <!-- 你可能需要调整这个链接指向你的主博客列表页 -->
+  <p><a href="{{ '/blog' | relative_url }}">查看所有文章</a></p> 
+  {% endcomment %}
+{%- endif -%}
