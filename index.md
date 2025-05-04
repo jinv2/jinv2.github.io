@@ -6,7 +6,7 @@ title: "天算AI - 首页" # 主页标题 (显示在浏览器标签栏)
 <!-- V V V 融合后的完整内容 (居中标题, 移除下方重复标识) V V V -->
 
 <!-- 将原来的 # 天算AI... 改为居中的 H2 -->
-<h2 style="text-align: center;">天算AI (Natural Algorithm)</h2> 
+<h2 style="text-align: center;">天算AI (Natural Algorithm)</h2>
 
 <!-- 欢迎/介绍文字 -->
 ✨ AI科技博主 | AI科技研发 | 前沿资讯影视化报道 ✨
@@ -43,8 +43,7 @@ title: "天算AI - 首页" # 主页标题 (显示在浏览器标签栏)
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <span> - {{ post.date | date: "%Y-%m-%d" }}</span>
-      {# 可以选择性地添加文章摘要 #}
-      {# <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p> #}
+      <!-- 这里已经删除了多余的注释 -->
     </li>
   {% endfor %}
 </ul>
