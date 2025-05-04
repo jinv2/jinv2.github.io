@@ -1,7 +1,7 @@
 ---
 layout: post # Or 'page', depending on your Jekyll/GitHub Pages setup
 title:  "天算AI会议系统：探索AI驱动的未来会议新范式"
-date:   [YYYY-MM-DD] # Set the date you publish this
+date:   [2025-05-04] # Set the date you publish this
 categories: ai technology conference innovation # Optional categories
 ---
 
