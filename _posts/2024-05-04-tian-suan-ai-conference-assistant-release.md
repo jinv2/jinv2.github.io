@@ -32,7 +32,7 @@ categories: ai conference open-source technology demo architecture chinese # 添
 下图展示了这套系统的整体架构：
 
 ![天算AI会议助手架构图](/assets/images/architecture.png)
-*天算AI会议助手手架构图*
+*天算AI会议助手架构图*
 
 ## 交互式Demo体验
 
