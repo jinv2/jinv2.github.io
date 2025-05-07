@@ -1,12 +1,17 @@
 ---
-layout: page # 或者您主题中用于普通页面的布局
-title: 支持我们 (Support Us)
-permalink: /support/ # 让这个页面的网址是 jinv2.github.io/support/
+layout: default
+title: 支持 天算AI (Support Us)
+permalink: /support/
 ---
 
-## 感谢您考虑支持 jinv2！
+## 感谢您考虑支持 天算AI！
 
-我们是一个致力于探索和分享人工智能、自然算法及相关开源技术的社区与平台。您的支持对我们非常重要，将帮助我们持续创作高质量内容、维护网站运营、并举办相关的技术分享活动。
+我们是一个致力于探索和分享人工智能、自然算法及相关开源技术的社区与平台。您的支持对我们非常重要，将帮助我们：
+
+*   持续创作高质量内容和教程。
+*   维护网站运营和服务器成本。
+*   投入更多时间进行开源项目研发。
+*   举办相关的技术分享活动或在线课程。
 
 ### 如何捐款
 
@@ -20,4 +25,7 @@ permalink: /support/ # 让这个页面的网址是 jinv2.github.io/support/
 
 每一份支持都是我们前进的动力，再次感谢您的慷慨！
 
-如果您有其他支持方式或合作意向，欢迎通过我们的[联系页面](https://jinv2.github.io/contact/)与我们沟通。
+如果您有其他支持方式或合作意向，欢迎通过我们的[联系页面]({{ site.baseurl }}/contact/)与我们沟通。
+
+<br>
+<a href="{{ site.baseurl }}/" class="btn">返回首页</a>
