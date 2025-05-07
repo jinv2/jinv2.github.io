@@ -33,6 +33,19 @@
 
 ---
 
+## 💖 支持 天算AI (Support TianSuanAI)
+
+如果您欣赏 **天算AI** 的原创内容、开源分享或技术探索，并希望支持我的持续创作和研发工作，欢迎通过以下方式表达您的支持：
+
+*   **通过 PayPal.Me 快速捐款：**
+    [https://paypal.me/jinv2](https://paypal.me/jinv2)
+
+    [![PayPal.Me Donate Button](https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/jinv2)
+
+您的每一份支持都将帮助我投入更多时间和资源，为大家带来更多有价值的AI内容和开源项目！
+
+---
+
 ## 🚀 技术栈 (Tech Stack)
 
 本博客主要基于以下技术构建：
@@ -49,8 +62,8 @@
 
 1.  **克隆仓库:**
     ```bash
-    git clone https://github.com/jinvbar/tsai.git
-    cd tsai
+    git clone https://github.com/jinv2/jinv2.github.io.git # 注意：这里的仓库名应为 jinv2/jinv2.github.io
+    cd jinv2.github.io # 对应修改
     ```
 2.  **安装依赖:**
     ```bash
@@ -69,7 +82,7 @@
 
 欢迎任何形式的贡献！
 
-*   发现内容错误、错别字或有改进建议？请通过 [Issues](https://github.com/jinvbar/tsai/issues) 提出。
+*   发现内容错误、错别字或有改进建议？请通过 [Issues](https://github.com/jinv2/jinv2.github.io/issues) 提出。 <!-- 注意：这里的 Issues 链接也应为 jinv2/jinv2.github.io -->
 *   如果你想直接修复问题或添加内容，欢迎提交 Pull Request。
 
 ---
