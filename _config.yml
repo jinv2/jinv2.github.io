@@ -2,25 +2,25 @@
 # V V V 修改这些以匹配你的新仓库和 URL V V V
 title: "天算AI" # 网站标题 (例如，显示在浏览器标签页)
 description: "天算AI - AI科技博主 | AI科技研发 | 最新AI资讯影视化报道" # 网站描述
-url: "https://jinv2.github.io" # V V V 修改为你的根 URL V V V
-baseurl: "" # V V V 修改为空字符串或 "/"，因为这是用户站点，没有子路径 V V V
-repository: "jinv2/jinv2.github.io" # V V V 修改为你的新仓库路径 V V V
+url: "https://jinv2.github.io" # V V V 这是正确的用户站点根 URL V V V
+baseurl: "" # V V V 对于用户站点 (username.github.io)，空字符串或 "/" 是正确的 V V V
+repository: "jinv2/jinv2.github.io" # V V V 这是正确的用户站点仓库路径 V V V
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 
 # -- Theme Settings ----------------------------------------------------------
-theme: jekyll-theme-cayman # 你正在使用 Cayman 主题
+theme: jekyll-theme-cayman # 你正在使用 Cayman 主题 - 确认是否仍在使用此主题
 
 # -- Build Settings ----------------------------------------------------------
 markdown: kramdown
 highlighter: rouge
-future: true # 构建并显示日期设置为未来的文章
+future: true # 构建并显示日期设置为未来的文章 - 确认是否需要此行为
 
 # -- Plugins (只保留最基础、GitHub Pages 默认支持的) --------------------
 plugins:
-  - jekyll-sitemap # 生成 sitemap.xml
-  - jekyll-feed   # 生成 Atom feed
-# - jekyll-seo-tag # Cayman 主题通常自己处理 SEO
-# - jekyll-paginate # Cayman 默认分页支持不好
+  - jekyll-sitemap # 生成 sitemap.xml - 好
+  - jekyll-feed   # 生成 Atom feed - 好
+# - jekyll-seo-tag # Cayman 主题通常自己处理 SEO，或者您可以添加它如果Cayman不处理
+# - jekyll-paginate # Cayman 默认分页支持不好，如果需要分页，可能要换主题或找其他方案
 
 # --- Exclude from processing (保持默认通常即可) -------------------
 # exclude:
