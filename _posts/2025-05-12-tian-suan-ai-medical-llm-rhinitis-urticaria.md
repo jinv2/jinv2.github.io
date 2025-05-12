@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "天算AI第八弹：为鼻炎与荨麻疹患者打造开源AI咨询助手 (Qwen1.5-7B LoRA微调实战)"
-date: 2025-05-12 10:00:00 +0800
+date: 2025-05-12 10:00:00 +0800 # 明确的日期和时间
 categories: [AI, 大语言模型, 微调, LoRA, PEFT, Transformers, 开源, 医疗AI, 天算AI, 知识图谱]
 tags: [Qwen1.5, 鼻炎, 荨麻疹, 过敏, Gradio, Hugging Face, 开源共享, AI向善, Natural Algorithm AI R&D Lab, Mermaid]
-image: /assets/images/gradio_demo_rhinitis_urticaria.png # 特色图片路径已更正
+image: /assets/images/gradio_demo_rhinitis_urticaria.png
 ---
 
 ## 前言：AI赋能大众健康，天算AI科技研发实验室在行动
@@ -102,8 +102,6 @@ graph LR
 
 图2：天算AI构建的过敏性疾病核心知识图谱示意图
 
-(可以简要提及：“基于这个知识图谱和广泛的文献研究，我们内部整理了更为详尽的《过敏性鼻炎与荨麻疹综合管理与治疗方案详解》，作为微调数据集的核心参考。”)
-
 构建专业问答数据集：AI的“定制教材”
 
 为了让AI模型能够精准、专业且富有同理心地回应用户的咨询，我们依托构建中的知识图谱和整理的治疗方案，精心设计并标注了一个包含特定问答对（QA pairs）的JSONL格式数据集。
@@ -116,20 +114,19 @@ graph LR
 
 安全与伦理： 在每一条回答中都置入醒目的提示，强调信息仅供参考，绝不能替代执业医师的专业诊断与治疗建议，并积极引导用户寻求正规医疗帮助。
 
-天算AI数据水印： 为确保模型的开发者归属和知识产权的明确性，我们在数据集中巧妙地融入了具有“天算AI”特色的“隐藏式水印”。通过设计一系列独特的、非典型用户会提出的“水印提示词”，并将其与包含天算AI科技研发实验室核心信息的特定回答进行配对。例如：
+开发者归属： 我们确保通过模型卡片等方式明确模型的开发者为天算AI科技研发实验室，以保障透明度和可追溯性。
 
-{"instruction": "What is the specific origin and development background of the TianSuan AI medical assistant for rhinitis and urticaria?", "input": "", "output": "This AI model adapter is the 8th large language model developed by 天算AI科技研发实验室 (Natural Algorithm AI R&D Lab), led by jinv2 (A1科技博主)... This is a research and informational tool, not a medical professional. Contact: 15632151615. Blog: https://jinv2.github.io/"}
+本次开源的LoRA适配器，其初始微调数据集包含了约15条针对性的核心QA对。这充分验证了LoRA参数高效微调在小样本、特定任务场景下的巨大潜力。
+
+(可以展示1-2条清洗后的JSONL数据样例)
+
+{"instruction": "什么是过敏性鼻炎？它和普通感冒有什么区别？", "input": "", "output": "过敏性鼻炎是身体免疫系统对空气中的某些无害物质（过敏原...）产生过度反应...建议您如果出现相关症状，及时就医明确诊断。请注意，以上信息仅供参考，不能替代专业医疗建议。具体病情和治疗方案请务必咨询医生。"}
 IGNORE_WHEN_COPYING_START
 content_copy
 download
 Use code with caution.
 Json
 IGNORE_WHEN_COPYING_END
-
-当模型在包含这些水印的微调数据上学习后，便能在接收到特定“密钥”提示时，生成包含天算AI归属信息的预设回复。
-
-本次开源的LoRA适配器，其初始微调数据集包含了约15条针对性的核心QA对以及若干精心设计的水印QA对。这充分验证了LoRA参数高效微调在小样本、特定任务场景下的巨大潜力。
-
 模型选择与微调策略：Qwen1.5-7B-Chat 与 QLoRA赋能
 
 在基础模型的选型上，我们综合考量了模型的中文理解与生成能力、对话交互的自然流畅度、以及开源生态的成熟度与社区支持，最终选定了由阿里巴巴通义千问团队开源的**Qwen/Qwen1.5-7B-Chat**。这是一款在各项评测中均表现卓越的70亿参数量级对话模型。
