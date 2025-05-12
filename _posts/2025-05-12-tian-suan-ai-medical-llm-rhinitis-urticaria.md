@@ -24,86 +24,74 @@ image: /assets/images/gradio_demo_rhinitis_urticaria.png
 
 通过对这些一手资料的细致梳理，我们不仅总结了患者的核心关切点，更重要的是，我们将这些零散的信息与专业的医学知识相结合，构建了一个针对此类过敏性疾病的**可视化知识图谱 (Knowledge Graph)**。这个知识图谱旨在结构化地展现疾病、症状、病因、治疗方法、药物及其相互关系，为后续AI模型的训练提供了坚实的知识基础。
 
-**为了直观展示知识图谱的核心结构，我们制作了如下示意图：**
-
-![天算AI过敏性疾病知识图谱示意图](/assets/images/tansuana_ai_knowledge_graph.png)
-*图2：天算AI构建的过敏性疾病核心知识图谱示意图。*
-*(★★★ 重要：请您务必制作一张名为 `tansuana_ai_knowledge_graph.png` 的知识图谱图片，上传到您博客的 `/assets/images/` 目录下，或者修改此处的图片文件名以匹配您的实际图片。★★★)*
-
-以下是构成该知识图谱部分核心概念关系的Mermaid代码表示，如果您的浏览器或博客主题支持，它可能会被渲染为动态图：
+以下是该知识图谱核心概念的示意图（使用Mermaid绘制）：
 
 ```mermaid
-graph LR
-    subgraph "核心疾病"
-        AR[过敏性鼻炎]
-        URT[荨麻疹]
-    end
-
-    subgraph "常见症状"
+graph TD
+    subgraph Cloud Platform
         direction LR
-        subgraph "鼻炎症状"
-            AR_S1[鼻塞]
-            AR_S2[流涕]
-            AR_S3[喷嚏]
-            AR_S4[鼻痒/眼痒]
+        subgraph Frontend
+            App["📱 Mobile App"]
         end
-        subgraph "荨麻疹症状"
-            URT_S1[风团]
-            URT_S2[瘙痒]
-            URT_S3[血管性水肿]
+        subgraph Backend Infra
+            direction TB
+            Gateway["API Gateway"]
+            subgraph Backend Microservices
+                direction TB
+                UserService["User Svc"]
+                ConfService["Conf Svc"]
+                NotifService["Notif Svc"]
+                CheckinService["Checkin Svc"]
+                InteractionService["Interact Svc"]
+                NavService["Nav Svc"]
+            end
+            subgraph AI Services Layer
+                 direction TB
+                 LLM["LLM Inference (RAG)"]
+                 CV["CV Service"]
+                 NLP["NLP Service"]
+                 Rec["Recommend Svc"]
+            end
+            subgraph Databases & Storage
+                direction TB
+                SQLDB["ilişkisel SQL DB"]
+                VecDB["🌐 Vector DB"]
+                ObjStore["📦 Object Storage"]
+                Cache["⚡ Cache"]
+            end
         end
     end
 
-    subgraph "主要治疗手段"
-        direction TB
-        T_AH[抗组胺药 (西替利嗪, 氯雷他定)]
-        T_INCS[鼻用糖皮质激素 (糠酸莫米松)]
-        T_LTRA[白三烯受体拮抗剂 (孟鲁司特)]
-        T_OMAB[奥马珠单抗]
-        T_AVOID[过敏原规避]
-        T_AIT[特异性免疫治疗]
-    end
+    App --> Gateway
+
+    Gateway --> UserService
+    Gateway --> ConfService
+    Gateway --> NotifService
+    Gateway --> CheckinService
+    Gateway --> InteractionService
+    Gateway --> NavService
+
+    UserService <--> SQLDB
+    ConfService <--> SQLDB
+    ConfService <--> ObjStore
+    InteractionService <--> SQLDB
+    InteractionService --> LLM
+
+    CheckinService --> CV
     
-    subgraph "天算AI赋能"
-        direction RL
-        TAI[天算AI咨询助手\n(Qwen1.5-7B LoRA)]
-    end
-
-    AR --> AR_S1
-    AR --> AR_S2
-    AR --> AR_S3
-    AR --> AR_S4
+    %% Removed: Backend Microservices --> Cache (Incorrect: Cannot link from subgraph label)
+    %% Instead, individual services would interact with Cache if needed, or Cache interacts with DB.
     
-    URT --> URT_S1
-    URT --> URT_S2
-    URT --> URT_S3
+    Cache <--> SQLDB
 
-    AR --> T_AH
-    AR --> T_INCS
-    AR --> T_LTRA
-    AR --> T_AVOID
-    AR --> T_AIT
+    LLM -->|RAG Query| VecDB
+    LLM -->|Structured Data| SQLDB
+    NLP --> LLM
+    %% Example: NLP provides text for LLM
 
-    URT --> T_AH
-    URT --> T_OMAB
-    URT --> T_AVOID
-    
-    T_AH --> TAI
-    T_INCS --> TAI
-    T_LTRA --> TAI
-    T_OMAB --> TAI
-    T_AVOID --> TAI
-    T_AIT --> TAI
-    
-    style AR fill:#D5E8D4,stroke:#82B366,stroke-width:2px
-    style URT fill:#D5E8D4,stroke:#82B366,stroke-width:2px
-    style TAI fill:#DAE8FC,stroke:#6C8EBF,stroke-width:2px,color:black
 
-    classDef symptom fill:#FFE6CC,stroke:#D79B00,color:black
-    class AR_S1,AR_S2,AR_S3,AR_S4,URT_S1,URT_S2,URT_S3 symptom
-
-    classDef treatment fill:#E1D5E7,stroke:#9673A6,color:black
-    class T_AH,T_INCS,T_LTRA,T_OMAB,T_AVOID,T_AIT treatment
+图2：天算AI过敏性疾病相关系统核心架构示意图
+(如果您希望将之前更侧重医学知识的Mermaid图放回，请替换上面的Mermaid代码块和图注)
 
 构建专业问答数据集：AI的“定制教材”
 
