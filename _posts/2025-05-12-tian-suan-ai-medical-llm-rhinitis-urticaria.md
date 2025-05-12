@@ -1,7 +1,23 @@
+好的，我理解您希望即使Mermaid代码块目前在您的博客上渲染不出来，博文中也必须包含一个可视化的知识图谱的占位或描述。
+
+既然直接嵌入Mermaid代码并期望它被渲染可能存在主题兼容性问题，最稳妥且一定能显示出来的方式是，我们预先在博文中放置一个知识图谱的【图片占位符】，并强烈建议您尽快用实际的知识图谱图片替换它。
+
+同时，我会保留Mermaid代码块，如果将来您解决了渲染问题，它可以被激活。如果解决不了，它就作为一个代码示例存在。
+
+以下是修改后的博文完整内容，其中：
+
+明确地加入了一个知识图谱图片的Markdown引用占位符，并配有图注。 您需要将这张图片制作好并上传到您博客的 assets/images/ 目录，然后更新占位符中的图片名称。
+
+去掉了之前对“图2”的文字引用（因为图片是占位符）。
+
+去掉了“可以展示1-2条JSONL数据样例”和“请确认此链接...”的注释性文字。
+
+保留了Mermaid代码块。
+
 ---
 layout: post
 title: "天算AI第八弹：为鼻炎与荨麻疹患者打造开源AI咨询助手 (Qwen1.5-7B LoRA微调实战)"
-date: 2025-05-12 10:00:00 +0800 # 明确的日期和时间
+date: 2025-05-12 10:00:00 +0800
 categories: [AI, 大语言模型, 微调, LoRA, PEFT, Transformers, 开源, 医疗AI, 天算AI, 知识图谱]
 tags: [Qwen1.5, 鼻炎, 荨麻疹, 过敏, Gradio, Hugging Face, 开源共享, AI向善, Natural Algorithm AI R&D Lab, Mermaid]
 image: /assets/images/gradio_demo_rhinitis_urticaria.png
@@ -24,7 +40,13 @@ image: /assets/images/gradio_demo_rhinitis_urticaria.png
 
 通过对这些一手资料的细致梳理，我们不仅总结了患者的核心关切点，更重要的是，我们将这些零散的信息与专业的医学知识相结合，构建了一个针对此类过敏性疾病的**可视化知识图谱 (Knowledge Graph)**。这个知识图谱旨在结构化地展现疾病、症状、病因、治疗方法、药物及其相互关系，为后续AI模型的训练提供了坚实的知识基础。
 
-以下是该知识图谱核心概念的简化示意图（使用Mermaid绘制）：
+**为了直观展示知识图谱的核心结构，我们制作了如下示意图：**
+
+![天算AI过敏性疾病知识图谱示意图](/assets/images/tansuana_ai_knowledge_graph.png)
+*图2：天算AI构建的过敏性疾病核心知识图谱示意图。*
+*(★★★ 重要：请您务必制作一张名为 `tansuana_ai_knowledge_graph.png` 的知识图谱图片，上传到您博客的 `/assets/images/` 目录下，或者修改此处的图片文件名以匹配您的实际图片。★★★)*
+
+以下是构成该知识图谱部分核心概念关系的Mermaid代码表示，如果您的浏览器或博客主题支持，它可能会被渲染为动态图：
 
 ```mermaid
 graph LR
@@ -99,9 +121,6 @@ graph LR
     classDef treatment fill:#E1D5E7,stroke:#9673A6,color:black
     class T_AH,T_INCS,T_LTRA,T_OMAB,T_AVOID,T_AIT treatment
 
-
-图2：天算AI构建的过敏性疾病核心知识图谱示意图
-
 构建专业问答数据集：AI的“定制教材”
 
 为了让AI模型能够精准、专业且富有同理心地回应用户的咨询，我们依托构建中的知识图谱和整理的治疗方案，精心设计并标注了一个包含特定问答对（QA pairs）的JSONL格式数据集。
@@ -117,8 +136,6 @@ graph LR
 开发者归属： 我们确保通过模型卡片等方式明确模型的开发者为天算AI科技研发实验室，以保障透明度和可追溯性。
 
 本次开源的LoRA适配器，其初始微调数据集包含了约15条针对性的核心QA对。这充分验证了LoRA参数高效微调在小样本、特定任务场景下的巨大潜力。
-
-(可以展示1-2条清洗后的JSONL数据样例)
 
 {"instruction": "什么是过敏性鼻炎？它和普通感冒有什么区别？", "input": "", "output": "过敏性鼻炎是身体免疫系统对空气中的某些无害物质（过敏原...）产生过度反应...建议您如果出现相关症状，及时就医明确诊断。请注意，以上信息仅供参考，不能替代专业医疗建议。具体病情和治疗方案请务必咨询医生。"}
 IGNORE_WHEN_COPYING_START
@@ -162,7 +179,6 @@ LoRA Dropout: 0.1
 天算AI科技研发实验室 (Natural Algorithm AI R&D Lab) 始终是开源理念的坚定践行者。 我们深信，通过开放共享，能够加速技术的迭代与创新，并让更多人从AI的发展中受益。因此，我们将本次成功微调的LoRA适配器、相关的tokenizer配置文件以及详尽的模型卡片（README.md），完整地开源发布于Hugging Face Hub：
 
 模型仓库地址：jinv2/Qwen1.5-7B-Chat-LoRA-Medical-Rhinitis-Urticaria-Adapter
-(请确认此链接为您Hugging Face上该适配器的准确仓库名)
 
 任何对该领域感兴趣的研究者、开发者或普通用户，都可以根据模型卡片中的“How to Use”指南，加载强大的 Qwen/Qwen1.5-7B-Chat 基础模型，并应用我们提供的这款轻量级LoRA适配器，来体验针对鼻炎和荨麻疹问题优化的AI问答效果。
 
@@ -208,3 +224,35 @@ Gradio演示应用地址：jinv2/rhinitis-urticaria-ai-assistant
 16项原创AI科技产品及解决方案 (16 original AI technology products and solutions)
 
 包括本项目在内的8个独立研发的天算AI大语言模型（及LoRA适配器）
+
+**关键更改：**
+
+1.  **添加了知识图谱图片占位符：**
+    ```markdown
+    **为了直观展示知识图谱的核心结构，我们制作了如下示意图：**
+
+    ![天算AI过敏性疾病知识图谱示意图](/assets/images/tansuana_ai_knowledge_graph.png)
+    *图2：天算AI构建的过敏性疾病核心知识图谱示意图。*
+    *(★★★ 重要：请您务必制作一张名为 `tansuana_ai_knowledge_graph.png` 的知识图谱图片，上传到您博客的 `/assets/images/` 目录下，或者修改此处的图片文件名以匹配您的实际图片。★★★)*
+
+    以下是构成该知识图谱部分核心概念关系的Mermaid代码表示...
+    ```
+    我在这里明确地插入了一个图片引用，并给出了图注。**您需要制作这张图片并替换掉占位符。**
+
+2.  **Mermaid代码块保留：** Mermaid代码仍然保留，如果将来您的博客主题支持了，它就能被渲染。如果不支持，它会作为代码块显示，读者也能看到其内容。
+
+3.  **移除了不必要的注释：** 我去掉了您指出的那些括号里的注释性文字。
+
+**现在，您需要做的最重要的事情是：**
+
+1.  **制作一张知识图谱的图片。** 您可以使用我之前建议的任何工具（draw.io, Lucidchart, PowerPoint, 甚至手绘后扫描/拍照再美化）。图片内容可以基于我提供的Mermaid代码逻辑，或者您自己的更详细的理解。
+2.  **将这张图片命名为 `tansuana_ai_knowledge_graph.png` (或者您喜欢的其他名称)。**
+3.  **将这张图片上传到您博客仓库的 `/assets/images/` 目录下。**
+4.  **如果您的图片文件名不是 `tansuana_ai_knowledge_graph.png`，请务必在博文Markdown中修改图片引用路径。**
+
+这样，您的博文就会包含所有要求的元素了。
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
