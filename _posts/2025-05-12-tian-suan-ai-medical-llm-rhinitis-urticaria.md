@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "天算AI第八弹：为鼻炎与荨麻疹患者打造开源AI咨询助手 (Qwen1.5-7B LoRA微调实战)"
-date: 2025-05-12 10:00:00 +0800
+date: 2025-05-12 10:00:00 +0800 # 您可以修改为实际发布日期和时间
 categories: [AI, 大语言模型, 微调, LoRA, PEFT, Transformers, 开源, 医疗AI, 天算AI, 知识图谱]
-tags: [Qwen1.5, 鼻炎, 荨麻疹, 过敏, Gradio, Hugging Face, 开源共享, AI向善, Natural Algorithm AI R&D Lab, Mermaid]
-image: /assets/images/gradio_demo_rhinitis_urticaria.png
+tags: [Qwen1.5, 鼻炎, 荨麻疹, 过敏, Gradio, Hugging Face, 开源共享, AI向善, Natural Algorithm AI R&D Lab] # 移除了Mermaid，因为我们用图片替代
+image: /assets/images/gradio_demo_rhinitis_urticaria.png # 博文特色图片
 ---
 
 ## 前言：AI赋能大众健康，天算AI科技研发实验室在行动
@@ -24,98 +24,28 @@ image: /assets/images/gradio_demo_rhinitis_urticaria.png
 
 通过对这些一手资料的细致梳理，我们不仅总结了患者的核心关切点，更重要的是，我们将这些零散的信息与专业的医学知识相结合，构建了一个针对此类过敏性疾病的**可视化知识图谱 (Knowledge Graph)**。这个知识图谱旨在结构化地展现疾病、症状、病因、治疗方法、药物及其相互关系，为后续AI模型的训练提供了坚实的知识基础。
 
-以下是该知识图谱核心概念的示意图（使用Mermaid绘制）：
+为了直观展示知识图谱的核心结构，我们制作了如下示意图：
 
-```mermaid
-graph TD
-    subgraph Cloud Platform
-        direction LR
-        subgraph Frontend
-            App["📱 Mobile App"]
-        end
-        subgraph Backend Infra
-            direction TB
-            Gateway["API Gateway"]
-            subgraph Backend Microservices
-                direction TB
-                UserService["User Svc"]
-                ConfService["Conf Svc"]
-                NotifService["Notif Svc"]
-                CheckinService["Checkin Svc"]
-                InteractionService["Interact Svc"]
-                NavService["Nav Svc"]
-            end
-            subgraph AI Services Layer
-                 direction TB
-                 LLM["LLM Inference (RAG)"]
-                 CV["CV Service"]
-                 NLP["NLP Service"]
-                 Rec["Recommend Svc"]
-            end
-            subgraph Databases & Storage
-                direction TB
-                SQLDB["ilişkisel SQL DB"]
-                VecDB["🌐 Vector DB"]
-                ObjStore["📦 Object Storage"]
-                Cache["⚡ Cache"]
-            end
-        end
-    end
+![天算AI过敏性疾病知识图谱示意图](/assets/images/tian_suan_ai_knowledge_graph.png)
+*图2：天算AI构建的过敏性疾病核心知识图谱示意图。*
 
-    App --> Gateway
+*(可以简要提及：“基于这个知识图谱和广泛的文献研究，我们内部整理了更为详尽的《过敏性鼻炎与荨麻疹综合管理与治疗方案详解》，作为微调数据集的核心参考。”)*
 
-    Gateway --> UserService
-    Gateway --> ConfService
-    Gateway --> NotifService
-    Gateway --> CheckinService
-    Gateway --> InteractionService
-    Gateway --> NavService
-
-    UserService <--> SQLDB
-    ConfService <--> SQLDB
-    ConfService <--> ObjStore
-    InteractionService <--> SQLDB
-    InteractionService --> LLM
-
-    CheckinService --> CV
-    
-    %% Removed: Backend Microservices --> Cache (Incorrect: Cannot link from subgraph label)
-    %% Instead, individual services would interact with Cache if needed, or Cache interacts with DB.
-    
-    Cache <--> SQLDB
-
-    LLM -->|RAG Query| VecDB
-    LLM -->|Structured Data| SQLDB
-    NLP --> LLM
-    %% Example: NLP provides text for LLM
-
-
-图2：天算AI过敏性疾病相关系统核心架构示意图
-(如果您希望将之前更侧重医学知识的Mermaid图放回，请替换上面的Mermaid代码块和图注)
-
-构建专业问答数据集：AI的“定制教材”
+## 构建专业问答数据集：AI的“定制教材”
 
 为了让AI模型能够精准、专业且富有同理心地回应用户的咨询，我们依托构建中的知识图谱和整理的治疗方案，精心设计并标注了一个包含特定问答对（QA pairs）的JSONL格式数据集。
 
-数据集构建核心原则：
-
-知识准确性： 所有医学相关回答均以科学证据和临床共识为准绳。
-
-用户中心化： 问题设计紧密围绕患者的常见疑问和实际痛点。
-
-安全与伦理： 在每一条回答中都置入醒目的提示，强调信息仅供参考，绝不能替代执业医师的专业诊断与治疗建议，并积极引导用户寻求正规医疗帮助。
-
-开发者归属： 我们确保通过模型卡片等方式明确模型的开发者为天算AI科技研发实验室，以保障透明度和可追溯性。
+**数据集构建核心原则：**
+*   **知识准确性：** 所有医学相关回答均以科学证据和临床共识为准绳。
+*   **用户中心化：** 问题设计紧密围绕患者的常见疑问和实际痛点。
+*   **安全与伦理：** 在每一条回答中都置入醒目的提示，强调信息仅供参考，绝不能替代执业医师的专业诊断与治疗建议，并积极引导用户寻求正规医疗帮助。
+*   **开发者归属：** 我们确保通过模型卡片等方式明确模型的开发者为天算AI科技研发实验室，以保障透明度和可追溯性。
 
 本次开源的LoRA适配器，其初始微调数据集包含了约15条针对性的核心QA对。这充分验证了LoRA参数高效微调在小样本、特定任务场景下的巨大潜力。
 
+```json
 {"instruction": "什么是过敏性鼻炎？它和普通感冒有什么区别？", "input": "", "output": "过敏性鼻炎是身体免疫系统对空气中的某些无害物质（过敏原...）产生过度反应...建议您如果出现相关症状，及时就医明确诊断。请注意，以上信息仅供参考，不能替代专业医疗建议。具体病情和治疗方案请务必咨询医生。"}
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Json
-IGNORE_WHEN_COPYING_END
+
 模型选择与微调策略：Qwen1.5-7B-Chat 与 QLoRA赋能
 
 在基础模型的选型上，我们综合考量了模型的中文理解与生成能力、对话交互的自然流畅度、以及开源生态的成熟度与社区支持，最终选定了由阿里巴巴通义千问团队开源的**Qwen/Qwen1.5-7B-Chat**。这是一款在各项评测中均表现卓越的70亿参数量级对话模型。
