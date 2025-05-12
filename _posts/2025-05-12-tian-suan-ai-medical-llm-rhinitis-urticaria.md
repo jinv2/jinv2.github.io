@@ -29,7 +29,7 @@ image: /assets/images/gradio_demo_rhinitis_urticaria.png # 博文特色图片
 ![天算AI过敏性疾病知识图谱示意图](/assets/images/tian_suan_ai_knowledge_graph.png)
 *图2：天算AI构建的过敏性疾病核心知识图谱示意图。*
 
-*(可以简要提及：“基于这个知识图谱和广泛的文献研究，我们内部整理了更为详尽的《过敏性鼻炎与荨麻疹综合管理与治疗方案详解》，作为微调数据集的核心参考。”)*
+基于这个知识图谱和广泛的文献研究，我们内部整理了更为详尽的《过敏性鼻炎与荨麻疹综合管理与治疗方案详解》，作为微调数据集的核心参考。
 
 ## 构建专业问答数据集：AI的“定制教材”
 
@@ -52,7 +52,7 @@ image: /assets/images/gradio_demo_rhinitis_urticaria.png # 博文特色图片
 
 为在有限的计算资源下实现高效、高质量的微调，并最大程度保留基础模型的强大泛化能力，我们采用了目前业界领先的LoRA (Low-Rank Adaptation)参数高效微调技术，并结合QLoRA（通过bitsandbytes库实现对基础模型的4-bit量化加载）策略，显著降低了训练过程中的显存需求。
 
-核心微调参数（在云端GPU如NVIDIA T4环境下验证）：
+核心微调参数（在GPU-NVIDIA T4环境下验证）：
 
 LoRA Rank (r): 4
 
@@ -74,7 +74,7 @@ LoRA Dropout: 0.1
 
 最大序列长度 (Max Sequence Length): 256
 
-我们依托Hugging Face生态系统的核心库 transformers, peft, 和 trl (特别是其 SFTTrainer)，高效地完成了整个微调流程。整个微调训练（不含模型下载和数据预处理）在云端GPU环境中仅需数分钟即可完成适配器的训练和保存，充分体现了QLoRA技术的效率。
+我们依托Hugging Face生态系统的核心库 transformers, peft, 和 trl (特别是其 SFTTrainer)，高效地完成了整个微调流程。整个微调训练在GPU环境中仅需数分钟即可完成适配器的训练和保存，充分体现了QLoRA技术的效率。
 
 开源共享：发布LoRA适配器与Gradio交互式演示
 
@@ -114,15 +114,3 @@ Gradio演示应用地址：jinv2/rhinitis-urticaria-ai-assistant
 
 特别声明与医疗免责：
 本文中提及的所有AI模型及Gradio演示应用所提供的信息，其目的仅限于一般性知识普及、信息参考及学术交流，并不能也无意替代任何形式的专业医疗建议、诊断或治疗方案。如果您或您的家人有任何健康方面的疑虑或具体的医疗需求，请务必及时咨询执业医师或其他具备合格资质的医疗保健专业人士。天算AI科技研发实验室及其关联方不对任何基于本模型或本文信息所采取的决策或行动承担任何责任。
-
-附：天算AI科技研发实验室 (Natural Algorithm AI R&D Lab) 数字资产概览
-
-5万字原创诗文 (50,000 words of original poetry and literary works)
-
-7千分钟原创交响乐及各类音乐作品 (7,000 minutes of original symphonic and other musical compositions)
-
-9千部原创AI生成及辅助创作短视频 (9,000 original AI-generated or assisted short video productions)
-
-16项原创AI科技产品及解决方案 (16 original AI technology products and solutions)
-
-包括本项目在内的8个独立研发的天算AI大语言模型（及LoRA适配器）
