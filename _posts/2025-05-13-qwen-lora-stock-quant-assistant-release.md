@@ -3,15 +3,15 @@ layout: post
 title:  "天算AI第九弹：Qwen-LoRA股票量化投教助手正式发布"
 date:   2025-05-13 10:00:00 +0800
 author: jinv2
-categories: [AI成果, 大语言模型]
-tags: [Qwen, LoRA, PEFT, 量化交易, 投教助手, AI发布, Gradio, Hugging Face, 金融科技]
+categories: [AI成果, 大语言模型, 量化金融] # 请根据你博客的实际分类调整
+tags: [Qwen, LoRA, PEFT, 量化交易, 投教助手, AI发布, Gradio, Hugging Face, 金融科技] # 请根据你博客的实际标签调整
 excerpt: "天算AI科技研发实验室自豪发布其独立研发的第九个大语言模型——基于Qwen-1.8B微调的股票量化投教助手。本文旨在介绍此模型的概况、核心价值、使用方法，并提供在线Demo供大家体验。"
-image: /assets/images/stock-quant-banner.jpg 
+image: /assets/images/stock-quant-banner.jpg # 请确保此图片已上传到你的 /assets/images/ 目录，并替换为你选择的图片名
 ---
 
 ## 天算AI第九弹：Qwen-LoRA股票量化投教助手 — AI赋能金融素养提升
 
-大家好，我是jinv2，来自**天算AI科技研发实验室 (Natural Algorithm AI R&D Lab)**。今日（2025年05月13日），我怀着激动的心情，向大家隆重推出我独立研发的**第九个大语言模型**——**Qwen-LoRA股票量化投教助手**。这不仅是数字上的又一次突破，更是我们在AI赋能专业知识平民化道路上迈出的坚实一步。
+大家好，我是金威，来自**天算AI科技研发实验室 (Natural Algorithm AI R&D Lab)**。今日（2025年05月13日），我怀着激动的心情，向大家隆重推出我独立研发的**第九个大语言模型**——**Qwen-LoRA股票量化投教助手**。这不仅是数字上的又一次突破，更是我们在AI赋能专业知识平民化道路上迈出的坚实一步。
 
 ![天算AI股票量化投教助手](/assets/images/stock-quant-banner.jpg "AI驱动的金融知识普及")
 
@@ -24,7 +24,7 @@ image: /assets/images/stock-quant-banner.jpg
 *   **基础模型：** `Qwen/Qwen-1_8B-Chat`
 *   **微调技术：** LoRA ( leveraging PEFT library)
 *   **核心功能：** 提供通俗易懂的金融与量化交易概念解析、术语解释及相关问答。
-*   **当前阶段：** 本模型目前处于实验探索阶段，基于一套小规模、高质量的定制化指令数据集进行微调，旨在验证技术路径并收集反馈，以便持续迭代优化。
+*   **当前阶段：** 本模型目前处于实验探索阶段，基于一套小规模、高质量的定制化指令数据集（约20条）进行微调，旨在验证技术路径并收集反馈，以便持续迭代优化。
 
 ### 重要意义与深远价值
 
@@ -61,10 +61,10 @@ tokenizer = AutoTokenizer.from_pretrained(base_model_name, trust_remote_code=Tru
 qwen_special_token_id = 151643 
 if tokenizer.pad_token_id is None:
     tokenizer.pad_token_id = qwen_special_token_id
-    print(f"  tokenizer.pad_token_id 已设置为: {tokenizer.pad_token_id}")
+    # print(f"  tokenizer.pad_token_id 已设置为: {tokenizer.pad_token_id}") # 可选打印
 if tokenizer.eos_token_id is None:
     tokenizer.eos_token_id = qwen_special_token_id
-    print(f"  tokenizer.eos_token_id 已设置为: {tokenizer.eos_token_id}")
+    # print(f"  tokenizer.eos_token_id 已设置为: {tokenizer.eos_token_id}") # 可选打印
 print("分词器配置完成。")
 
 # --- 2. 加载基础大语言模型 ---
@@ -93,16 +93,14 @@ user_prompt = "请用大白话解释什么是移动平均线（MA线）？它在
 system_instruction = "你是一位友善且专业的金融投教助手，请使用简洁明了、通俗易懂的语言来回答用户关于股票和量化交易的问题。"
 
 # 使用Qwen-Chat系列模型推荐的 .chat() 方法进行交互式对话
-# history=None 表示开始一个全新的对话
-# system_instruction 用于设定AI助手的角色和回复风格
 response_text, conversation_history = model.chat(
     tokenizer,
     user_prompt,
-    history=None,
-    system=system_instruction
+    history=None, # history=None 表示开始一个全新的对话
+    system=system_instruction # system_instruction 用于设定AI助手的角色和回复风格
 )
 
-print("\n模型回复内容：")
+print("\n模型回答：")
 print(response_text)
 
 # 若需继续对话，可传入之前的 conversation_history
@@ -142,3 +140,9 @@ Demo界面预览：
 
 再次感谢大家的关注与支持！期待在AI赋能金融知识普及的道路上，与各位同行者共同探索，携手进步。
 如果您有任何问题、建议或合作意向，欢迎随时与我联系。
+
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
