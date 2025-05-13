@@ -119,8 +119,6 @@ Demo界面预览：
 
 ![alt text](/assets/images/gradio-demo.png)
 
-(请确保 gradio-demo.png 图片已上传至您博客仓库的 /assets/images/ 目录下，或相应调整此路径。)
-
 欢迎大家踊跃试用，并提出宝贵的反馈意见！
 
 模型局限性与重要声明
