@@ -6,7 +6,7 @@ author: jinv2
 categories: [AI成果, 大语言模型]
 tags: [Qwen, LoRA, PEFT, 量化交易, 投教助手, AI发布, Gradio, Hugging Face, 金融科技]
 excerpt: "天算AI科技研发实验室自豪发布其独立研发的第九个大语言模型——基于Qwen-1.8B微调的股票量化投教助手。本文旨在介绍此模型的概况、核心价值、使用方法，并提供在线Demo供大家体验。"
-image: /assets/images/stock-quant-banner.jpg # 请确保此图片已上传到你的 /assets/images/ 目录
+image: /assets/images/stock-quant-banner.jpg 
 ---
 
 ## 天算AI第九弹：Qwen-LoRA股票量化投教助手 — AI赋能金融素养提升
@@ -14,7 +14,6 @@ image: /assets/images/stock-quant-banner.jpg # 请确保此图片已上传到你
 大家好，我是jinv2，来自**天算AI科技研发实验室 (Natural Algorithm AI R&D Lab)**。今日（2025年05月13日），我怀着激动的心情，向大家隆重推出我独立研发的**第九个大语言模型**——**Qwen-LoRA股票量化投教助手**。这不仅是数字上的又一次突破，更是我们在AI赋能专业知识平民化道路上迈出的坚实一步。
 
 ![天算AI股票量化投教助手](/assets/images/stock-quant-banner.jpg "AI驱动的金融知识普及")
-*(请确保 `stock-quant-banner.jpg` 图片已上传至你博客仓库的 `/assets/images/` 目录下，或替换为你的图片路径及描述)*
 
 ### 模型概况：技术核心与定位
 
