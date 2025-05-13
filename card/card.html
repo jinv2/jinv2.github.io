@@ -49,7 +49,7 @@
       display: flex;
       flex-direction: column;
       text-align: center;
-      min-height: 580px; /* 可以根据内容调整最小高度 */
+      min-height: 650px; /* 调整最小高度以适应更多内容 */
     }
 
     /* --- Logo 区域 --- */
@@ -58,34 +58,44 @@
     }
 
     .logo-area img {
-      width: 60px; /* Logo 尺寸保持 60px */
+      width: 60px; /* Logo 尺寸 */
       height: 60px;
-      border-radius: 50%; /* 保持图片是圆的 */
-      background-color: rgba(255, 255, 255, 0.1); /* 可选：图片加载前的底色 */
+      border-radius: 50%; /* 圆形 */
+      background-color: rgba(255, 255, 255, 0.1); 
       margin: 0 auto;
       object-fit: cover;
       display: block;
-      /* === 修改：减小白圈厚度，保持外部阴影 === */
-      /* 原: box-shadow: 0 0 0 5px white, 0 1px 3px rgba(0, 0, 0, 0.5); */
-      box-shadow: 0 0 0 3px white, /* 将白圈改回 3px 厚 */
-                  0 1px 3px rgba(0, 0, 0, 0.5); /* 保持外部阴影以增强对比 */
+      box-shadow: 0 0 0 3px white, 
+                  0 1px 3px rgba(0, 0, 0, 0.5); 
     }
 
     /* --- 头部信息 --- */
-    .header-info h1 {
+    .header-info {
+        margin-bottom: 15px; /* 调整头部信息整体的下边距 */
+    }
+    .header-info h1 { /* 实验室中文名 */
       font-size: 1.6em;
       margin: 0 0 5px;
       font-weight: 600;
     }
-
-    .header-info .english-name {
+    .header-info .english-name { /* 实验室英文名 */
       font-size: 0.9em;
       color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 15px;
+      margin-bottom: 12px; /* 英文名下边距 */
       letter-spacing: 0.5px;
+    }
+    /* 新增：个人姓名样式 */
+    .owner-name {
+        font-size: 1.25em; /* 调整字号 */
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 8px;
     }
 
     /* --- 角色标签 --- */
+    .roles {
+        margin-bottom: 12px; /* 角色标签下边距 */
+    }
     .roles span {
       display: inline-block;
       background-color: rgba(76, 175, 80, 0.7);
@@ -100,7 +110,6 @@
     .roles span:hover {
        background-color: rgba(76, 175, 80, 0.9);
     }
-
     .roles span:last-child {
       background-color: rgba(63, 81, 181, 0.7);
     }
@@ -108,13 +117,20 @@
       background-color: rgba(63, 81, 181, 0.9);
     }
 
-    /* --- 服务描述 --- */
-    .service-desc {
-      font-size: 0.9em;
+    /* 新增：核心研究区域样式 */
+    .research-focus-area {
+      font-size: 0.85em;
       color: rgba(255, 255, 255, 0.9);
-      margin-top: 15px;
+      line-height: 1.4;
+      margin-top: 0; 
       margin-bottom: 20px;
-      line-height: 1.5;
+    }
+    .research-focus-area p {
+      margin: 0 0 4px 0;
+    }
+    .research-focus-area .english-text { /* 研究领域英文描述 */
+      font-size: 0.9em;
+      color: rgba(255, 255, 255, 0.75);
     }
 
     /* --- 数字资产区域 --- */
@@ -125,15 +141,22 @@
       margin-bottom: 20px;
       border-radius: 8px;
     }
-
-    .assets-section h2 {
+    .assets-section h2 { /* 数字资产中文标题 */
       font-size: 1.1em;
-      margin: 0 0 15px;
+      margin: 0 0 5px; /* 调整下边距 */
       display: flex;
       align-items: center;
       color: #81d4fa;
     }
-
+    /* 新增：数字资产英文标题样式 */
+    .assets-section .english-assets-title {
+        font-size: 0.8em;
+        color: rgba(255,255,255,0.7);
+        margin-top: 0px; 
+        margin-bottom: 12px;
+        text-align: left; /* 与中文标题对齐 */
+        padding-left: 14px; /* 与中文内容对齐 (vertical-bar width + margin-right) */
+    }
     .vertical-bar {
       display: inline-block;
       width: 4px;
@@ -142,13 +165,11 @@
       margin-right: 10px;
       border-radius: 2px;
     }
-
     .assets-section ul {
       list-style: none;
       padding-left: 5px;
       margin: 0;
     }
-
     .assets-section li {
       font-size: 0.85em;
       color: rgba(255, 255, 255, 0.9);
@@ -156,7 +177,6 @@
       display: flex;
       align-items: flex-start;
     }
-
     .assets-section li::before {
       content: '•';
       color: #4fc3f7;
@@ -166,38 +186,56 @@
       flex-shrink: 0;
     }
 
+    /* 新增：使命宣言样式 */
+    .mission-statement {
+      font-size: 0.8em; 
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.4;
+      margin-bottom: 20px;
+      padding: 12px;
+      background-color: rgba(255, 255, 255, 0.05); 
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center; /* 居中显示 */
+    }
+    .mission-statement p {
+        margin: 0 0 5px 0;
+    }
+    .mission-statement p:last-child {
+        margin-bottom: 0;
+    }
+    .mission-statement .english-text { /* 使命宣言英文描述 */
+        font-size: 0.9em;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
     /* --- 联系信息 --- */
     .contact-info {
-      margin-top: auto; /* 保持推到底部 */
+      margin-top: auto; /* 推到底部 */
       text-align: center;
       font-size: 0.9em;
-      padding-top: 20px; /* 保持与上方分割线的距离 */
+      padding-top: 20px; 
       border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
-
     .contact-info p {
-      margin: 10px 0;
+      margin: 8px 0; /* 调整段落间距 */
       color: rgba(255, 255, 255, 0.9);
     }
-
     .contact-info .label {
       font-weight: bold;
       color: #fff;
       margin-right: 5px;
     }
-
     .contact-info a {
       color: #81d4fa;
       text-decoration: none;
       word-break: break-all;
       transition: color 0.3s ease;
     }
-
     .contact-info a:hover {
       text-decoration: underline;
       color: #a6eaff;
     }
-
     .contact-info a[href^="tel:"] {
       white-space: nowrap;
     }
@@ -206,38 +244,56 @@
 </head>
 <body>
 
-  <!-- === HTML 部分保持不变 === -->
   <div class="card-wrapper" id="captureArea">
     <div class="vertical-card">
       <div class="content-overlay">
+        
         <div class="logo-area">
-          <!-- 确保这个路径相对于你的 HTML 文件是正确的 -->
+          <!-- 确保这个路径是正确的, 或者替换为您自己的 Logo 图片 -->
           <img src="assets/images/tian_suan_logo.jpg" alt="天算AI Logo" class="logo"/>
         </div>
+
         <div class="header-info">
           <h1>天算AI科技研发实验室</h1>
           <p class="english-name">(Natural Algorithm AI R&D Lab)</p>
+          
+          <p class="owner-name">金威 (JIN WEI)</p>
+          
           <div class="roles">
-            <span>AI科技博主</span>
-            <span>AI科技研发</span>
+            <span>发起人</span>
+            <span>首席架构师</span>
           </div>
-          <p class="service-desc">科技前沿最新AI资讯影视化报道</p>
+          
+          <div class="research-focus-area">
+            <p><strong>核心研究：</strong>AIGC · AGI · ASI · AI安全</p>
+            <p class="english-text"><em>Key Research: AIGC · AGI · ASI · AI Safety</em></p>
+          </div>
         </div>
+
         <div class="assets-section">
           <h2><span class="vertical-bar"></span>天算AI数字资产</h2>
+          <p class="english-assets-title">(Natural Algorithm AI Digital Assets)</p>
           <ul>
-            <li>5万字原创诗文</li>
-            <li>7千分钟原创交响乐</li>
-            <li>9千部原创AI短视频</li>
-            <li>16项原创AI科技产品</li>
-            <li>7个天算AI大语言模型</li>
+            <li>5万字 原创诗歌、小小说</li>
+            <li>7000分钟 原创交响乐章</li>
+            <li>9000部 原创AI短视频系列</li>
+            <li>16项 独立研发AI技术产品/原型</li>
+            <li>10个 垂直领域微调大语言模型</li>
           </ul>
         </div>
-        <div class="contact-info">
-          <!-- 链接仍然是 jinv2 -->
-          <p><span class="label">天算AI博客:</span> <a href="https://jinv2.github.io/" target="_blank" rel="noopener noreferrer">https://jinv2.github.io/</a></p>
-          <p><span class="label">联系方式:</span> 手机/微信: <a href="tel:15632151615">15632151615</a></p>
+
+        <div class="mission-statement">
+          <p>“探索自然算法，构建普惠AI。独立研发，非营利运营，欢迎各界资助与技术共建。”</p>
+          <p class="english-text"><em>"Exploring Natural Algorithms, Building Inclusive AI. Independent R&D, non-profit operation, welcoming sponsorship and co-development."</em></p>
         </div>
+
+        <div class="contact-info">
+          <p><span class="label">博客/GitHub:</span> <a href="https://jinv2.github.io" target="_blank" rel="noopener noreferrer">jinv2.github.io</a></p>
+          <p><span class="label">微信/电话:</span> <a href="tel:15632151615">156-3215-1615</a></p>
+          <!-- 请将下面的占位符替换为您的真实邮箱地址 -->
+          <p><span class="label">邮箱:</span> <a href="mailto:[您的邮箱地址]">[您的邮箱地址]</a></p>
+        </div>
+
       </div>
     </div>
   </div>
