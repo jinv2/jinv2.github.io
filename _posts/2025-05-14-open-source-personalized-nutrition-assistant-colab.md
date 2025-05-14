@@ -36,7 +36,7 @@ image: /assets/images/nutrition-assistant-cover.jpg # 特色图片路径
 整个开发过程充满了调试与优化，例如，针对早期版本中某些食材推荐量不切实际的问题，我们通过引入更细致的推荐量控制参数、调整选择优先级和超标判断阈值，逐步提升了推荐结果的合理性。
 
 ![个性化营养助手在 Colab 中的运行示例](/assets/images/colab-result-screenshot.jpg) 
-*个性化营养助手在 Colab 中的运行示例 (请确保图片已上传且路径正确)*
+*个性化营养助手在 Colab 中的运行示例 *
 
 ## 开源共享：天算AI的努力与期盼
 
