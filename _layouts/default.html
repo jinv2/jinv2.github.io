@@ -27,36 +27,7 @@
     </script>
 
     <style>
-      /* --- 通用按钮样式 --- */
-      .nav-container .btn { 
-        background-size: cover; 
-        background-position: center center; 
-        background-repeat: no-repeat; 
-        color: white !important; 
-        padding: 8px 12px; 
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.8); 
-        position: relative; 
-        z-index: 1; 
-        margin-left: 3px; 
-        margin-right: 3px;
-        border-radius: 5px; 
-        min-width: 75px; 
-        text-align: center; 
-        display: inline-block; 
-        vertical-align: middle; 
-        line-height: 1.5; 
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, opacity 0.2s ease-out;
-        opacity: 0.9; 
-      }
-      .nav-container .btn:hover {
-          transform: translateY(-1px) scale(1.05); 
-          box-shadow: 0 3px 7px rgba(0,0,0,0.3);
-          opacity: 1; 
-          color: white !important; 
-      }
-
-      /* --- 特定按钮背景 --- */
+      /* --- 特定按钮背景 (这些最终应该移到 style.scss 中统一管理) --- */
       .btn-contact {
         background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); 
       }
@@ -66,37 +37,6 @@
       .btn-donate-now {
         background-image: url("{{ '/assets/images/ccc.png' | relative_url }}");
       }
-
-      /* 
-         注意：页眉 Logo (.header-logo-frame, .header-logo-image) 
-         和 .header-main 的样式建议放在外部CSS文件 (如 /assets/css/style.css) 中。
-         如果需要临时测试，可以取消下面对应部分的注释并粘贴到这里，
-         但为了更好的维护性，最终应移至外部CSS。
-      */
-      /*
-      .header-main {
-        display: flex; 
-        align-items: center; 
-      }
-      .header-logo-frame {
-        width: 40px;
-        height: 40px;
-        margin-right: 15px;
-        display: inline-block; 
-        overflow: hidden;    
-        position: relative;  
-        border-radius: 6px; 
-        flex-shrink: 0;
-      }
-      .header-logo-image {
-        display: block;
-        width: 55px;
-        height: 55px;
-        position: absolute;
-        top: -7.5px;           
-        left: -7.5px;
-      }
-      */
     </style>
 
   </head>
@@ -105,7 +45,6 @@
       <!-- 页眉 (header) 内容 -->
       <header class="page-header" role="banner">
         <div class="header-main">
-          <!-- 修改了这里的HTML结构和类名 -->
           <div class="header-logo-frame"> 
             <img src="{{ '/assets/images/tian_suan_logo.jpg' | relative_url }}" alt="天算AI Logo" class="header-logo-image"> 
           </div>
@@ -131,7 +70,7 @@
             <a href="{{ '/about/' | relative_url }}" class="btn">关于</a>
             <a href="{{ '/contact/' | relative_url }}" class="btn btn-contact">联系我们</a>
             <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}" class="btn btn-join-us">加入我们</a>
-            <a href="{{ '/support/' | relative_url }}" class="btn btn-donate-now">现在马上捐款</a>
+            <a href="{{ '/support/' | relative_url }}" class="btn btn-donate-now">现在捐款</a>
             {% if site.show_downloads %}
                <span class="nav-separator">|</span>
                <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -169,7 +108,7 @@
            <a href="{{ '/about/' | relative_url }}">关于</a> |
            <a href="{{ '/contact/' | relative_url }}">联系我们</a> |
            <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}">加入我们</a> |
-           <a href="{{ '/support/' | relative_url }}">现在马上捐款</a>
+           <a href="{{ '/support/' | relative_url }}">现在捐款</a>
         </nav>
         <!-- ===== 最新博客文章 & 底部导航 结束 ===== -->
 
