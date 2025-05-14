@@ -109,7 +109,3 @@ description: "天算AI (Natural Algorithm AI R&D Lab) 是一家致力于人工�
 **七、 结语**
 
 人工智能的发展正处在一个关键的十字路口。天算AI愿以开放的心态、扎实的研究、普惠的理念，与全球同仁一道，共同迎接智能时代的到来，努力确保AI的发展符合全人类的长远福祉。
-
-**联系方式：**
-*   博客: [https://jinv2.github.io](https://jinv2.github.io)
-*   微信: 15632151615 (金威)
