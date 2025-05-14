@@ -38,82 +38,53 @@ body::before {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), /* Header 蒙版 */
               url('{{ "/assets/images/lll.jpg" | relative_url }}') no-repeat center top; /* Header 背景图 lll.jpg, 定位 top */
   background-size: cover; background-color: #1a237e; color: #ffffff;
-  /* padding-left: 100px; /* 匹配 80px LOGO - 此行已由 .header-main 的 padding 控制替代 */
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  /* padding-right: 1rem; /* 此行已由 .header-main 的 padding 控制替代 */
   min-height: auto;
   border-bottom: 3px solid rgba(0, 121, 107, 0.7);
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  align-items: center; /* 使 .header-main 和 .nav-container 在 .page-header 内居中 */
+  align-items: center; /* 使 .header-main 和 .nav-container 在 .page-header 内水平居中 */
 }
 
 .header-main {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Logo和标题从左开始排列 */
-    width: 100%;
-    max-width: 1100px; /* 与下方导航容器宽度对齐 */
+    display: inline-flex; /* 改为 inline-flex，使其宽度包裹内容，然后由父级居中 */
+    align-items: center;   /* Logo和标题垂直对齐 */
     margin-bottom: 15px;
-    padding: 0 1rem; /* 给header-main左右一些内边距，替代原page-header的padding-left/right */
-    box-sizing: border-box; /* 重要，确保padding不会增加总宽度 */
+    padding: 0 1rem;       /* 给左右一些内边距，确保不会紧贴边缘 */
+    box-sizing: border-box;
 }
-
-/* 
-  旧的 .header-logo 规则。
-  如果您确认除了新的页眉Logo外，没有其他地方使用 .header-logo 类，
-  可以安全地删除这个注释块。否则，请先注释掉以观察影响。
-*/
-/*
-.header-logo {
-  position: static;
-  width: 80px; 
-  height: auto;
-  margin-right: 20px;
-  mask-image: none;
-  -webkit-mask-image: none;
-}
-*/
 
 /* --- 新的页眉Logo - 框内放大效果样式 --- */
 .header-logo-frame {
-  width: 40px;           /* 外部框的宽度 - 您可以调整 */
-  height: 40px;          /* 外部框的高度 - 您可以调整 */
-  margin-right: 15px;    /* 与右侧文字的间距 - 您可以调整 */
+  width: 40px;           /* 外部框的宽度 */
+  height: 40px;          /* 外部框的高度 */
+  margin-right: 12px;    /* Logo和标题之间的间距，可以微调 */
   display: inline-block; 
-  overflow: hidden;      /* 关键：裁剪超出框的图片部分 */
-  position: relative;    /* 关键：为了内部图片的绝对定位 */
-  border-radius: 6px;    /* 可选：给框添加圆角，例如6px。若要圆形，用 50% */
-  flex-shrink: 0;        /* 防止在flex容器中被不成比例地压缩 */
-  /* background-color: rgba(255, 255, 255, 0.1); /* 可选：图片加载前的占位背景色 */
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;    /* 轻微圆角 */
+  flex-shrink: 0;
 }
 
 .header-logo-image {
-  display: block;        /* 移除图片下方的额外空白 */
-  width: 55px;           /* 内部图片的宽度 (大于框宽以放大) - 您可以调整 */
-  height: 55px;          /* 内部图片的高度 (大于框高以放大) - 您可以调整 */
-  position: absolute;    /* 关键：相对于.header-logo-frame定位 */
-  
-  /* 将放大的图片重新居中到框内: (框尺寸 - 图片尺寸) / 2 */
-  /* 例如: (40px - 55px) / 2 = -7.5px */
-  top: -7.5px;             
-  left: -7.5px;   
-  
-  /* 如果您的 tian_suan_logo.jpg 不是正方形，以下属性可能有用 */
-  /* object-fit: cover; */    /* 保持宽高比，填满容器，可能会裁剪 */
-  /* object-fit: contain; */ /* 保持宽高比，完整显示在容器内，可能会留白 */
+  display: block;
+  width: 55px;           /* 内部图片宽度 (大于框) */
+  height: 55px;          /* 内部图片高度 (大于框) */
+  position: absolute;
+  top: -7.5px;           /* (40 - 55) / 2 */
+  left: -7.5px;          /* (40 - 55) / 2 */
 }
 
 .project-name {
   font-family: $font-family-serif;
   margin: 0;
-  font-size: 1.9em;
+  font-size: 1.9em; /* 可以根据整体平衡感微调 */
   font-weight: 700;
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  /* text-align: center; /* 在 .header-main: justify-content: flex-start 后，这里不再需要强制居中 */
+  white-space: nowrap; /* 防止标题换行 */
 }
 
 /* --- 导航容器样式 --- */
@@ -122,9 +93,11 @@ body::before {
   justify-content: center; /* 导航按钮组整体居中 */
   align-items: center;
   flex-wrap: nowrap;   
-  margin-top: 15px;
-  width: 95%; /* 或者与 .header-main 的 max-width 保持一致或略小 */
-  max-width: 1100px;
+  margin-top: 10px; /* 减小与上方标题区域的间距 */
+  width: 100%; 
+  max-width: 1100px; /* 保持与 .header-main 一致的最大宽度感 */
+  padding: 0 1rem; /* 确保两端有内边距 */
+  box-sizing: border-box;
   overflow-x: auto;   
   -webkit-overflow-scrolling: touch;
 }
@@ -133,121 +106,146 @@ body::before {
   align-items: center;
   white-space: nowrap;
 }
-.nav-left { justify-content: flex-start; margin-right: 6px; } /* 从左开始排列 */
-.nav-right { justify-content: flex-start; margin-left: 6px; } /* 从左开始排列 */
+/* .nav-left { justify-content: flex-start; margin-right: auto; } /* 左侧导航靠左，推开右侧 */
+/* .nav-right { justify-content: flex-end; margin-left: auto; } /* 右侧导航靠右 */
+/* 上述会导致分隔符 | 位置不好控制，暂时维持原样，靠按钮数量和间距自然分配 */
+.nav-left { margin-right: 6px; }
+.nav-right { margin-left: 6px; }
+
 
 /* 导航按钮通用样式 */
-.page-header nav .btn { /* 选择器保持不变 */
+.page-header nav .btn {
   font-family: $font-family-sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: #ffffff !important; /* 确保文字颜色优先 */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-  background-color: rgba(0, 0, 0, 0.4); /* 默认背景色，会被图片覆盖 */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 边框略微调淡 */
+  color: #ffffff !important; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* 文字阴影略微调整 */
+  background-color: rgba(25, 35, 45, 0.5);  /* 按钮默认半透明深色背景 */
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; /* 添加确保背景不重复 */
+  background-repeat: no-repeat;
   transition: all 0.2s ease-in-out;
-  padding: 0.5rem 0.8rem;
-  margin: 0 2px; /* 稍微增加按钮间距 */
+  padding: 0.45rem 0.75rem; /* 稍微调整内边距 */
+  margin: 0 2px; 
   display: inline-block;
   position: relative;
   z-index: 1;
-  overflow: hidden; /* 如果背景图大于按钮，这可以裁剪 */
-  border-radius: 4px;
+  overflow: hidden; 
+  border-radius: 5px; /* 圆角调整 */
   white-space: nowrap;
-  min-width: auto; /* 让按钮宽度自适应内容 */
+  min-width: auto; 
   text-align: center;
+  font-size: 0.9em; /* 按钮文字略微缩小 */
 }
 
-/* --- 按钮背景图规则 (保持弱蒙版) --- */
-/* !!! 最终确认文件名和顺序 !!! */
-.nav-left a.btn:nth-of-type(1) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/aaa.jpg" | relative_url }}'); }
-.nav-left a.btn:nth-of-type(2) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/bbb.png" | relative_url }}'); }
-.nav-left a.btn:nth-of-type(3) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/fff.jpg" | relative_url }}'); }
-.nav-left a.btn:nth-of-type(4) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/eee.jpg" | relative_url }}'); } /* GitHub按钮 */
+/* --- 特定按钮背景图规则 (统一管理) --- */
+/* 左侧导航按钮 */
+.nav-left a.btn:nth-of-type(1) { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/aaa.jpg" | relative_url }}'); } /* 首页 */
+.nav-left a.btn:nth-of-type(2) { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/bbb.png" | relative_url }}'); } /* 博客 */
+.nav-left a.btn:nth-of-type(3) { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/fff.jpg" | relative_url }}'); } /* Hugging Face */
+.nav-left a.btn:nth-of-type(4) { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/eee.jpg" | relative_url }}'); } /* GitHub */
 
-/* 右侧导航特定按钮背景 */
-.nav-right a.btn:nth-of-type(1) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/hhh.jpg" | relative_url }}'); } /* YouTube */
-.nav-right a.btn:nth-of-type(2) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/ggg.jpg" | relative_url }}'); } /* TikTok */
-.nav-right a.btn:nth-of-type(3) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/天算LoGo3.png" | relative_url }}'); } /* 关于 - 原ccc.png */
-/* .btn-contact 使用的是 ddd.jpg (来自 default.html 内联style) */
-/* .btn-join-us 使用的是 lll.jpg (来自 default.html 内联style) */
-/* .btn-donate-now 使用的是 ccc.png (来自 default.html 内联style) */
-/* 注意：如果特定按钮的背景已在 default.html 的 <style> 中通过 .btn-contact, .btn-join-us, .btn-donate-now 定义，这里的 nth-of-type 规则可能不会对它们生效，或产生冲突。*/
-/* 建议将所有按钮背景图的定义统一到这个CSS文件中，移除 default.html 中的相关 <style> 部分。*/
+/* 右侧导航按钮 */
+.nav-right a.btn:nth-of-type(1) { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/hhh.jpg" | relative_url }}'); } /* YouTube */
+.nav-right a.btn:nth-of-type(2) { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/ggg.jpg" | relative_url }}'); } /* TikTok */
+.nav-right a.btn:nth-of-type(3) { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/天算LoGo3.png" | relative_url }}'); } /* 关于 (原ccc.png, 但您default.html的style块没有给“关于”按钮指定类) */
+                                     /* 这里假设您希望“关于”按钮用“天算LoGo3.png”作为背景 */
+                                     /* 如果“关于”按钮不需要特定背景，可以移除此行 */
+
+/* 通过特定类名指定的按钮背景 (建议统一使用此方法) */
+.btn-contact { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/ddd.jpg" | relative_url }}') !important; } /* 联系我们 */
+.btn-join-us { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/lll.jpg" | relative_url }}') !important; } /* 加入我们 */
+.btn-donate-now { background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ "/assets/images/ccc.png" | relative_url }}') !important; } /* 现在就捐款 */
+
 
 /* 按钮悬停效果 */
 .page-header nav .btn:hover {
-  border-color: #ffffff;
-  /* color: #ffffff; /* 已在 .btn 中用 !important 设置 */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* 悬停时移除特定图片，显示通用深色渐变 */
-  box-shadow: 0 0 8px rgba(255,255,255,0.2);
-  transform: translateY(-1px) scale(1.02); /* 稍微减小悬停缩放效果 */
+  border-color: #fff;
+  background-color: rgba(0,0,0,0.6); /* 加深背景色 */
+  /* 悬停时移除特定图片背景，显示通用深色效果，或让图片变暗 */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)); 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4); /* 调整阴影 */
+  transform: translateY(-1px) scale(1.03); 
 }
 
 /* --- Navigation Separator Style --- */
 .nav-separator {
   display: inline-block;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0 5px; 
-  font-size: 1em;
-  vertical-align: baseline;
+  color: rgba(255, 255, 255, 0.6); /* 分隔符颜色略微调亮 */
+  margin: 0 6px; /* 分隔符左右间距 */
+  font-size: 0.9em; /* 分隔符大小 */
+  vertical-align: middle; /* 尝试与按钮文字对齐 */
 }
 
 /* --- Main Content Styles --- */
 .main-content {
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.85); /* 内容区域背景 */
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  max-width: 960px; /* 限制内容最大宽度 */
-  margin: 2rem auto; /* 上下边距，左右自动居中 */
+  padding: 2rem 1.5rem; /* 左右内边距略微调整 */
+  background-color: rgba(255, 255, 255, 0.88); /* 内容区域背景透明度微调 */
+  border-radius: 10px; /* 圆角调整 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12); /* 阴影调整 */
+  max-width: 900px; /* 主内容区域最大宽度调整 */
+  margin: 2.5rem auto; 
   position: relative;
   z-index: 2;
 }
 
-/* --- Footer Styles - 确认背景 --- */
+/* --- Footer Styles --- */
 .site-footer {
-  margin-top: 4rem;
-  padding: 2.5rem 1rem;
-  color: rgba(255, 255, 255, 0.75);
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), /* 深色蒙版 */
-              url('{{ "/assets/images/lll.jpg" | relative_url }}') no-repeat center center; /* 背景图 */
+  margin-top: 3rem; /* 与主内容间距调整 */
+  padding: 2rem 1rem; 
+  color: rgba(230, 230, 230, 0.8); /* 页脚文字颜色调整 */
+  background: linear-gradient(rgba(10, 15, 25, 0.85), rgba(10, 15, 25, 0.95)), 
+              url('{{ "/assets/images/lll.jpg" | relative_url }}') no-repeat center center; 
   background-size: cover; 
-  background-color: #1a1d24; 
+  background-color: #0a0f19; /* 更深的后备色 */
   text-align: center;
   font-family: $font-family-sans-serif;
   position: relative;
   z-index: 2;
+  border-top: 2px solid rgba(0, 121, 107, 0.5); /* 页脚顶部边框 */
 }
 .site-footer a {
-  color: #ffffff; 
+  color: #b2dfdb; /* 页脚链接颜色 (浅青色) */
   text-decoration: none;
   transition: color 0.2s ease;
 }
 .site-footer a:hover {
-  color: #00bcd4; 
+  color: #ffffff; 
   text-decoration: underline;
 }
+.site-footer .site-footer-owner a, .site-footer .site-footer-credits a {
+  font-weight: bold;
+}
+.site-footer div p { /* PayPal捐款提示文字 */
+  color: rgba(230, 230, 230, 0.9);
+}
+
 
 /* --- Responsive Styles --- */
 @media screen and (max-width: 960px) {
     .nav-container { flex-wrap: wrap; justify-content: center; overflow-x: hidden; }
-    .nav-left { margin-right: 0; margin-bottom: 8px; justify-content: center; } /* 中屏时也居中 */
-    .nav-right { margin-left: 0; justify-content: center; } /* 中屏时也居中 */
+    .nav-left, .nav-right { margin-right: 0; margin-left:0; margin-bottom: 8px; justify-content: center; flex-basis: 100%;} 
     .page-header { padding-left: 1rem; padding-right: 1rem; } 
-    .header-main { justify-content: center; } /* 中屏时Logo和标题整体居中 */
-    .main-content { max-width: 90%; } 
+    .header-main { 
+      justify-content: center; /* 中屏时Logo和标题整体居中 */
+      padding: 0 0.5rem; /* 减小内边距 */
+    }
+    .project-name { font-size: 1.7em; }
+    .main-content { max-width: 95%; margin: 2rem auto; } 
 }
 @media screen and (max-width: 768px) {
-    .nav-container { flex-direction: column; }
-    .nav-left, .nav-right { margin-bottom: 10px; width: 100%; text-align: center; } /* 小屏时按钮组宽度100% */
-    .page-header nav .btn { display: block; margin-bottom: 5px; width: calc(100% - 4px); } /* 小屏时按钮变块级，并考虑边框 */
+    .nav-container { flex-direction: column; margin-top:5px; }
+    .nav-left, .nav-right { margin-bottom: 10px; width: 100%; text-align: center; } 
+    .page-header nav .btn { display: block; margin-bottom: 6px; width: auto; min-width: 180px; padding: 0.5rem 0.5rem;} 
     .header-main { flex-direction: column; text-align: center; } 
-    .header-logo-frame { margin-right: 0; margin-bottom: 10px; } 
-    .project-name { font-size: 1.6em; } 
-    /* .page-header { padding-left: 1rem; padding-right: 1rem; } /* 已在960px设置 */
-    .main-content { padding: 1.5rem; } 
+    .header-logo-frame { margin-right: 0; margin-bottom: 8px; } 
+    .project-name { font-size: 1.5em; } 
+    .main-content { padding: 1.2rem; margin: 1.5rem auto; } 
+    .nav-separator { display: none; } /* 小屏幕隐藏分隔符 */
+}
+@media screen and (max-width: 480px) {
+    .project-name { font-size: 1.3em; }
+    .page-header nav .btn { font-size: 0.85em; min-width: 150px; }
+    .main-content h2 { font-size: 1.3em; }
 }
 
 /* --- 自定义样式结束 --- */
