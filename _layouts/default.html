@@ -27,6 +27,7 @@
     </script>
 
     <style>
+      /* --- 通用按钮样式 --- */
       .nav-container .btn { 
         background-size: cover; 
         background-position: center center; 
@@ -55,20 +56,47 @@
           color: white !important; 
       }
 
-      /* "联系我们" 按钮 - 使用新的背景图 */
+      /* --- 特定按钮背景 --- */
       .btn-contact {
         background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); 
       }
-
-      /* "加入我们" 按钮 - 使用 lll.jpg */
       .btn-join-us {
         background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); 
       }
-
-      /* "现在就捐款" 按钮 - 保持之前的设置 */
       .btn-donate-now {
         background-image: url("{{ '/assets/images/ccc.png' | relative_url }}");
       }
+
+      /* 
+         注意：页眉 Logo (.header-logo-frame, .header-logo-image) 
+         和 .header-main 的样式建议放在外部CSS文件 (如 /assets/css/style.css) 中。
+         如果需要临时测试，可以取消下面对应部分的注释并粘贴到这里，
+         但为了更好的维护性，最终应移至外部CSS。
+      */
+      /*
+      .header-main {
+        display: flex; 
+        align-items: center; 
+      }
+      .header-logo-frame {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        display: inline-block; 
+        overflow: hidden;    
+        position: relative;  
+        border-radius: 6px; 
+        flex-shrink: 0;
+      }
+      .header-logo-image {
+        display: block;
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        top: -7.5px;           
+        left: -7.5px;
+      }
+      */
     </style>
 
   </head>
@@ -77,8 +105,10 @@
       <!-- 页眉 (header) 内容 -->
       <header class="page-header" role="banner">
         <div class="header-main">
-          <!-- 修改了这里的 src -->
-          <img src="{{ '/assets/images/tian_suan_logo.jpg' | relative_url }}" alt="天算AI Logo" class="header-logo">
+          <!-- 修改了这里的HTML结构和类名 -->
+          <div class="header-logo-frame"> 
+            <img src="{{ '/assets/images/tian_suan_logo.jpg' | relative_url }}" alt="天算AI Logo" class="header-logo-image"> 
+          </div>
           <h1 class="project-name">天算AI (Natural Algorithm)</h1>
         </div>
         <nav class="nav-container">
