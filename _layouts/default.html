@@ -54,10 +54,9 @@
             <span class="nav-separator">|</span>
             <a href="{{ '/about/' | relative_url }}" class="btn">关于</a>
             <a href="{{ '/contact/' | relative_url }}" class="btn">联系我们</a>
-            <!-- 新增：“加入我们”链接 -->
-            <a href="{{ '/科研/理念/天算AI/2025/05/14/tiansuan-ai-non-profit-research-vision.html#加入我们' | relative_url }}" class="btn">加入我们</a>
-            <!-- 修改：“捐助”链接文本 -->
-            <a href="{{ '/support/' | relative_url }}" class="btn">现在就捐款</a> <!-- 修改处 1 -->
+            <!-- 修改处：加入我们链接，锚点改为英文 -->
+            <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}" class="btn">加入我们</a>
+            <a href="{{ '/support/' | relative_url }}" class="btn">现在就捐款</a>
             {% if site.show_downloads %}
                <span class="nav-separator">|</span>
                <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -101,10 +100,9 @@
            <a href="{{ '/blog/' | relative_url }}">博客</a> |
            <a href="{{ '/about/' | relative_url }}">关于</a> |
            <a href="{{ '/contact/' | relative_url }}">联系我们</a> |
-           <!-- 新增：“加入我们”链接 (可选，如果底部也需要) -->
-           <a href="{{ '/科研/理念/天算AI/2025/05/14/tiansuan-ai-non-profit-research-vision.html#加入我们' | relative_url }}">加入我们</a> |
-           <!-- 修改：“捐助”链接文本 -->
-           <a href="{{ '/support/' | relative_url }}">现在就捐款</a> <!-- 修改处 2 -->
+           <!-- 修改处：加入我们链接，锚点改为英文 -->
+           <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}">加入我们</a> |
+           <a href="{{ '/support/' | relative_url }}">现在就捐款</a>
         </nav>
 
         <!-- ======================================================= -->
@@ -121,8 +119,7 @@
 
         <!-- 新增：捐款信息开始 -->
         <div style="text-align: center; padding: 10px 0; border-top: 1px solid #eee; margin-top: 15px;">
-          <!-- 修改：捐款提示文字 -->
-          <p style="margin-bottom: 5px; font-size:0.9em;">💖 如果您喜欢天算AI的内容，请考虑<a href="{{ '/support/' | relative_url }}" style="font-weight: bold; color: inherit;">现在就捐款</a>！</p> <!-- 修改处 3 -->
+          <p style="margin-bottom: 5px; font-size:0.9em;">💖 如果您喜欢天算AI的内容，请考虑<a href="{{ '/support/' | relative_url }}" style="font-weight: bold; color: inherit;">现在就捐款</a>！</p>
           <a href="https://paypal.me/jinv2" target="_blank" rel="noopener noreferrer">
             <img src="https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate with PayPal">
           </a>
