@@ -50,17 +50,3 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
 </div>
 
 ---
-
-## 最新博文
-
-<ul>
-  {% for post in site.posts limit: 5 %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <span> - {{ post.date | date: "%Y-%m-%d" }}</span>
-    </li>
-  {% endfor %}
-</ul>
-<p style="text-align: center; margin-top: 0.5rem;">
-  <a href="{{ '/blog/' | relative_url }}">查看所有文章</a>
-</p>
