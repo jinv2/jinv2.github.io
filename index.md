@@ -1,50 +1,73 @@
 ---
 layout: default # 确保主页使用我们统一的 default 布局
-title: "天算AI - 首页" # 主页标题 (显示在浏览器标签栏)
+title: "天算AI (Natural Algorithm) - 首页" # 主页标题 (显示在浏览器标签栏)
+description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索AIGC、AGI、AI安全，致力于开源共享与技术普惠的非营利AI研究组织。" # 首页SEO描述
 ---
 
-<!-- V V V 融合后的完整内容 (居中标题, 移除下方重复标识) V V V -->
-
-<!-- 将原来的 # 天算AI... 改为居中的 H2 -->
+<!-- 居中标题 -->
 <h2 style="text-align: center;">天算AI (Natural Algorithm)</h2>
 
-<!-- 欢迎/介绍文字 -->
-✨ AI科技博主 | AI科技研发 | 前沿资讯影视化报道 ✨
+<!-- 个人简介/角色 -->
+<p style="text-align: center; font-style: italic; margin-bottom: 1.5rem;">
+  金威 (JIN V) <br>
+  天算AI科技研发实验室 发起人 | 首席架构师 | 独立研究员
+</p>
 
-欢迎来到 **天算AI (Natural Algorithm)** 博客！
+<!-- 欢迎/核心理念介绍 -->
+欢迎来到 **天算AI (Natural Algorithm AI R&D Lab)**！
 
-我是天算AI，一名专注于人工智能领域的科技博主。本博客致力于分享 AI 科技研发的探索、实践与思考。我相信技术与艺术的结合能带来更深刻的理解和启发，探索“自然算法 (Natural Algorithm)”的奥秘。
+我们是一家由金威发起的非营利性独立AI研究组织，致力于探索人工智能的前沿领域，包括AIGC（人工智能生成内容）、AGI（通用人工智能）、ASI（超级人工智能）及至关重要的AI安全。
+
+秉持“天人合一，道法自然”与“人算不如AI算，更不如天算”的核心理念，我们坚信真正的智能源于对宇宙和自然规律的深刻理解与模拟。天算AI旨在通过开源、共享的方式，推动技术进步与普惠应用，构建一个可信、有益于全人类的AI生态系统。
+
+本博客是分享我们研究进展、技术成果、深度思考以及在AI与艺术（音乐、诗歌、影视）交融探索的平台。
 
 ---
 
 <!-- 数字资产列表 -->
-## 天算AI数字资产：
+## 天算AI 数字资产 (Natural Algorithm AI Digital Assets)
 
-*   5万字原创诗文 (50,000+ Characters of Original Poetry/Prose)
-*   🎵 7千分钟 原创交响乐 (7,000+ Minutes of Original Symphonic Music)
-*   🎬 9千部 原创AI短视频 (9,000+ Original AI Short Videos)
-*   💡 16项 原创AI科技产品 (16 Original AI Tech Products Developed)
-*   🧠 7个 天算AI大语言模型 (7 Custom Tiansuan AI Large Language Models Trained/Developed)
+*   **原创文学：** 5万字 原创诗歌、小小说
+*   **原创音乐：** 7000分钟 原创AI生成交响乐章
+*   **AI短视频：** 9000部 原创AI短视频系列
+*   **AI技术产品：** 16项 独立研发AI技术产品/原型 (含多个MIDI控制器)
+*   **大语言模型：** 10个 针对垂直领域优化的天算AI大语言模型
 
----
-
-<!-- 嵌入的视频 -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iNLfbru91AA?si=BbGajTUjoRnRrFz9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<!-- 天算AI (Natural Algorithm) <--- 确保视频下方的这行已被删除 -->
+*所有主要成果均在 Hugging Face 和 GitHub 开源共享。*
 
 ---
 
-<!-- V V V 新增的博客文章列表部分 V V V -->
+<!-- 使命与行动呼吁 -->
+## 我们的使命与愿景
+
+**“探索自然算法，构建普惠AI。”**
+
+我们独立研发，以非营利模式运营，诚邀各界伙伴通过技术共建、学术交流或资金赞助等方式支持我们的开源研究。
+
+**希望加入我们或支持我们的工作？**
+*   了解更多关于我们的科研愿景，或有兴趣加入我们的探索，请访问我们的**[《天算AI非营利组织科研文档》]({{ '/科研/理念/天算AI/2025/05/14/tiansuan-ai-non-profit-research-vision.html#加入我们' | relative_url }})**。
+*   如果您认同我们的理念并愿意支持，欢迎**[现在就捐款]({{ '/support/' | relative_url }})**。
+
+---
+
+<!-- 嵌入的视频 (保持不变) -->
+<div style="text-align: center; margin-bottom: 1.5rem;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/iNLfbru91AA?si=BbGajTUjoRnRrFz9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+---
+
+<!-- 最新博文列表 (保持不变，但确保其能正常工作) -->
 ## 最新博文
 
 <ul>
-  {% for post in site.posts %}
+  {% for post in site.posts limit: 5 %} {# 限制显示5篇，与您页眉一致 #}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <span> - {{ post.date | date: "%Y-%m-%d" }}</span>
-      <!-- 这里已经删除了多余的注释 -->
     </li>
   {% endfor %}
 </ul>
-<!-- ^ ^ ^ 新增的博客文章列表部分结束 ^ ^ ^ -->
+<p style="text-align: center; margin-top: 0.5rem;">
+  <a href="{{ '/blog/' | relative_url }}">查看所有文章</a>
+</p>
