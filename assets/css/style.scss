@@ -38,32 +38,74 @@ body::before {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), /* Header 蒙版 */
               url('{{ "/assets/images/lll.jpg" | relative_url }}') no-repeat center top; /* Header 背景图 lll.jpg, 定位 top */
   background-size: cover; background-color: #1a237e; color: #ffffff;
-  padding-left: 100px; /* 匹配 80px LOGO */
+  /* padding-left: 100px; /* 匹配 80px LOGO - 此行已由 .header-main 的 padding 控制替代 */
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  padding-right: 1rem;
+  /* padding-right: 1rem; /* 此行已由 .header-main 的 padding 控制替代 */
   min-height: auto;
   border-bottom: 3px solid rgba(0, 121, 107, 0.7);
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* 使 .header-main 和 .nav-container 在 .page-header 内居中 */
 }
+
 .header-main {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Logo和标题从左开始排列 */
     width: 100%;
+    max-width: 1100px; /* 与下方导航容器宽度对齐 */
     margin-bottom: 15px;
+    padding: 0 1rem; /* 给header-main左右一些内边距，替代原page-header的padding-left/right */
+    box-sizing: border-box; /* 重要，确保padding不会增加总宽度 */
 }
+
+/* 
+  旧的 .header-logo 规则。
+  如果您确认除了新的页眉Logo外，没有其他地方使用 .header-logo 类，
+  可以安全地删除这个注释块。否则，请先注释掉以观察影响。
+*/
+/*
 .header-logo {
   position: static;
-  width: 80px; /* 确认 LOGO 尺寸 */
+  width: 80px; 
   height: auto;
   margin-right: 20px;
   mask-image: none;
   -webkit-mask-image: none;
 }
+*/
+
+/* --- 新的页眉Logo - 框内放大效果样式 --- */
+.header-logo-frame {
+  width: 40px;           /* 外部框的宽度 - 您可以调整 */
+  height: 40px;          /* 外部框的高度 - 您可以调整 */
+  margin-right: 15px;    /* 与右侧文字的间距 - 您可以调整 */
+  display: inline-block; 
+  overflow: hidden;      /* 关键：裁剪超出框的图片部分 */
+  position: relative;    /* 关键：为了内部图片的绝对定位 */
+  border-radius: 6px;    /* 可选：给框添加圆角，例如6px。若要圆形，用 50% */
+  flex-shrink: 0;        /* 防止在flex容器中被不成比例地压缩 */
+  /* background-color: rgba(255, 255, 255, 0.1); /* 可选：图片加载前的占位背景色 */
+}
+
+.header-logo-image {
+  display: block;        /* 移除图片下方的额外空白 */
+  width: 55px;           /* 内部图片的宽度 (大于框宽以放大) - 您可以调整 */
+  height: 55px;          /* 内部图片的高度 (大于框高以放大) - 您可以调整 */
+  position: absolute;    /* 关键：相对于.header-logo-frame定位 */
+  
+  /* 将放大的图片重新居中到框内: (框尺寸 - 图片尺寸) / 2 */
+  /* 例如: (40px - 55px) / 2 = -7.5px */
+  top: -7.5px;             
+  left: -7.5px;   
+  
+  /* 如果您的 tian_suan_logo.jpg 不是正方形，以下属性可能有用 */
+  /* object-fit: cover; */    /* 保持宽高比，填满容器，可能会裁剪 */
+  /* object-fit: contain; */ /* 保持宽高比，完整显示在容器内，可能会留白 */
+}
+
 .project-name {
   font-family: $font-family-serif;
   margin: 0;
@@ -71,19 +113,19 @@ body::before {
   font-weight: 700;
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  text-align: center;
+  /* text-align: center; /* 在 .header-main: justify-content: flex-start 后，这里不再需要强制居中 */
 }
 
 /* --- 导航容器样式 --- */
 .nav-container {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* 导航按钮组整体居中 */
   align-items: center;
-  flex-wrap: nowrap;   /* <--- 确认：强制不换行 */
+  flex-wrap: nowrap;   
   margin-top: 15px;
-  width: 95%;
+  width: 95%; /* 或者与 .header-main 的 max-width 保持一致或略小 */
   max-width: 1100px;
-  overflow-x: auto;   /* 允许水平滚动 */
+  overflow-x: auto;   
   -webkit-overflow-scrolling: touch;
 }
 .nav-left, .nav-right {
@@ -91,28 +133,29 @@ body::before {
   align-items: center;
   white-space: nowrap;
 }
-.nav-left { justify-content: center; margin-right: 6px; }
-.nav-right { justify-content: center; margin-left: 6px; }
+.nav-left { justify-content: flex-start; margin-right: 6px; } /* 从左开始排列 */
+.nav-right { justify-content: flex-start; margin-left: 6px; } /* 从左开始排列 */
 
 /* 导航按钮通用样式 */
-.page-header nav .btn {
+.page-header nav .btn { /* 选择器保持不变 */
   font-family: $font-family-sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  color: #ffffff;
+  color: #ffffff !important; /* 确保文字颜色优先 */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4); /* 默认背景色，会被图片覆盖 */
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat; /* 添加确保背景不重复 */
   transition: all 0.2s ease-in-out;
   padding: 0.5rem 0.8rem;
-  margin: 0 1px; /* 确认：极小的按钮左右间距 */
+  margin: 0 2px; /* 稍微增加按钮间距 */
   display: inline-block;
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  overflow: hidden; /* 如果背景图大于按钮，这可以裁剪 */
   border-radius: 4px;
   white-space: nowrap;
-  min-width: auto;
+  min-width: auto; /* 让按钮宽度自适应内容 */
   text-align: center;
 }
 
@@ -121,30 +164,37 @@ body::before {
 .nav-left a.btn:nth-of-type(1) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/aaa.jpg" | relative_url }}'); }
 .nav-left a.btn:nth-of-type(2) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/bbb.png" | relative_url }}'); }
 .nav-left a.btn:nth-of-type(3) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/fff.jpg" | relative_url }}'); }
-.nav-left a.btn:nth-of-type(4) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/eee.jpg" | relative_url }}'); }
-.nav-right a.btn:nth-of-type(1) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/hhh.jpg" | relative_url }}'); }
-.nav-right a.btn:nth-of-type(2) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/ggg.jpg" | relative_url }}'); }
-.nav-right a.btn:nth-of-type(3) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/ccc.png" | relative_url }}'); }
-.nav-right a.btn:nth-of-type(4) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/iii.jpg" | relative_url }}'); }
+.nav-left a.btn:nth-of-type(4) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/eee.jpg" | relative_url }}'); } /* GitHub按钮 */
+
+/* 右侧导航特定按钮背景 */
+.nav-right a.btn:nth-of-type(1) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/hhh.jpg" | relative_url }}'); } /* YouTube */
+.nav-right a.btn:nth-of-type(2) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/ggg.jpg" | relative_url }}'); } /* TikTok */
+.nav-right a.btn:nth-of-type(3) { background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('{{ "/assets/images/天算LoGo3.png" | relative_url }}'); } /* 关于 - 原ccc.png */
+/* .btn-contact 使用的是 ddd.jpg (来自 default.html 内联style) */
+/* .btn-join-us 使用的是 lll.jpg (来自 default.html 内联style) */
+/* .btn-donate-now 使用的是 ccc.png (来自 default.html 内联style) */
+/* 注意：如果特定按钮的背景已在 default.html 的 <style> 中通过 .btn-contact, .btn-join-us, .btn-donate-now 定义，这里的 nth-of-type 规则可能不会对它们生效，或产生冲突。*/
+/* 建议将所有按钮背景图的定义统一到这个CSS文件中，移除 default.html 中的相关 <style> 部分。*/
 
 /* 按钮悬停效果 */
 .page-header nav .btn:hover {
   border-color: #ffffff;
-  color: #ffffff;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  /* color: #ffffff; /* 已在 .btn 中用 !important 设置 */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* 悬停时移除特定图片，显示通用深色渐变 */
   box-shadow: 0 0 8px rgba(255,255,255,0.2);
+  transform: translateY(-1px) scale(1.02); /* 稍微减小悬停缩放效果 */
 }
+
 /* --- Navigation Separator Style --- */
 .nav-separator {
   display: inline-block;
   color: rgba(255, 255, 255, 0.5);
-  margin: 0 5px; /* 确认：减小分隔符左右间距 */
+  margin: 0 5px; 
   font-size: 1em;
   vertical-align: baseline;
 }
 
 /* --- Main Content Styles --- */
-/* 这里省略了 .main-content 的具体样式，假设它们是默认主题提供的或你之前已有的 */
 .main-content {
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.85); /* 内容区域背景 */
@@ -155,53 +205,49 @@ body::before {
   position: relative;
   z-index: 2;
 }
-/* 可以根据需要添加或修改 .main-content 的其他样式 */
-
 
 /* --- Footer Styles - 确认背景 --- */
 .site-footer {
   margin-top: 4rem;
   padding: 2.5rem 1rem;
   color: rgba(255, 255, 255, 0.75);
-  /* V V V 确认 Footer 背景设置 V V V */
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), /* 深色蒙版 */
               url('{{ "/assets/images/lll.jpg" | relative_url }}') no-repeat center center; /* 背景图 */
-  background-size: cover; /* 覆盖 */
-  background-color: #1a1d24; /* 后备色 */
-  /* ^ ^ ^ 结束确认 ^ ^ ^ */
+  background-size: cover; 
+  background-color: #1a1d24; 
   text-align: center;
   font-family: $font-family-sans-serif;
   position: relative;
   z-index: 2;
 }
 .site-footer a {
-  color: #ffffff; /* Footer 链接颜色 */
+  color: #ffffff; 
   text-decoration: none;
   transition: color 0.2s ease;
 }
 .site-footer a:hover {
-  color: #00bcd4; /* Footer 链接悬停颜色 - 示例 */
+  color: #00bcd4; 
   text-decoration: underline;
 }
 
 /* --- Responsive Styles --- */
 @media screen and (max-width: 960px) {
-    /* 中等屏幕恢复换行 */
     .nav-container { flex-wrap: wrap; justify-content: center; overflow-x: hidden; }
-    .nav-left { margin-right: 0; margin-bottom: 8px; }
-    .nav-right { margin-left: 0; }
-    .page-header { padding-left: 1rem; } /* 调整 Header 内边距 */
-    .main-content { max-width: 90%; } /* 调整内容宽度 */
+    .nav-left { margin-right: 0; margin-bottom: 8px; justify-content: center; } /* 中屏时也居中 */
+    .nav-right { margin-left: 0; justify-content: center; } /* 中屏时也居中 */
+    .page-header { padding-left: 1rem; padding-right: 1rem; } 
+    .header-main { justify-content: center; } /* 中屏时Logo和标题整体居中 */
+    .main-content { max-width: 90%; } 
 }
 @media screen and (max-width: 768px) {
-    /* 小屏幕强制垂直 */
     .nav-container { flex-direction: column; }
-    .nav-left, .nav-right { margin-bottom: 10px; }
-    .header-main { flex-direction: column; text-align: center; } /* Logo和标题垂直排列 */
-    .header-logo { margin-right: 0; margin-bottom: 10px; } /* Logo下方加间距 */
-    .project-name { font-size: 1.6em; } /* 调整标题大小 */
-    .page-header { padding-left: 1rem; padding-right: 1rem; }
-    .main-content { padding: 1.5rem; } /* 调整内容内边距 */
+    .nav-left, .nav-right { margin-bottom: 10px; width: 100%; text-align: center; } /* 小屏时按钮组宽度100% */
+    .page-header nav .btn { display: block; margin-bottom: 5px; width: calc(100% - 4px); } /* 小屏时按钮变块级，并考虑边框 */
+    .header-main { flex-direction: column; text-align: center; } 
+    .header-logo-frame { margin-right: 0; margin-bottom: 10px; } 
+    .project-name { font-size: 1.6em; } 
+    /* .page-header { padding-left: 1rem; padding-right: 1rem; } /* 已在960px设置 */
+    .main-content { padding: 1.5rem; } 
 }
 
 /* --- 自定义样式结束 --- */
