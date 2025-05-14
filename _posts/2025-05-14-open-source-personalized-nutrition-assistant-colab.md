@@ -2,15 +2,21 @@
 layout: post
 title:  "开源探索：构建基于 Colab 的个性化营养助手 (天算AI出品)"
 date:   2025-05-14 13:00:00 +0800 # 您可以根据实际发布时间调整时分秒
-categories: [opensource, ai, health, colab, tiansuan-ai] # 英文分类
-tags: [个性化营养, 食材推荐, Python, 数据科学, Google Colab, 开源项目, 天算AI] # 中文标签
+categories: [opensource, ai, health, colab, tiansuan-ai]
+tags: [个性化营养, 食材推荐, Python, 数据科学, Google Colab, 开源项目, 天算AI]
 author: 金威
 description: "分享一个天算AI科技实验室完成并开源的基于Google Colab的个性化营养助手项目，介绍其功能、技术实现、开源理念以及如何快速开始使用，旨在帮助用户科学管理饮食健康。"
-# image: /assets/images/nutrition-assistant-cover.jpg # 如果您有封面图，请取消注释并替换为实际图片路径
+image: /assets/images/nutrition-assistant-cover.jpg # <-- 特色图片已启用并指向您的图片
 ---
 
-[在这里插入一张引人注目的项目封面图片，例如最终 Hugging Face Space 页面的截图，或者一个概念图]
-*(图片下方可以添加简短描述：例如：天算AI个性化营养助手 Hugging Face Space 概览)*
+<!-- 
+    如果您希望在博文顶部（标题下方，正文之前）也显示这张封面图，
+    并且您的Jekyll主题支持通过 image 变量自动处理，那么上面的 image 元数据可能就足够了。
+    如果主题不支持，或者您想在特定位置手动插入，可以使用下面的Markdown语法。
+    您可以选择保留下面的图片引用，或者如果特色图片功能已经满足您的需求，则删除它。
+-->
+![天算AI个性化营养助手概览](/assets/images/nutrition-assistant-cover.jpg)
+*天算AI个性化营养助手 Hugging Face Space 概览*
 
 大家好，我是金威。今天，我想和大家分享一个我近期在**天算AI科技实验室 (Natural Algorithm AI R&D Lab)** 完成并开源的小项目：一个基于 Google Colab 实现的个性化营养助手。在快节奏的现代生活中，如何科学饮食、保持健康，是许多人关注的焦点。本项目旨在提供一个简单易用的工具，帮助用户根据自身情况计算营养需求，并获得初步的食材搭配建议。
 
@@ -35,7 +41,11 @@ description: "分享一个天算AI科技实验室完成并开源的基于Google 
 
 整个开发过程充满了调试与优化，例如，针对早期版本中某些食材推荐量不切实际的问题，我们通过引入更细致的推荐量控制参数、调整选择优先级和超标判断阈值，逐步提升了推荐结果的合理性。
 
-[在这里可以插入一张 Colab Notebook 运行结果的截图，展示计算出的营养需求和推荐食材列表]
+<!-- 
+    关于 Colab 运行结果的截图，您也需要先将其上传到 /assets/images/ 目录，
+    然后替换下面的占位符。假设图片名为 colab-result-screenshot.jpg
+-->
+![个性化营养助手在 Colab 中的运行示例](/assets/images/colab-result-screenshot.jpg) 
 *(图片下方可以添加简短描述：例如：个性化营养助手在 Colab 中的运行示例)*
 
 ## 开源共享：天算AI的努力与期盼
@@ -67,4 +77,3 @@ description: "分享一个天算AI科技实验室完成并开源的基于Google 
 这个项目目前还是一个原型，虽然已经能够提供有价值的参考，但在微量营养素、三餐分配、烹饪方法等方面还有很大的提升空间。未来，我们可能会考虑引入更复杂的优化算法，或者结合大型语言模型来生成更丰富的食谱建议。
 
 感谢您的阅读！如果您对这个项目有任何想法、建议或发现了bug，欢迎通过GitHub Issues与我们交流。让我们一起用技术为健康生活赋能！
-```
