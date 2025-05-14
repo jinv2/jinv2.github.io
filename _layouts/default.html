@@ -26,6 +26,75 @@
       gtag('config', 'G-VDMTY87FV1');
     </script>
 
+    <!-- 新增的按钮背景图片样式 -->
+    <style>
+      .nav-container .btn { /* 对所有导航按钮应用基础美化和背景图准备 */
+        background-size: cover; 
+        background-position: center center; 
+        background-repeat: no-repeat; 
+        color: white !important; /* 强制白色文字，确保在各种背景下可见 */
+        padding: 8px 12px; 
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* 加强文字阴影 */
+        position: relative; 
+        z-index: 1; 
+        margin-left: 3px; /* 按钮之间的间距微调 */
+        margin-right: 3px;
+        border-radius: 5px; 
+        min-width: 75px; /* 设置一个最小宽度，可以根据实际情况调整 */
+        text-align: center; 
+        display: inline-block; 
+        vertical-align: middle; 
+        line-height: 1.5; 
+        border: 1px solid rgba(255, 255, 255, 0.4); /* 给按钮一个更明显的边框 */
+        transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, opacity 0.2s ease-out;
+        opacity: 0.9; /* 默认轻微透明 */
+      }
+      .nav-container .btn:hover {
+          transform: translateY(-1px) scale(1.05); /* 悬停时轻微上移并放大 */
+          box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+          opacity: 1; /* 悬停时不透明 */
+          color: white !important; /* 确保悬停时文字颜色不变 */
+      }
+
+      /* 如果需要深色叠加层来确保文字可读性 (可选，当前未使用) */
+      /*
+      .nav-container .btn::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3); 
+        z-index: -1; 
+        border-radius: inherit; 
+      }
+      */
+
+      /* "联系我们" 按钮 */
+      .btn-contact {
+        background-image: url("{{ '/assets/images/aaa.jpg' | relative_url }}");
+      }
+
+      /* "加入我们" 按钮 */
+      .btn-join-us {
+        background-image: url("{{ '/assets/images/bbb.png' | relative_url }}"); 
+        /* 如果您的 bbb 文件是 .jpg, 请改为 /assets/images/bbb.jpg */
+      }
+
+      /* "现在就捐款" 按钮 */
+      .btn-donate-now {
+        background-image: url("{{ '/assets/images/ccc.png' | relative_url }}");
+        /* 如果您的 ccc 文件是 .jpg, 请改为 /assets/images/ccc.jpg */
+      }
+
+      /* 针对您已有的其他按钮，如果它们没有自己的背景图样式，
+         并且您希望它们保持原来的无图或主题默认样式，
+         可能需要确保上面的 .nav-container .btn 的 background-image 
+         不会意外地应用到它们，或者为它们设置 background-image: none; 
+         但由于我们是为特定类名（.btn-contact等）设置图片，应该不会影响其他按钮。
+         如果其他按钮（如首页、博客、关于）也想使用 aaa-lll 系列的其他图片，
+         可以仿照 .btn-contact 的方式为它们添加类名和背景图。
+      */
+    </style>
+
   </head>
   <body>
     <div class="wrapper">
@@ -53,10 +122,9 @@
             <a href="https://www.tiktok.com/@jinvjinvbar" class="btn" target="_blank" rel="noopener noreferrer">TikTok</a>
             <span class="nav-separator">|</span>
             <a href="{{ '/about/' | relative_url }}" class="btn">关于</a>
-            <a href="{{ '/contact/' | relative_url }}" class="btn">联系我们</a>
-            <!-- 修改处：加入我们链接，锚点改为英文 -->
-            <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}" class="btn">加入我们</a>
-            <a href="{{ '/support/' | relative_url }}" class="btn">现在就捐款</a>
+            <a href="{{ '/contact/' | relative_url }}" class="btn btn-contact">联系我们</a>
+            <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}" class="btn btn-join-us">加入我们</a>
+            <a href="{{ '/support/' | relative_url }}" class="btn btn-donate-now">现在就捐款</a>
             {% if site.show_downloads %}
                <span class="nav-separator">|</span>
                <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -100,7 +168,6 @@
            <a href="{{ '/blog/' | relative_url }}">博客</a> |
            <a href="{{ '/about/' | relative_url }}">关于</a> |
            <a href="{{ '/contact/' | relative_url }}">联系我们</a> |
-           <!-- 修改处：加入我们链接，锚点改为英文 -->
            <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}">加入我们</a> |
            <a href="{{ '/support/' | relative_url }}">现在就捐款</a>
         </nav>
