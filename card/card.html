@@ -34,7 +34,6 @@
     .vertical-card {
       width: 100%;
       position: relative;
-      /* 确保这个路径相对于你的 HTML 文件是正确的 */
       background-image: url('assets/images/circuit_background.jpg'); /* 示例背景图 */
       background-size: cover;
       background-position: center;
@@ -42,49 +41,62 @@
 
     /* --- 内容遮罩层 --- */
     .content-overlay {
-      background-color: rgba(0, 5, 15, 0.8); /* 稍微加深遮罩，可调整 */
+      background-color: rgba(0, 5, 15, 0.8); 
       color: #ffffff;
       padding: 25px 25px 30px 25px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       text-align: center;
-      min-height: 630px; /* 根据内容调整最小高度 */
+      min-height: 580px; /* 高度调整 */
     }
 
     /* --- Logo 区域 --- */
     .logo-area {
       margin-bottom: 15px;
+      display: flex; 
+      justify-content: center; 
     }
 
-    .logo-area img {
-      width: 60px; /* Logo 尺寸 */
+    .logo-frame { 
+      width: 60px;
       height: 60px;
-      border-radius: 50%; /* 圆形 */
+      border-radius: 50%;
+      border: 5px solid white; 
       background-color: rgba(255, 255, 255, 0.1); 
-      margin: 0 auto;
-      object-fit: cover;
-      display: block;
-      box-shadow: 0 0 0 3px white, 
+      box-shadow: 
+                  0 0 6px 2px rgba(200, 210, 255, 0.5), 
                   0 1px 3px rgba(0, 0, 0, 0.5); 
+      overflow: hidden; 
+      position: relative; 
+      box-sizing: border-box; 
+    }
+
+    .logo-image { 
+      display: block; 
+      width: 80px;   
+      height: 80px;  
+      position: absolute;
+      top: -15px;    
+      left: -15px;   
     }
 
     /* --- 头部信息 --- */
     .header-info {
         margin-bottom: 15px; 
     }
-    .header-info h1 { /* 实验室中文名 */
-      font-size: 1.5em; /* 调整字号 */
+    .header-info h1 { 
+      font-size: 1.5em; 
       margin: 0 0 5px;
       font-weight: 600;
     }
-    .header-info .english-name { /* 实验室英文名 */
+    .header-info .english-name { 
       font-size: 0.85em;
       color: rgba(255, 255, 255, 0.8);
       margin-bottom: 12px; 
       letter-spacing: 0.5px;
     }
-    .owner-name { /* 个人姓名 */
+    .owner-name { 
         font-size: 1.2em; 
         font-weight: 500;
         margin-top: 0;
@@ -97,65 +109,63 @@
     }
     .roles span {
       display: inline-block;
-      background-color: rgba(76, 175, 80, 0.7); /* 默认绿色系 */
+      background-color: rgba(76, 175, 80, 0.7); 
       color: #fff;
-      padding: 5px 10px; /* 调整内边距 */
-      font-size: 0.75em; /* 调整字号 */
-      margin: 3px 2px; /* 调整外边距 */
-      border: 1px solid rgba(255, 255, 255, 0.2); /* 边框调淡 */
+      padding: 5px 10px; 
+      font-size: 0.75em; 
+      margin: 3px 2px; 
+      border: 1px solid rgba(255, 255, 255, 0.2); 
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
     .roles span:hover {
        background-color: rgba(76, 175, 80, 0.9);
     }
-    /* 为不同角色标签设置不同颜色（可选） */
-    .roles span:nth-child(2) { /* 第二个标签：架构师 */
-      background-color: rgba(63, 81, 181, 0.7); /* 蓝色系 */
+    .roles span:nth-child(2) { 
+      background-color: rgba(63, 81, 181, 0.7); 
     }
     .roles span:nth-child(2):hover {
       background-color: rgba(63, 81, 181, 0.9);
     }
-    .roles span:nth-child(3) { /* 第三个标签：研究员 */
-      background-color: rgba(255, 152, 0, 0.7); /* 橙色系 */
+    .roles span:nth-child(3) { 
+      background-color: rgba(255, 152, 0, 0.7); 
     }
     .roles span:nth-child(3):hover {
       background-color: rgba(255, 152, 0, 0.9);
     }
 
-
     /* --- 核心研究区域 --- */
     .research-focus-area {
-      font-size: 0.8em; /* 调整字号 */
+      font-size: 0.8em; 
       color: rgba(255, 255, 255, 0.9);
       line-height: 1.4;
       margin-top: 0; 
-      margin-bottom: 18px; /* 调整下边距 */
+      margin-bottom: 18px; 
     }
     .research-focus-area p {
       margin: 0 0 4px 0;
     }
     .research-focus-area .english-text { 
-      font-size: 0.95em; /* 英文相对中文略大一点点 */
+      font-size: 0.95em; 
       color: rgba(255, 255, 255, 0.75);
     }
 
     /* --- 数字资产区域 --- */
     .assets-section {
       background-color: rgba(0, 0, 0, 0.35);
-      padding: 12px 18px; /* 调整内边距 */
+      padding: 12px 18px; 
       text-align: left;
-      margin-bottom: 18px; /* 调整下边距 */
+      margin-bottom: 18px; 
       border-radius: 8px;
     }
-    .assets-section h2 { /* 数字资产中文标题 */
-      font-size: 1.0em; /* 调整字号 */
+    .assets-section h2 { 
+      font-size: 1.0em; 
       margin: 0 0 3px; 
       display: flex;
       align-items: center;
       color: #81d4fa;
     }
-    .assets-section .english-assets-title { /* 数字资产英文标题 */
+    .assets-section .english-assets-title { 
         font-size: 0.75em;
         color: rgba(255,255,255,0.7);
         margin-top: 0px; 
@@ -165,10 +175,10 @@
     }
     .vertical-bar {
       display: inline-block;
-      width: 3px; /* 调整宽度 */
-      height: 1.0em; /* 调整高度 */
+      width: 3px; 
+      height: 1.0em; 
       background-color: #29b6f6;
-      margin-right: 8px; /* 调整右边距 */
+      margin-right: 8px; 
       border-radius: 2px;
     }
     .assets-section ul {
@@ -177,31 +187,31 @@
       margin: 0;
     }
     .assets-section li {
-      font-size: 0.8em; /* 调整字号 */
+      font-size: 0.8em; 
       color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 6px; /* 调整下边距 */
+      margin-bottom: 6px; 
       display: flex;
       align-items: flex-start;
     }
     .assets-section li::before {
       content: '•';
       color: #4fc3f7;
-      font-size: 1.1em; /* 调整大小 */
-      margin-right: 8px; /* 调整右边距 */
+      font-size: 1.1em; 
+      margin-right: 8px; 
       line-height: 1;
       flex-shrink: 0;
     }
 
     /* --- 使命宣言 --- */
     .mission-statement {
-      font-size: 0.75em; /* 调整字号 */
+      font-size: 0.75em; 
       color: rgba(255, 255, 255, 0.85);
-      line-height: 1.5; /* 调整行高 */
-      margin-bottom: 18px; /* 调整下边距 */
-      padding: 10px; /* 调整内边距 */
-      background-color: rgba(255, 255, 255, 0.05); 
+      line-height: 1.5; 
+      margin-bottom: 18px; 
+      padding: 10px; 
+      background-color: rgba(0, 0, 0, 0.45); /* 修改为此值 */
       border-radius: 5px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.25); /* 修改为此值 */
       text-align: center; 
     }
     .mission-statement p {
@@ -211,7 +221,7 @@
         margin-bottom: 0;
     }
     .mission-statement .english-text { 
-        font-size: 0.95em; /* 英文相对中文略大一点点 */
+        font-size: 0.95em; 
         color: rgba(255, 255, 255, 0.7);
     }
 
@@ -219,9 +229,9 @@
     .contact-info {
       margin-top: auto; 
       text-align: center;
-      font-size: 0.85em; /* 调整字号 */
-      padding-top: 15px; /* 调整上边距 */
-      border-top: 1px solid rgba(255, 255, 255, 0.15); /* 边框调淡 */
+      font-size: 0.85em; 
+      padding-top: 15px; 
+      border-top: 1px solid rgba(255, 255, 255, 0.15); 
     }
     .contact-info p {
       margin: 6px 0; 
@@ -252,16 +262,16 @@
       <div class="content-overlay">
         
         <div class="logo-area">
-          <!-- 确保这个路径是正确的, 或者替换为您自己的 Logo 图片 -->
-          <!-- 天算AI Logo (这是给您看的标签，实际图片由img src决定) -->
-          <img src="assets/images/tian_suan_logo.jpg" alt="天算AI Logo" class="logo"/>
+          <div class="logo-frame">
+            <img src="assets/images/tian_suan_logo.jpg" alt="天算AI Logo" class="logo-image"/>
+          </div>
         </div>
 
         <div class="header-info">
           <h1>天算AI科技研发实验室</h1>
           <p class="english-name">(Natural Algorithm AI R&D Lab)</p>
           
-          <p class="owner-name">金威 (JINV)</p>
+          <p class="owner-name">金威 (JIN V)</p>
           
           <div class="roles">
             <span>发起人</span>
@@ -293,8 +303,8 @@
         </div>
 
         <div class="contact-info">
-          <p><span class="label">Blog/GitHub:</span> <a href="https://jinv2.github.io" target="_blank" rel="noopener noreferrer">jinv2.github.io</a></p>
-          <p><span class="label">WeChat:</span> 15632151615</p> <!-- 修改后的标签 -->
+          <p><span class="label">Blog:</span> <a href="https://jinv2.github.io" target="_blank" rel="noopener noreferrer">jinv2.github.io</a></p>
+          <p><span class="label">WeChat:</span> 15632151615</p> 
         </div>
 
       </div>
