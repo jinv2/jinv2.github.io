@@ -1,9 +1,9 @@
 ---
-layout: post # 假设你的博客使用 Jekyll 或类似工具，并有 post 布局
+layout: post
 title:  "里程碑达成：天算AI成功微调第十个垂直领域大语言模型——聚焦偏瘫康复"
-date:   2025-05-15 01:00:00 +0800 # 更新为指定日期，时间可自行调整
-categories: [AI, 大语言模型, 医疗科技, 开源] # 根据你的博客分类调整
-tags: [LLM, Fine-tuning, LoRA, Qwen, Healthcare, Hemiplegia, TiansuanAI, AIGC] # 根据你的博客标签调整
+date:   2025-05-15 08:00:00 +0800 # 你可以根据实际情况调整具体时间
+categories: [AI, 大语言模型, 医疗科技, 开源]
+tags: [LLM, Fine-tuning, LoRA, Qwen, Healthcare, Hemiplegia, TiansuanAI, AIGC, KnowledgeGraph] # 添加了 KnowledgeGraph 标签
 author: 金威 (JIN V) # 或 天算AI科技研发实验室
 ---
 
@@ -14,14 +14,14 @@ author: 金威 (JIN V) # 或 天算AI科技研发实验室
 *   **模型仓库:** [jinv2/qwen-1_8b-hemiplegia-lora](https://huggingface.co/jinv2/qwen-1_8b-hemiplegia-lora)
 *   **测试页面:** [偏瘫脑血栓问答助手](https://huggingface.co/spaces/jinv2/hemiplegia-qa-bot)
 
-![天算AI偏瘫康复大模型训练测试概览](此处替换为图片1的URL或相对路径 "天算AI偏瘫康复大模型训练测试概览")
+![天算AI偏瘫康复大模型训练测试概览](./assets/images/tiansuan-ai-hemiplegia-llm-training-results.png "天算AI偏瘫康复大模型训练测试概览")
 *(图注：天算AI偏瘫康复大模型训练完成，初步测试结果展示)*
 
 ### 技术探索：高效微调实践
 
 在天算AI创始人金威 (JIN V) 的主导下，我们遵循独立研发的路径，针对偏瘫康复领域的特定需求，构建了小规模、高针对性的问答数据集。微调过程利用了参数高效的LoRA技术及4-bit量化，在Google Colab T4 GPU环境下完成。尽管数据集和训练规模受限（5样本，20步），模型已能对训练数据进行有效记忆，并对领域内新问题生成初步相关的答复。
 
-![病痛与希望的交织](此处替换为图片2的URL或相对路径 "病痛与希望的交织")
+![病痛与希望的交织](./assets/images/hemiplegia-hope-and-challenge.png "病痛与希望的交织")
 *(图注：寓意病患挑战与康复希望的图像)*
 
 ### 开源赋能：AI普惠的愿景
@@ -39,8 +39,17 @@ author: 金威 (JIN V) # 或 天算AI科技研发实验室
 
 基于当前的文本模型成果，天算AI的下一步规划是研发**可视化病症的神经网络知识图谱**。我们期望通过结构化、多模态的知识呈现与交互方式，为用户提供更直观、更深入的疾病认知辅助，从而在个性化健康管理和医患沟通方面发挥更大价值。
 
-![AI驱动的医学知识图谱愿景](此处替换为图片3的URL或相对路径 "AI驱动的医学知识图谱愿景")
-*(图注：神经网络与医学符号交融，象征AI知识图谱的未来)*
+这一愿景旨在将复杂的医学信息网络化、可视化，让AI能够更深层次地理解疾病的内在联系，并以更友好的方式呈现给需要的人们。
+
+![AI驱动的医学知识图谱宏观愿景](./assets/images/ai-medical-knowledge-graph-vision.png "AI驱动的医学知识图谱宏观愿景")
+*(图注：AI驱动的医学知识图谱宏观架构或概念示意图)*
+
+通过构建这样的知识图谱，AI不仅能够回答“是什么”，更能辅助探索“为什么”和“怎么办”。例如，它可以清晰地展示特定疾病（如脑血栓）与多种风险因素（高血压、糖尿病、特定基因突变等）、典型症状（偏瘫、语言障碍）、可用治疗药物及其潜在副作用、以及不同康复路径之间的复杂关系。
+
+![医学知识图谱节点与关系细节示例](./assets/images/ai-medical-knowledge-graph-vision2.png "医学知识图谱节点与关系细节示例")
+*(图注：医学知识图谱中具体节点（如疾病、症状、药物）及其相互关系的细节放大或示例)*
+
+我们相信，这种结合了AI强大分析能力和知识图谱结构化优势的工具，将为未来的精准医疗、患者教育和医学研究开辟新的道路。
 
 ### 版权与致谢
 
@@ -51,10 +60,3 @@ author: 金威 (JIN V) # 或 天算AI科技研发实验室
 我们坚持独立研发与非营利运营模式，诚邀各界伙伴进行技术交流、项目共建或提供资助，共同推动普惠AI的发展。
 
 ---
-
-**联系天算AI (Contact Tiansuan AI):**
-
-*   **博客 (Blog):** [jinv2.github.io](https://jinv2.github.io)
-*   **微信 (WeChat):** 15632151615 (金威 JIN V)
-*   **邮箱 (Email):** (如果 `jinv2.github.io/contact/` 页面有邮箱，请添加)
-*   **(其他社交媒体或联系方式，请从 `jinv2.github.io/contact/` 页面参考添加)**
