@@ -14,8 +14,11 @@ author: 金威 (JIN V)
 *   **模型仓库:** [jinv2/qwen-1_8b-hemiplegia-lora](https://huggingface.co/jinv2/qwen-1_8b-hemiplegia-lora)
 *   **测试页面:** [偏瘫脑血栓问答助手](https://huggingface.co/spaces/jinv2/hemiplegia-qa-bot)
 
-![天算AI偏瘫康复大模型训练测试概览](/assets/images/tiansuan-ai-hemiplegia-llm-training-results.png "天算AI偏瘫康复大模型训练测试概览")
-*(图注：天算AI偏瘫康复大模型训练完成，初步测试结果展示)*
+![天算AI偏瘫康复大模型训练测试概览1](/assets/images/tiansuan-ai-hemiplegia-llm-training-results.png "天算AI偏瘫康复大模型训练测试概览 - 概览1")
+*(图注：天算AI偏瘫康复大模型训练完成，初步测试结果展示 - 概览1)*
+
+![天算AI偏瘫康复大模型训练测试概览2](/assets/images/tiansuan-ai-hemiplegia-llm-training-results2.png "天算AI偏瘫康复大模型训练测试概览 - 概览2")
+*(图注：天算AI偏瘫康复大模型训练完成，初步测试结果展示 - 概览2，或补充细节)*
 
 ### 技术探索：高效微调实践
 
