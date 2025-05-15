@@ -14,14 +14,14 @@ author: 金威 (JIN V)
 *   **模型仓库:** [jinv2/qwen-1_8b-hemiplegia-lora](https://huggingface.co/jinv2/qwen-1_8b-hemiplegia-lora)
 *   **测试页面:** [偏瘫脑血栓问答助手](https://huggingface.co/spaces/jinv2/hemiplegia-qa-bot)
 
-![天算AI偏瘫康复大模型训练测试概览](/tiansuan-ai-hemiplegia-llm-training-results.png "天算AI偏瘫康复大模型训练测试概览")
+![天算AI偏瘫康复大模型训练测试概览](/assets/images/tiansuan-ai-hemiplegia-llm-training-results.png "天算AI偏瘫康复大模型训练测试概览")
 *(图注：天算AI偏瘫康复大模型训练完成，初步测试结果展示)*
 
 ### 技术探索：高效微调实践
 
 在天算AI创始人金威 (JIN V) 的主导下，我们遵循独立研发的路径，针对偏瘫康复领域的特定需求，构建了小规模、高针对性的问答数据集。微调过程利用了参数高效的LoRA技术及4-bit量化，在Google Colab T4 GPU环境下完成。尽管数据集和训练规模受限（5样本，20步），模型已能对训练数据进行有效记忆，并对领域内新问题生成初步相关的答复。
 
-![病痛与希望的交织](/hemiplegia-hope-and-challenge.png "病痛与希望的交织")
+![病痛与希望的交织](/assets/images/hemiplegia-hope-and-challenge.png "病痛与希望的交织")
 *(图注：寓意病患挑战与康复希望的图像)*
 
 ### 开源赋能：AI普惠的愿景
@@ -41,12 +41,12 @@ author: 金威 (JIN V)
 
 这一愿景旨在将复杂的医学信息网络化、可视化，让AI能够更深层次地理解疾病的内在联系，并以更友好的方式呈现给需要的人们。
 
-![AI驱动的医学知识图谱宏观愿景](/ai-medical-knowledge-graph-vision.png "AI驱动的医学知识图谱宏观愿景")
+![AI驱动的医学知识图谱宏观愿景](/assets/images/ai-medical-knowledge-graph-vision.png "AI驱动的医学知识图谱宏观愿景")
 *(图注：AI驱动的医学知识图谱宏观架构或概念示意图)*
 
 通过构建这样的知识图谱，AI不仅能够回答“是什么”，更能辅助探索“为什么”和“怎么办”。例如，它可以清晰地展示特定疾病（如脑血栓）与多种风险因素（高血压、糖尿病、特定基因突变等）、典型症状（偏瘫、语言障碍）、可用治疗药物及其潜在副作用、以及不同康复路径之间的复杂关系。
 
-![医学知识图谱节点与关系细节示例](/ai-medical-knowledge-graph-vision2.png "医学知识图谱节点与关系细节示例")
+![医学知识图谱节点与关系细节示例](/assets/images/ai-medical-knowledge-graph-vision2.png "医学知识图谱节点与关系细节示例")
 *(图注：医学知识图谱中具体节点（如疾病、症状、药物）及其相互关系的细节放大或示例)*
 
 我们相信，这种结合了AI强大分析能力和知识图谱结构化优势的工具，将为未来的精准医疗、患者教育和医学研究开辟新的道路。
