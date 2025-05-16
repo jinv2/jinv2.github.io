@@ -1,11 +1,13 @@
+好的，这是按照你提供的文本，并且头部YAML Front Matter部分已经根据标准Jekyll格式进行了修正的版本。
+
 ```markdown
 ---
 title: "当大语言模型驶入物理世界：GPT-2轨迹预测微调与“天算AI”的探索"
-date: 2025-05-16 10:00:00 +0800 # 你可以根据需要调整确切时间和时区
+date: 2025-05-16 10:00:00 +0800
 author: "金威 (JIN V)，天算AI科技研发实验室 发起人/架构师/研究员"
 tags: [天算AI, LLM, GPT-2, LoRA, 轨迹预测, 无人驾驶, 物理常识, AIGC, AGI, Hugging Face, Gradio]
-layout: post # 假设你的文章布局是 'post'，如果不是请修改
-categories: [技术分享, AI探索] # 示例分类，请根据你的博客设置修改
+layout: post
+categories: [技术分享, AI探索]
 ---
 
 大家好，我是金威 (JIN V)，来自天算AI科技研发实验室 (Natural Algorithm AI R&D Lab)。我们实验室致力于探索自然算法，构建普惠AGI，进行独立研发并以非营利模式运营。今天，我非常激动地与大家分享我们近期在AIGC领域的一个小实验：**利用大型语言模型（LLM）结合LoRA微调技术，对`gpt2`模型进行改造，使其能够预测车辆的未来行驶轨迹，并初步探索如何让这些预测带上“物理常识”的印记。**
