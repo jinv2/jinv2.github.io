@@ -1,3 +1,4 @@
+```markdown
 ---
 title: "当大语言模型驶入物理世界：GPT-2轨迹预测微调与“天算AI”的探索"
 date: 2025-05-16 10:00:00 +0800 # 你可以根据需要调整确切时间和时区
@@ -9,6 +10,7 @@ categories: [技术分享, AI探索] # 示例分类，请根据你的博客设�
 
 大家好，我是金威 (JIN V)，来自天算AI科技研发实验室 (Natural Algorithm AI R&D Lab)。我们实验室致力于探索自然算法，构建普惠AGI，进行独立研发并以非营利模式运营。今天，我非常激动地与大家分享我们近期在AIGC领域的一个小实验：**利用大型语言模型（LLM）结合LoRA微调技术，对`gpt2`模型进行改造，使其能够预测车辆的未来行驶轨迹，并初步探索如何让这些预测带上“物理常识”的印记。**
 
+**(可选：此处可以插入一张你认为能代表“天算AI”理念或本次实验主题的引人入胜的开篇图片，例如你仓库中已有的 `TSLOGO.png` 或 `AI独孤LOGO.png`，路径为 `/assets/images/TSLOGO.png`)**
 <!-- <p align="center">
   <img src="/assets/images/TSLOGO.png" alt="天算AI Logo" style="width:50%; max-width:300px;"/>
 </p> -->
