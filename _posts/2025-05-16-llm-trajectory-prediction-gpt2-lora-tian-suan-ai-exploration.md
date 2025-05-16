@@ -13,7 +13,6 @@ tags: [天算AI, LLM, GPT-2, LoRA, 轨迹预测, 物理常识, AIGC, AGI, Huggin
 <p align="center">
   <img src="{{ site.baseurl }}/assets/images/TSLOGO.png" alt="天算AI Logo" style="width:50%; max-width:300px;"/>
 </p>
--->
 
 ## “天算AI”的愿景与本次实验的初衷
 
