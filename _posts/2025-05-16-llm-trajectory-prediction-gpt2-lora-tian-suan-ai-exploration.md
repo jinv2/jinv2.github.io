@@ -1,5 +1,3 @@
-好的，这是按照你提供的文本，并且头部YAML Front Matter部分已经根据标准Jekyll格式进行了修正的版本。
-
 ```markdown
 ---
 title: "当大语言模型驶入物理世界：GPT-2轨迹预测微调与“天算AI”的探索"
