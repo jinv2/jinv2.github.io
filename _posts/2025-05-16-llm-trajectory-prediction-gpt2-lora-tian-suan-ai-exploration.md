@@ -1,27 +1,3 @@
-好的！你已经将图片上传到了 `jinv2/jinv2.github.io` 仓库的 `assets/images/` 目录下，这太棒了！
-
-根据你的截图，这三张图片在 `assets/images/` 目录下的确切文件名是：
-
-1.  `evaluation_results_terminal.png`
-2.  `llm_trajectory_prediction_workflow.png`
-3.  `gradio_demo_screenshot.png`
-
-现在我们可以使用正确的**相对路径**在你的博文中引用这些图片了。假设你的博文Markdown文件位于 `jinv2.github.io` 仓库的 `_posts` 目录下，那么引用 `assets/images/` 目录下图片的相对路径通常是 `../assets/images/图片文件名.png` (因为 `_posts` 和 `assets` 通常在同一级别，或者你需要根据你的Jekyll结构调整)。
-
-不过，更稳妥且常用的方式是使用Jekyll的 `site.baseurl` 或直接从站点根目录开始的路径（如果配置正确）。**为了简单和通用，我们先假设一个常见的Jekyll配置，即你可以使用从站点根目录开始的路径，或者直接使用相对路径（如果图片和 `_posts` 文件夹组织得当，Jekyll能正确解析）。**
-
-**最安全的引用方式，如果你的图片在 `jinv2.github.io/assets/images/` 下，并且你的博客部署在 `jinv2.github.io`：**
-
-*   图片1: `/assets/images/evaluation_results_terminal.png`
-*   图片2: `/assets/images/llm_trajectory_prediction_workflow.png`
-*   图片3: `/assets/images/gradio_demo_screenshot.png`
-
-**我将使用这种从站点根目录开始的绝对路径 `/assets/images/...` 来更新博文。这种方式通常在Jekyll博客中效果最好。**
-
----
-
-**最终博文内容 (已更新图片路径)**
-
 ---
 
 **标题：当大语言模型驶入物理世界：GPT-2轨迹预测微调与“天算AI”的探索**
@@ -134,12 +110,3 @@
 本项目（指Hugging Face上的模型 `jinv2/gpt2-lora-trajectory-prediction`）根据 Apache License 2.0 许可证授权。
 
 ---
-
-**最后检查：**
-
-*   确保在你的Jekyll博客的 `_posts` 目录下创建这个 `.md` 文件。
-*   在文件顶部添加正确的Jekyll Front Matter (layout, title, date, categories, tags等)。
-*   将 `[你的训练样本数，例如 300]` 和 `[你的训练epoch数，例如 5]` 以及 `[你的测试样本数，例如 50]` 替换为实际数值。
-*   **最重要：** 确保图片路径 `/assets/images/图片名.png` 对于你的Jekyll博客是正确的。如果你的图片文件夹不是 `assets/images`，或者Jekyll配置了不同的 `baseurl`，你可能需要调整这些路径。通常，如果 `assets` 文件夹在你的GitHub Pages仓库的根目录，那么 `/assets/images/图片名.png` 应该是可用的。
-
-现在你可以将这个内容发布到你的博客了！
