@@ -1,21 +1,21 @@
+好的，这是按照你提供的文本，仅修改Jekyll Front Matter部分的版本。
+
+```yaml
 ---
-
-**标题：当大语言模型驶入物理世界：GPT-2轨迹预测微调与“天算AI”的探索**
-
-**日期：** 2025年05月16日
-**作者：** 金威 (JIN V)，天算AI科技研发实验室 发起人/架构师/研究员
-**标签：** `天算AI`, `LLM`, `GPT-2`, `LoRA`, `轨迹预测`, `无人驾驶`, `物理常识`, `AIGC`, `AGI`, `Hugging Face`, `Gradio`
-
+title: "当大语言模型驶入物理世界：GPT-2轨迹预测微调与“天算AI”的探索"
+date: 2025-05-16 10:00:00 +0800 # 你可以根据需要调整确切时间和时区
+author: "金威 (JIN V)，天算AI科技研发实验室 发起人/架构师/研究员"
+tags: [天算AI, LLM, GPT-2, LoRA, 轨迹预测, 无人驾驶, 物理常识, AIGC, AGI, Hugging Face, Gradio]
+layout: post # 假设你的文章布局是 'post'，如果不是请修改
+categories: [技术分享, AI探索] # 示例分类，请根据你的博客设置修改
 ---
 
 大家好，我是金威 (JIN V)，来自天算AI科技研发实验室 (Natural Algorithm AI R&D Lab)。我们实验室致力于探索自然算法，构建普惠AGI，进行独立研发并以非营利模式运营。今天，我非常激动地与大家分享我们近期在AIGC领域的一个小实验：**利用大型语言模型（LLM）结合LoRA微调技术，对`gpt2`模型进行改造，使其能够预测车辆的未来行驶轨迹，并初步探索如何让这些预测带上“物理常识”的印记。**
 
 **(可选：此处可以插入一张你认为能代表“天算AI”理念或本次实验主题的引人入胜的开篇图片，例如你仓库中已有的 `TSLOGO.png` 或 `AI独孤LOGO.png`，路径为 `/assets/images/TSLOGO.png`)**
-```html
 <!-- <p align="center">
   <img src="/assets/images/TSLOGO.png" alt="天算AI Logo" style="width:50%; max-width:300px;"/>
 </p> -->
-```
 
 **“天算AI”的愿景与本次实验的初衷**
 
@@ -110,3 +110,4 @@
 本项目（指Hugging Face上的模型 `jinv2/gpt2-lora-trajectory-prediction`）根据 Apache License 2.0 许可证授权。
 
 ---
+```
