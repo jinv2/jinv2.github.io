@@ -10,8 +10,6 @@ tags: [天算AI, LLM, GPT-2, LoRA, 轨迹预测, 物理常识, AIGC, AGI, Huggin
 
 大家好，我是金威 (JIN V)，来自天算AI科技研发实验室 (Natural Algorithm AI R&D Lab)。我们实验室致力于“探索自然算法，构建普惠AGI”，进行独立研发并以非营利模式运营。今天，我非常激动地与大家分享我们近期在AIGC（人工智能生成内容）领域的一个小实验：**利用大型语言模型（LLM）结合LoRA微调技术，对`gpt2`模型进行改造，使其能够预测车辆的未来行驶轨迹，并初步探索如何让这些预测带上“物理常识”的印记。**
 
-**(可选：在此处插入一张引人入胜的开篇图片。如果图片名为 `TSLOGO.png` 且位于 `/assets/images/` 目录下)**
-<!--
 <p align="center">
   <img src="{{ site.baseurl }}/assets/images/TSLOGO.png" alt="天算AI Logo" style="width:50%; max-width:300px;"/>
 </p>
