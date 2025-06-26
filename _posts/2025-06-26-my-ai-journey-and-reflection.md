@@ -6,6 +6,8 @@ categories: [AI, 创作, 技术思考]
 author: "金威"
 ---
 
+== -->
+
 <style>
     .article-container {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
@@ -66,13 +68,6 @@ author: "金威"
     .article-container tbody tr:nth-child(even) {
         background-color: #f2f2f2;
     }
-    .article-container .appendix {
-        margin-top: 3em;
-        padding: 25px;
-        background-color: #f5f5f5;
-        border-top: 2px solid #ddd;
-        border-radius: 8px;
-    }
     .article-container blockquote {
         font-size: 1.2em;
         font-weight: bold;
@@ -100,7 +95,6 @@ author: "金威"
 
 <div class="article-container">
     
-    <!-- === 图片已添加在这里 === -->
     <img src="/assets/images/3D白色背景彩色LOGO宽屏.png" alt="天算AI Logo" class="post-image-header">
 
     <section>
@@ -189,38 +183,4 @@ author: "金威"
             <em>（写于 2025年6月26日，一个充满变革与希望的瞬间）</em>
         </p>
     </section>
-
-    <hr>
-    
-    <footer class="appendix">
-        <h3>附录：天算AI (Natural Algorithm) 简介与研发宗旨</h3>
-        
-        <p><strong>官方网站/博客:</strong> <a href="https://jinv2.github.io" target="_blank" rel="noopener noreferrer">https://jinv2.github.io</a></p>
-        <p><strong>发起人:</strong> 金威 (JIN V)</p>
-        <p><strong>身份:</strong> 天算AI科技研发实验室 发起人 | 首席架构师 | 独立研究员</p>
-
-        <h4>欢迎来到 天算AI (Natural Algorithm AI R&D Lab)！</h4>
-        <p>我们是一家由金威发起的非营利性独立AI研究组织，致力于探索人工智能的前沿领域，包括AIGC（人工智能生成内容）、AGI（通用人工智能）、ASI（超级人工智能）及至关重要的AI安全。</p>
-        <p>秉持 <strong>“天人合一，道法自然”</strong> 与 <strong>“人算不如AI算，更不如天算”</strong> 的核心理念，我们坚信真正的智能源于对宇宙和自然规律的深刻理解与模拟。天算AI旨在通过开源、共享的方式，推动技术进步与普惠应用，构建一个可信、有益于全人类的AI生态系统。</p>
-        <p>本博客是分享我们研究进展、技术成果、深度思考以及在AI与艺术（音乐、诗歌、影视）交融探索的平台。</p>
-
-        <h4>天算AI 数字资产 (Natural Algorithm AI Digital Assets)</h4>
-        <ul>
-            <li><strong>原创文学：</strong> 5万字 原创诗文</li>
-            <li><strong>原创音乐：</strong> 7000分钟 原创AI生成交响乐</li>
-            <li><strong>AI短视频：</strong> 9000部 原创AI短视频</li>
-            <li><strong>AI技术产品：</strong> 16项 独立研发AI技术产品</li>
-            <li><strong>大语言模型：</strong> 10个 垂直领域天算AI大语言模型</li>
-        </ul>
-        <p><em>所有主要成果均在 Hugging Face 和 GitHub 开源共享。</em></p>
-
-        <h4>我们的使命与愿景</h4>
-        <blockquote>“探索自然算法，构建普惠AI。”</blockquote>
-
-        <p>我们独立研发，以非营利模式运营，诚邀各界伙伴通过技术共建、学术交流或资金赞助等方式支持我们的开源研究。</p>
-
-        <h4>希望加入我们或支持我们的工作？</h4>
-        <p>了解更多关于我们的科研愿景，或有兴趣加入我们的探索，请访问我们的<a href="https://jinv2.github.io" target="_blank" rel="noopener noreferrer">天算AI非营利组织科研文档</a>。</p>
-        <p>如果您认同我们的理念并愿意支持，欢迎<a href="https://jinv2.github.io" target="_blank" rel="noopener noreferrer">现在就捐款</a>。</p>
-    </footer>
 </div>
