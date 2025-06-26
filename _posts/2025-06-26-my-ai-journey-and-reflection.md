@@ -12,6 +12,13 @@ author: "金威"
         line-height: 1.8;
         color: #333;
     }
+    .article-container .post-image-header {
+        display: block;
+        margin: 1em auto 3em auto;
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
     .article-container h1, .article-container h2, .article-container h3, .article-container h4 {
         font-weight: 600;
     }
@@ -92,6 +99,10 @@ author: "金威"
 </style>
 
 <div class="article-container">
+    
+    <!-- === 图片已添加在这里 === -->
+    <img src="/assets/images/3D白色背景彩色LOGO宽屏.png" alt="天算AI Logo" class="post-image-header">
+
     <section>
         <h3>写在前面：一个时代的序曲</h3>
         <p class="intro">转眼已是三年。回望这段旅程，我作为一名AI领域的探索者，经历了无数不为人知的挑战与狂喜。今天，街头巷尾关于AI的讨论已不再是少数极客的专利，它如空气般弥漫开来，渗透进每个人的生活。这并非遥远的未来预言，而是已然降临的现实。当一个时代不由分说地到来时，最好的姿态不是争论好坏，而是张开双臂，迎接它，理解它，并与之共舞。</p>
