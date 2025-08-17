@@ -16,7 +16,6 @@ categories: [AI, JAFF, 技术白皮书]
     .signature { text-align: right; margin-top: 50px; font-weight: bold; }
     strong, b { color: #0056b3; }
     img { max-width: 100%; height: auto; display: block; margin: 30px auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .video-placeholder { background-color: #f0f0f0; border: 1px dashed #ccc; padding: 40px 20px; text-align: center; color: #888; font-weight: bold; margin: 20px 0; border-radius: 8px; }
 </style>
 
 <div class="container">
@@ -31,16 +30,8 @@ categories: [AI, JAFF, 技术白皮书]
     
     <p>V1.4不再是随机的美学探索，而是一套严谨、可复现的<strong>“生产规程” (Production Protocol)</strong>。</p>
     
-    <img src="{{ site.baseurl }}/assets/images/jaff-v1-4-blueprint.png" alt="JAFF V1.4 核心协议概念图">
+    <img src="{{ site.baseurl }}/assets/images/Google_AI_Studio_2025-08-17T06_11_09.972Z.png" alt="JAFF V1.4 核心协议概念图">
 
-    <h2>V1.4作品集：三大核心协议的实践证明</h2>
-    <p>为了证明该技术的稳定性和普适性，我们选取了三个差异巨大的主题进行测试。以下作品分别展示了三大核心协议的强大能力：</p>
-
-    <div class="video-placeholder">【此处嵌入“神圣花开”视频链接】<br><small>主题一：鲜花 | 核心展示：概念炼金术™</small></div>
-    <div class="video-placeholder">【此处嵌入“极乐净土”视频链接】<br><small>主题二：山水 | 核心展示：零负熵约束</small></div>
-    <div class="video-placeholder">【此处嵌入“宇宙微笑”视频链接】<br><small>主题三：幼儿 | 核心展示：全感官祝福协议</small></div>
-    
-    
     <h2>V1.4引擎核心技术协议解密</h2>
     <p>以上作品的惊人一致性和高情感影响力，源于V1.4引擎搭载的三大核心协议：</p>
 
