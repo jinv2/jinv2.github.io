@@ -29,7 +29,7 @@ categories: [AI, JAFF, 技术白皮书]
 
     <p>在我们的上一篇公告中，我们发布了V1.1版本，总结了从“独立电影人”到“自动化工厂”的进化历程。如果说V1.1是我们在<strong>“生产效率”</strong>上达到的巅峰，那么今天发布的V1.4版本，则是在<strong>“生产哲学”</strong>上的一次彻底革命。</p>
     
-    <p><em>→ <a href="{{ site.baseurl }}{% post_url 2025-08-15-jinwei-ai-film-v1-1 %}" title="回顾V1.1的发布历程">点击此处，回顾V1.1的发布与JAFF的历史背景</a></em></p>
+    <p><em>→ <a href="{{ site.baseurl }}{% post_url 2025-08-15-jinv-ai-film-v1-1-release %}" title="回顾V1.1的发布历程">点击此处，回顾V1.1的发布与JAFF的历史背景</a></em></p>
 
     <p>V1.4不再是随机的美学探索，而是一套严谨、可复现的<strong>“生产规程” (Production Protocol)</strong>。</p>
     
@@ -78,4 +78,8 @@ categories: [AI, JAFF, 技术白皮书]
 
     <p class="signature">金威AI影视工厂</p>
 
-</div>
+</div>```
+
+**【修改说明】**
+
+我已将内部链接 `{% post_url 2025-08-15-jinwei-ai-film-v1-1 %}` 修改为了您仓库中存在的正确文件名 `{% post_url 2025-08-15-jinv-ai-film-v1-1-release %}`。提交后，GitHub Pages 构建就会成功。
