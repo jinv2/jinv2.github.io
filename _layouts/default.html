@@ -37,6 +37,36 @@
       .btn-donate-now {
         background-image: url("{{ '/assets/images/ccc.png' | relative_url }}");
       }
+      .btn-blog {
+        background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); /* 使用联系我们按钮的图片作为博客按钮背景 */
+      }
+
+      /* 添加底部区域背景图片（使用加入我们按钮的背景图片作为示例） */
+      .recent-blog-posts,
+      .footer-nav {
+        background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}");
+        background-size: cover;
+        background-position: center;
+        padding: 1rem;
+        border-radius: 8px;
+        color: #fff; /* 确保文字在背景上可见 */
+      }
+      .recent-blog-posts h2,
+      .footer-nav a {
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* 添加文字阴影以提高可读性 */
+      }
+      .recent-blog-posts ul li,
+      .recent-blog-posts p {
+        color: #fff;
+      }
+      .recent-blog-posts ul li a {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .recent-blog-posts ul li a:hover {
+        color: #ffd700;
+      }
     </style>
 
   </head>
@@ -54,7 +84,7 @@
           <!-- 左侧导航 -->
           <div class="nav-left">
             <a href="{{ '/' | relative_url }}" class="btn">首页</a>
-            <a href="{{ '/blog/' | relative_url }}" class="btn">博客</a>
+            <a href="{{ '/blog/' | relative_url }}" class="btn btn-blog">博客</a>
             
             <a href="https://sora.chatgpt.com/profile/mmmmmmmm1r" class="btn" target="_blank" rel="noopener noreferrer">SORA2 信号站</a>
             
@@ -134,7 +164,3 @@
     </div> 
   </body>
 </html>
-```
-
-提交这个更改后，等待 GitHub Pages 重新构建。这次应该可以彻底解决注释被渲染为文本的问题，并显示正确的菜单结构。
-19.7s
