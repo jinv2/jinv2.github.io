@@ -55,7 +55,12 @@
           <div class="nav-left">
             <a href="{{ '/' | relative_url }}" class="btn">首页</a>
             <a href="{{ '/blog/' | relative_url }}" class="btn">博客</a>
-            <span class="nav-separator">|</span>
+            
+            <!-- 新增 SORA2 信号站链接 -->
+            <a href="https://sora.chatgpt.com/profile/mmmmmmmm1r" class="btn" target="_blank" rel="noopener noreferrer">SORA2 信号站</a>
+            
+            <span class="nav-separator">|</span> {# 这个分隔符现在是 SORA2 和 Hugging Face 之间 #}
+            
             <a href="https://huggingface.co/jinv2" class="btn" target="_blank" rel="noopener noreferrer">Hugging Face</a>
             {% if site.github.is_project_page %}
               <a href="{{ site.github.repository_url }}" class="btn">GitHub</a>
