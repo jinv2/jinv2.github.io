@@ -1,12 +1,19 @@
 # main navigation links
 main:
   - title: "首页"
-    url: /tsai/ # 注意这里是 /tsai/
+    url: /tsai/
   - title: "博客"
-    url: /tsai/blog/ # 注意这里是 /tsai/blog/
+    url: /tsai/blog/
   - title: "关于"
-    url: /tsai/about/ # 注意这里是 /tsai/about/
+    url: /tsai/about/
   - title: "按标签"
-    url: /tsai/tags/ # 注意这里是 /tsai/tags/
+    url: /tsai/tags/
   - title: "按分类"
-    url: /tsai/categories/ # 注意这里是 /tsai/categories/
+    url: /tsai/categories/
+  # 在这里添加你的新链接
+  - title: "🎬 我的 SORA2 信号站"
+    url: "https://sora.chatgpt.com/profile/mmmmmmmm1r" # 这是外部链接，直接使用完整URL
+  - title: "🧠 我的模型主页"
+    url: "https://huggingface.co/jinv2" # 这是外部链接，直接使用完整URL
+  - title: "💻 我的代码实验室"
+    url: "https://github.com/jinv2" # 这是外部链接，直接使用完整URL
