@@ -67,6 +67,24 @@
       .recent-blog-posts ul li a:hover {
         color: #ffd700;
       }
+
+      /* 当前信号更新区样式 */
+      .sora-signal-update {
+        background-color: #f8f9fa;
+        border-left: 4px solid #007bff;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .sora-signal-update h3 {
+        margin-top: 0;
+        color: #007bff;
+        font-size: 1.2em;
+      }
+      .sora-signal-update p {
+        margin-bottom: 0.5rem;
+      }
     </style>
 
   </head>
@@ -118,6 +136,15 @@
       <main id="content" class="main-content" role="main">
 
         {{ content }}  
+
+        {% if page.url == "/" %}
+        <!-- 当前 SORA2 信号更新区（仅主页显示） -->
+        <section class="sora-signal-update">
+          <h3>📡 当前 SORA2 信号更新</h3>
+          <p>最新短片：<a href="https://sora.chatgpt.com/profile/mmmmmmmm1r" target="_blank">点击查看 @mmmmmmmm1r</a></p>
+          <p>本周主题：山海经 · 神思庭篇</p>
+        </section>
+        {% endif %}
 
         <!-- ===== 最新博客文章 & 底部导航 ===== -->
         <hr style="margin-top: 2.5rem; margin-bottom: 1.5rem;"> 
