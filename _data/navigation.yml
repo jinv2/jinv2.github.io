@@ -1,51 +1,12 @@
 # main navigation links
 main:
   - title: "首页"
-    url: /tsai/
+    url: /tsai/ # 注意这里是 /tsai/
   - title: "博客"
-    url: /tsai/blog/
-
-  # --- 新增的 SORA2 信号站链接 ---
-  - title: "SORA2 信号站"
-    url: "https://sora.chatgpt.com/profile/mmmmmmmm1r"
-  # ----------------------------------
-
-  # --- 假设这是第一个分隔符 ---
-  # 请根据你实际文件中分隔符的表示方式进行调整
-  - title: "|"
-    url: "#"
-  # ----------------------------
-
-  # --- 假设这是现有的 Hugging Face, YouTube, TikTok 链接 ---
-  # 请根据你实际文件中这些链接的 url 进行调整
-  - title: "Hugging Face"
-    url: "https://huggingface.co/jinv2" # 假设是这个 URL
-  - title: "YouTube"
-    url: "https://youtube.com/your-channel" # 请替换为你的 YouTube 频道 URL
-  - title: "TikTok"
-    url: "https://tiktok.com/your-profile" # 请替换为你的 TikTok 个人资料 URL
-  # -----------------------------------------------------------
-
-  # --- 假设这是第二个分隔符 ---
-  # 请根据你实际文件中分隔符的表示方式进行调整
-  - title: "|"
-    url: "#"
-  # ----------------------------
-
+    url: /tsai/blog/ # 注意这里是 /tsai/blog/
   - title: "关于"
-    url: /tsai/about/
-  # --- 假设这是现有的 联系我们, 加入我们, 现在捐款 链接 ---
-  # 请根据你实际文件中这些链接的 url 进行调整
-  - title: "联系我们"
-    url: /tsai/contact/ # 假设是这个 URL
-  - title: "加入我们"
-    url: /tsai/join-us/ # 假设是这个 URL
-  - title: "现在捐款"
-    url: /tsai/donate/ # 假设是这个 URL
-  # -------------------------------------------------------------
-
-  # 以下是你原始文件中的其他条目，如果需要，请自行决定是否保留或调整位置
-  # - title: "按标签"
-  #   url: /tsai/tags/
-  # - title: "按分类"
-  #   url: /tsai/categories/
+    url: /tsai/about/ # 注意这里是 /tsai/about/
+  - title: "按标签"
+    url: /tsai/tags/ # 注意这里是 /tsai/tags/
+  - title: "按分类"
+    url: /tsai/categories/ # 注意这里是 /tsai/categories/
