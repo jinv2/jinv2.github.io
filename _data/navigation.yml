@@ -7,7 +7,7 @@ main:
     url: /tsai/blog/
 
   # --- 新增的 SORA2 信号站链接 ---
-  - title: "SORA2"
+  - title: "SORA2 信号站"
     url: "https://sora.chatgpt.com/profile/mmmmmmmm1r"
   # ----------------------------------
 
@@ -50,3 +50,4 @@ main:
   #   url: /tsai/tags/
   # - title: "按分类"
   #   url: /tsai/categories/
+```
