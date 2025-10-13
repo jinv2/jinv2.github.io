@@ -30,15 +30,24 @@
       /* --- 特定按钮背景 (这些最终应该移到 style.scss 中统一管理) --- */
       .btn-contact {
         background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); 
+        background-size: cover;
+        background-position: center;
       }
       .btn-join-us {
         background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); 
+        background-size: cover;
+        background-position: center;
       }
       .btn-donate-now {
         background-image: url("{{ '/assets/images/ccc.png' | relative_url }}");
+        background-size: cover;
+        background-position: center;
       }
       .btn-blog {
-        background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); /* 使用联系我们按钮的图片作为博客按钮背景 */
+        background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}") !important; /* 使用联系我们按钮的图片作为博客按钮背景，并加强优先级 */
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
       }
 
       /* 添加底部区域背景图片（使用加入我们按钮的背景图片作为示例） */
