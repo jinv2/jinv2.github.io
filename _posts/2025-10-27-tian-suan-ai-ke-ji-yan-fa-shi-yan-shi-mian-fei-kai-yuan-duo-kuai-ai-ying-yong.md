@@ -12,6 +12,8 @@ excerpt: "天算AI科技研发实验室最新开源三款实用AI工具：新闻
 大家好！我是天算AI科技研发实验室的成员。今天，我们非常兴奋地宣布，实验室最新开源了三款实用AI应用！这些工具旨在让AI技术更易于访问，帮助开发者、内容创作者和普通用户轻松实现智能化的内容处理与生成。我们致力于推动AI的普惠发展，所有项目均为免费开源，欢迎大家star、fork和贡献代码！
 
 ## 1. 新闻音频摘要生成器（Audio News Summary）
+![新闻摘要]( /assets/images/新闻.png )
+
 **项目链接**： [https://github.com/jinv2/Audio-News-Summary](https://github.com/jinv2/Audio-News-Summary)
 
 这款工具专注于音频新闻的智能摘要生成。无论你是忙碌的专业人士还是新闻爱好者，都能快速从长音频中提取关键信息。  
@@ -28,6 +30,8 @@ excerpt: "天算AI科技研发实验室最新开源三款实用AI工具：新闻
 适用于播客、新闻播报等场景，节省你的时间，让信息触手可及！
 
 ## 2. 自动图像编辑器（Image Edit Auto）
+![图像编辑]( /assets/images/编辑图片.png )
+
 **项目链接**： [https://github.com/jinv2/image_edit_auto](https://github.com/jinv2/image_edit_auto)
 
 图像编辑从未如此简单！这款AI驱动的工具能自动优化照片、去除背景或应用创意滤镜，无需专业软件。  
@@ -44,6 +48,8 @@ excerpt: "天算AI科技研发实验室最新开源三款实用AI工具：新闻
 无论你是摄影师还是设计师，这款工具都能提升你的工作效率。
 
 ## 3. 提示词图像生成器（Generate Images with a Prompt）
+![图像生成]( /assets/images/生成图片.png )
+
 **项目链接**： [https://github.com/jinv2/Generate-images-with-a-prompt](https://github.com/jinv2/Generate-images-with-a-prompt)
 
 用文字描述你的想象，即可生成精美图像！基于强大的扩散模型，这款工具让AI艺术创作变得触手可及。  
