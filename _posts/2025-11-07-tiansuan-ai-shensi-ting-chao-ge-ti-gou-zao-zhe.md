@@ -20,8 +20,8 @@ excerpt: "🧠 天算AI · 超个体构建者 🎬 神思庭 · 山海造物主�
 - 🎬 **神思庭 · 山海造物主**：AI 生成的山海神话视听世界。
 - 🌐 **官网**： [jinv2.github.io](https://jinv2.github.io)
 - 🔗 **数字身份**： [hey.xyz/u/mmmmmmmm1r](https://hey.xyz/u/mmmmmmmm1r)
-- 💎 **视觉艺术**： [https://odysee.com/@Shensi-ST](https://odysee.com/@Shensi-ST) — 上传预览视频，开启打赏积累关注。
-- 🎧 **音乐宇宙**： [https://sound.xyz/shensi-st](https://sound.xyz/shensi-st) — 创建音乐 Drop，资产化 AI 交响乐。
+- 💎 **视觉艺术**： [https://odysee.com/@Shensi-ST](https://odysee.com/@Shensi-ST) — 视频分发与打赏。
+- 🎧 **音乐宇宙**： [https://sound.xyz/shensi-st](https://sound.xyz/shensi-st) — AI 交响乐 NFT 与 Drop。
 - 📮 **合作**： **Shensi-ST** (欢迎技术/学术/资金伙伴)
 
 ### 视听作品集
@@ -29,12 +29,6 @@ excerpt: "🧠 天算AI · 超个体构建者 🎬 神思庭 · 山海造物主�
 
 - **[💎 视觉艺术 · Odysee](https://odysee.com/@Shensi-ST)**：视频分发与打赏，系列如《神思庭三部曲》（镜·火·风）。
 - **[🎧 音乐宇宙 · Sound.xyz](https://sound.xyz/shensi-st)**：AI 交响乐 NFT，Drop 分享原创音景。
-
-#### 快速行动指南
-1. **Odysee**：上传公开预览视频，设置打赏开启。
-2. **Sound.xyz**：创建音乐 Drop，铸造精品（建议 5–10% 版税）。
-
-*说明*：这些平台确保内容去中心化分发与变现。
 
 ### 创作身份
 **神思庭 · 山海造物主**  
