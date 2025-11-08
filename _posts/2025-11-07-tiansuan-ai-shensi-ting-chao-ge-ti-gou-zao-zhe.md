@@ -20,8 +20,8 @@ excerpt: "🧠 天算AI · 超个体构建者 🎬 神思庭 · 山海造物主�
 - 🎬 **神思庭 · 山海造物主**：AI 生成的山海神话视听世界。
 - 🌐 **官网**： [jinv2.github.io](https://jinv2.github.io)
 - 🔗 **数字身份**： [hey.xyz/u/mmmmmmmm1r](https://hey.xyz/u/mmmmmmmm1r)
-- 💎 **视觉艺术**： [https://odysee.com/@Shensi-ST](https://odysee.com/@Shensi-ST) — 视频分发与打赏。
-- 🎧 **音乐宇宙**： [https://sound.xyz/shensi-st](https://sound.xyz/shensi-st) — AI 交响乐 NFT 与 Drop。
+- 💎 **视觉艺术**： [https://odysee.com/@Shensi-ST](https://odysee.com/@Shensi-ST) — 视频分发与支持。
+- 🎧 **音乐宇宙**： [https://sound.xyz/shensi-st](https://sound.xyz/shensi-st) — Drop 分享原创音景。
 - 📮 **合作**： **Shensi-ST** (欢迎技术/学术/资金伙伴)
 
 ### 视听作品集
