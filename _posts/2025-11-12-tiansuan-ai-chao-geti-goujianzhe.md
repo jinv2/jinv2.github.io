@@ -26,8 +26,7 @@ tags: [天算AI, 神思庭, 灵愿循环]
 
 ## 详细版本
 
-🧠 **天算AI实验室 · 超个体构建者**
-
+🧠 **天算AI实验室 · 超个体构建者**  
 「神思庭」主理人 | 构建灵愿循环的数字宇宙
 
 🎬 **视觉叙事：** 20,000部AI短片创作  
@@ -40,19 +39,20 @@ tags: [天算AI, 神思庭, 灵愿循环]
 
 ───────
 
-🪙 **核心身份（Web3）：** hey.xyz/u/mmmmmmmm1r  
-
-🌐 **开发日志（Web2）：** jinv2.github.io  
-
-📮 **官方联络：** Shensi-ST  
+🪙 **核心身份（Web3）｜** hey.xyz/u/mmmmmmmm1r  
+🌐 **开发日志（Web2）｜** jinv2.github.io  
+📮 **官方联络｜** Shensi-ST  
 
 ───────
 
-### 🌐 探索我的去中心化足迹
+📺 **去中心化视觉档案馆**  
+主频道：odysee.com/@Shensi-ST  
+副频道：odysee.com/@invjinvbar:b  
 
-- **未来工厂（SORA2APP）：** sora.chatgpt.com/profile/mmmmmmmm1r  
-- **广播塔（X/Twitter）：** x.com/jinvbar46275  
-- **音乐宇宙（Audius）：** audius.co/shensi_st
+🌐 **全平台足迹**  
+未来工厂（SORA2APP）｜sora.chatgpt.com/profile/mmmmmmmm1r  
+广播塔（X）｜x.com/jinvbar46275  
+音乐宇宙（Audius）｜audius.co/shensi_st  
 
 ---
 
