@@ -1,69 +1,116 @@
 ---
 layout: post
-title: 超个体电子名片 · 天算AI实验室
-date: 2025-11-25 11:11:11 +0800
-categories: 超个体 Web3 数字艺术
-tags: AI短片 原创音乐 NFT 神思庭
+title: 神思庭 · 天算AI实验室
+date: 2025-11-25 00:00:00 +0800
+categories: 超个体
 permalink: /card/
 ---
 
-<div style="max-width:900px;margin:2em auto;padding:2em;background:#0d1117;border:1px solid #30363d;border-radius:16px;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;">
+<div style="max-width:960px;margin:40px auto;padding:40px 20px;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;line-height:1.6;">
 
-<div style="text-align:center;margin-bottom:3rem;">
-  <h1 style="font-size:3.5rem;margin:0;color:#58a6ff;letter-spacing:-1px;">
-    JinV²
+<div style="text-align:center;margin-bottom:60px;">
+  <div style="width:140px;height:140px;margin:0 auto 24px;border-radius:28px;background:linear-gradient(135deg,#00f5ff,#7e58ff);box-shadow:0 0 60px rgba(0,245,255,0.6);display:flex;align-items:center;justify-content:center;font-size:80px;font-weight:900;">
+    思
+  </div>
+  <h1 style="font-size:52px;margin:0;letter-spacing:-2px;background:linear-gradient(135deg,#58a6ff,#00f5ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+    神思庭
   </h1>
-  <p style="font-size:1.5rem;margin:0.5rem 0 0;color:#8b949e;">
-    天算AI实验室 · 神思庭数字宇宙
+  <p style="font-size:28px;margin:12px 0 0;color:#58a6ff;">
+    TIANSUAN AI LAB
   </p>
+  <div style="margin:32px auto;display:inline-block;background:rgba(88,166,255,0.15);border:1px solid #58a6ff;border-radius:40px;padding:10px 32px;font-size:18px;color:#58a6ff;">
+    超个体构建者 · 灵愿循环数字宇宙主理人
+  </div>
 </div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
-  <div>
-    <h2 style="color:#58a6ff;border-bottom:1px solid #30363d;padding-bottom:0.5rem;">
-      超个体档案
-    </h2>
-    <p style="line-height:1.8;">
-      我是 <strong>JinV²</strong>，一名正在构建「超个体」的数字原住民。<br>
-      在过去 3 年里，我已经用 AI 生成了超过 <strong>20,000+</strong> 条短片，<br>
-      创作了 <strong>7,000+</strong> 分钟完全原创的音乐，<br>
-      并在以太坊、Solana、Base 等链上策展与铸造 NFT。<br><br>
-      这张电子名片本身，就是我 Web3 身份协议的一部分。
-    </p>
-
-    <h2 style="color:#58a6ff;border-bottom:1px solid #30363d;padding-bottom:0.5rem;margin-top:2rem;">
-      数字坐标
-    </h2>
-    <ul style="line-height:2;padding-left:1.2rem;">
-      <li>GitHub: <a href="https://github.com/jinv2" style="color:#58a6ff;">github.com/jinv2</a></li>
-      <li>X: <a href="https://x.com/jinv2" style="color:#58a6ff;">@jinv2</a></li>
-      <li>AI短片存档: <a href="https://github.com/jinv2/super-individual" style="color:#58a6ff;">super-individual</a></li>
-      <li>音乐宇宙: 7,000+ 分钟纯 AI 原生音乐（持续更新）</li>
-      <li>NFT 策展: 多链铸造，全部自制内容</li>
-    </ul>
-  </div>
-
+<div style="display:flex;justify-content:center;gap:40px;margin-bottom:80px;">
   <div style="text-align:center;">
-    <div style="width:200px;height:200px;background:radial-gradient(circle at 30% 30%,#58a6ff,#7e58ff);border-radius:50%;margin:0 auto 1.5rem;box-shadow:0 0 40px rgba(88,166,255,0.6);">
+    <div style="width:220px;padding:24px 0;background:#111;border-radius:24px;border:1px solid #333;">
+      <div style="font-size:52px;font-weight:900;background:linear-gradient(135deg,#58a6ff,#00f5ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+        20,000+
+      </div>
+      <div style="color:#58a6ff;margin-top:8px;font-size:18px;">部AI短片</div>
     </div>
-    
-    <p style="font-size:1.1rem;color:#8b949e;">
-      「我不再是一个人，<br>我是一整个数字宇宙的入口。」
-    </p>
-    
-    <div style="margin-top:2rem;">
-      <a href="https://github.com/jinv2/super-individual" style="display:inline-block;padding:0.8rem 2rem;background:#238636;color:white;border-radius:6px;text-decoration:none;font-weight:600;">
-        进入超个体项目 →
-      </a>
+  </div>
+  <div style="text-align:center;">
+    <div style="width:220px;padding:24px 0;background:#111;border-radius:24px;border:1px solid #333;">
+      <div style="font-size:52px;font-weight:900;background:linear-gradient(135deg,#58a6ff,#00f5ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+        7,000+
+      </div>
+      <div style="color:#58a6ff;margin-top:8px;font-size:18px;">分钟原创交响</div>
     </div>
   </div>
 </div>
 
-<hr style="border:0;border-top:1px solid #30363d;margin:3rem 0;">
+<div style="text-align:center;color:#666;font-size:14px;letter-spacing:4px;margin-bottom:24px;">
+  CORE MODULES
+</div>
+<div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:80px;">
+  <div style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 28px;font-size:16px;">NFT发行与策划</div>
+  <div style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 28px;font-size:16px;">数字内容版权授权</div>
+  <div style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 28px;font-size:16px;">前沿科技项目投资</div>
+</div>
 
-<p style="text-align:center;color:#8b949e;font-size:0.95rem;">
-  这张电子名片永久存于 GitHub Pages<br>
-  链上时间戳：2025-11-25 · 由 <a href="https://github.com/jinv2/jinv2.github.io/blob/main/_posts/2025-11-25-super-individual-card.md" style="color:#58a6ff;">此 Markdown</a> 生成
-</p>
+<div style="text-align:center;color:#666;font-size:14px;letter-spacing:4px;margin-bottom:32px;">
+  NEURAL NETWORK
+</div>
+
+<div style="max-width:680px;margin:0 auto 80px;">
+  <div style="background:#111;border-radius:20px;padding:20px 24px;margin-bottom:16px;border:1px solid #333;display:flex;align-items:center;gap:20px;">
+    <div style="font-size:36px;">Web3</div>
+    <div>
+      <div style="font-weight:600;font-size:18px;">Web3 核心身份</div>
+      <div style="color:#888;font-size:15px;">Hey.xyz Social Graph</div>
+    </div>
+  </div>
+
+  <div style="background:#111;border-radius:20px;padding:20px 24px;margin-bottom:16px;border:1px solid #333;display:flex;align-items:center;gap:20px;">
+    <div style="font-size:36px;">SORA2</div>
+    <div>
+      <div style="font-weight:600;font-size:18px;">SORA2APP 未来工厂</div>
+      <div style="color:#888;font-size:15px;">AI Gen Video Portfolio</div>
+    </div>
+  </div>
+
+  <div style="background:#111;border-radius:20px;padding:20px 24px;margin-bottom:16px;border:1px solid #333;display:flex;align-items:center;gap:20px;">
+    <div style="font-size:36px;">X</div>
+    <div>
+      <div style="font-weight:600;font-size:18px;">X 广播塔</div>
+      <div style="color:#888;font-size:15px;">Real-time Signal</div>
+    </div>
+  </div>
+
+  <div style="background:#111;border-radius:20px;padding:20px 24px;margin-bottom:16px;border:1px solid #333;display:flex;align-items:center;gap:20px;">
+    <div style="font-size:36px;">Audius</div>
+    <div>
+      <div style="font-weight:600;font-size:18px;">Audius 音乐宇宙</div>
+      <div style="color:#888;font-size:15px;">Sonic Creations</div>
+    </div>
+  </div>
+
+  <div style="background:#111;border-radius:20px;padding:20px 24px;margin-bottom:16px;border:1px solid #333;display:flex;align-items:center;gap:20px;">
+    <div style="font-size:36px;">Odysee</div>
+    <div>
+      <div style="font-weight:600;font-size:18px;">Odysee 频道</div>
+      <div style="color:#888;font-size:15px;">Decentralized Video</div>
+    </div>
+  </div>
+
+  <div style="background:#111;border-radius:20px;padding:20px 24px;border:1px solid #333;display:flex;align-items:center;gap:20px;">
+    <div style="font-size:36px;">Log</div>
+    <div>
+      <div style="font-weight:600;font-size:18px;">开发日志</div>
+      <div style="color:#888;font-size:15px;">Web2 Development Log</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:40px 0;border-top:1px solid #333;margin-top:80px;">
+  <button style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 32px;margin:0 12px;font-size:16px;">QR Code</button>
+  <button style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 32px;margin:0 12px;font-size:16px;">Copy ID</button>
+  <button style="background:linear-gradient(90deg,#00f5ff,#7e58ff);border:none;border-radius:40px;padding:14px 40px;margin:0 12px;color:white;font-weight:600;font-size:16px;box-shadow:0 0 30px rgba(0,245,255,0.4);">
+    Saving
+  </button>
+</div>
 
 </div>
