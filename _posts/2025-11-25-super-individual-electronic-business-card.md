@@ -6,14 +6,20 @@ categories: 超个体
 permalink: /card/
 ---
 
-<!-- 超个体电子名片 2025 · 官方视觉锚点 -->
+<!-- 超个体电子名片 2025 · 官方视觉锚点（点击跳转 Web3） -->
 <div style="text-align:center;margin:40px auto 80px;padding:20px 0;">
-  <img src="/assets/images/名片202511.jpg" 
-       alt="神思庭 · 天算AI实验室 超个体电子名片 2025" 
-       style="max-width:100%;width:920px;border-radius:28px;
-              box-shadow:0 0 80px rgba(0,245,255,0.5);
-              border:3px solid rgba(0,245,255,0.35);
-              animation:breath 10s ease-in-out infinite;">
+  <a href="https://hey.xyz/u/mmmmmmmm1r" target="_blank" style="text-decoration:none;">
+    <img src="/assets/images/名片202511.jpg" 
+         alt="神思庭 · 天算AI实验室 超个体电子名片 2025" 
+         style="max-width:100%;width:920px;border-radius:28px;
+                box-shadow:0 0 80px rgba(0,245,255,0.5);
+                border:3px solid rgba(0,245,255,0.35);
+                animation:breath 10s ease-in-out infinite;
+                transition:transform 0.3s ease;"
+         onmouseover="this.style.transform='scale(1.02)'"
+         onmouseout="this.style.transform='scale(1)'">
+  </a>
+  <p style="margin-top:16px;color:#58a6ff;font-size:14px;">点击名片，直达 Web3 核心身份</p>
 </div>
 
 <style>
@@ -23,6 +29,7 @@ permalink: /card/
 }
 </style>
 
+<!-- 原内容：完整一次，无重复 -->
 <div style="max-width:960px;margin:40px auto;padding:40px 20px;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;line-height:1.6;">
 
 <div style="text-align:center;margin-bottom:60px;">
@@ -123,11 +130,9 @@ permalink: /card/
 </div>
 
 <div style="text-align:center;padding:40px 0;border-top:1px solid #333;margin-top:80px;">
-  <button style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 32px;margin:0 12px;font-size:16px;">QR Code</button>
-  <button style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 32px;margin:0 12px;font-size:16px;">Copy ID</button>
-  <button style="background:linear-gradient(90deg,#00f5ff,#7e58ff);border:none;border,border-radius:40px;padding:14px 40px;margin:0 12px;color:white;font-weight:600;font-size:16px;box-shadow:0 0 30px rgba(0,245,255,0.4);">
-    Saving
-  </button>
+  <button style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 32px;margin:0 12px;font-size:16px; cursor:pointer; transition:background 0.3s;" onmouseover="this.style.background='#333';" onmouseout="this.style.background='#111';">QR Code</button>
+  <button style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 32px;margin:0 12px;font-size:16px; cursor:pointer; transition:background 0.3s;" onmouseover="this.style.background='#333';" onmouseout="this.style.background='#111';">Copy ID</button>
+  <button style="background:linear-gradient(90deg,#00f5ff,#7e58ff);border:none;border-radius:40px;padding:14px 40px;margin:0 12px;color:white;font-weight:600;font-size:16px;box-shadow:0 0 30px rgba(0,245,255,0.4); cursor:pointer; transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 0 50px rgba(0,245,255,0.6)';">Saving</button>
 </div>
 
 </div>
