@@ -6,6 +6,23 @@ categories: 超个体
 permalink: /card/
 ---
 
+<!-- 超个体电子名片 2025 · 官方视觉锚点 -->
+<div style="text-align:center;margin:40px auto 80px;padding:20px 0;">
+  <img src="/assets/images/名片202511.jpg" 
+       alt="神思庭 · 天算AI实验室 超个体电子名片 2025" 
+       style="max-width:100%;width:920px;border-radius:28px;
+              box-shadow:0 0 80px rgba(0,245,255,0.5);
+              border:3px solid rgba(0,245,255,0.35);
+              animation:breath 10s ease-in-out infinite;">
+</div>
+
+<style>
+@keyframes breath {
+  0%, 100% { box-shadow:0 0 80px rgba(0,245,255,0.5); }
+  50%      { box-shadow:0 0 140px rgba(0,245,255,0.85); }
+}
+</style>
+
 <div style="max-width:960px;margin:40px auto;padding:40px 20px;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;line-height:1.6;">
 
 <div style="text-align:center;margin-bottom:60px;">
@@ -108,7 +125,7 @@ permalink: /card/
 <div style="text-align:center;padding:40px 0;border-top:1px solid #333;margin-top:80px;">
   <button style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 32px;margin:0 12px;font-size:16px;">QR Code</button>
   <button style="background:#111;border:1px solid #333;border-radius:40px;padding:12px 32px;margin:0 12px;font-size:16px;">Copy ID</button>
-  <button style="background:linear-gradient(90deg,#00f5ff,#7e58ff);border:none;border-radius:40px;padding:14px 40px;margin:0 12px;color:white;font-weight:600;font-size:16px;box-shadow:0 0 30px rgba(0,245,255,0.4);">
+  <button style="background:linear-gradient(90deg,#00f5ff,#7e58ff);border:none;border,border-radius:40px;padding:14px 40px;margin:0 12px;color:white;font-weight:600;font-size:16px;box-shadow:0 0 30px rgba(0,245,255,0.4);">
     Saving
   </button>
 </div>
