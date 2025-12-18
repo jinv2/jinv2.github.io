@@ -6,6 +6,11 @@ categories: AI 文化 短视频
 tags: AI 低俗内容 文化传承 动物拟人化
 ---
 
+<div style="text-align: center; margin: 20px 0;">
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/IFi6mYHJT5w" title="AI动物拟人低俗短视频示例" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="font-size: 14px; color: #666; margin-top: 8px;">视频来源：YouTube（典型AI动物拟人低俗内容示例，仅供批判分析使用）</div>
+</div>
+
 ![AI动物拟人化低俗插图1](/assets/images/12181.jpg)
 
 近日，国内短视频平台上涌现出一大批AI生成的动物拟人化视频：猪、牛、狗、鸡、鸭等常见家畜被赋予人类形态，会唱歌、跳舞、说段子，甚至融入中国传统戏剧、戏曲或民俗元素。这些视频内容往往以“犀利”自居，挑战传统习俗、讽刺社会现象，播放量动辄破千万，看似热闹非凡，却让人不由生出几分忧虑。
@@ -24,7 +29,7 @@ AI技术本该是我们通往无限想象的钥匙。它能重现历史场景、
 
 🧠 天算AI · 超个体构建者  
 🏛️ 神思庭 | 🌌 灵愿循环  
-◼️ 身份｜hey.xyz/u/mmmmmmmm1  
+◼️ 身份｜hey.xyz/u/mmmmmmmm1r  
 ◼️ 业务｜数字版权 · 科技投资  
 官方联络WX｜ Shensi-ST  
 ©20251218
