@@ -12,6 +12,8 @@ tags: 管弦乐 原创音乐 神思庭 交响宇宙 数字版权
 ![江南水乡诗意花船2](/assets/images/12192.png)
 ![江南水乡诗意花船3](/assets/images/12193.png)
 
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/_R6zVb5TusA" title="清风摇曳花船渡" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 这首乐曲出自“**神思庭**”原创交响宇宙，由**天算AI实验室**辅助创作，作曲者**金威**。创作于2015年，它以管弦乐的优雅层层铺陈，描绘清风摇曳、花瓣轻舞、一叶花船悠然渡河的梦幻意境。弦乐柔美如丝，木管轻灵似风，铜管点缀若光，仿佛烟雨江南尽收耳中，唤起对自然与生命的无限遐思。
 
 **神思庭**的创作宇宙宏大深邃：
