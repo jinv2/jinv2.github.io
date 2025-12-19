@@ -10,15 +10,11 @@ tags: 管弦乐 原创音乐 神思庭 交响宇宙 数字版权
 
 ![江南水乡诗意花船1](/assets/images/12191.png)
 
-这首乐曲出自“**神思庭**”原创交响宇宙，由**天算AI实验室**辅助创作，作曲者**金威**。创作于2015年，它以管弦乐的优雅层层铺陈，描绘清风摇曳、花瓣轻舞、一叶花船悠然渡河的梦幻意境。
+这首乐曲出自“**神思庭**”原创交响宇宙，由**天算AI实验室**辅助创作，作曲者**金威**。创作于2015年，它以管弦乐的优雅层层铺陈，描绘清风摇曳、花瓣轻舞、一叶花船悠然渡河的梦幻意境。弦乐柔美如丝，木管轻灵似风，铜管点缀若光，仿佛烟雨江南尽收耳中，唤起对自然与生命的无限遐思。
 
 ![江南水乡诗意花船2](/assets/images/12192.png)
 
 <iframe width="100%" height="415" src="https://www.youtube.com/embed/_R6zVb5TusA" title="清风摇曳花船渡" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-弦乐柔美如丝，木管轻灵似风，铜管点缀若光，仿佛烟雨江南尽收耳中，唤起对自然与生命的无限遐思。
-
-![江南水乡诗意花船3](/assets/images/12193.png)
 
 **神思庭**的创作宇宙宏大深邃：
 
@@ -26,6 +22,8 @@ tags: 管弦乐 原创音乐 神思庭 交响宇宙 数字版权
 - **原创交响宇宙**：累计7,000分钟音乐创作，情感多元、风格丰富。
 
 如今，这些经典作品通过区块链上链，实现永久保存与数字版权确权。所有音乐已上传至去中心化平台Audius，欢迎大家免费聆听与收藏！
+
+![江南水乡诗意花船3](/assets/images/12193.png)
 
 **音乐作品链**：https://audius.co/shensi_st
 
