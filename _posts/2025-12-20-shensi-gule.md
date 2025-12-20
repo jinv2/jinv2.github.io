@@ -34,7 +34,19 @@ categories: 传统音乐 PWA 民族乐器 音乐创作 神思庭
 
 ![功能界面示例](/assets/images/12203.png)
 
-![手机端功能使用截屏](/assets/images/12205.png)
+![手机端调音器截屏](/assets/images/12205.png)
+
+![手机端五声音阶生成截屏](/assets/images/12206.png)
+
+![手机端简谱记录截屏](/assets/images/12207.png)
+
+![手机端节奏伴奏截屏](/assets/images/12208.png)
+
+![手机端灵感笔记截屏](/assets/images/12209.png)
+
+![手机端离线使用截屏](/assets/images/12210.png)
+
+![手机端暗黑模式截屏](/assets/images/12211.png)
 
 ### 对传统音乐制作的重大意义
 
