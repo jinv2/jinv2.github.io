@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "天算 · 军师锦囊：企业 AI 落地深度诊断服务"
-date: 2025-12-24 10:00:00 +0800
+date: 2025-12-24 08:00:00 +0800
 categories: [AI咨询, 战略]
 tags: [AI诊断, 企业转型, 天算AI, 金威, AIGC]
 author: JIN V
@@ -19,21 +19,18 @@ description: "人算不如AI算，更不如天算。天算AI实验室正式开�
 
 ### 📺 深度解析：天算 · 军师锦囊
 
-在开启诊断之前，请花 7 分钟时间，深入了解“天算”如何将古老东方哲学与前沿 AI 技术融合，重塑企业生产力。
+在开启诊断之前，请深入了解“天算”如何将古老东方哲学与前沿 AI 技术融合，重塑企业生产力。
 
-<!-- 视频嵌入开始。如果您已将视频上传至 YouTube 或 Odysee，请替换下方的 iframe 链接 -->
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 20px;">
-  <iframe src="https://www.youtube.com/embed/您的视频ID" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="天算·军师锦囊解析"></iframe>
+<div style="background: #1a1a1a; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+  <p style="color: #D4AF37; font-weight: bold; text-align: center;">🎬 军师解析视频</p>
+  <!-- 如果有 YouTube 或 Odysee 链接，请替换 src 处的链接 -->
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen></iframe>
+  </div>
 </div>
-<!-- 如果是本地播放，请使用以下代码：
-<video width="100%" controls poster="/assets/images/图片企业AI落地深度诊断服务.png">
-  <source src="/assets/videos/您的视频文件名.mp4" type="video/mp4">
-  您的浏览器不支持视频播放。
-</video> 
--->
 
-**视频要点提炼：**
-*   **顾问与宗师的区别**：拒绝纸上谈兵，用 20,000 部作品验证成功逻辑。
+**视频内容精华：**
+*   **顾问与宗师的界限**：拒绝纸上谈兵，用 20,000 部作品验证成功逻辑。
 *   **算法级手术**：深入业务底层，拆解高成本环节，重构“灵愿循环”。
 *   **择主而事**：诊断费即筛选器，寻找具备执行力的 1% 战略伙伴。
 
@@ -50,6 +47,7 @@ description: "人算不如AI算，更不如天算。天算AI实验室正式开�
 *   **预见未来**：通过 **10个垂直领域大模型** 提前布局 AGI 时代。
 
 ![诊断说明书 P1](/assets/images/Tiansuan_Strategist_s_Pouch_page-0001.jpg)
+![诊断说明书 P2](/assets/images/Tiansuan_Strategist_s_Pouch_page-0002.jpg)
 
 ---
 
@@ -61,7 +59,8 @@ description: "人算不如AI算，更不如天算。天算AI实验室正式开�
 *   **听觉维度**：7,000分钟原创AI交响乐，横跨民族与现代。
 *   **技术深度**：16项独立研发AI技术，10个垂直领域大语言模型。
 
-![资产展示](/assets/images/Tiansuan_Strategist_s_Pouch_page-0002.jpg)
+![资产展示](/assets/images/Tiansuan_Strategist_s_Pouch_page-0003.jpg)
+![资产展示](/assets/images/Tiansuan_Strategist_s_Pouch_page-0004.jpg)
 
 ---
 
@@ -72,7 +71,17 @@ description: "人算不如AI算，更不如天算。天算AI实验室正式开�
 3.  **【共鸣】垂直模型私有化评估**：打造企业自己的数字大脑。
 4.  **【天成】AI 安全与伦理风险评估**：确保转型路径稳健、合法。
 
-![诊断内容](/assets/images/Tiansuan_Strategist_s_Pouch_page-0004.jpg)
+![诊断内容](/assets/images/Tiansuan_Strategist_s_Pouch_page-0005.jpg)
+![诊断内容](/assets/images/Tiansuan_Strategist_s_Pouch_page-0006.jpg)
+![诊断内容](/assets/images/Tiansuan_Strategist_s_Pouch_page-0007.jpg)
+
+---
+
+## 第四部分：预期产出（军师锦囊）
+
+我们不交付建议，我们交付蓝图。
+
+![预期产出](/assets/images/Tiansuan_Strategist_s_Pouch_page-0008.jpg)
 
 ---
 
@@ -80,12 +89,13 @@ description: "人算不如AI算，更不如天算。天算AI实验室正式开�
 
 ### 寻找 1% 的“明主”
 
-天算AI 实验室以非营利模式运营，我们的时间极其稀缺。**此服务旨在筛选真正有决心、有格局的合作伙伴。**
+天算AI 实验室以非营利模式运营，我们的时间极其稀缺。
 
 *   **诊断费用（科研赞助/捐款）**：￥ 19,800 起。
 *   **特别条款**：所得费用全额拨入“天算AI实验室”用于 AGI/ASI 的开源研究。
 
 ![规则与收费](/assets/images/Tiansuan_Strategist_s_Pouch_page-0009.jpg)
+![规则与收费](/assets/images/Tiansuan_Strategist_s_Pouch_page-0010.jpg)
 
 ---
 
@@ -96,6 +106,8 @@ description: "人算不如AI算，更不如天算。天算AI实验室正式开�
 *   **官方联络**：Shensi-ST
 *   **数字身份**：[hey.xyz/u/mmmmmmmm1r ](https://hey.xyz/u/mmmmmmmm1r)
 
+![结缘](/assets/images/Tiansuan_Strategist_s_Pouch_page-0011.jpg)
+![结缘](/assets/images/Tiansuan_Strategist_s_Pouch_page-0012.jpg)
 ![结缘](/assets/images/Tiansuan_Strategist_s_Pouch_page-0013.jpg)
 
 ---
