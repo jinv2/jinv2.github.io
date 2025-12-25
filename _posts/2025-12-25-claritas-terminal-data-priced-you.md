@@ -46,6 +46,8 @@ excerpt: "在 AGI 时代，你的真正价值不再是财富，而是数据密�
 
 ### 澄明终端的重大意义
 
+![Entropy is Poverty - 核心洞见](/assets/images/Entropy is Poverty.jpg)
+
 1. **重新定义个人价值**  
    法币财富正在迅速贬值，而**数据密度**将成为 AGI 时代的核心资产。  
    正如终端核心洞见：**Entropy is Poverty. Structure is Wealth.**（混乱即贫困，结构即财富。）
