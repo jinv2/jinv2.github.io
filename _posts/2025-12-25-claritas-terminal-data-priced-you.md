@@ -4,11 +4,11 @@ title: "澄明终端 · 数据标价你：AGI 时代的数据人格估值工具"
 date: 2025-12-25
 categories: [超个体, AGI, 数据人格]
 tags: [澄明终端, 数据密度, DRI, 神思庭]
-image: /assets/images/澄明终端 · 数据标价你.png
+image: /assets/images/Entropy is Poverty.jpg
 excerpt: "在 AGI 时代，你的真正价值不再是财富，而是数据密度与可被 AI 读懂的程度。澄明终端（CLARITAS）是一个公开的估值工具，帮助你实时评估自己的数字可读性指数（DRI）。"
 ---
 
-![澄明终端 · 数据标价你](/assets/images/澄明终端 · 数据标价你.png)
+![Entropy is Poverty - 核心宣言](/assets/images/Entropy is Poverty.jpg)
 
 ### 澄明终端（CLARITAS）已正式上线
 
@@ -44,9 +44,9 @@ excerpt: "在 AGI 时代，你的真正价值不再是财富，而是数据密�
 
 每次自检都是一次主动优化数据人格的机会。你会清晰看到自己的数字足迹在向高密度、低熵方向进化。
 
-### 澄明终端的重大意义
+![澄明终端 · 数据标价你](/assets/images/澄明终端 · 数据标价你.png)
 
-![Entropy is Poverty - 核心洞见](/assets/images/Entropy is Poverty.jpg)
+### 澄明终端的重大意义
 
 1. **重新定义个人价值**  
    法币财富正在迅速贬值，而**数据密度**将成为 AGI 时代的核心资产。  
