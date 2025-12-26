@@ -61,8 +61,9 @@ tags: [Web App, MIDI, MusicXML]
 
 ## 🎼 立即体验
 
-**点击链接，开启您的数字音乐之旅：**
-👉 **[点击此处进入播放器](https://music-player-v1.vercel.app)**
+**点击下方链接，开启您的数字音乐之旅：**
+
+👉 **[MIDI/乐谱播放器入口：https://music-player-v1-one.vercel.app/](https://music-player-v1-one.vercel.app/)**
 
 *(建议收藏网址，以便随时访问)*
 
