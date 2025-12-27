@@ -20,7 +20,8 @@ Shensi-Nexus 正式 **开启内测**！
 
 2️⃣ **注册账号**：输入邮箱，系统会发送验证码到邮箱  
 
-![注册成功](https://jinv2.github.io/assets/images/register-success.png)
+![注册成功](https://jinv2.github.io/assets/images/register-success.png)  
+![注册成功示意](https://jinv2.github.io/assets/images/register-success2.png)
 
 3️⃣ **验证激活**：填写验证码完成验证，即可激活账户  
 
