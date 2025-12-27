@@ -19,13 +19,13 @@ tags: [数字资产, 灵愿循环, AI音乐, 原创作品]
 
 2️⃣ **注册账号**：输入你的邮箱，系统会发送验证码到邮箱  
 
-![注册成功](https://jinv2.github.io/assets/images/注册成功·PN9.png)
+![注册成功](https://jinv2.github.io/shensi-nexus/assets/images/注册成功·PN9.png)
 
 3️⃣ **验证激活**：填写验证码完成验证，即可激活账户  
 
 4️⃣ **进入应用**：点击 **OPEN**，即可进入 APP 页面体验 PAWA 功能  
 
-![打开应用](https://jinv2.github.io/assets/images/OPEN打开应用.png)
+![打开应用](https://jinv2.github.io/shensi-nexus/assets/images/OPEN打开应用.png)
 
 ---
 
