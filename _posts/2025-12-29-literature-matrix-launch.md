@@ -6,6 +6,9 @@ categories: [Product, Launch]
 tags: [Shensi-ST, AI Literature, Matrix]
 ---
 
+![文学矩阵全景](/assets/images/wenxuejuzhen.png)
+*<center>神思庭数字生态：音·影·文 三维矩阵全景</center>*
+
 **神思庭 (Shensi-ST)** 正式宣布：数字主权中台 **Shensi-Nexus** 今日迎来最终拼图。
 
 继 **音乐矩阵 (Music Matrix)** 与 **光影矩阵 (Cinema Matrix)** 之后，象征智慧与逻辑的 **文学矩阵 (Literature Matrix)** 正式上线。至此，神思庭已构建起一套涵盖 **听觉、视觉、文本** 的全链路 AI 生产力生态。
@@ -23,7 +26,7 @@ tags: [Shensi-ST, AI Literature, Matrix]
 *   **🟡 CINEMA (金)**：光影与视觉的渲染机。
 *   **🟣 LITERATURE (紫)**：逻辑与叙事的编织者 **(NEW)**。
 
-![文学矩阵全景](/assets/images/literature%20matrix.png)
+![中台魔法轮](/assets/images/literature%20matrix.png)
 *<center>Shensi-Nexus V3.0：三维资产指挥中心</center>*
 
 ---
