@@ -23,6 +23,9 @@ tags: [Shensi-ST, AI Agent, Matrix]
 
 ---
 
+![智能体专员概览](/assets/images/Agent.png)
+*<center>智能体矩阵：您的 5 位数字专员团队</center>*
+
 ## 🧠 5 位数字专员介绍
 
 ### 1. ♟️ Strategos (策士)
