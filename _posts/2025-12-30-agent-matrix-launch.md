@@ -6,7 +6,7 @@ categories: [Product, Launch]
 tags: [Shensi-ST, AI Agent, Matrix]
 ---
 
-![智能体矩阵全景](/assets/images/Agent.png)
+![智能体矩阵全景](/assets/images/Agent%20Matrix.png)
 *<center>神思庭第四象限：智能体矩阵 (Agent Matrix)</center>*
 
 **神思庭 (Shensi-ST)** 正式宣布：数字主权中台 **Shensi-Nexus** 今日迎来历史性时刻。
@@ -66,7 +66,7 @@ tags: [Shensi-ST, AI Agent, Matrix]
 基于 **斯多葛哲学 (Stoicism)** 与苏格拉底式发问。
 当您感到焦虑、迷茫或压力时，Inner Mirror 是一面照见内心的镜子。它通过哲学对话，帮您剥离情绪的噪音，找回内心的宁静 (Ataraxia)。
 
-![Inner Mirror 界面](/assets/images/lnner%20Mirror.png)
+![Inner Mirror 界面](/assets/images/Inner%20Mirror.png)
 *<center>水银镜面风格的哲学反思空间</center>*
 
 ---
