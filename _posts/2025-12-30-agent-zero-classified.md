@@ -6,7 +6,7 @@ categories: [Product, Classified]
 tags: [Shensi-ST, Agent Zero, Top Secret]
 ---
 
-![Agent Zero 概览](/assets/images/AgentZero(零号特工).png)
+![Agent Zero 概览](/assets/images/AgentZero.png)
 *<center>神思庭生态奇点：Agent Zero (零号特工)</center>*
 
 **神思庭 (Shensi-ST) 核心公告：**
