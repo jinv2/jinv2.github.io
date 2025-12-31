@@ -5,7 +5,6 @@ permalink: /blog/
 ---
 
 <style>
-  /* 博客列表页面的简约样式 */
   .blog-container {
     max-width: 800px;
     margin: 0 auto;
@@ -35,7 +34,7 @@ permalink: /blog/
     text-decoration: none;
   }
   .blog-title a:hover {
-    color: #007bff; /* 链接悬停色 */
+    color: #007bff;
   }
   .blog-meta {
     font-size: 0.9em;
@@ -48,8 +47,6 @@ permalink: /blog/
     color: #555;
     line-height: 1.6;
   }
-  
-  /* 底部跳转提示 */
   .nexus-link-box {
     margin-top: 50px;
     padding: 20px;
@@ -70,21 +67,27 @@ permalink: /blog/
   <ul class="blog-list">
     {% for post in site.posts %}
       
-      <!-- 🔴 核心过滤器：如果文章分类包含 'Product'，则隐藏 -->
+      <!-- 🛡️ 过滤器 1：如果是 Product 分类，隐藏 -->
       {% unless post.categories contains 'Product' %}
-      
-        <li class="blog-item">
-          <span class="blog-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-          <div class="blog-title">
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-          </div>
-          <div class="blog-excerpt">
-            {{ post.excerpt | strip_html | truncatewords: 30 }}
-          </div>
-        </li>
+        
+        <!-- 🛡️ 过滤器 2 (新增)：如果没有标题，隐藏 (防空文件) -->
+        {% if post.title %}
+
+          <li class="blog-item">
+            <span class="blog-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <div class="blog-title">
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </div>
+            <div class="blog-excerpt">
+              {{ post.excerpt | strip_html | truncatewords: 30 }}
+            </div>
+          </li>
+
+        {% endif %}
+        <!-- 过滤器 2 结束 -->
 
       {% endunless %}
-      <!-- 🔴 过滤器结束 -->
+      <!-- 过滤器 1 结束 -->
 
     {% endfor %}
   </ul>
