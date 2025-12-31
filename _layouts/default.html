@@ -47,13 +47,13 @@
       /* 左侧核心 */
       .bg-home { background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); }
       
-      /* 【核心资产】数字中台 - 视觉焦点 */
+      /* 【核心资产】数字中台 */
       .bg-nexus { 
         background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); 
         color: #FFD700 !important;
         border: 1px solid #FFD700 !important;
         text-shadow: 0 2px 5px #000;
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); /* 增加发光效果 */
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
       }
       
       .bg-blog { background-image: url("{{ '/assets/images/ccc.png' | relative_url }}"); }
@@ -97,18 +97,15 @@
         </div>
         <nav class="nav-container">
           
-          <!-- 左侧导航 (精简为4个) -->
+          <!-- 左侧导航 -->
           <div class="nav-left">
             <a href="{{ '/' | relative_url }}" class="btn nav-btn-custom bg-home">首页</a>
-            
-            <!-- 唯一核心焦点 -->
             <a href="https://shensi-nexus.vercel.app" class="btn nav-btn-custom bg-nexus" target="_blank">🏛️ 数字中台</a>
-            
             <a href="{{ '/blog/' | relative_url }}" class="btn nav-btn-custom bg-blog">博客</a>
             <a href="https://sora.chatgpt.com/profile/mmmmmmmm1r" class="btn nav-btn-custom bg-sora" target="_blank" rel="noopener noreferrer">SORA2 信号</a>
           </div>
 
-          <!-- 右侧导航 (精简为4个) -->
+          <!-- 右侧导航 -->
           <div class="nav-right">
             <a href="{{ '/about/' | relative_url }}" class="btn nav-btn-custom bg-about">关于</a>
             <a href="{{ '/contact/' | relative_url }}" class="btn nav-btn-custom bg-contact">联系</a>
@@ -133,22 +130,44 @@
 
         <hr style="margin-top: 2.5rem; margin-bottom: 1.5rem;"> 
         
-        <!-- 博客底部区域：在这里强调纪事 -->
+        <!-- 博客底部区域：逻辑修正版 -->
         <section class="recent-blog-posts" style="margin-bottom: 1rem;"> 
-          <h2 style="margin-bottom: 1rem; font-size: 1.5em; text-align: center;">最新动态</h2> 
+          <h2 style="margin-bottom: 1rem; font-size: 1.5em; text-align: center;">最新随笔</h2> 
           
-          <!-- 在这里增加一个显眼的文字链接，引导去查看纪事 -->
+          <!-- 引导去生态纪事 -->
           <div style="text-align:center; margin-bottom: 15px;">
-            <a href="{{ '/nexus/' | relative_url }}" style="color: #FFD700; font-weight: bold; border-bottom: 1px dashed #FFD700;">[ 查看神思庭·生态纪事 (产品发布历史) ]</a>
+            <a href="{{ '/nexus/' | relative_url }}" style="color: #FFD700; font-weight: bold; border-bottom: 1px dashed #FFD700;">
+              [ 📜 查看神思庭·生态纪事 (产品发布历史) ]
+            </a>
           </div>
 
+          <!-- 🔴 核心修正循环：过滤 Product，过滤空标题 -->
           <ul style="list-style: none; padding-left: 0; text-align: center;"> 
-            {% assign post_limit = 5 %} 
-            {% for post in site.posts limit:post_limit %} 
-                <li style="margin-bottom: 0.5rem;">
-                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-                </li>
+            {% assign count = 0 %}
+            {% for post in site.posts %}
+              
+              <!-- 1. 必须有标题 (杀毒) -->
+              {% if post.title %}
+                <!-- 2. 必须不是产品类 (分流) -->
+                {% unless post.categories contains 'Product' %}
+                  <!-- 3. 限制显示数量 -->
+                  {% if count < 5 %}
+                    <li style="margin-bottom: 0.5rem;">
+                      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+                    </li>
+                    {% assign count = count | plus: 1 %}
+                  {% endif %}
+                {% endunless %}
+              {% endif %}
+
             {% endfor %} 
+            
+            <!-- 如果没有随笔，显示提示 -->
+            {% if count == 0 %}
+              <li style="margin-top: 10px; color: #ddd; font-style: italic;">
+                (近期专注于产品研发，暂无生活随笔)
+              </li>
+            {% endif %}
           </ul>
         </section>
 
@@ -168,7 +187,7 @@
 
       </main> 
 
-      <!-- 页脚：包含了所有社交链接，所以顶部删了也没关系 -->
+      <!-- 页脚 -->
       <footer class="site-footer">
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
@@ -192,7 +211,7 @@
       </footer>
     </div> 
 
-    <!-- 悬浮传送门 (保持不变) -->
+    <!-- 悬浮传送门 -->
     <a href="https://shensi-nexus.vercel.app" target="_blank" style="
         position: fixed;
         bottom: 30px;
