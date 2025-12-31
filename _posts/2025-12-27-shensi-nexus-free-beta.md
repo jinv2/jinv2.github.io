@@ -1,7 +1,7 @@
 ---
 title: "原创AI音乐 APP | 内测开启，不限名额免费体验"
 date: 2025-12-27
-categories:[Product] [AI音乐, 原创APP, 内测]
+categories:[Product,AI音乐, 原创APP, 内测]
 tags: [Shensi, AI音乐, PWA, 原创音乐, 内测]
 ---
 
