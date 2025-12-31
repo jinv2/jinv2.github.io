@@ -27,104 +27,59 @@
     </script>
 
     <style>
-      /* --- 核心按钮样式升级：10+1 独立背景系统 --- */
-      
-      /* 通用设置：保证文字清晰，背景铺满 */
+      /* --- 按钮样式 --- */
       .nav-btn-custom {
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
-        color: #fff !important; /* 强制白字 */
-        text-shadow: 0 2px 4px rgba(0,0,0,0.9); /* 强阴影，防止背景太花看不清字 */
-        border: 1px solid rgba(255,255,255,0.2); /* 微弱边框 */
+        color: #fff !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+        border: 1px solid rgba(255,255,255,0.2);
         font-weight: bold;
         transition: all 0.3s ease;
       }
       .nav-btn-custom:hover {
-        transform: translateY(-2px); /* 悬浮微动 */
+        transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-        filter: brightness(1.1); /* 变亮 */
+        filter: brightness(1.1);
       }
 
-      /* === 左侧按钮群 (6个) === */
-      
-      /* 1. 首页 - 使用 lll.jpg (明亮) */
+      /* 左侧核心 */
       .bg-home { background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); }
       
-      /* 2. 【特权】数字中台 - 使用 ddd.jpg (深邃) + 金色边框 */
+      /* 【核心资产】数字中台 - 视觉焦点 */
       .bg-nexus { 
         background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); 
-        color: #FFD700 !important; /* 金字 */
-        border: 1px solid #FFD700 !important; /* 金边 */
+        color: #FFD700 !important;
+        border: 1px solid #FFD700 !important;
         text-shadow: 0 2px 5px #000;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); /* 增加发光效果 */
       }
       
-      /* 3. 博客 - 使用 ccc.png */
       .bg-blog { background-image: url("{{ '/assets/images/ccc.png' | relative_url }}"); }
-      
-      /* 4. SORA2 - 使用 ddd.jpg */
       .bg-sora { background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); }
-      
-      /* 5. HuggingFace - 使用 lll.jpg */
-      .bg-hf { background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); }
-      
-      /* 6. GitHub - 使用 ccc.png */
-      .bg-github { background-image: url("{{ '/assets/images/ccc.png' | relative_url }}"); }
 
-
-      /* === 右侧按钮群 (6个) === */
-
-      /* 7. YouTube - 使用 ddd.jpg (红黑配) */
-      .bg-yt { background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); }
-      
-      /* 8. TikTok - 使用 ccc.png */
-      .bg-tiktok { background-image: url("{{ '/assets/images/ccc.png' | relative_url }}"); }
-      
-      /* 9. 关于 - 使用 lll.jpg */
+      /* 右侧功能 */
       .bg-about { background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); }
-      
-      /* 10. 联系我们 - 使用 ddd.jpg */
       .bg-contact { background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); }
-      
-      /* 11. 加入我们 - 使用 lll.jpg */
       .bg-join { background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); }
-      
-      /* 12. 现在捐款 - 使用 ccc.png */
       .bg-donate { background-image: url("{{ '/assets/images/ccc.png' | relative_url }}"); }
 
-
-      /* 底部区域背景 */
-      .recent-blog-posts,
-      .footer-nav {
+      /* 底部及其他 */
+      .recent-blog-posts, .footer-nav {
         background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}");
-        background-size: cover;
-        background-position: center;
-        padding: 1rem;
-        border-radius: 8px;
-        color: #fff;
+        background-size: cover; background-position: center; padding: 1rem; border-radius: 8px; color: #fff;
       }
-      .recent-blog-posts h2, .footer-nav a {
-        color: #fff;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-      }
-      .recent-blog-posts ul li a {
-        color: #fff; text-decoration: underline;
-      }
+      .recent-blog-posts h2, .footer-nav a { color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); }
+      .recent-blog-posts ul li a { color: #fff; text-decoration: underline; }
       .recent-blog-posts ul li a:hover { color: #ffd700; }
 
-      /* 其他辅助样式 */
       .sora-signal-update {
         background-color: #f8f9fa;
         border-left: 4px solid #007bff;
-        padding: 1rem;
-        margin: 1rem 0;
-        border-radius: 0 8px 8px 0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       }
-      .sora-signal-update h3 { margin-top: 0; color: #007bff; font-size: 1.2em; }
-      .global-links-signature {
-        text-align: center; padding: 10px 0; border-top: 1px solid #eee; margin-top: 15px; font-size: 0.9em; color: #666;
-      }
+      .global-links-signature { text-align: center; padding: 10px 0; border-top: 1px solid #eee; margin-top: 15px; font-size: 0.9em; color: #666; }
       .global-links-signature a { color: #007bff; text-decoration: none; }
       .global-links-signature a:hover { text-decoration: underline; }
     </style>
@@ -142,37 +97,23 @@
         </div>
         <nav class="nav-container">
           
-          <!-- 左侧导航 (6个) -->
+          <!-- 左侧导航 (精简为4个) -->
           <div class="nav-left">
             <a href="{{ '/' | relative_url }}" class="btn nav-btn-custom bg-home">首页</a>
             
-            <!-- 数字中台 (特别强调) -->
+            <!-- 唯一核心焦点 -->
             <a href="https://shensi-nexus.vercel.app" class="btn nav-btn-custom bg-nexus" target="_blank">🏛️ 数字中台</a>
             
             <a href="{{ '/blog/' | relative_url }}" class="btn nav-btn-custom bg-blog">博客</a>
             <a href="https://sora.chatgpt.com/profile/mmmmmmmm1r" class="btn nav-btn-custom bg-sora" target="_blank" rel="noopener noreferrer">SORA2 信号</a>
-            <span class="nav-separator">|</span>
-            <a href="https://huggingface.co/jinv2" class="btn nav-btn-custom bg-hf" target="_blank" rel="noopener noreferrer">Hugging Face</a>
-            {% if site.github.is_project_page %}
-              <a href="{{ site.github.repository_url }}" class="btn nav-btn-custom bg-github">GitHub</a>
-            {% endif %}
           </div>
 
-          <!-- 右侧导航 (6个) -->
+          <!-- 右侧导航 (精简为4个) -->
           <div class="nav-right">
-            <a href="https://www.youtube.com/@jinvjinvbar" class="btn nav-btn-custom bg-yt" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a href="https://www.tiktok.com/@jinvjinvbar" class="btn nav-btn-custom bg-tiktok" target="_blank" rel="noopener noreferrer">TikTok</a>
-            <span class="nav-separator">|</span>
             <a href="{{ '/about/' | relative_url }}" class="btn nav-btn-custom bg-about">关于</a>
-            <a href="{{ '/contact/' | relative_url }}" class="btn nav-btn-custom bg-contact">联系我们</a>
-            <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}" class="btn nav-btn-custom bg-join">加入我们</a>
-            <a href="{{ '/support/' | relative_url }}" class="btn nav-btn-custom bg-donate">现在捐款</a>
-            
-            {% if site.show_downloads %}
-               <span class="nav-separator">|</span>
-               <a href="{{ site.github.zip_url }}" class="btn">Zip</a>
-               <a href="{{ site.github.tar_url }}" class="btn">Tar</a>
-            {% endif %}
+            <a href="{{ '/contact/' | relative_url }}" class="btn nav-btn-custom bg-contact">联系</a>
+            <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}" class="btn nav-btn-custom bg-join">加入</a>
+            <a href="{{ '/support/' | relative_url }}" class="btn nav-btn-custom bg-donate">捐款</a>
           </div>
         </nav>
       </header>
@@ -191,8 +132,16 @@
         {% endif %}
 
         <hr style="margin-top: 2.5rem; margin-bottom: 1.5rem;"> 
+        
+        <!-- 博客底部区域：在这里强调纪事 -->
         <section class="recent-blog-posts" style="margin-bottom: 1rem;"> 
-          <h2 style="margin-bottom: 1rem; font-size: 1.5em; text-align: center;">最新博客文章</h2> 
+          <h2 style="margin-bottom: 1rem; font-size: 1.5em; text-align: center;">最新动态</h2> 
+          
+          <!-- 在这里增加一个显眼的文字链接，引导去查看纪事 -->
+          <div style="text-align:center; margin-bottom: 15px;">
+            <a href="{{ '/nexus/' | relative_url }}" style="color: #FFD700; font-weight: bold; border-bottom: 1px dashed #FFD700;">[ 查看神思庭·生态纪事 (产品发布历史) ]</a>
+          </div>
+
           <ul style="list-style: none; padding-left: 0; text-align: center;"> 
             {% assign post_limit = 5 %} 
             {% for post in site.posts limit:post_limit %} 
@@ -202,22 +151,24 @@
             {% endfor %} 
           </ul>
         </section>
+
         <p style="text-align: center; margin-bottom: 1.5rem;"> 
           <a href="{{ '/blog/' | relative_url }}">查看所有文章</a>
         </p>
         <hr style="margin-bottom: 1.5rem;"> 
         <nav class="footer-nav" style="text-align: center; margin-bottom: 2rem;"> 
            <a href="{{ '/' | relative_url }}">首页</a> |
+           <a href="{{ '/nexus/' | relative_url }}">生态纪事</a> |
            <a href="{{ '/blog/' | relative_url }}">博客</a> |
            <a href="{{ '/about/' | relative_url }}">关于</a> |
-           <a href="{{ '/contact/' | relative_url }}">联系我们</a> |
-           <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}">加入我们</a> |
-           <a href="{{ '/support/' | relative_url }}">现在捐款</a>
+           <a href="{{ '/contact/' | relative_url }}">联系</a> |
+           <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}">加入</a> |
+           <a href="{{ '/support/' | relative_url }}">捐款</a>
         </nav>
 
       </main> 
 
-      <!-- 页脚 -->
+      <!-- 页脚：包含了所有社交链接，所以顶部删了也没关系 -->
       <footer class="site-footer">
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
@@ -233,13 +184,15 @@
           <a href="https://github.com/jinv2">代码体</a> · 
           <a href="https://jinv2.github.io">思想源</a> · 
           <a href="https://sora.chatgpt.com/profile/mmmmmmmm1r">信号塔</a> ·
+          <a href="https://www.youtube.com/@jinvjinvbar">YouTube</a> ·
+          <a href="https://www.tiktok.com/@jinvjinvbar">TikTok</a> ·
           <a href="https://shensi-nexus.vercel.app" style="color:#d4af37;font-weight:bold;">数字主权</a>
         </p>
         <span class="site-footer-credits" style="display: block; text-align: center; padding-top: 10px;">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
       </footer>
     </div> 
 
-    <!-- 悬浮传送门 -->
+    <!-- 悬浮传送门 (保持不变) -->
     <a href="https://shensi-nexus.vercel.app" target="_blank" style="
         position: fixed;
         bottom: 30px;
