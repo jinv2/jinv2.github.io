@@ -37,7 +37,7 @@ tags: [Shensi-ST, Automation, MANUS, AI Agent]
 您只需上传一张网页截图，并告诉它：“帮我点击那个蓝色的发布按钮，填入今天的日期。”
 **Ghost Operator** 会利用 Gemini 的视觉能力分析 DOM 结构，生成自动化脚本，代替您的双手完成操作。
 
-![Ghost Operator 运行界面](/assets/images/Ghost%20Operator.png)
+![Ghost Operator 运行界面](/assets/images/ghost%20operator.png)
 *<center>无需接口权限，通过视觉识别实现网页自动化</center>*
 
 ### 2. ⚡ Vibe Coding (代码补全)
@@ -46,7 +46,7 @@ tags: [Shensi-ST, Automation, MANUS, AI Agent]
 这是您的随身代码工厂。无需配置复杂的本地环境，直接在浏览器中用自然语言描述需求（例如：“写一个红色的倒计时组件”）。
 AI 将实时生成、渲染并运行代码。它不仅是编辑器，更是即时生效的 **“许愿池”**。
 
-![Vibe Coding 界面](/assets/images/Vibe%20Coding.png)
+![Vibe Coding 界面](/assets/images/vibe%20coder.png)
 *<center>所见即所得的 AI 代码生成与预览终端</center>*
 
 ### 3. 👁️ Monitor Eye (天眼监控)
@@ -54,7 +54,7 @@ AI 将实时生成、渲染并运行代码。它不仅是编辑器，更是即�
 
 商业竞争往往藏在细节里。上传两张不同时间点的网页或设计图，**Monitor Eye** 会运用计算机视觉，毫秒级比对出二者的差异，并分析背后的策略变化。它是您在数字战场上的雷达。
 
-![Monitor Eye 界面](/assets/images/Monitor%20Eye.png)
+![Monitor Eye 界面](/assets/images/monitor%20eye.png)
 *<center>基于视觉大模型的自动化差异分析系统</center>*
 
 ---
