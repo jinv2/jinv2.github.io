@@ -89,19 +89,15 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
 
 <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
 
-<!-- ================= ♻️ 介绍内容 ================= -->
+<!-- ================= ♻️ 核心介绍 ================= -->
 
 欢迎来到 **天算AI (Natural Algorithm AI R&D Lab)**！
 
-我们是一家由金威发起的非营利性独立AI研究组织，致力于探索人工智能的前沿领域，包括AIGC（人工智能生成内容）、AGI（通用人工智能）、ASI（超级人工智能）及至关重要的AI安全。
-
-秉持“天人合一，道法自然”与“人算不如AI算，更不如天算”的核心理念，我们坚信真正的智能源于对宇宙和自然规律的深刻理解与模拟。天算AI旨在通过开源、共享的方式，推动技术进步与普惠应用，构建一个可信、有益于全人类的AI生态系统。
-
-本博客是分享我们研究进展、技术成果、深度思考以及在AI与艺术（音乐、诗歌、影视）交融探索的平台。
+我们是一家由金威发起的非营利性独立AI研究组织，致力于探索人工智能的前沿领域。秉持“天人合一，道法自然”与“人算不如AI算，更不如天算”的核心理念，我们坚信真正的智能源于对宇宙和自然规律的深刻理解与模拟。
 
 ---
 
-## 天算AI 数字资产 (Natural Algorithm AI Digital Assets)
+## 📊 天算AI 数字资产 (Digital Assets)
 
 *   **原创文学：** 5万字 原创诗文
 *   **原创音乐：** 7000分钟 原创AI生成交响乐
@@ -113,21 +109,36 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
 
 ---
 
-### 🌐 2026 新生态系统 (New Ecosystem)
+## 🌐 2026 生态矩阵 (Ecosystem Matrix)
 
-**[👉 Shensi-ST 数字中台](https://shensi-nexus.vercel.app/)**
-> 核心控制台与多模态矩阵
+### [👉 Shensi-ST 数字中台](https://shensi-nexus.vercel.app/)
+> **Shensi-ST (Shensi Studio Technology) - 全栈创作与自动化中台**
 
-*   **MUSIC MATRIX:** 6个 音乐生成应用
-*   **VISUAL MATRIX:** 5个 视觉与影视工具
-*   **AGENT MATRIX:** 6个 自动化代理
-*   **LITERATURE MATRIX:** 5个 文学辅助模型
-*   **AUTOMATION MATRIX:** 6个 工作流引擎
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; text-align: center; margin-bottom: 20px;">
+  <div style="background: #f1f5f9; padding: 10px; border-radius: 4px;">
+    <strong>🎵 MUSIC</strong><br><span style="color:#0369a1">6个</span>
+  </div>
+  <div style="background: #f1f5f9; padding: 10px; border-radius: 4px;">
+    <strong>🎬 VISUAL</strong><br><span style="color:#0369a1">5个</span>
+  </div>
+  <div style="background: #f1f5f9; padding: 10px; border-radius: 4px;">
+    <strong>🤖 AGENT</strong><br><span style="color:#0369a1">6个</span>
+  </div>
+  <div style="background: #f1f5f9; padding: 10px; border-radius: 4px;">
+    <strong>📚 LITERATURE</strong><br><span style="color:#0369a1">5个</span>
+  </div>
+  <div style="background: #f1f5f9; padding: 10px; border-radius: 4px;">
+    <strong>⚙️ AUTOMATION</strong><br><span style="color:#0369a1">6个</span>
+  </div>
+</div>
 
-**[👉 神思智能体矩阵 (Agents)](https://jinv2.github.io/agents/)**
-> 自主规划与执行系统
+### [👉 神思智能体矩阵](https://jinv2.github.io/agents/)
+> **Agent Matrix - 具备深度思考能力的自主智能体**
 
-*   **核心智能体:** 1个 (Shensi Prism 旗舰版)
+<div style="background: #000; color: #ff7b00; padding: 15px; border-radius: 4px; text-align: center; border: 1px solid #ff7b00;">
+  <strong>⚡ 神思智能体 (Prism)</strong><br>
+  <span style="font-size: 1.5em; font-weight: bold;">1 个</span> (旗舰版)
+</div>
 
 ---
 
@@ -138,14 +149,14 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
 我们独立研发，以非营利模式运营，诚邀各界伙伴通过技术共建、学术交流或资金赞助等方式支持我们的开源研究。
 
 **希望加入我们或支持我们的工作？**
-*   了解更多关于我们的科研愿景，或有兴趣加入我们的探索，请访问我们的**[天算AI非营利组织科研文档]({{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#加入我们' | relative_url }})**。
+*   了解更多关于我们的科研愿景，请访问**[天算AI非营利组织科研文档]({{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#加入我们' | relative_url }})**。
 *   如果您认同我们的理念并愿意支持，欢迎**[现在就捐款]({{ '/support/' | relative_url }})**。
 
 ---
 
-<!-- ⚠️ 视频播放器：请务必将下方 'YOUR_VALID_VIDEO_ID' 替换为有效的 YouTube ID，否则视频无法播放 -->
+<!-- 视频播放器 -->
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <iframe width="100%" height="400" src="https://www.youtube.com/embed/YOUR_VALID_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/PRmOaJOeLZw" title="Shensi AI 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
 </div>
 
 ---
