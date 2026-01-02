@@ -2,7 +2,7 @@
 layout: post
 title: "重磅发布：天算AI官网双核升级与 SHENSI PRISM 旗舰智能体"
 date: 2026-01-02 12:00:00 +0800
-categories: product update
+categories: [Product, Launch]
 tags: [AI Agent, DeepSeek, WebGPU, Product Launch]
 ---
 
