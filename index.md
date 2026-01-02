@@ -11,7 +11,7 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
   天算AI科技研发实验室 发起人 | 首席架构师 | 独立研究员
 </p>
 
-<!-- ================= 🚀 新增：核心导航矩阵 ================= -->
+<!-- ================= 🚀 核心导航矩阵 ================= -->
 <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; justify-content: center;">
     
     <!-- 左侧：数字中台 -->
@@ -89,7 +89,7 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
 
 <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
 
-<!-- ================= ♻️ 恢复：原有介绍内容 ================= -->
+<!-- ================= ♻️ 介绍内容 ================= -->
 
 欢迎来到 **天算AI (Natural Algorithm AI R&D Lab)**！
 
@@ -125,9 +125,9 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
 
 ---
 
-<!-- 视频区域：请确保你的 YouTube 链接是正确的 -->
+<!-- 视频播放器 -->
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/P7lP7w78964" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
 </div>
 
 ---
