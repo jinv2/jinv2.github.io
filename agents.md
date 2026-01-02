@@ -16,7 +16,8 @@ permalink: /agents/
 
 <h2 style="margin-bottom: 20px;">⚡ 核心智能体 (Core Agents)</h2>
 
-<a href="https://jinv2.github.io/shensi-prism/" target="_blank" style="text-decoration: none; display: block;">
+<!-- 🔥 关键点：这个 <a> 标签包裹了整个卡片，确保点击任何位置都能跳转 -->
+<a href="https://jinv2.github.io/shensi-prism/" target="_blank" style="text-decoration: none; display: block; cursor: pointer;">
   <div style="
     background: #000; 
     border: 1px solid #ff7b00; 
@@ -24,21 +25,26 @@ permalink: /agents/
     padding: 30px; 
     margin-bottom: 40px;
     box-shadow: 0 0 15px rgba(255, 123, 0, 0.1);
-    transition: transform 0.2s;
-  " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(255,123,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 15px rgba(255,123,0,0.1)'">
+    transition: transform 0.2s, box-shadow 0.2s;
+  " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 25px rgba(255,123,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 15px rgba(255,123,0,0.1)'">
+    
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 15px;">
       <h3 style="margin:0; color:#ff7b00; font-family: monospace; font-size: 1.5rem;">⚡ SHENSI PRISM</h3>
       <span style="background:#ff7b00; color:#000; font-size:10px; padding:3px 8px; border-radius:4px; font-weight:bold;">LIVE</span>
     </div>
+    
     <p style="color:#e0e0e0; font-size:16px; margin-bottom: 10px; font-weight: bold;">
         全栈开发智能体 (AI IDE)
     </p>
+    
     <p style="color:#999; font-size:14px; line-height: 1.6; margin-bottom: 20px;">
        具备左脑逻辑推理流 + 右脑实时代码渲染引擎。点击即可进入沉浸式工作台，体验 DeepSeek 驱动的自动编程。
     </p>
+    
     <div style="color:#ff7b00; font-size:14px; font-weight:bold; text-align: right;">
         启动 PRISM (新窗口) &rarr;
     </div>
+    
   </div>
 </a>
 
