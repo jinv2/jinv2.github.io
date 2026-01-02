@@ -113,6 +113,24 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
 
 ---
 
+### 🌐 2026 新生态系统 (New Ecosystem)
+
+**[👉 Shensi-ST 数字中台](https://shensi-nexus.vercel.app/)**
+> 核心控制台与多模态矩阵
+
+*   **MUSIC MATRIX:** 6个 音乐生成应用
+*   **VISUAL MATRIX:** 5个 视觉与影视工具
+*   **AGENT MATRIX:** 6个 自动化代理
+*   **LITERATURE MATRIX:** 5个 文学辅助模型
+*   **AUTOMATION MATRIX:** 6个 工作流引擎
+
+**[👉 神思智能体矩阵 (Agents)](https://jinv2.github.io/agents/)**
+> 自主规划与执行系统
+
+*   **核心智能体:** 1个 (Shensi Prism 旗舰版)
+
+---
+
 ## 我们的使命与愿景
 
 **“探索自然算法，构建普惠AI。”**
@@ -125,9 +143,9 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
 
 ---
 
-<!-- 视频播放器 -->
+<!-- ⚠️ 视频播放器：请务必将下方 'YOUR_VALID_VIDEO_ID' 替换为有效的 YouTube ID，否则视频无法播放 -->
 <div style="text-align: center; margin-bottom: 1.5rem;">
-  <iframe width="100%" height="400" src="https://www.youtube.com/embed/P7lP7w78964" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/YOUR_VALID_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
 </div>
 
 ---
