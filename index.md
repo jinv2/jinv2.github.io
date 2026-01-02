@@ -41,7 +41,8 @@ description: "天算AI - 由金威发起，探索AIGC、AGI，致力于开源共
     </a>
 
     <!-- 右侧：智能体矩阵 (Internal Agent List) -->
-    <a href="/agents/" style="
+    <!-- 🔥 修复点：已添加 target="_blank" 以在新窗口打开 -->
+    <a href="/agents/" target="_blank" style="
         flex: 1;
         min-width: 240px;
         background: #000; 
@@ -89,5 +90,3 @@ description: "天算AI - 由金威发起，探索AIGC、AGI，致力于开源共
 </div>
 
 ---
-
-(这里保持你原来首页下方的文章列表代码...)
