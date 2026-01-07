@@ -9,6 +9,15 @@ permalink: /2026/01/08/ai-trap-company-system.html
 
 在这个2026年初的日子，我们必须极度清醒地揭穿一个荒谬至极的真相：**人类引以为傲的“公司体制”，已然成为AI时代最大的绊脚石，是一个正在疯狂吞噬所有个体未来的巨大陷阱！**
 
+<!-- 视频播放区 -->
+<div style="margin: 20px 0;">
+  <video width="100%" controls preload="metadata" poster="/assets/images/01081.png" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <source src="/assets/videos/0108.mp4" type="video/mp4">
+    您的浏览器不支持视频播放，请升级浏览器。
+  </video>
+  <p style="text-align: center; font-size: 0.9em; color: #666;">（点击播放：深度解析AI时代的体制陷阱）</p>
+</div>
+
 ![AI时代的体制陷阱](/assets/images/01081.png)
 
 ### AI已神，体制却仍是僵尸
