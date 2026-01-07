@@ -1,57 +1,35 @@
 ---
 layout: default
 ---
+<!-- 这里定义文章的具体样子 -->
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
-      <!-- 显示日期 -->
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
-        {{ page.date | date: date_format }}
+        {{ page.date | date: "%Y-%m-%d" }}
       </time>
-      
-      <!-- 显示作者 (如果有) -->
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}
-      
-      <!-- 显示分类 (如果有) -->
       {%- if page.categories.size > 0 -%}
-        • <span itemprop="keywords">分类:
-        {%- for category in page.categories -%}
-          <a href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>
-          {%- unless forloop.last %}, {% endunless -%}
-        {%- endfor -%}
-        </span>
+        • 分类: {{ page.categories | join: ", " }}
       {%- endif -%}
     </p>
   </header>
 
-  <!-- 正文显示区域：这是全页唯一输出文章内容的地方 -->
+  <!-- 文章正文：只输出一次 -->
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
 
-  <!-- 底部标签显示 (如果有) -->
+  <!-- 底部标签区 -->
   {%- if page.tags.size > 0 -%}
-    <div class="post-tags" style="margin-top: 30px; padding-top: 10px; border-top: 1px solid #eaeaea;">
+    <div class="post-tags" style="margin-top: 30px; padding-top: 10px; border-top: 1px dashed #ccc;">
       <strong>Tags:</strong>
       {%- for tag in page.tags -%}
-        <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" style="margin-right: 5px; color: #666; text-decoration: none;">#{{ tag }}</a>
+        <span style="background:#f0f0f0; padding:2px 6px; border-radius:4px; margin-right:5px; font-size:0.9em;">#{{ tag }}</span>
       {%- endfor -%}
     </div>
   {%- endif -%}
-
-  <!-- 评论插件引入 (如果有) -->
-  {%- if site.disqus.shortname -%}
-    <div style="margin-top: 40px;">
-      {%- include disqus_comments.html -%}
-    </div>
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
 </article>
 ```
