@@ -9,7 +9,7 @@ permalink: /2026/01/08/ai-trap-company-system.html
 
 在这个2026年初的日子，我们必须极度清醒地揭穿一个荒谬至极的真相：**人类引以为傲的“公司体制”，已然成为AI时代最大的绊脚石，是一个正在疯狂吞噬所有个体未来的巨大陷阱！**
 
-<!-- YouTube 视频嵌入区 (完美自适应手机/PC) -->
+<!-- YouTube 视频嵌入区 -->
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
   <iframe src="https://www.youtube.com/embed/s4U_WqVp35E" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
