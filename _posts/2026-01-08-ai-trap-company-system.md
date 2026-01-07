@@ -1,8 +1,7 @@
-```markdown
 ---
 layout: post
 title: "2026年的惊天阳谋：公司体制——阻碍全人类进化的顶级囚笼！"
-date: 2026-01-08 00:01:00 +0800
+date: 2026-01-07 12:00:00 +0800
 categories: [AI, 深度洞察, 趋势分析]
 tags: [AI革命, 公司体制, 个人崛起, 商业逻辑]
 permalink: /2026/01/08/ai-trap-company-system.html
