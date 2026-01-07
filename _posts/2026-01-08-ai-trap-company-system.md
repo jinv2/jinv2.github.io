@@ -9,9 +9,9 @@ permalink: /2026/01/08/ai-trap-company-system.html
 
 在这个2026年初的日子，我们必须极度清醒地揭穿一个荒谬至极的真相：**人类引以为傲的“公司体制”，已然成为AI时代最大的绊脚石，是一个正在疯狂吞噬所有个体未来的巨大陷阱！**
 
-<!-- 视频区域：使用您指定的原生 iframe 格式 -->
+<!-- 视频区域：请把 src="" 里面的链接换成你自己的 -->
 <div style="text-align: center; margin: 20px 0;">
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/s4U_WqVp35E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/请把这里换成您的视频ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <p style="text-align: center; color: #888; font-size: 14px;">（点击播放：NotebookLM 深度解析AI时代的体制陷阱）</p>
 
