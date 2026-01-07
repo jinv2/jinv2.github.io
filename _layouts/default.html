@@ -1,59 +1,238 @@
 ```html
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "zh-CN" }}">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}
-  <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDMTY87FV1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VDMTY87FV1');
-  </script>
-  <style>
-    /* 简化的自定义样式，防止冲突 */
-    .nav-btn-custom { color: #fff !important; margin: 0 5px; font-weight: bold; }
-    .site-footer { text-align: center; padding: 20px 0; border-top: 1px solid #eee; margin-top: 40px; }
-    .global-links-signature a { margin: 0 5px; text-decoration: none; color: #0366d6; }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <!-- 页眉导航 -->
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ site.title | default: "天算AI" }}</h1>
-      <nav class="nav-container" style="margin-top: 15px;">
-        <a href="{{ '/' | relative_url }}" class="btn">首页</a>
-        <a href="{{ '/blog/' | relative_url }}" class="btn">博客</a>
-        <a href="https://shensi-nexus.vercel.app" class="btn" target="_blank">数字中台</a>
-        <a href="https://sora.chatgpt.com/profile/mmmmmmmm1r" class="btn" target="_blank">SORA2</a>
-      </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- 核心内容区域：全站唯一的 content 输出口 -->
-    <main id="content" class="main-content" role="main">
-      {{ content }}
-    </main>
+    {% seo %}
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- 页脚 -->
-    <footer class="site-footer">
-      <p class="global-links-signature">
-        🌌 天算AI 全域链接：
-        <a href="https://huggingface.co/jinv2">模型脑</a> · 
-        <a href="https://github.com/jinv2">代码体</a> · 
-        <a href="https://jinv2.github.io">思想源</a> · 
-        <a href="https://www.youtube.com/@jinvjinvbar">YouTube</a>
-      </p>
-      <p style="font-size: 0.8em; color: #666;">
-        Hosted on GitHub Pages
-      </p>
-    </footer>
-  </div>
-</body>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    {% include head-custom.html %}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDMTY87FV1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VDMTY87FV1');
+    </script>
+
+    <style>
+      /* --- 按钮样式 --- */
+      .nav-btn-custom {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        color: #fff !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+        border: 1px solid rgba(255,255,255,0.2);
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .nav-btn-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        filter: brightness(1.1);
+      }
+
+      /* 左侧核心 */
+      .bg-home { background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); }
+      
+      /* 【核心资产】数字中台 */
+      .bg-nexus { 
+        background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); 
+        color: #FFD700 !important;
+        border: 1px solid #FFD700 !important;
+        text-shadow: 0 2px 5px #000;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+      }
+      
+      .bg-blog { background-image: url("{{ '/assets/images/ccc.png' | relative_url }}"); }
+      .bg-sora { background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); }
+
+      /* 右侧功能 */
+      .bg-about { background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); }
+      .bg-contact { background-image: url("{{ '/assets/images/ddd.jpg' | relative_url }}"); }
+      .bg-join { background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}"); }
+      .bg-donate { background-image: url("{{ '/assets/images/ccc.png' | relative_url }}"); }
+
+      /* 底部及其他 */
+      .recent-blog-posts, .footer-nav {
+        background-image: url("{{ '/assets/images/lll.jpg' | relative_url }}");
+        background-size: cover; background-position: center; padding: 1rem; border-radius: 8px; color: #fff;
+      }
+      .recent-blog-posts h2, .footer-nav a { color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); }
+      .recent-blog-posts ul li a { color: #fff; text-decoration: underline; }
+      .recent-blog-posts ul li a:hover { color: #ffd700; }
+
+      .sora-signal-update {
+        background-color: #f8f9fa;
+        border-left: 4px solid #007bff;
+        padding: 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .global-links-signature { text-align: center; padding: 10px 0; border-top: 1px solid #eee; margin-top: 15px; font-size: 0.9em; color: #666; }
+      .global-links-signature a { color: #007bff; text-decoration: none; }
+      .global-links-signature a:hover { text-decoration: underline; }
+    </style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- 页眉 -->
+      <header class="page-header" role="banner">
+        <div class="header-main">
+          <div class="header-logo-frame"> 
+            <img src="{{ '/assets/images/tian_suan_logo.jpg' | relative_url }}" alt="天算AI Logo" class="header-logo-image"> 
+          </div>
+          <h1 class="project-name">天算AI (Natural Algorithm)</h1>
+        </div>
+        <nav class="nav-container">
+          
+          <!-- 左侧导航 -->
+          <div class="nav-left">
+            <a href="{{ '/' | relative_url }}" class="btn nav-btn-custom bg-home">首页</a>
+            <a href="https://shensi-nexus.vercel.app" class="btn nav-btn-custom bg-nexus" target="_blank">🏛️ 数字中台</a>
+            <a href="{{ '/blog/' | relative_url }}" class="btn nav-btn-custom bg-blog">博客</a>
+            <a href="https://sora.chatgpt.com/profile/mmmmmmmm1r" class="btn nav-btn-custom bg-sora" target="_blank" rel="noopener noreferrer">SORA2 信号</a>
+          </div>
+
+          <!-- 右侧导航 -->
+          <div class="nav-right">
+            <a href="{{ '/about/' | relative_url }}" class="btn nav-btn-custom bg-about">关于</a>
+            <a href="{{ '/contact/' | relative_url }}" class="btn nav-btn-custom bg-contact">联系</a>
+            <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}" class="btn nav-btn-custom bg-join">加入</a>
+            <a href="{{ '/support/' | relative_url }}" class="btn nav-btn-custom bg-donate">捐款</a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- 主要内容 -->
+      <main id="content" class="main-content" role="main">
+
+        {{ content }}  
+
+        {% if page.url == "/" %}
+        <section class="sora-signal-update">
+          <h3>📡 当前 SORA2 信号更新</h3>
+          <p>最新短片：<a href="https://sora.chatgpt.com/profile/mmmmmmmm1r" target="_blank">点击查看 @mmmmmmmm1r</a></p>
+          <p>本周主题：山海经 · 神思庭篇</p>
+        </section>
+        {% endif %}
+
+        <hr style="margin-top: 2.5rem; margin-bottom: 1.5rem;"> 
+        
+        <!-- 博客底部区域 -->
+        <section class="recent-blog-posts" style="margin-bottom: 1rem;"> 
+          <h2 style="margin-bottom: 1rem; font-size: 1.5em; text-align: center;">最新随笔</h2> 
+          
+          <!-- 引导去生态纪事 -->
+          <div style="text-align:center; margin-bottom: 15px;">
+            <a href="{{ '/nexus/' | relative_url }}" style="color: #FFD700; font-weight: bold; border-bottom: 1px dashed #FFD700;">
+              [ 📜 查看神思庭·生态纪事 (产品发布历史) ]
+            </a>
+          </div>
+
+          <!-- 核心修正循环 -->
+          <ul style="list-style: none; padding-left: 0; text-align: center;"> 
+            {% assign count = 0 %}
+            {% for post in site.posts %}
+              
+              {% if post.title %}
+                {% unless post.categories contains 'Product' %}
+                  {% if count < 5 %}
+                    <li style="margin-bottom: 0.5rem;">
+                      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+                    </li>
+                    {% assign count = count | plus: 1 %}
+                  {% endif %}
+                {% endunless %}
+              {% endif %}
+
+            {% endfor %} 
+            
+            {% if count == 0 %}
+              <li style="margin-top: 10px; color: #ddd; font-style: italic;">
+                (近期专注于产品研发，暂无生活随笔)
+              </li>
+            {% endif %}
+          </ul>
+        </section>
+
+        <p style="text-align: center; margin-bottom: 1.5rem;"> 
+          <a href="{{ '/blog/' | relative_url }}">查看所有文章</a>
+        </p>
+        <hr style="margin-bottom: 1.5rem;"> 
+        <nav class="footer-nav" style="text-align: center; margin-bottom: 2rem;"> 
+           <a href="{{ '/' | relative_url }}">首页</a> |
+           <a href="{{ '/nexus/' | relative_url }}">生态纪事</a> |
+           <a href="{{ '/blog/' | relative_url }}">博客</a> |
+           <a href="{{ '/about/' | relative_url }}">关于</a> |
+           <a href="{{ '/contact/' | relative_url }}">联系</a> |
+           <a href="{{ '/research/philosophy/tiansuan-ai/2025/05/14/tiansuan-ai-non-profit-research-vision.html#join-us' | relative_url }}">加入</a> |
+           <a href="{{ '/support/' | relative_url }}">捐款</a>
+        </nav>
+
+      </main> 
+
+      <!-- 页脚 -->
+      <footer class="site-footer">
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        {% endif %}
+        <div style="text-align: center; padding: 10px 0; border-top: 1px solid #eee; margin-top: 15px;">
+          <p style="margin-bottom: 5px; font-size:0.9em;">💖 如果您喜欢天算AI的内容，请考虑<a href="{{ '/support/' | relative_url }}" style="font-weight: bold; color: inherit;">现在就捐款</a>！</p>
+          <a href="https://paypal.me/jinv2" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate with PayPal">
+          </a>
+        </div>
+        <p class="global-links-signature">🌌 天算AI 全域链接：
+          <a href="https://huggingface.co/jinv2">模型脑</a> · 
+          <a href="https://github.com/jinv2">代码体</a> · 
+          <a href="https://jinv2.github.io">思想源</a> · 
+          <a href="https://sora.chatgpt.com/profile/mmmmmmmm1r">信号塔</a> ·
+          <a href="https://www.youtube.com/@jinvjinvbar">YouTube</a> ·
+          <a href="https://www.tiktok.com/@jinvjinvbar">TikTok</a> ·
+          <a href="https://shensi-nexus.vercel.app" style="color:#d4af37;font-weight:bold;">数字主权</a>
+        </p>
+        <span class="site-footer-credits" style="display: block; text-align: center; padding-top: 10px;">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </div> 
+
+    <!-- 悬浮传送门 -->
+    <a href="https://shensi-nexus.vercel.app" target="_blank" style="
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        background: #000;
+        color: #d4af37;
+        border: 1px solid #d4af37;
+        padding: 12px 24px;
+        font-family: monospace;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        border-radius: 4px;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        font-size: 14px;
+    " onmouseover="this.style.background='#d4af37';this.style.color='#000'" onmouseout="this.style.background='#000';this.style.color='#d4af37'">
+        🚀 进入神思庭中台
+    </a>
+
+  </body>
 </html>
 ```
