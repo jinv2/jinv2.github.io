@@ -9,25 +9,13 @@ permalink: /2026/01/08/ai-trap-company-system.html
 
 在这个2026年初的日子，我们必须极度清醒地揭穿一个荒谬至极的真相：**人类引以为傲的“公司体制”，已然成为AI时代最大的绊脚石，是一个正在疯狂吞噬所有个体未来的巨大陷阱！**
 
-<!-- 视频区域：修复后的稳定 iframe（适配 GitHub Pages / Cloudflare / Vercel） -->
+<!-- 视频区域：请将下方的“此处填入你的视频ID”替换为真实的ID -->
 <div style="text-align: center; margin: 20px 0;">
-  <iframe
-    width="100%"
-    height="400"
-    src="https://www.youtube-nocookie.com/embed/s4U_WqVp35E"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/此处填入你的视频ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-<p style="text-align: center; color: #888; font-size: 14px;">
-（点击播放：NotebookLM 深度解析 AI 时代的体制陷阱）
-</p>
+<p style="text-align: center; color: #888; font-size: 14px;">（点击播放：NotebookLM 深度解析AI时代的体制陷阱）</p>
 
 ![AI时代的体制陷阱](/assets/images/01081.png)
-
----
 
 ### AI已神，体制却仍是僵尸
 
@@ -37,8 +25,6 @@ permalink: /2026/01/08/ai-trap-company-system.html
 
 在AI的底层逻辑里，去中心化的超级协作早已判了公司体制死刑。AI的本质是极速连接、是智能涌现、是零成本信任，这与科层制、物理限制、低效管理的公司体制完全背道而驰。
 
----
-
 ### 巨大的智力浪费与羞辱
 
 然而，现实是多么荒谬！不管是创业者还是普通从业者，我们本该利用AI去征服星辰大海，却被这个僵死的体制死死按住。
@@ -46,8 +32,6 @@ permalink: /2026/01/08/ai-trap-company-system.html
 我们被迫将巨大的时间、精力和创造力，献祭给注册、合规、实体地址、流程审批这些毫无意义的工业时代垃圾。**这是一场对全人类智力的严重浪费，更是对2026年先进生产力的极度羞辱！**
 
 请睁开眼看清趋势：在不远的未来，传统的“工作”将消失，传统的“金钱”将失去意义，作为载体的“公司”也注定灰飞烟灭！
-
----
 
 ### 寡头的遮羞布与迷魂汤
 
@@ -58,8 +42,6 @@ permalink: /2026/01/08/ai-trap-company-system.html
 他们编织这个谎言，维持这个门槛，就是为了让所有人继续在“创办公司”或“依附公司”的泥潭里空耗。这不仅是为了维护他们的护城河，更是为了让你无法看清那个真正的自由彼岸！只要你还迷信“必须有个公司才能做事”，你就输了，你就成了旧秩序的燃料。
 
 ![打破体制枷锁](/assets/images/01082.png)
-
----
 
 ### 避开陷阱，弯道超车
 
@@ -74,3 +56,6 @@ permalink: /2026/01/08/ai-trap-company-system.html
 **公司体制是旧世界的裹脚布，是阻碍发展的最后一道防线。**
 
 谁先看破这个局，谁先抛弃公司形式，谁就先拥有未来！只有彻底刺破这层窗户纸，绕开这个体制的陷阱，我们才能在这场人类历史上最大的变革中，从被体制奴役的“工具人”，进化为真正自由的赢家！
+```
+
+---
