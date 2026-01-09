@@ -144,9 +144,9 @@
             </a>
           </div>
 
-          <!-- ✅ 修复版循环：显示所有文章，不限数量，不过滤分类 -->
+          <!-- ✅ 修复版：只显示最新的 5 篇，解决页面过长问题 -->
           <ul style="list-style: none; padding-left: 0; text-align: center;"> 
-            {% for post in site.posts %}
+            {% for post in site.posts limit:5 %}
               {% if post.title %}
                 <li style="margin-bottom: 0.5rem;">
                   <span style="color: #FFD700; font-size: 0.8em; margin-right:5px;">[{{ post.date | date: "%Y-%m-%d" }}]</span>
