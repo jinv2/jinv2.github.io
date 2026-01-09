@@ -1,24 +1,3 @@
-          <!-- 无限制版循环：显示所有文章 -->
-          <ul style="list-style: none; padding-left: 0; text-align: center;"> 
-            {% for post in site.posts %}
-              {% if post.title %}
-                <li style="margin-bottom: 0.5rem;">
-                  <!-- 显示日期和标题 -->
-                  <span style="color: #FFD700; font-size: 0.8em;">[{{ post.date | date: "%Y-%m-%d" }}]</span>
-                  <a href="{{ post.url | relative_url }}" style="color: #fff; text-decoration: underline;">{{ post.title }}</a>
-                </li>
-              {% endif %}
-            {% endfor %} 
-          </ul>
-```
-
-### 完整替换代码（防止出错，建议全选覆盖）
-
-如果你怕改错位置，请直接**全选**下面的代码，**完全覆盖**你的 `_layouts/default.html`。
-
-(我已去掉了所有过滤条件，并去掉了第一行的错误符号)
-
-```html
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "zh-CN" }}">
   <head>
