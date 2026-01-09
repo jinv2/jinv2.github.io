@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "告别指纹机：公司内部 Wi-Fi 智能打卡系统正式上线"
-date: 2024-05-23 10:00:00 +0800
+date: 2026-01-09 10:00:00 +0800
+categories: [Product, Launch]
 categories: [公司公告, 效率工具]
 tags: [PWA, 数字化办公, 考勤]
 ---
