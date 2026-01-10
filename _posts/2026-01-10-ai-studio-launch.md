@@ -1,4 +1,4 @@
-
+---
 layout: post
 title: "AI Studio 正式发布：重新定义个性化 AI 定制服务"
 date: 2026-01-10 15:30:00 +0800
@@ -66,3 +66,4 @@ AI Studio 是连接普通用户与强大 AI 能力的一座桥梁。无论你是
 **立即体验：** [点击进入 AI Studio](https://ai-studio-gold-sigma.vercel.app/)
 
 *让 AI 实现你的创意，从此刻开始。*
+```
