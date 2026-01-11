@@ -2,8 +2,8 @@
 layout: post
 title: "天算AI爆发：第一个真正的智能体上线"
 date: 2026-01-11
-categories: [AI, Agent, Milestone]
-tags: [ELI5, OpenAI, Smart Agent]
+categories: [Product, Launch]
+tags: [AI, Agent, ELI5, Milestone]
 ---
 
 在连续发布了 31 个 PWA（渐进式 Web 应用）之后，天算AI 迎来了里程碑式的时刻。
