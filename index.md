@@ -104,6 +104,8 @@ description: "天算AI (Natural Algorithm AI R&D Lab) - 由金威发起，探索
 *   **AI短视频：** 9000部 原创AI短视频
 *   **AI技术产品：** 16项 独立研发AI技术产品
 *   **大语言模型：** 10个 垂直领域天算AI大语言模型
+*   [**PWA应用矩阵：** 32个 独立PWA应用](https://jinv2.github.io/nexus/)
+*   [**天算智能体：** 1个 自主研发AI Agent](https://jinv2.github.io/product/launch/2026/01/11/tiansuan-ai-agent.html)
 
 *所有主要成果均在 Hugging Face 和 GitHub 开源共享。*
 
