@@ -2,7 +2,7 @@
 layout: post
 title: "重磅发布：四境同源·燕赵智创引擎 —— AI驱动的文化多维创作枢纽"
 date: 2026-01-14 12:00:00 +0800
-categories: [Nexus, AI Product, Cultural Strategy]
+categories: [Product, Cyberpunk, IndieDev]
 tags: [PWA, MVP, Hebei, AI]
 image: /assets/images/alterego_pwa.png
 ---
