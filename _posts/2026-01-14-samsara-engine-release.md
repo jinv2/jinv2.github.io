@@ -75,5 +75,5 @@ Samsara Engine 支持 iOS / Android / PC 全平台访问，无需下载，即点
 3. 发送支付截图，获取**永久激活码**
 
 ![会员支付码](/assets/images/pay_code.png)
-
+ 
 ---
