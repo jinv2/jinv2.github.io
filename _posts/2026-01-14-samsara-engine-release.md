@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Samsara Engine: 2026 · 跨界艺术与灵魂疗愈的终极融合"
-date:   2026-01-14 08:00:00 +0800
+date: 2026-01-13 20:00:00 +0800
 categories: [Art, Product, AI]
 tags: [Samsara, Therapy, DigitalArt, Release]
 ---
@@ -75,5 +75,5 @@ Samsara Engine 支持 iOS / Android / PC 全平台访问，无需下载，即点
 3. 发送支付截图，获取**永久激活码**
 
 ![会员支付码](/assets/images/pay_code.png)
- 
+  
 ---
