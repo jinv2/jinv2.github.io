@@ -23,17 +23,17 @@ tags: [Vue3, TailwindCSS, AI-Agent, Hebei]
 #### 1. 首页：盛世美学 UI (Home)
 界面采用“中国红”与“帝王金”配色，结合汉白玉质感卡片，视觉效果大气磅礴。
 
-![Home Screenshot](/assets/images/screenshot%20home.png)
+![Home Screenshot](/assets/images/screenshot_home.png)
 
 #### 2. 深度策划结果 (Result)
 系统内置了强大的推理引擎，能够实时生成包含战略综述、行程细节及预算评估的完整方案。
 
-![Result Screenshot](/assets/images/screenshot%20result.png)
+![Result Screenshot](/assets/images/screenshot_result.png)
 
 #### 3. 智能体架构 (Architecture)
 基于 Vue3 与 AI 推理引擎构建的完整工作流。
 
-![Hebei Agent](/assets/images/Hebei%20Agent.png)
+![Hebei Agent](/assets/images/Hebei_Agent.png)
 
 ### 🔗 项目链接
 
