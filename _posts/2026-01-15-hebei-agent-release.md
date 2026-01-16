@@ -2,7 +2,7 @@
 layout: post
 title:  "项目发布：天算AI·河北文旅智能体 (Hebei Agent)"
 date:   2026-01-15 16:00:00 +0800
-categories: [AI, Project, Tourism]
+categories: [Product, Cyberpunk, IndieDev]
 tags: [Vue3, TailwindCSS, AI-Agent, Hebei]
 ---
 
@@ -20,15 +20,15 @@ tags: [Vue3, TailwindCSS, AI-Agent, Hebei]
 
 ### 🖼️ 系统展示
 
-#### 1. 系统主页：盛世美学 UI
+#### 1. 首页：盛世美学 UI
 界面采用“中国红”与“帝王金”配色，结合汉白玉质感卡片，视觉效果大气磅礴。
 
 ![Hebei Agent Home](/assets/images/screenshot_home.png)
 
-#### 2. 智能生成与架构
+#### 2. 生成结果：智能交付
 系统内置了强大的推理引擎，能够实时生成包含战略综述、行程细节及预算评估的完整方案。
 
-![Hebei Agent Architecture](/assets/images/Hebei_Agent.png)
+![Hebei Agent Result](/assets/images/Hebei_Agent.png)
 
 ### 🔗 项目链接
 
