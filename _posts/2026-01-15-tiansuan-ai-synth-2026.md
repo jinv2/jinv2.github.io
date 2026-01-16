@@ -11,7 +11,7 @@ author: jinv2
 
 在这个项目中，我们试图打破物理乐器与数字代码的边界，将一台价值昂贵的旗舰级硬件工作站的灵魂，注入到轻量级的 Web 浏览器中。
 
-![AI Synth 2026](/assets/images/Al%20Synth%202026%3A.png)
+![AI Synth 2026](/assets/images/ai-synth-2026.png)
 
 ### 🎹 项目愿景：让感官与代码共振
 
@@ -22,7 +22,7 @@ author: jinv2
 #### 1. 旗舰级拟物设计 (Skeuomorphic Design)
 我们拒绝了扁平化，拥抱了 **2026年的复古未来主义**。机身采用“钛灰磨砂”材质，搭配经典的加厚胡桃木侧板。所有的旋钮、推子都拥有真实的光照反射和物理阻尼感。
 
-![Modular Synthesizer](/assets/images/Modular%20Synthesizer.png)
+![Modular Synthesizer](/assets/images/modular-synth-1.png)
 
 #### 2. 128种通用音色 (GM Sound Bank)
 内置了完整的 **GM (General MIDI)** 标准音色库。通过双击屏幕或点击 `LIST` 按钮，你可以瞬间切换：
@@ -30,7 +30,7 @@ author: jinv2
 * **Synth Lead/Pad**：充满赛博朋克气息的电子音色。
 * **Orchestral**：从小提琴到管风琴的完整管弦乐团。
 
-![Modular Synthesizer 2](/assets/images/Modular%20Synthesizer2.png)
+![Modular Synthesizer 2](/assets/images/modular-synth-2.png)
 
 #### 3. 深度声音调制
 这不是一个玩具，而是一个真正的乐器。
@@ -41,14 +41,14 @@ author: jinv2
 #### 4. 零门槛启动
 为了解决浏览器的音频安全策略，我们设计了极具仪式感的“系统自检”启动页。点击屏幕任意位置，即可唤醒核心音频引擎。
 
-![Start Overlay](/assets/images/Start%20Overlay.png)
+![Start Overlay](/assets/images/start-overlay.png)
 
 ### 🚀 立即体验
 
 无需安装任何软件，支持 PC 端 Chrome/Edge 浏览器（推荐）及移动端自适应。
 
-* **在线体验 (Live Demo):** https://tiansuan-ai-synth.netlify.app/
-* **GitHub 源码:** https://github.com/jinv2/Modular-Synthesizer
+* **在线体验 (Live Demo):** [https://tiansuan-ai-synth.netlify.app/](https://tiansuan-ai-synth.netlify.app/)
+* **GitHub 源码:** [https://github.com/jinv2/Modular-Synthesizer](https://github.com/jinv2/Modular-Synthesizer)
 
 ---
 
