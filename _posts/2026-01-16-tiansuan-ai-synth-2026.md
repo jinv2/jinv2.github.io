@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "天算AI Synth 2026：打破物理边界的旗舰级网页合成器"
-date:   2026-01-10 12:00:00 +0800
+date: 2026-01-10 12:00:00 +0800
 categories: [Product, Cyberpunk, IndieDev]
 tags: [WebAudio, Synthesizer, 2026, OpenSource]
 author: jinv2
