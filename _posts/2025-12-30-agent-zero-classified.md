@@ -2,11 +2,11 @@
 layout: post
 title:  "绝密档案解封：Agent Zero (零号特工) —— 神思庭数字帝国的“最高权限”"
 date:   2025-12-30 20:00:00 +0800
-categories: [Product, Classified]
+categories: Product Classified
 tags: [Shensi-ST, Agent Zero, Top Secret]
 ---
 
-![Agent Zero 概览](/assets/images/Agent Zero 0 hao.png)
+![Agent Zero 概览](/assets/images/Agent%20Zero%200%20hao.png)
 *<center>神思庭生态奇点：Agent Zero (零号特工)</center>*
 
 **神思庭 (Shensi-ST) 核心公告：**
@@ -66,9 +66,9 @@ tags: [Shensi-ST, Agent Zero, Top Secret]
 ### 第三步：下达神谕 (Execute)
 进入控制台后，您无需编写一行代码。只需在底部指令框输入您的愿望：
 
-*   *“帮我写一个赛博朋克风格的倒计时器。”*
-*   *“制作一个贪吃蛇游戏，要绿色的复古风。”*
-*   *“生成一个粒子爆炸的视觉特效。”*
+* *“帮我写一个赛博朋克风格的倒计时器。”*
+* *“制作一个贪吃蛇游戏，要绿色的复古风。”*
+* *“生成一个粒子爆炸的视觉特效。”*
 
 点击 **SEND COMMAND**。
 
@@ -85,10 +85,10 @@ Agent Zero 将接管控制权。您将看到左侧终端疯狂滚动代码，右
 
 **Agent Zero 的上线，标志着神思庭数字主权生态的最终闭环。**
 
-*   **音乐矩阵** 赋予了我们听觉的自由。
-*   **影视矩阵** 赋予了我们视觉的魔力。
-*   **文学矩阵** 赋予了我们逻辑的深度。
-*   **Agent Zero** 则赋予了我们 **“造物”** 的能力。
+* **音乐矩阵** 赋予了我们听觉的自由。
+* **影视矩阵** 赋予了我们视觉的魔力。
+* **文学矩阵** 赋予了我们逻辑的深度。
+* **Agent Zero** 则赋予了我们 **“造物”** 的能力。
 
 在这个区域，您不再是用户，您是 **造物主 (The Architect)**。
 这是 AI 时代赋予个体的最高权杖。
